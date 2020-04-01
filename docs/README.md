@@ -1,5 +1,6 @@
 
 The application is intended for use with Android TV equipment, check your device, it may be incompatible with the requirements..  
+There are no ads or purchases in the application.  
 
 ![adbviewer](img/banner600x600b.png)
 

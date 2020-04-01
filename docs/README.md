@@ -1,8 +1,8 @@
 # VLC TV Remote
 
-![adbviewer](img/banner512x512.png)
+The application is intended for use with Android TV equipment, check your device, it may be incompatible with the requirements..  
 
-This Application is designed to control the VLC player running on a remote device from the Android-TV remote control.  
+![adbviewer](img/banner600x600b.png)
 
 It is understood that the remote device where the VLC player is running, connected to the Android TV device via HDMI or another wired method.  
 
@@ -11,13 +11,13 @@ Devices can be in different networks, taking into account the network routing se
 
 [download apk](release/avlctv-remote.apk)
 
-![adbviewer](avlctv-remote-5700680.png)
-![adbviewer](avlctv-remote-5700706.png)
-![adbviewer](avlctv-remote-5700736.png)
-![adbviewer](avlctv-remote-5700745.png)
-![adbviewer](avlctv-remote-5700785.png)
-![adbviewer](avlctv-remote-5700808.png)
-![adbviewer](avlctv-remote-5700821.png)
-![adbviewer](avlctv-remote-5700834.png)
-![adbviewer](avlctv-remote-5700842.png)
-![adbviewer](avlctv-remote-5700896.png)
+![adbviewer](img/avlctv-remote-5700680.png)
+![adbviewer](img/avlctv-remote-5700706.png)
+![adbviewer](img/avlctv-remote-5700736.png)
+![adbviewer](img/avlctv-remote-5700745.png)
+![adbviewer](img/avlctv-remote-5700785.png)
+![adbviewer](img/avlctv-remote-5700808.png)
+![adbviewer](img/avlctv-remote-5700821.png)
+![adbviewer](img/avlctv-remote-5700834.png)
+![adbviewer](img/avlctv-remote-5700842.png)
+![adbviewer](img/avlctv-remote-5700896.png)

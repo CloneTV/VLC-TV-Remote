@@ -1,4 +1,3 @@
-# VLC TV Remote
 
 The application is intended for use with Android TV equipment, check your device, it may be incompatible with the requirements..  
 

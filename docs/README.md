@@ -9,7 +9,7 @@ It is understood that the remote device where the VLC player is running, connect
 Also, the devices must be connected over a local network using Ethernet or Wi-Fi.  
 Devices can be in different networks, taking into account the network routing settings.  
 
-[download apk](release/avlctv-remote.apk)
+[download apk](release/avlctv-remote-release.apk)
 
 ![adbviewer](img/avlctv-remote-5700680.png)
 ![adbviewer](img/avlctv-remote-5700706.png)

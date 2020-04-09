@@ -22,6 +22,7 @@ Devices can be in different networks, taking into account the network routing se
 ![adbviewer](img/avlctv-remote-5700834.png)
 ![adbviewer](img/avlctv-remote-5700842.png)
 ![adbviewer](img/avlctv-remote-5700896.png)
+![adbviewer](img/avlctv-remote-1586560182.png)
 
 ### Tested on models
 

@@ -12,17 +12,17 @@ Devices can be in different networks, taking into account the network routing se
 - [download release apk 1.0](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
 - [download current snapshot apk](release/avlctv-remote-release.apk)
 
-![adbviewer](img/avlctv-remote-5700680.png)
-![adbviewer](img/avlctv-remote-5700706.png)
-![adbviewer](img/avlctv-remote-5700736.png)
-![adbviewer](img/avlctv-remote-5700745.png)
-![adbviewer](img/avlctv-remote-5700785.png)
-![adbviewer](img/avlctv-remote-5700808.png)
-![adbviewer](img/avlctv-remote-5700821.png)
-![adbviewer](img/avlctv-remote-5700834.png)
-![adbviewer](img/avlctv-remote-5700842.png)
-![adbviewer](img/avlctv-remote-5700896.png)
-![adbviewer](img/avlctv-remote-1586560182.png)
+![VLC Android-TV remote - screencap 1](img/avlctv-remote-5700680.png)
+![VLC Android-TV remote - screencap 2](img/avlctv-remote-5700706.png)
+![VLC Android-TV remote - screencap 3](img/avlctv-remote-5700736.png)
+![VLC Android-TV remote - screencap 4](img/avlctv-remote-5700745.png)
+![VLC Android-TV remote - screencap 5](img/avlctv-remote-5700785.png)
+![VLC Android-TV remote - screencap 6](img/avlctv-remote-5700808.png)
+![VLC Android-TV remote - screencap 7](img/avlctv-remote-5700821.png)
+![VLC Android-TV remote - screencap 8](img/avlctv-remote-5700834.png)
+![VLC Android-TV remote - screencap 9](img/avlctv-remote-5700842.png)
+![VLC Android-TV remote - screencap 10](img/avlctv-remote-5700896.png)
+![VLC Android-TV remote - screencap 11](img/avlctv-remote-1586560182.png)
 
 ### Tested on models
 

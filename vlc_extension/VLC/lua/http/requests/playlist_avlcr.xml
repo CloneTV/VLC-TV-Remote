@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?<?vlcprint'>'?>
+<?vlc
+require "httprequests"
+
+local getNfo = function(item)
+   if (item ~= nil) and (item.uri ~= nil) and (item.uri:find("file:///") == 1) then
+      local t = vlc.strings.decode_uri(item.uri):sub(9):match("(.+)%..+$"):gsub("/", "\\")
+      local s1 = t .. ".nfo"
+      --local s2 = t .. "-thumb.jpg"
+      local f = vlc.io.open(s1, "r")
+      if f ~= nil then
+        f:seek(0)
+        local txt = f:read("*all")
+	f.close(f)
+        item.nfo = vlc.strings.make_uri(s1)
+        item.date = txt:match("<premiered>([^<]+)")
+        item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
+        item.title = txt:match("<title>([^<]+)")
+        item.description = txt:match("<plot>([^<]+)")
+        item.arturl = txt:match("<thumb>([^<]+)")
+      end
+
+      --f = vlc.io.open(s2, "r")
+      --if f ~= nil then
+	--f.close(f)
+        --item.arturl = vlc.strings.make_uri(s2)
+      --end
+   end
+end
+
+local printleaf = function(item)
+	print ("\n<leaf")
+	for k,v in pairs(item) do
+		if (k~="type") then
+			print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
+		end
+        end
+	print ("/>")
+end
+
+local printnode = function(item)
+	local children=NULL
+	print ("\n<node")
+	for k,v in pairs(item) do
+		if (k == "type") then
+		elseif (k == "children") then
+			children = v._array
+		else
+			print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
+		end
+        end
+	print (">")
+	return children
+end
+
+printitem = function(item)
+	local children=NULL
+	if (item.type == "node") then
+		children = printnode(item)
+		if (children) then
+			for i,v in ipairs(children) do
+				printitem(v)
+			end
+		end
+		print ("</node>")
+	else
+		getNfo(item)
+		printleaf(item)
+	end
+end
+
+httprequests.processcommands()
+local pt=httprequests.playlisttable()
+printitem(pt)
+
+?>

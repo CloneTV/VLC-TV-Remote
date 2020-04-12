@@ -1,0 +1,68 @@
+<?vlc
+
+
+--package.loaded.httprequests = nil --uncomment to debug changes
+require "httprequests"
+
+
+local getNfo = function(item)
+   if (item ~= nil) and (item.uri ~= nil) and (item.uri:find("file:///") == 1) then
+      local t = vlc.strings.decode_uri(item.uri):sub(9):match("(.+)%..+$"):gsub("/", "\\")
+      local s1 = t .. ".nfo"
+      local s2 = t .. "-thumb.jpg"
+      local f = vlc.io.open(s1, "r")
+      if f ~= nil then
+        f:seek(0)
+        local txt = f:read("*all")
+	f.close(f)
+        item.nfo = vlc.strings.make_uri(s1)
+        item.date = txt:match("<premiered>([^<]+)")
+        item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
+        item.title = txt:match("<title>([^<]+)")
+        item.description = txt:match("<plot>([^<]+)")
+        item.arturl = txt:match("<thumb>([^<]+)")
+      end
+
+      --f = vlc.io.open(s2, "r")
+      --if f ~= nil then
+	--f.close(f)
+        --item.arturl = vlc.strings.make_uri(s2)
+      --end
+   end
+end
+
+local testnode = function(item)
+	local children=NULL
+	for k,v in pairs(item) do
+		if (k == "type") then
+		elseif (k == "children") then
+			children = v._array
+		end
+        end
+	return children
+end
+
+testitems = function(item)
+	local children = NULL
+
+	if (item.type == "node") then
+		children = testnode(item)
+		if (children) then
+			for i,v in ipairs(children) do
+				testitems(v)
+			end
+		end
+	else
+		getNfo(item)
+	end
+
+end
+
+httprequests.processcommands()
+
+local pt = httprequests.playlisttable()
+
+testitems(pt)
+httprequests.printTableAsJson(pt)
+
+?>

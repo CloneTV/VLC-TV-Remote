@@ -18,7 +18,8 @@ Devices can be in different networks, taking into account the network routing se
 
 ![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
 
-- [screenshot using VLC default PlayList](VLC-default-PlayList-Page.md)  [screenshot using VLC AddOn Media Play List](VLC-Media-PlayList-Page.md)
+- [screenshot using VLC default PlayList](VLC-default-PlayList-Page.md)  
+- [screenshot using VLC AddOn Media Play List](VLC-Media-PlayList-Page.md)
 
 ---
 

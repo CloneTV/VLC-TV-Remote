@@ -14,7 +14,7 @@ Devices can be in different networks, taking into account the network routing se
 
 ---
 
-# VLC Play list VS VLC MediaPlayList AddOn
+# VLC Playlist VS VLC MediaPlayList AddOn
 
 ![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
 

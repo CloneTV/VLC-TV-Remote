@@ -1,72 +1,149 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?<?vlcprint'>'?>
 <?vlc
+
+--package.loaded.httprequests = nil --uncomment to debug changes
 require "httprequests"
+local nodes = {}
 
-local getNfo = function(item)
-   if (item ~= nil) and (item.uri ~= nil) and (item.uri:find("file:///") == 1) then
-      local t = vlc.strings.decode_uri(item.uri):sub(9):match("(.+)%..+$"):gsub("/", "\\")
-      local s1 = t .. ".nfo"
-      --local s2 = t .. "-thumb.jpg"
-      local f = vlc.io.open(s1, "r")
-      if f ~= nil then
-        f:seek(0)
-        local txt = f:read("*all")
-	f.close(f)
-        item.nfo = vlc.strings.make_uri(s1)
-        item.date = txt:match("<premiered>([^<]+)")
-        item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
-        item.title = txt:match("<title>([^<]+)")
-        item.description = txt:match("<plot>([^<]+)")
-        item.arturl = txt:match("<thumb>([^<]+)")
+local pathFormat = function(fmt, paths, val)
+  local d = tonumber(val)
+  if (d > 9) then
+    return string.format(fmt, paths, "", val)
+  else
+    return string.format(fmt, paths, "0", val)
+  end
+end
+
+local findLastOf = function(s)
+  local n = (s:reverse()):find("%\\")
+  if (n ~= nil) and (n > 0) then
+    n = s:len() - n
+    if (n <= 0) then
+      return null
+    end
+  else
+    return null
+  end
+  s = s:sub(1, n)
+  if (s == nil) then
+    return null
+  end
+  return s
+end
+
+local setNode = function(paths)
+  if #nodes == 0 then
+    return
+  end
+
+  local s = paths
+
+  for i=1, #nodes do
+    s = findLastOf(s)
+    if (s == nil) then
+      break
+    end
+    local item = nodes[#nodes + 1 - i]
+    local res = string.format("%s\\tvshow.nfo", s)
+    local f = vlc.io.open(res, "r")
+    if f ~= nil then
+      item.nfo = vlc.strings.make_uri(res)
+    else
+      local d = s:match("(%d+)$")
+      if d ~= nil then
+        res = pathFormat("%s\\season%s%s-poster.jpg", s, d)
+        f = vlc.io.open(res, "r")
+        if f ~= nil then
+          item.arturl = vlc.strings.make_uri(pathFormat("%s\\season%s%s-", s, d))
+        else
+          local ss = findLastOf(s)
+          if (ss == nil) then
+            break
+          end
+          res = pathFormat("%s\\season%s%s-poster.jpg", ss, d)
+          f = vlc.io.open(res, "r")
+          if f ~= nil then
+            item.arturl = vlc.strings.make_uri(pathFormat("%s\\season%s%s-", ss, d))
+          end
+        end
       end
+    end
+  end
+  nodes = {}
 
-      --f = vlc.io.open(s2, "r")
-      --if f ~= nil then
-	--f.close(f)
-        --item.arturl = vlc.strings.make_uri(s2)
-      --end
-   end
+end
+
+local setItem = function(item)
+  if (item ~= nil) and (item.uri ~= nil) and (item.uri:find("file:///") == 1) then
+    local t = vlc.strings.decode_uri(item.uri):sub(9):match("(.+)%..+$"):gsub("/", "\\")
+    local s = t .. ".nfo"
+    --local s2 = t .. "-thumb.jpg"
+    local f = vlc.io.open(s, "r")
+    if f ~= nil then
+      f:seek(0)
+      local txt = f:read("*all")
+      f.close(f)
+      f = nil
+      item.nfo = vlc.strings.make_uri(s)
+      item.date = txt:match("<premiered>([^<]+)")
+      item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
+      item.title = txt:match("<title>([^<]+)")
+      item.description = txt:match("<plot>([^<]+)")
+      item.arturl = txt:match("<thumb>([^<]+)")
+    end
+    setNode(t);
+
+    --f = vlc.io.open(s2, "r")
+    --if f ~= nil then
+    --f.close(f)
+    --item.arturl = vlc.strings.make_uri(s2)
+    --end
+  end
 end
 
 local printleaf = function(item)
-	print ("\n<leaf")
-	for k,v in pairs(item) do
-		if (k~="type") then
-			print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
-		end
-        end
-	print ("/>")
+  print ("\n<leaf")
+  for k,v in pairs(item) do
+    if (k~="type") then
+      print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
+    end
+  end
+  print ("/>")
 end
 
 local printnode = function(item)
-	local children=NULL
-	print ("\n<node")
-	for k,v in pairs(item) do
-		if (k == "type") then
-		elseif (k == "children") then
-			children = v._array
-		else
-			print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
-		end
-        end
-	print (">")
-	return children
+  local children=NULL
+  print ("\n<node")
+  for k,v in pairs(item) do
+    if (k == "type") then
+    elseif (k == "children") then
+      children = v._array
+    else
+      print(" "..httprequests.xmlString(k).."=\""..httprequests.xmlString(v).."\"")
+    end
+  end
+  print (">")
+  return children
 end
 
 printitem = function(item)
-	local children=NULL
-	if (item.type == "node") then
-		children = printnode(item)
-		if (children) then
-			for i,v in ipairs(children) do
-				printitem(v)
-			end
-		end
-		print ("</node>")
-	else
-		getNfo(item)
-		printleaf(item)
-	end
+  local children = NULL
+
+  if (item.type == "node") then
+    table.insert(nodes, item)
+    children = printnode(item)
+
+    if (children) then
+      for i,v in ipairs(children) do
+        printitem(v)
+      end
+    end
+    print ("</node>")
+
+  else
+    setItem(item)
+    printleaf(item)
+  end
 end
 
 httprequests.processcommands()

@@ -17,7 +17,8 @@ Devices can be in different networks, taking into account the network routing se
 # VLC Playlist VS VLC MediaPlayList AddOn
 
 Get a more attractive appearance and greater functionality using a VLC Media PlayList.  You can use the [tinyMediaManager](https://www.tinymediamanager.org/) to collect detailed information about your films, seasons and series.  
-A complete software package, including a tinyMediaManager and VLC Android-TV remote APK, is included in the installation package VLC AddOn MediaPlayList.
+A complete software package, including a tinyMediaManager and VLC Android-TV remote APK, is included in the installation package VLC AddOn MediaPlayList.  
+AddOn uses local `NFO` format files to receive information used by `Kodi` (`XBMC`) and `MediaPortal`.  
 
 ![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
 

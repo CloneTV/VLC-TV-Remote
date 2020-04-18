@@ -12,6 +12,10 @@ Devices can be in different networks, taking into account the network routing se
 - [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
 - [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
 
+# VLC Play list VS VLC MediaPlayList AddOn
+
+![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
+
 ---
 
 ![VLC Android-TV remote - screencap 1](img/avlctv-remote-5700680.png)
@@ -25,6 +29,8 @@ Devices can be in different networks, taking into account the network routing se
 ![VLC Android-TV remote - screencap 9](img/avlctv-remote-5700842.png)
 ![VLC Android-TV remote - screencap 10](img/avlctv-remote-5700896.png)
 ![VLC Android-TV remote - screencap 11](img/avlctv-remote-1586560182.png)
+
+---
 
 ### Tested on models
 

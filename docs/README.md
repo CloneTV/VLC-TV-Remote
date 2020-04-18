@@ -2,7 +2,7 @@
 The application is intended for use with Android TV equipment, check your device, it may be incompatible with the requirements..  
 There are no ads or purchases in the application.  
 
-![adbviewer](img/banner600x600b.png)
+![VLC Android-TV remote](img/banner600x600b.png)
 
 It is understood that the remote device where the VLC player is running, connected to the Android TV device via HDMI or another wired method.  
 
@@ -15,6 +15,9 @@ Devices can be in different networks, taking into account the network routing se
 ---
 
 # VLC Playlist VS VLC MediaPlayList AddOn
+
+Get a more attractive appearance and greater functionality using a VLC Media PlayList.  You can use the [tinyMediaManager](https://www.tinymediamanager.org/) to collect detailed information about your films, seasons and series.  
+A complete software package, including a tinyMediaManager and VLC Android-TV remote APK, is included in the installation package VLC AddOn MediaPlayList.
 
 ![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
 

@@ -18,19 +18,7 @@ Devices can be in different networks, taking into account the network routing se
 
 ![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
 
----
-
-![VLC Android-TV remote - screencap 1](img/avlctv-remote-5700680.png)
-![VLC Android-TV remote - screencap 2](img/avlctv-remote-5700706.png)
-![VLC Android-TV remote - screencap 3](img/avlctv-remote-5700736.png)
-![VLC Android-TV remote - screencap 4](img/avlctv-remote-5700745.png)
-![VLC Android-TV remote - screencap 5](img/avlctv-remote-5700785.png)
-![VLC Android-TV remote - screencap 6](img/avlctv-remote-5700808.png)
-![VLC Android-TV remote - screencap 7](img/avlctv-remote-5700821.png)
-![VLC Android-TV remote - screencap 8](img/avlctv-remote-5700834.png)
-![VLC Android-TV remote - screencap 9](img/avlctv-remote-5700842.png)
-![VLC Android-TV remote - screencap 10](img/avlctv-remote-5700896.png)
-![VLC Android-TV remote - screencap 11](img/avlctv-remote-1586560182.png)
+- [screenshot using VLC default PlayList](VLC-default-PlayList-Page.md)  [screenshot using VLC AddOn Media Play List](VLC-Media-PlayList-Page.md)
 
 ---
 

@@ -1,5 +1,5 @@
 theme: jekyll-theme-hacker
 
 github:
-  zip_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk
-  tar_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/VLCAddOnMediaPlayList.exe
+  apk_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk
+  addon_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/VLCAddOnMediaPlayList.exe

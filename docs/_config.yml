@@ -1,4 +1,5 @@
 theme: jekyll-theme-hacker
+show_downloads: true
 
 github:
   apk_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk

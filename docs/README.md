@@ -22,6 +22,11 @@ Devices can be in different networks, taking into account the network routing se
 
 ---
 
+![VLC Android-TV remote - screencap Help page 1](img/avlctv-remote-5700834.png)
+![VLC Android-TV remote - screencap Help page 2](img/avlctv-remote-5700842.png)
+
+---
+
 ### Tested on models
 
 24LE7911D, 32LE7511D, 32LE7521D, 32LE7162D, 32LE7912D, 43LE7512D, 43LE7912D, 43LE7913D, 49LE7912D, 49LE7713D, 50LE7513D, 55LE7713D, 55LE7913D, 65LE7113D  

@@ -77,27 +77,27 @@ local setItem = function(item)
   if (item ~= nil) and (item.uri ~= nil) and (item.uri:find("file:///") == 1) then
     local t = vlc.strings.decode_uri(item.uri):sub(9):match("(.+)%..+$"):gsub("/", "\\")
     local s = t .. ".nfo"
-    --local s2 = t .. "-thumb.jpg"
     local f = vlc.io.open(s, "r")
     if f ~= nil then
       f:seek(0)
       local txt = f:read("*all")
-      f.close(f)
+      f:close()
       f = nil
       item.nfo = vlc.strings.make_uri(s)
-      item.date = txt:match("<premiered>([^<]+)")
       item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
       item.title = txt:match("<title>([^<]+)")
       item.description = txt:match("<plot>([^<]+)")
-      item.arturl = txt:match("<thumb>([^<]+)")
+      item.posterurl = txt:match("<thumb>([^<]+)")
+      --item.date = txt:match("<premiered>([^<]+)")
+
+      s = t .. "-thumb.jpg"
+      f = vlc.io.open(s, "r")
+      if f ~= nil then
+        f:close()
+        item.posterfile = vlc.strings.make_uri(s)
+      end
     end
     setNode(t);
-
-    --f = vlc.io.open(s2, "r")
-    --if f ~= nil then
-    --f.close(f)
-    --item.arturl = vlc.strings.make_uri(s2)
-    --end
   end
 end
 

@@ -15,3 +15,5 @@
 ![VLC Android-TV remote - screencap Media List 10](img/avlctv-remote-1587085349.png)
 ![VLC Android-TV remote - screencap Media List 11](img/avlctv-remote-1587085357.png)
 ![VLC Android-TV remote - screencap Media List 12](img/avlctv-remote-1587085364.png)
+![VLC Android-TV remote - screencap Media List 13](img/avlctv-remote-1587434441.png)
+

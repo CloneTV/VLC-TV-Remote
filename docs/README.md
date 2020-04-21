@@ -9,8 +9,18 @@ It is understood that the remote device where the VLC player is running, connect
 Also, the devices must be connected over a local network using Ethernet or Wi-Fi.  
 Devices can be in different networks, taking into account the network routing settings.  
 
-- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
-- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
+- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.1/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
+- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.1/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
+
+---
+
+### New in version 1.1.x:
+
+- automatic find VLC server in local network  
+- ambilight background  
+- extended multimedia playlist, compatible `Kodi`, `XMBC`, `MediaServer`  
+- remembers the latest playbacks, making it easy to return to them  
+- VLC addOn `MediaPlayList`  
 
 ---
 

@@ -83,12 +83,22 @@ local setItem = function(item)
       local txt = f:read("*all")
       f:close()
       f = nil
+      local sr = txt:match("<rating>([^<]+)")
+      local sv = txt:match("<votes>([^<]+)")
+      if sr ~= nil and sv ~= nil then
+        item.rating = sr .. "/" .. sv
+      elseif sr ~= nil then
+        item.rating = sr
+      elseif sv ~= nil then
+        item.rating = sv
+      end
       item.nfo = vlc.strings.make_uri(s)
-      item.rating = txt:match("<rating>([^<]+)") .. "/" .. txt:match("<votes>([^<]+)")
       item.title = txt:match("<title>([^<]+)")
       item.description = txt:match("<plot>([^<]+)")
       item.posterurl = txt:match("<thumb>([^<]+)")
-      --item.date = txt:match("<premiered>([^<]+)")
+      item.season = txt:match("<season>([^<]+)")
+      item.episode = txt:match("<episode>([^<]+)")
+      item.date = txt:match("<premiered>([^<]+)")
 
       s = t .. "-thumb.jpg"
       f = vlc.io.open(s, "r")

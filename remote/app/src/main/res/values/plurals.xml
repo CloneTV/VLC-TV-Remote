@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plurals_second">
+        <item quantity="zero">second</item>
+        <item quantity="one">seconds</item>
+        <item quantity="two">seconds</item>
+        <item quantity="few">seconds</item>
+        <item quantity="many">second</item>
+        <item quantity="other">seconds</item>
+    </plurals>
+    <plurals name="plurals_minutes">
+        <item quantity="zero">minute</item>
+        <item quantity="one">minutes</item>
+        <item quantity="two">minutes</item>
+        <item quantity="few">minutes</item>
+        <item quantity="many">minute</item>
+        <item quantity="other">minutes</item>
+    </plurals>
+</resources>

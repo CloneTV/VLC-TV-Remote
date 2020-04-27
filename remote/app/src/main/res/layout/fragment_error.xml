@@ -1,0 +1,54 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".gui.fragment.ErrorFragment">
+
+    <data>
+        <variable
+            name="frag"
+            type="ru.ps.vlcatv.remote.gui.fragment.ErrorFragment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/cl_root_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackground"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/divider03"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+    android:id="@+id/cl_form_error"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorMainBackground"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/imgbtn_error"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:onClick="OnClickBtn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/error_96px" />
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:maxLines="5"
+            android:minLines="2"
+            android:onClick="OnClickBtn"
+            android:text="@{frag.tvError}"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</LinearLayout>
+</layout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="status"
+            type="ru.ps.vlcatv.remote.data.DataSharedControl" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/colorMainBackground"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/imgbtn_vol_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/btn_round_selector"
+            android:src="@drawable/audio_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_vol_down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_vol_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btn_round_selector"
+            android:src="@drawable/voice_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_vol_mute"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_vol_up" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_vol_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_MUTE, status.StateChange)}"
+            android:background="@drawable/btn_round_selector"
+            android:src="@drawable/no_audio_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_vol_down" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

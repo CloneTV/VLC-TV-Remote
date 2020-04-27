@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:colorButtonNormal">@color/colorTransparent</item>
+    </style>
+
+</resources>

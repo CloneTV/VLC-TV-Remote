@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <plurals name="plurals_second" tools:ignore="UnusedQuantity">
+        <item quantity="zero">секунд</item>
+        <item quantity="one">секунда</item>
+        <item quantity="two">секунды</item>
+        <item quantity="few">секунды</item>
+        <item quantity="many">секунд</item>
+        <item quantity="other">секунд</item>
+    </plurals>
+    <plurals name="plurals_minutes" tools:ignore="UnusedQuantity">
+        <item quantity="zero">минут</item>
+        <item quantity="one">минута</item>
+        <item quantity="two">минуты</item>
+        <item quantity="few">минуты</item>
+        <item quantity="many">минут</item>
+        <item quantity="other">минут</item>
+    </plurals>
+</resources>

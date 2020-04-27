@@ -1,0 +1,57 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".gui.fragment.PlayTitleFragment">
+
+    <data>
+        <variable
+            name="frag"
+            type="ru.ps.vlcatv.remote.gui.fragment.PlayTitleFragment" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/cl_root_play_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackground"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:elegantTextHeight="true"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:foregroundGravity="center_vertical"
+            android:gravity="center"
+            android:labelFor="@id/progressBar"
+            android:onClick="OnClickBtn"
+            android:singleLine="true"
+            android:text="@{frag.status.Title}"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="@color/colorAccent"
+            android:textDirection="locale"
+            android:textIsSelectable="false"
+            android:textSize="30sp"
+            app:autoSizeTextType="uniform" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:foregroundTint="@color/colorAccent"
+            android:max="@{frag.status.TimeTotal}"
+            android:progress="@{frag.status.TimeCurrent}" />
+
+</LinearLayout>
+</layout>

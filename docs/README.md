@@ -14,7 +14,7 @@ Devices can be in different networks, taking into account the network routing se
 
 ---
 
-### New in version 1.1.x:
+## New in version 1.1.x:
 
 - automatic find VLC server in local network  
 - ambilight background  

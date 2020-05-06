@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="status"
+            type="ru.ps.vlcatv.remote.data.DataSharedControl" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackground">
+
+        <ImageButton
+            android:id="@+id/imgbtn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_PLAY, status.StateChange)}"
+            android:onClick="OnClickBtn"
+            android:src="@drawable/play_button_circled_96px"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_pause"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_PAUSE, status.StateChange)}"
+            android:onClick="OnClickBtn"
+            android:src="@drawable/pause_button_96px"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_stop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_play" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_STOP, status.StateChange)}"
+            android:onClick="OnClickBtn"
+            android:src="@drawable/stop_circled_96px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_pause" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

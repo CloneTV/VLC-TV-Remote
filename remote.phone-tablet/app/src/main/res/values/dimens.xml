@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="media_text_size">24sp</dimen>
+    <dimen name="text_size">24sp</dimen>
+    <dimen name="title_size">30sp</dimen>
+    <dimen name="button_size">82dp</dimen>
+</resources>

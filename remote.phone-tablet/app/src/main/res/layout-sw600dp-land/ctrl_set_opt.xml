@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="status"
+            type="ru.ps.vlcatv.remote.data.DataSharedControl" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackground">
+
+        <ImageButton
+            android:id="@+id/imgbtn_loop"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_LOOP, status.StateChange)}"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/loop_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_random"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_random"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_RANDOM, status.StateChange)}"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/shuffle_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_repeat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_loop" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_repeat"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_REPEAT, status.StateChange)}"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/repeat_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toTopOf="@+id/imgbtn_fullscreen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_random" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_fullscreen"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_round_selector"
+            android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_FULLSCREEN, status.StateChange)}"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/full_screen_96px"
+            android:onClick="OnClickBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgbtn_repeat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

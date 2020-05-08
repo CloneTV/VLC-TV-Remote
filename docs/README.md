@@ -15,13 +15,14 @@ Devices can be in different networks, taking into account the network routing se
 
 ---
 
-## New in version 1.1.x:
+## New in version 1.2.x:
 
 - automatic find VLC server in local network  
 - ambilight background  
 - extended multimedia playlist, compatible `Kodi`, `XMBC`, `MediaServer`  
 - remembers the latest playbacks, making it easy to return to them  
 - VLC addOn `MediaPlayList`  
+- add remote control App from phone/tablet devices  
 
 ---
 

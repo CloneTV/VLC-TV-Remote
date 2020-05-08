@@ -3,7 +3,6 @@ package ru.ps.vlcatv.remote.gui.activity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentActivity;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -97,7 +96,6 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
     }
     @Override
     public void onSettingsChange() {
-        // AppMain.getRequestStatus();
         event_FRAGMENT_TITLE();
     }
     @Override

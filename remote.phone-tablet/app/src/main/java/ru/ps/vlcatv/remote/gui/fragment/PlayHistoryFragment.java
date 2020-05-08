@@ -33,7 +33,6 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
     private ImageView ivPoster;
     private RecyclerView recyclerView;
     private ImageButton iButton;
-    private int playId = -1;
 
     @Override
     public View onCreateView(@NotNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -55,10 +54,10 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
         iButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (playId > -1)
+                if (item.id.get() > -1)
                     AppMain.getRequest(
                             AppMain.getStatus().getCtrlCmd(v.getId()),
-                            Integer.toString(playId)
+                            Integer.toString(item.id.get())
                     );
             }
         });
@@ -109,7 +108,6 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
             recyclerView.setAdapter(new MediaItemImageAdapter(this, items));
             item.copy(items[(items.length - 1)]);
             item.updatePoster(ivPoster);
-            playId = item.id.get();
 
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e("parseHistoryList", Objects.requireNonNull(e.getMessage()));
@@ -147,7 +145,6 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
                     private MediaItemViewHolder hld = holder;
                     @Override
                     public void onClick(View v) {
-                        phf.playId = holder.id;
                         phf.item.copy(items[holder.pos]);
                         items[holder.pos].updatePoster(phf.ivPoster);
                     }

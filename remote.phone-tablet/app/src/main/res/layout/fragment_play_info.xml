@@ -75,8 +75,8 @@
                 android:id="@+id/tv_season"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="@dimen/info_margin_port"
+                android:layout_marginEnd="@dimen/info_margin_port"
                 android:layout_weight="1"
                 android:gravity="start|center_vertical"
                 android:text='@{frag.item.serial}'
@@ -88,8 +88,8 @@
                 android:id="@+id/tv_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="@dimen/info_margin_port"
+                android:layout_marginEnd="@dimen/info_margin_port"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text='@{frag.item.rating}'
@@ -101,8 +101,8 @@
                 android:id="@+id/tv_duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="@dimen/info_margin_port"
+                android:layout_marginEnd="@dimen/info_margin_port"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text='@{frag.item.time}'
@@ -114,8 +114,8 @@
                 android:id="@+id/tv_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginStart="@dimen/info_margin_port"
+                android:layout_marginEnd="@dimen/info_margin_port"
                 android:layout_weight="1"
                 android:gravity="center_vertical|end"
                 android:text='@{frag.item.date}'

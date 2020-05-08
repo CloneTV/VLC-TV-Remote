@@ -4,4 +4,6 @@
     <dimen name="text_size">36sp</dimen>
     <dimen name="title_size">42sp</dimen>
     <dimen name="button_size">82dp</dimen>
+    <dimen name="info_margin_port">12dp</dimen>
+    <dimen name="info_margin_land">16dp</dimen>
 </resources>

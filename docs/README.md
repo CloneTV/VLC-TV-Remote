@@ -28,7 +28,7 @@ Devices can be in different networks, taking into account the network routing se
 
 # Remote for remote :)
 
-The remote control for Android-TV VLC player allows you to control all functions from a tablet or phone.  
+The remote control for Android-TV VLC player allows you to control all functions from a tablet or phone. 
 You can view information about the current video fragment, or the browsing history with photos and a description.  
 
 ![VLC Android-TV remote - phone/tablet remote](img/atvremote-poster.png)  

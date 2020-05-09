@@ -1,3 +1,4 @@
 rootProject.name='Remote'
 include ':app'
 include ':constanttag'
+project(":constanttag").projectDir = file("../constant.tag")

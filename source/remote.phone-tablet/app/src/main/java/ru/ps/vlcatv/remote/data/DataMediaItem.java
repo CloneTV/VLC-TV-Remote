@@ -9,6 +9,7 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 import java.util.Locale;
 
+import ru.ps.vlcatv.constanttag.DataTagPlayItem;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
@@ -85,24 +86,24 @@ public class DataMediaItem extends BaseObservable {
     {
         try
         {
-            title.set(obj.optString("titleTxt", ""));
-            description.set(obj.optString("descriptionTxt", ""));
-            category.set(obj.optString("categoryTxt", ""));
-            date.set(obj.optString("dateTxt", ""));
-            rating.set(obj.optString("ratingTxt", ""));
-            poster.set(obj.optString("arturlTxt", ""));
-            filename.set(obj.optString("filenameTxt", ""));
-            nfo.set(obj.optString("nfoTxt", ""));
+            title.set(obj.optString(DataTagPlayItem.TAG_TITLE, ""));
+            description.set(obj.optString(DataTagPlayItem.TAG_DESC, ""));
+            category.set(obj.optString(DataTagPlayItem.TAG_CAT, ""));
+            date.set(obj.optString(DataTagPlayItem.TAG_DATE, ""));
+            rating.set(obj.optString(DataTagPlayItem.TAG_RATING, ""));
+            poster.set(obj.optString(DataTagPlayItem.TAG_POSTER, ""));
+            filename.set(obj.optString(DataTagPlayItem.TAG_FILE, ""));
+            nfo.set(obj.optString(DataTagPlayItem.TAG_NFO, ""));
 
-            season.set(obj.optInt("seasonInt", -1));
-            episode.set(obj.optInt("episodeInt", -1));
-            id.set(obj.optInt("idInt", -1));
-            grpid.set(obj.optInt("grpIdInt", -1));
-            grpitem.set(obj.optInt("grpItemInt", -1));
-            grptotal.set(obj.optInt("categoryTotalInt", -1));
-            type.set(obj.optInt("typeIdInt", -1));
-            duration.set(obj.optInt("durationInt", -1));
-            lastpos.set(obj.optInt("lastposInt", -1));
+            season.set(obj.optInt(DataTagPlayItem.TAG_SEASON, -1));
+            episode.set(obj.optInt(DataTagPlayItem.TAG_EPISODE, -1));
+            id.set(obj.optInt(DataTagPlayItem.TAG_ID, -1));
+            grpid.set(obj.optInt(DataTagPlayItem.TAG_GRPID, -1));
+            grpitem.set(obj.optInt(DataTagPlayItem.TAG_GRPITEMID, -1));
+            grptotal.set(obj.optInt(DataTagPlayItem.TAG_CATTOTAL, -1));
+            type.set(obj.optInt(DataTagPlayItem.TAG_TYPE, -1));
+            duration.set(obj.optInt(DataTagPlayItem.TAG_DURATION, -1));
+            lastpos.set(obj.optInt(DataTagPlayItem.TAG_LASTPOS, -1));
             dateVisible.set(
                     ((Utils.isempty(date.get())) ? View.GONE : View.VISIBLE)
             );

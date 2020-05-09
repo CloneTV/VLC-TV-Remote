@@ -11,7 +11,7 @@ Devices can be in different networks, taking into account the network routing se
 
 - [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
 - [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
-- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/vlcatv-phone-tablet-remote-release.apk) (`tested API24-28`)
+- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/vlcatv-phone-tablet-remote-release.apk) (`minimum API24, Nougat 7.0`)
 
 ---
 

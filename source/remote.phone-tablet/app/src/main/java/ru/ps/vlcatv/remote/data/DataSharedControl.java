@@ -10,6 +10,7 @@ import androidx.databinding.ObservableInt;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
+import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
@@ -233,52 +234,52 @@ public class DataSharedControl extends BaseObservable {
         switch (id)
         {
             case BTN_TOGGLE:
-                return "PLAY_TOGGLE";
+                return DataUriApi.PLAY_TOGGLE;
             case BTN_PLAY_BY_ID:
-                return "PLAY_BY_ID";
+                return DataUriApi.PLAY_ID;
             case BTN_PLAY:
-                return "PLAY_PLAY";
+                return DataUriApi.PLAY_PLAY;
             case BTN_PAUSE:
-                return "PLAY_PAUSE";
+                return DataUriApi.PLAY_PAUSE;
             case BTN_STOP:
-                return "PLAY_STOP";
+                return DataUriApi.PLAY_STOP;
             case BTN_FWD:
-                return "PLAY_FORWARD";
+                return DataUriApi.PLAY_FORWARD;
             case BTN_REV:
-                return "PLAY_REWIND";
+                return DataUriApi.PLAY_REWIND;
             case BTN_NEXT:
-                return "PLAY_NEXT_TRACK";
+                return DataUriApi.PLAY_NEXT_TRACK;
             case BTN_PREV:
-                return "PLAY_PREVIOUS_TRACK";
+                return DataUriApi.PLAY_PREVIOUS_TRACK;
             case GET_MEDIA_ITEM:
-                return "GET_MEDIA_ITEM";
+                return DataUriApi.GET_MEDIA_ITEM;
             case GET_MEDIA_ITEMS:
-                return "GET_MEDIA_ITEMS";
+                return DataUriApi.GET_MEDIA_ITEMS;
             case GET_STAT:
-                return "GET_STATUS";
+                return DataUriApi.GET_STAT;
             case BTN_VOLUP:
-                return "AUDIO_VOLUME_UP";
+                return DataUriApi.AUDIO_VOLUME_UP;
             case BTN_VOLDOWN:
-                return "AUDIO_VOLUME_DOWN";
+                return DataUriApi.AUDIO_VOLUME_DOWN;
             case BTN_MUTE:
-                return "AUDIO_VOLUME_MUTE";
+                return DataUriApi.AUDIO_VOLUME_MUTE;
             case BTN_UP:
-                return "PAD_UP";
+                return DataUriApi.PAD_UP;
             case BTN_DOWN:
-                return "PAD_DOWN";
+                return DataUriApi.PAD_DOWN;
             case BTN_LEFT:
-                return "PAD_LEFT";
+                return DataUriApi.PAD_LEFT;
             case BTN_RIGHT:
-                return "PAD_RIGHT";
+                return DataUriApi.PAD_RIGHT;
             case BTN_CENTER:
-                return "PAD_CENTER";
+                return DataUriApi.PAD_CENTER;
             case BTN_BACK:
-                return "KEY_BACK";
+                return DataUriApi.KEY_BACK;
             case BTN_HOME: {
                 if (AppRun.get()) {
-                    return "GET_ACTIVITY";
+                    return DataUriApi.GET_ACTIVITY;
                 } else {
-                    return "KEY_BACK";
+                    return DataUriApi.KEY_BACK;
                 }
             }
             default:

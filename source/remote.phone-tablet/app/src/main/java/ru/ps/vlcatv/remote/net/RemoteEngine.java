@@ -11,6 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.JsonObjectConverterFactory;
@@ -22,12 +23,6 @@ import ru.ps.vlcatv.remote.data.DataMediaItem;
 public class RemoteEngine implements SettingsInterface {
 
     private static final String TAG = RemoteEngine.class.getSimpleName();
-    private static final String TAG_ERROR = "error";
-    private static final String TAG_TYPE = "type";
-    private static final String TAG_DATA = "data";
-    private static final String TAG_STATUS = "STATUS";
-    private static final String TAG_ITEM = "MEDIAITEM";
-    private static final String TAG_ITEMS = "MEDIAITEMS";
 
     private RemoteInterface m_remoteInterface = null;
     private CallbackCmdDefault cb_default = new CallbackCmdDefault();
@@ -140,10 +135,10 @@ public class RemoteEngine implements SettingsInterface {
                 JSONObject obj = response.body();
                 if (obj == null)
                     return;
-                int error = obj.optInt(TAG_ERROR, -1);
+                int error = obj.optInt(DataUriApi.TAG_ERROR, -1);
                 if (error != 200)
                     return;
-                if (obj.optString(TAG_TYPE, "").equalsIgnoreCase(TAG_STATUS))
+                if (obj.optString(DataUriApi.TAG_TYPE, "").equalsIgnoreCase(DataUriApi.TAG_ID_STATUS))
                     AppMain.getStatus().fromJson(obj);
 
             } catch (Exception e) {
@@ -167,10 +162,10 @@ public class RemoteEngine implements SettingsInterface {
                 JSONObject obj = response.body();
                 if (obj == null)
                     return;
-                int error = obj.optInt(TAG_ERROR, -1);
+                int error = obj.optInt(DataUriApi.TAG_ERROR, -1);
                 if (error != 200)
                     return;
-                if (!obj.optString(TAG_TYPE, "").equalsIgnoreCase(TAG_ITEM))
+                if (!obj.optString(DataUriApi.TAG_TYPE, "").equalsIgnoreCase(DataUriApi.TAG_ID_MEDIAITEM))
                     return;
                 AppMain.getStatus().MmItem = new DataMediaItem(obj);
 
@@ -195,12 +190,12 @@ public class RemoteEngine implements SettingsInterface {
                 JSONObject obj = response.body();
                 if (obj == null)
                     return;
-                int error = obj.optInt(TAG_ERROR, -1);
+                int error = obj.optInt(DataUriApi.TAG_ERROR, -1);
                 if (error != 200)
                     return;
-                if (!obj.optString(TAG_TYPE, "").equalsIgnoreCase(TAG_ITEMS))
+                if (!obj.optString(DataUriApi.TAG_TYPE, "").equalsIgnoreCase(DataUriApi.TAG_ID_MEDIAITEMS))
                     return;
-                JSONArray array = obj.optJSONArray(TAG_DATA);
+                JSONArray array = obj.optJSONArray(DataUriApi.TAG_DATA);
                 if (array == null)
                     return;
                 if (array.length() == 0)

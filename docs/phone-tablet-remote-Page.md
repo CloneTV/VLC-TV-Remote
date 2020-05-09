@@ -6,12 +6,12 @@ You can view information about the current video fragment, or the browsing histo
 
 ---
 
-![VLC Android-TV remote - screencap default PlayList 1](img/atvremote-poster.png)
+![tablet or phone remote for Android-TV- screencap 1](img/atvremote-poster.png)
 
 ---
 
-![VLC Android-TV remote - screencap default PlayList 2](img/atvremote-1802668.png)
-![VLC Android-TV remote - screencap default PlayList 3](img/atvremote-4507434.png)
-![VLC Android-TV remote - screencap default PlayList 4](img/atvremote-4604295.png)
-![VLC Android-TV remote - screencap default PlayList 5](img/atvremote-4654638.png)
+![tablet or phone remote for Android-TV- screencap 2](img/atvremote-1802668.png)
+![tablet or phone remote for Android-TV- screencap 3](img/atvremote-4507434.png)
+![tablet or phone remote for Android-TV- screencap 5](img/atvremote-4654638.png)
+![tablet or phone remote for Android-TV- screencap 4](img/atvremote-4604295.png)
 

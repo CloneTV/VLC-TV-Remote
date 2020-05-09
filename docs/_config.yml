@@ -1,8 +1,8 @@
 theme: jekyll-theme-hacker
-show_downloads: true
+show_downloads: false
 title: VLC Android-TV Remote
 description: This Application is designed to control the VLC player running on a remote device from the Android-TV remote control. Support Android-TV only.
 
 github:
-  apk_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.1/avlctv-remote-release.apk
-  addon_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.1/VLCAddOnMediaPlayList.exe
+  apk_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2/avlctv-remote-release.apk
+  addon_url: https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2/VLCAddOnMediaPlayList.exe

@@ -26,13 +26,23 @@ Devices can be in different networks, taking into account the network routing se
 
 ---
 
+# Remote for remote :)
+
+The remote control for Android-TV VLC player allows you to control all functions from a tablet or phone.  
+You can view information about the current video fragment, or the browsing history with photos and a description.  
+
+![VLC Android-TV remote - phone/tablet remote](img/atvremote-poster.png)  
+
+- [screenshot phone/tablet remote](phone-tablet-remote-Page.md)  
+
+
 # VLC Playlist VS VLC MediaPlayList AddOn
 
 Get a more attractive appearance and greater functionality using a VLC Media PlayList.  You can use the [tinyMediaManager](https://www.tinymediamanager.org/) to collect detailed information about your films, seasons and series.  
 A complete software package, including a tinyMediaManager and VLC Android-TV remote APK, is included in the installation package VLC AddOn MediaPlayList.  
 AddOn uses local `NFO` format files to receive information used by `Kodi` (`XBMC`) and `MediaPortal`.  
 
-![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)
+![VLC Android-TV remote - screencap 1](img/playlistVSplaylist.png)  
 
 - [screenshot using VLC default PlayList](VLC-default-PlayList-Page.md)  
 - [screenshot using VLC AddOn Media Play List](VLC-Media-PlayList-Page.md)

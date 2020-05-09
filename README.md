@@ -3,5 +3,6 @@ This Application is designed to control the VLC player running on a remote devic
 
 ### Support Android-TV only.
 
-[VLC-TV-Remote APK download](https://clonetv.github.io/VLC-TV-Remote/)
+[VLC-TV-Remote APK download](https://clonetv.github.io/VLC-TV-Remote/)  
+[Translate any language] (https://crowdin.com/project/android-tv-vlc-remote)  
 

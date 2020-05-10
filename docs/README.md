@@ -35,6 +35,7 @@ You can view information about the current video fragment, or the browsing histo
 
 - [screenshot phone/tablet remote](phone-tablet-remote-Page.md)  
 
+---
 
 # VLC Playlist VS VLC MediaPlayList AddOn
 

@@ -32,7 +32,6 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
     public DataMediaItem item = new DataMediaItem();
     private ImageView ivPoster;
     private RecyclerView recyclerView;
-    private ImageButton iButton;
 
     @Override
     public View onCreateView(@NotNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
                 false);
         binding.setFrag(this);
         View v = binding.getRoot();
-        iButton = v.findViewById(R.id.imgebtn_history_play);
+        ImageButton iButton = v.findViewById(R.id.imgebtn_history_play);
         ivPoster = v.findViewById(R.id.img_logo);
         recyclerView = v.findViewById(R.id.list_view);
         recyclerView.setLayoutManager(
@@ -61,7 +60,7 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
                     );
             }
         });
-        AppMain.getStatus().setCallbackPlayHistoryChanged(this);
+        AppMain.getStatus().eventHistory.setCallbackChanged(this);
         AppMain.getMediaItems();
         return v;
     }
@@ -70,14 +69,14 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
     public void onResume() {
         super.onResume();
         AppMain.getStatus().AppHistory.set(true);
-        AppMain.getStatus().setCallbackPlayHistoryChanged(this);
+        AppMain.getStatus().eventHistory.setCallbackChanged(this);
         AppMain.getMediaItems();
     }
 
     @Override
     public void onPause() {
         AppMain.getStatus().AppHistory.set(false);
-        AppMain.getStatus().removeCallbackPlayHistoryChanged(this);
+        AppMain.getStatus().eventHistory.removeCallbackChanged(this);
         super.onPause();
     }
 
@@ -95,13 +94,26 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
     }
 
     @Override
-    public void onPlayChange() {
+    public void onPlayStateChange() {
+        try {
+            item.setDurations(
+                    AppMain.getStatus().TimeTotal.get(),
+                    AppMain.getStatus().TimeCurrent.get(),
+                    AppMain.getStatus().TimeRemain.get(),
+                    AppMain.getStatus().TimeType.get()
+            );
+        } catch (Exception ignored) {}
+    }
+
+    @Override
+    public void onPlayItemChange() {
+        addHistoryList();
     }
 
     private void addHistoryList() {
 
         try {
-            DataMediaItem[] items = AppMain.getStatus().getItemsList();
+            DataMediaItem[] items = AppMain.getStatus().eventHistory.getItemsList();
             if (items == null)
                 return;
 

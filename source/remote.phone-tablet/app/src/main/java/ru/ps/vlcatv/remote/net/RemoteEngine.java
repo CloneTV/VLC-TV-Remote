@@ -1,5 +1,6 @@
 package ru.ps.vlcatv.remote.net;
 
+import android.os.Handler;
 import android.util.Log;
 import java.util.Locale;
 import java.util.Objects;
@@ -28,31 +29,42 @@ public class RemoteEngine implements SettingsInterface {
     private CallbackCmdDefault cb_default = new CallbackCmdDefault();
     private CallbackMediaItem cb_mediaItem = new CallbackMediaItem();
     private CallbackMediaItems cb_mediaItems = new CallbackMediaItems();
+    private Handler handler = new Handler();
+    private Runnable runnable = null;
+    private int countWarning = 0;
 
     public RemoteEngine() {
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                init();
+            }
+        };
         init();
-        try {
-            AppMain.getSettings().setCallbackChanged(this);
-        } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e(TAG, e.getLocalizedMessage(), e);
-        }
+        AppMain.getSettings().setCallbackChanged(this);
     }
 
     @Override
     public void onSettingsChange() {
         init();
     }
-
     @Override
-    public void onPlayChange() {}
-
+    public void onPlayStateChange() {}
+    @Override
+    public void onPlayItemChange() {}
     @Override
     public void onHistoryChange() {}
 
     private void init() {
 
-        if (AppMain.getSettings().isempty())
+        if (AppMain.getSettings().isempty()) {
+            handler.postDelayed(runnable, 1000);
             return;
+        } else {
+            try {
+                handler.removeCallbacksAndMessages(runnable);
+            } catch (Exception e) {}
+        }
 
         m_remoteInterface = null;
 
@@ -73,6 +85,8 @@ public class RemoteEngine implements SettingsInterface {
                     .client(okHttpClient);
             retrofit = builder.build();
             m_remoteInterface = retrofit.create(RemoteInterface.class);
+            if (m_remoteInterface != null)
+                countWarning = 0;
 
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e(TAG, e.getLocalizedMessage(), e);
@@ -84,10 +98,14 @@ public class RemoteEngine implements SettingsInterface {
     private boolean checkInstance() {
         if (m_remoteInterface == null) {
             if ((Utils.isempty(AppMain.getSettings().Address.get())) ||
-                    (Utils.isempty(AppMain.getSettings().Port.get())))
+                    (Utils.isempty(AppMain.getSettings().Port.get()))) {
                 AppMain.printError(R.string.warning_connect1);
-            else
+            } else if ((countWarning > 1) && (countWarning++ < 6)) {
                 AppMain.printError(R.string.warning_connect2);
+            }
+            if (countWarning == 30)
+                countWarning = 0;
+
             return false;
         }
         return true;
@@ -207,7 +225,7 @@ public class RemoteEngine implements SettingsInterface {
                     if (o != null)
                         items[i] = new DataMediaItem(o);
                 }
-                AppMain.getStatus().setItemsList(items);
+                AppMain.getStatus().eventHistory.setItemsList(items);
 
             } catch (Exception e) {
                 if (BuildConfig.DEBUG) Log.e(TAG, Objects.requireNonNull(e.getMessage()));

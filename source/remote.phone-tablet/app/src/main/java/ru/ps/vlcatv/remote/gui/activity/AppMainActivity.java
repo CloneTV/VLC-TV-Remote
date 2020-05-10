@@ -41,7 +41,8 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
             binding.setStatus(AppMain.getStatus());
 
             AppMain.getSettings().setCallbackChanged(this);
-            AppMain.getStatus().setCallbackPlayStateChanged(this);
+            AppMain.getStatus().eventItem.setCallbackChanged(this);
+            AppMain.getStatus().eventState.setCallbackChanged(this);
 
             m_pagerAdapter = new FragmentManageAdapter(getSupportFragmentManager());
             m_pagerAdapter.add(new ErrorFragment(), getResources().getString(R.string.fragment_title_0));
@@ -96,15 +97,24 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
     }
     @Override
     public void onSettingsChange() {
+        if (BuildConfig.DEBUG) Log.e(TAG, " -> onSettingsChange");
         event_FRAGMENT_TITLE();
     }
     @Override
-    public void onPlayChange() {
+    public void onPlayStateChange() {
+        if (BuildConfig.DEBUG) Log.e(TAG, " -> onPlayStateChange");
+        event_FRAGMENT_TITLE();
+    }
+    @Override
+    public void onPlayItemChange() {
+        if (BuildConfig.DEBUG) Log.e(TAG, " -> onPlayItemChange");
         event_FRAGMENT_TITLE();
     }
 
     @Override
-    public void onHistoryChange() {}
+    public void onHistoryChange() {
+        if (BuildConfig.DEBUG) Log.e(TAG, " -> onHistoryChange");
+    }
 
     private void event_FRAGMENT_TITLE() {
 

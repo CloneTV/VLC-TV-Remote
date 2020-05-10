@@ -127,19 +127,7 @@ public class DataMediaItem extends BaseObservable {
                 serialVisible.set(View.GONE);
             }
             if (duration.get() > 0) {
-                boolean b = (duration.get() > 60);
-                int d = (b ? (duration.get() / 60) : duration.get());
-                int l = (b ? ((lastpos.get() >= 60) ? (lastpos.get() / 60) : 0) : lastpos.get());
-                int r = (d - l);
-                time.set(
-                        String.format(Locale.getDefault(), "%d/%d/%d %s",
-                                d, l, r,
-                                (b ?
-                                   AppMain.getAppResources().getQuantityString(R.plurals.plurals_minutes, r) :
-                                   AppMain.getAppResources().getQuantityString(R.plurals.plurals_second, r)
-                                )
-                        )
-                );
+                setDurations();
                 timeVisible.set(View.VISIBLE);
             } else if (id.get() > -1) {
                 time.set(Integer.toString(id.get()));
@@ -151,6 +139,44 @@ public class DataMediaItem extends BaseObservable {
         } catch (Exception e) {
             if (BuildConfig.DEBUG) AppMain.printError(e.getLocalizedMessage());
         }
+    }
+
+    public void setDurations(int duration, int current, int remain, String s)
+    {
+        if (duration > 0)
+            time.set(String.format(Locale.getDefault(), "%d/%d/%d %s",
+                duration, current, remain,
+                    ((Utils.isempty(s)) ?
+                            AppMain.getAppResources()
+                                    .getQuantityString(R.plurals.plurals_minutes, remain) :
+                            s)
+            ));
+        else
+            time.set("");
+    }
+
+    private void setDurations()
+    {
+        try {
+            if (duration.get() > 0) {
+                boolean b = (duration.get() > 60);
+                int d = (b ? (duration.get() / 60) : duration.get());
+                int l = (b ? ((lastpos.get() >= 60) ? (lastpos.get() / 60) : 0) : lastpos.get());
+                int r = (d - l);
+                time.set(String.format(Locale.getDefault(), "%d/%d/%d %s",
+                        d, l, r,
+                        (b ?
+                                AppMain.getAppResources().getQuantityString(R.plurals.plurals_minutes, r) :
+                                AppMain.getAppResources().getQuantityString(R.plurals.plurals_second, r)
+                        )
+                ));
+                return;
+            }
+
+        } catch (Exception e) {
+            if (BuildConfig.DEBUG) AppMain.printError(e.getLocalizedMessage());
+        }
+        time.set("");
     }
 
     public void updatePoster(ImageView imgv)

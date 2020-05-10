@@ -41,6 +41,7 @@ public class AppMain extends Application {
                 req.status();
             } catch (Exception ignored) {}
 
+
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e(TAG, Objects.requireNonNull(e.getMessage()));
         }

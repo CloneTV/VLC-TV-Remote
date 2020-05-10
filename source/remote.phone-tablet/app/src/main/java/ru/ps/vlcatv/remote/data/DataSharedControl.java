@@ -8,28 +8,18 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
 import org.json.JSONObject;
-import java.util.ArrayList;
 
+import ru.ps.vlcatv.constanttag.DataTagVlcStatus;
 import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
+import ru.ps.vlcatv.remote.data.event.EventPlayHistoryChange;
+import ru.ps.vlcatv.remote.data.event.EventPlayItemChange;
+import ru.ps.vlcatv.remote.data.event.EventPlayStateChange;
 
 public class DataSharedControl extends BaseObservable {
     private static final String TAG = DataSharedControl.class.getSimpleName();
-
-    private static final String FIELD_LOOP = "loop";
-    private static final String FIELD_REPEAT = "repeat";
-    private static final String FIELD_RANDOM = "random";
-    private static final String FIELD_FULLSCREEN = "fullscreen";
-    private static final String FIELD_VOLUME = "volume";
-    private static final String FIELD_API = "apiversion";
-    private static final String FIELD_TITLE = "title";
-    private static final String FIELD_FILE = "filename";
-    private static final String FIELD_PLAYID = "currentplid";
-    private static final String FIELD_TIME = "time";
-    private static final String FIELD_LENGTH = "length";
-    private static final String FIELD_STATE = "state";
 
     //
 
@@ -37,8 +27,8 @@ public class DataSharedControl extends BaseObservable {
     public static final int BTN_RANDOM = R.id.imgbtn_random;
     public static final int BTN_REPEAT = R.id.imgbtn_repeat;
     public static final int BTN_FULLSCREEN = R.id.imgbtn_fullscreen;
-    public static final int BTN_MUTE = R.id.imgbtn_vol_up;
-    public static final int BTN_VOLUP = R.id.imgbtn_vol_mute;
+    public static final int BTN_MUTE = R.id.imgbtn_vol_mute;
+    public static final int BTN_VOLUP = R.id.imgbtn_vol_up;
     public static final int BTN_VOLDOWN = R.id.imgbtn_vol_down;
     public static final int BTN_PLAY_BY_ID = R.id.imgebtn_history_play;
     public static final int BTN_PLAY = R.id.imgbtn_play;
@@ -80,6 +70,7 @@ public class DataSharedControl extends BaseObservable {
     public final ObservableInt TimeTotal = new ObservableInt(0);
     public final ObservableInt TimeCurrent = new ObservableInt(0);
     public final ObservableInt TimeRemain = new ObservableInt(0);
+    public final ObservableInt TimeTypeId = new ObservableInt(0);
     public final ObservableInt PlayState = new ObservableInt(-1);
     public final ObservableInt VlcApiVersion = new ObservableInt(-1);
     public final ObservableBoolean PlayIsRepeat = new ObservableBoolean(false);
@@ -93,19 +84,14 @@ public class DataSharedControl extends BaseObservable {
     public final ObservableBoolean AppHistory = new ObservableBoolean(false);
     public final ObservableBoolean AppError = new ObservableBoolean(false);
 
-    public final ObservableInt CalcTimeTotal = new ObservableInt(0);
-    public final ObservableInt CalcTimeCurrent = new ObservableInt(0);
-    public final ObservableInt CalcTimeRemain = new ObservableInt(0);
-    public final ObservableField<String> CalcTimeType = new ObservableField<>("");
-
-    public DataMediaItem MmItem;
+    public DataMediaItem MmItem  = new DataMediaItem();
+    public EventPlayHistoryChange eventHistory = new EventPlayHistoryChange();
+    public EventPlayStateChange eventState = new EventPlayStateChange();
+    public EventPlayItemChange eventItem = new EventPlayItemChange();
 
     // virtual changer
     public final ObservableBoolean StateChange = new ObservableBoolean();
 
-    private ArrayList<SettingsInterface> cb_PlayStateChanged = new ArrayList<>();
-    private ArrayList<SettingsInterface> cb_PlayHistoryChanged = new ArrayList<>();
-    private DataMediaItem[] MmItems = null;
     private int colorTransparent;
     private int colorActivate;
     private int oldPlayId = -1;
@@ -113,105 +99,61 @@ public class DataSharedControl extends BaseObservable {
     public DataSharedControl() {
         colorTransparent = AppMain.getAppResources().getColor(R.color.colorTransparent, null);
         colorActivate = AppMain.getAppResources().getColor(R.color.colorAccent, null);
-        MmItem = new DataMediaItem();
 
-        OnPropertyChangedCallback cb = new OnPropertyChangedCallback() {
-            @Override
-            public void onPropertyChanged(Observable sender, int propertyId) {
-                bindPlayStatePropertyChanged();
-            }
-        };
-        PlayId.addOnPropertyChangedCallback(cb);
-        PlayState.addOnPropertyChangedCallback(cb);
+        PlayId.addOnPropertyChangedCallback(
+                new OnPropertyChangedCallback() {
+                    @Override
+                    public void onPropertyChanged(Observable sender, int propertyId) {
+                        eventItem.onChangeProperty(PlayId.get());
+                    }
+                });
+        PlayState.addOnPropertyChangedCallback(
+                new OnPropertyChangedCallback() {
+                    @Override
+                    public void onPropertyChanged(Observable sender, int propertyId) {
+                        eventState.onChangeProperty(PlayState.get());
+                    }
+                });
+        Title.addOnPropertyChangedCallback(
+                new OnPropertyChangedCallback() {
+                    @Override
+                    public void onPropertyChanged(Observable sender, int propertyId) {
+                        eventItem.onChangeProperty();
+                    }
+                });
     }
-
-    ///
-
-    public void setItemsList(DataMediaItem[] items)
-    {
-        MmItems = items;
-        bindPlayHistoryPropertyChanged();
-    }
-    public DataMediaItem[] getItemsList()
-    {
-        return MmItems;
-    }
-
-    ///
-
-    private void bindPlayStatePropertyChanged() {
-        try {
-            for (SettingsInterface si : cb_PlayStateChanged)
-                si.onPlayChange();
-        } catch (Exception ignored) {}
-    }
-    public void setCallbackPlayStateChanged(SettingsInterface cb) {
-        try {
-            if (!cb_PlayStateChanged.contains(cb))
-                cb_PlayStateChanged.add(cb);
-        } catch (Exception ignored) {}
-    }
-
-    ///
-
-    private void bindPlayHistoryPropertyChanged() {
-        try {
-            for (SettingsInterface si : cb_PlayHistoryChanged)
-                si.onHistoryChange();
-        } catch (Exception ignored) {}
-    }
-    public void setCallbackPlayHistoryChanged(SettingsInterface cb) {
-        try {
-            if (!cb_PlayHistoryChanged.contains(cb))
-                cb_PlayHistoryChanged.add(cb);
-        } catch (Exception ignored) {}
-    }
-    public void removeCallbackPlayHistoryChanged(SettingsInterface cb) {
-        try {
-            cb_PlayHistoryChanged.remove(cb);
-        } catch (Exception ignored) {}
-    }
-
-    ///
 
     public void fromJson(JSONObject obj) {
         if (obj == null)
             return;
         try {
-            Title.set(obj.optString(FIELD_TITLE, ""));
-            FileName.set(obj.optString(FIELD_FILE, ""));
+            Title.set(obj.optString(DataTagVlcStatus.TAG_TITLE, ""));
+            FileName.set(obj.optString(DataTagVlcStatus.TAG_FILE, ""));
 
-            PlayId.set(obj.optInt(FIELD_PLAYID, -1));
-            AudioVolume.set(obj.optInt(FIELD_VOLUME, 0));
+            PlayId.set(obj.optInt(DataTagVlcStatus.TAG_PLAYID, -1));
+            AudioVolume.set(obj.optInt(DataTagVlcStatus.TAG_VOLUME, 0));
 
-            // TimeType ??
-            TimeTotal.set(obj.optInt(FIELD_LENGTH, 0));
-            TimeCurrent.set(obj.optInt(FIELD_TIME, 0));
+            TimeTypeId.set(obj.optInt(DataTagVlcStatus.TAG_TIME_FMT, 1));
+            TimeTotal.set(obj.optInt(DataTagVlcStatus.TAG_LENGTH, 0));
+            TimeCurrent.set(obj.optInt(DataTagVlcStatus.TAG_TIME, 0));
             TimeRemain.set(TimeTotal.get() - TimeCurrent.get());
 
-            if (TimeTotal.get() > 60) {
-                CalcTimeTotal.set(TimeTotal.get() / 60);
-                CalcTimeCurrent.set(
-                        ((TimeCurrent.get() >= 60) ? (TimeCurrent.get() / 60) : 0)
-                );
-                CalcTimeRemain.set(
-                        ((TimeRemain.get() >= 60) ? (TimeRemain.get() / 60) : 0)
-                );
-                CalcTimeType.set("min");
-            } else {
-                CalcTimeTotal.set(TimeTotal.get());
-                CalcTimeCurrent.set(TimeCurrent.get());
-                CalcTimeRemain.set(TimeRemain.get());
-                CalcTimeType.set("sec");
-            }
+            PlayState.set(obj.optInt(DataTagVlcStatus.TAG_STATE, -1));
+            VlcApiVersion.set(obj.optInt(DataTagVlcStatus.TAG_API, -1));
 
-            PlayState.set(obj.optInt(FIELD_STATE, -1));
-            VlcApiVersion.set(obj.optInt(FIELD_API, -1));
+            PlayIsRepeat.set(obj.optBoolean(DataTagVlcStatus.TAG_REPEAT, false));
+            PlayIsLoop.set(obj.optBoolean(DataTagVlcStatus.TAG_LOOP, false));
+            PlayIsRandom.set(obj.optBoolean(DataTagVlcStatus.TAG_RANDOM, false));
+            PlayIsFullscreen.set(obj.optBoolean(DataTagVlcStatus.TAG_FULLSCREEN, false));
 
-            PlayIsRepeat.set(obj.optBoolean(FIELD_REPEAT, false));
-            PlayIsLoop.set(obj.optBoolean(FIELD_LOOP, false));
-            PlayIsRandom.set(obj.optBoolean(FIELD_RANDOM, false));
-            PlayIsFullscreen.set(obj.optBoolean(FIELD_FULLSCREEN, false));
+            if (TimeTypeId.get() > 0)
+                TimeType.set(
+                        AppMain.getAppResources().getQuantityString(R.plurals.plurals_minutes, TimeRemain.get())
+                );
+            else
+                TimeType.set(
+                        AppMain.getAppResources().getQuantityString(R.plurals.plurals_second, TimeRemain.get())
+                );
 
             switch (PlayState.get())
             {
@@ -333,21 +275,14 @@ public class DataSharedControl extends BaseObservable {
         }
     }
 
-    void setStateChange() {
+    private void setStateChange() {
         StateChange.set(!StateChange.get());
     }
     public void clickStateChange() {
         StateChange.set(!StateChange.get());
-        bindPlayStatePropertyChanged();
+        eventState.onChangeProperty(PlayState.get());
     }
     public boolean checkPlayState(int id) {
         return (PlayState.get() == id);
-    }
-    public boolean isMediaItemsEmpty()
-    {
-        for (DataMediaItem itm : MmItems)
-            if (itm != null)
-                return false;
-        return true;
     }
 }

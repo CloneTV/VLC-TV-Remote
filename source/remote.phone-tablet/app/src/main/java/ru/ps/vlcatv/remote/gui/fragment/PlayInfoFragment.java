@@ -9,23 +9,25 @@ import android.widget.ImageView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import org.jetbrains.annotations.NotNull;
+
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.data.DataMediaItem;
 import ru.ps.vlcatv.remote.data.DataSharedControl;
+import ru.ps.vlcatv.remote.data.SettingsInterface;
 import ru.ps.vlcatv.remote.databinding.FragmentPlayInfoBinding;
 
-public class PlayInfoFragment extends Fragment implements FragmentInterface {
+public class PlayInfoFragment extends Fragment implements FragmentInterface, SettingsInterface {
 
-    public DataMediaItem item = new DataMediaItem();
     public DataSharedControl status;
+    public DataMediaItem item = new DataMediaItem();
     private ImageView imageView;
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+    public View onCreateView(@NotNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
 
         status = AppMain.getStatus();
-        item.copy(status.MmItem);
         FragmentPlayInfoBinding binding = DataBindingUtil.inflate(
                 inflater,
                 R.layout.fragment_play_info,
@@ -34,21 +36,55 @@ public class PlayInfoFragment extends Fragment implements FragmentInterface {
         binding.setFrag(this);
         View v = binding.getRoot();
         imageView = v.findViewById(R.id.img_logo);
+        item.copy(status.MmItem);
         item.updatePoster(imageView);
+        AppMain.getStatus().eventItem.setCallbackChanged(this);
+        AppMain.getStatus().eventState.setCallbackChanged(this);
         return v;
     }
     @Override
     public void onResume() {
         super.onResume();
+        onPlayStateChange();
         AppMain.getStatus().AppInfo.set(true);
-        item.copy(status.MmItem);
-        item.updatePoster(imageView);
+        AppMain.getStatus().eventItem.setCallbackChanged(this);
+        AppMain.getStatus().eventState.setCallbackChanged(this);
     }
     @Override
     public void onPause() {
         AppMain.getStatus().AppInfo.set(false);
+        AppMain.getStatus().eventItem.removeCallbackChanged(this);
+        AppMain.getStatus().eventState.removeCallbackChanged(this);
         super.onPause();
     }
     @Override
     public void setTitle(String s) {}
+
+    @Override
+    public void onSettingsChange() {
+    }
+
+    @Override
+    public void onPlayStateChange() {
+        try {
+            item.copy(status.MmItem);
+            item.updatePoster(imageView);
+        } catch (Exception ignored) {}
+    }
+
+    @Override
+    public void onPlayItemChange() {
+        try {
+            item.setDurations(
+                    status.TimeTotal.get(),
+                    status.TimeCurrent.get(),
+                    status.TimeRemain.get(),
+                    status.TimeType.get()
+            );
+        } catch (Exception ignored) {}
+    }
+
+    @Override
+    public void onHistoryChange() {
+    }
 }

@@ -11,6 +11,7 @@ public class DataTagVlcStatus {
     public static final String TAG_FILE = "filename";
     public static final String TAG_PLAYID = "currentplid";
     public static final String TAG_TIME = "time";
+    public static final String TAG_TIME_FMT = "timefmt";
     public static final String TAG_LENGTH = "length";
     public static final String TAG_STATE = "state";
     public static final String TAG_INFO = "information";

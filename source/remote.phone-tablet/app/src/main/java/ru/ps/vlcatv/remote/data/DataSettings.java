@@ -1,26 +1,23 @@
 package ru.ps.vlcatv.remote.data;
 
-import android.util.Log;
-
-import androidx.databinding.BaseObservable;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 import androidx.preference.PreferenceManager;
 import android.content.SharedPreferences;
-import java.util.ArrayList;
+
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.Utils;
+import ru.ps.vlcatv.remote.data.event.BaseEventChange;
 
 import static androidx.preference.PreferenceManager.getDefaultSharedPreferences;
 
-public class DataSettings extends BaseObservable {
+public class DataSettings extends BaseEventChange {
 
     private static final String PREF_IP = "netaddr";
     private static final String PREF_PORT = "netport";
 
     public final ObservableField<String> Address = new ObservableField<>();
     public final ObservableField<String> Port = new ObservableField<>();
-    private ArrayList<SettingsInterface> cb_interface = new ArrayList<>();
 
     public DataSettings() {
         Address.set("");
@@ -28,19 +25,15 @@ public class DataSettings extends BaseObservable {
         OnPropertyChangedCallback cb = new OnPropertyChangedCallback() {
                     @Override
                     public void onPropertyChanged(Observable sender, int propertyId) {
-                        bindPropertyChanged();
+                        onChangeProperty();
                     }
                 };
         Address.addOnPropertyChangedCallback(cb);
         Port.addOnPropertyChangedCallback(cb);
     }
-    private void bindPropertyChanged() {
-        for (SettingsInterface si : cb_interface)
-            si.onSettingsChange();
-    }
-    public void setCallbackChanged(SettingsInterface cb) {
-        if (!cb_interface.contains(cb))
-            cb_interface.add(cb);
+    @Override
+    protected void callPropertyChanged(SettingsInterface si) {
+        si.onSettingsChange();
     }
     public boolean isempty() {
         return (Utils.isempty(Address.get()) || Utils.isempty(Port.get()));
@@ -49,7 +42,7 @@ public class DataSettings extends BaseObservable {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(AppMain.getAppContext());
         Address.set(pref.getString(PREF_IP, ""));
         Port.set(pref.getString(PREF_PORT, ""));
-        bindPropertyChanged();
+        onChangeProperty();
     }
     public void setPreferences() {
         SharedPreferences pref = getDefaultSharedPreferences(AppMain.getAppContext());

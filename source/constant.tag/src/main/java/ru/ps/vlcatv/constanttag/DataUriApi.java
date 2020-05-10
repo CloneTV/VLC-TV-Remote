@@ -37,4 +37,10 @@ public class DataUriApi {
     public final static String TAG_ID_OK = "OK";
     public final static String TAG_ID_MEDIAITEM = "MEDIAITEM";
     public final static String TAG_ID_MEDIAITEMS = "MEDIAITEMS";
+
+    public final static String TAG_SUPPORT_GIT = "https://github.com/CloneTV/VLC-TV-Remote";
+    public final static String TAG_SUPPORT_WWW = "https://clonetv.github.io/VLC-TV-Remote/";
+    public final static String TAG_SUPPORT_APTOIDE = "https://vlc-atv-remote.ru.aptoide.com/";
+    public final static String TAG_SUPPORT_APTOIDE_PHONE = "https://vlcatv-remote.ru.aptoide.com/?store_name=clonetv&app_id=51518679";
+    public final static String TAG_SUPPORT_APTOIDE_TV = "https://vlc-atv-remote.ru.aptoide.com/?store_name=clonetv&app_id=51518577";
 }

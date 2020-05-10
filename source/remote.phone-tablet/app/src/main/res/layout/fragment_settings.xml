@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
+        android:layout_height="40dp"
         android:background="@color/colorAccent"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -31,13 +32,14 @@
 
     <EditText
         android:id="@+id/tv_ip"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_port"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtn_net_end"
         app:layout_constraintStart_toStartOf="@+id/tv_port"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -55,28 +57,84 @@
 
     <EditText
         android:id="@+id/tv_port"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imgbtn_net_end"
         app:layout_constraintStart_toEndOf="@+id/tvLabel2"
         app:layout_constraintTop_toBottomOf="@+id/tv_ip" />
 
     <ImageButton
         android:id="@+id/imgbtn_net_end"
-        android:layout_width="82dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginTop="16dp"
         android:background="@drawable/btn_round_selector_accent"
         android:onClick="OnClickBtn"
         android:padding="8dp"
         android:scaleType="centerCrop"
         android:src="@drawable/upload_to_ftp_96px"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_aptoidtv"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="OnGoUrlBtn"
+        android:src="@drawable/aptoidetv_96px"
+        android:background="@drawable/btn_round_selector_accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtn_aptoid"
+        app:layout_constraintTop_toBottomOf="@+id/tv_port" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_aptoid"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/aptoide_96px"
+        android:onClick="OnGoUrlBtn"
+        android:background="@drawable/btn_round_selector_accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtn_web"
+        app:layout_constraintTop_toBottomOf="@+id/tv_port" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_web"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/web_96px"
+        android:onClick="OnGoUrlBtn"
+        android:background="@drawable/btn_round_selector_accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgbtn_git"
+        app:layout_constraintTop_toBottomOf="@+id/tv_port" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_git"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/github_96px"
+        android:onClick="OnGoUrlBtn"
+        android:background="@drawable/btn_round_selector_accent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_port" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@ package ru.ps.vlcatv.remote.gui.activity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -11,6 +13,7 @@ import android.view.View;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
@@ -295,6 +298,29 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
                 break;
             }
         }
+    }
+
+    public void OnGoUrlBtn(View v) {
+        String s;
+        switch (v.getId())
+        {
+            case R.id.imgbtn_aptoid:
+                s = DataUriApi.TAG_SUPPORT_APTOIDE_PHONE;
+                break;
+            case R.id.imgbtn_aptoidtv:
+                s = DataUriApi.TAG_SUPPORT_APTOIDE_TV;
+                break;
+            case R.id.imgbtn_web:
+                s = DataUriApi.TAG_SUPPORT_WWW;
+                break;
+            case R.id.imgbtn_git:
+                s = DataUriApi.TAG_SUPPORT_GIT;
+                break;
+            default:
+                return;
+        }
+        Intent wwwIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(s));
+        startActivity(wwwIntent);
     }
 
     private static final class statusTask extends TimerTask {

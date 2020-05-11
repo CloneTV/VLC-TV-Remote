@@ -4,6 +4,7 @@
     <dimen name="text_size">18sp</dimen>
     <dimen name="title_size">20sp</dimen>
     <dimen name="button_size">82dp</dimen>
+    <dimen name="button_min_size">62dp</dimen>
     <dimen name="info_margin_port">3dp</dimen>
     <dimen name="info_margin_land">8dp</dimen>
 </resources>

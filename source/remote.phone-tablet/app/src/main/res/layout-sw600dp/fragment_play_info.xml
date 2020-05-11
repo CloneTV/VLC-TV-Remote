@@ -166,7 +166,7 @@
             android:visibility="@{frag.item.descVisible}" />
 
         <LinearLayout
-            android:id="@+id/divider02"
+            android:id="@+id/divider08"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:background="@color/colorAccent"

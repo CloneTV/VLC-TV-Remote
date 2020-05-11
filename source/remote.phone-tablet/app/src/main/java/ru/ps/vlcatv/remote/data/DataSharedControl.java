@@ -51,6 +51,8 @@ public class DataSharedControl extends BaseObservable {
     public static final int BTN_SETUP = R.id.imgbtn_setup;
     public static final int BTN_SETUPD = R.id.imgbtn_net_end;
     public static final int BTN_TITLE = R.id.tv_title_close;
+    public static final int BTN_SEARCH = R.id.imgbtn_search;
+    public static final int BTN_MLIST = R.id.imgbtn_mlist;
     public static final int BTN_ERROR = R.id.imgbtn_error;
     public static final int BTN_ERRORD = R.id.tv_error;
     public static final int BTN_ERRORE = 10001;
@@ -82,6 +84,7 @@ public class DataSharedControl extends BaseObservable {
     public final ObservableBoolean AppTitle = new ObservableBoolean(false);
     public final ObservableBoolean AppInfo = new ObservableBoolean(false);
     public final ObservableBoolean AppHistory = new ObservableBoolean(false);
+    public final ObservableBoolean AppSearch = new ObservableBoolean(false);
     public final ObservableBoolean AppError = new ObservableBoolean(false);
 
     public DataMediaItem MmItem  = new DataMediaItem();
@@ -217,9 +220,11 @@ public class DataSharedControl extends BaseObservable {
                 return DataUriApi.PAD_CENTER;
             case BTN_BACK:
                 return DataUriApi.KEY_BACK;
+            case BTN_SEARCH:
+                return DataUriApi.GET_SEARCH_ACTIVITY;
             case BTN_HOME: {
                 if (AppRun.get()) {
-                    return DataUriApi.GET_ACTIVITY;
+                    return DataUriApi.GET_MAIN_ACTIVITY;
                 } else {
                     return DataUriApi.KEY_BACK;
                 }
@@ -261,6 +266,10 @@ public class DataSharedControl extends BaseObservable {
             case BTN_HOME: {
                 setStateChange();
                 return AppRun.get() ? colorActivate : colorTransparent;
+            }
+            case BTN_SEARCH: {
+                setStateChange();
+                return AppSearch.get() ? colorActivate : colorTransparent;
             }
             case BTN_SETUP: {
                 setStateChange();

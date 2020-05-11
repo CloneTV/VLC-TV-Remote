@@ -15,4 +15,5 @@
     <string name="fragment_title_2">Описание</string>
     <string name="fragment_title_3">Настройки</string>
     <string name="fragment_title_4">История</string>
+    <string name="fragment_title_5">Поиск</string>
 </resources>

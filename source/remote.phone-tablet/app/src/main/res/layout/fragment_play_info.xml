@@ -166,15 +166,14 @@
             android:visibility="@{frag.item.descVisible}" />
 
         <LinearLayout
-            android:id="@+id/divider02"
+            android:id="@+id/divider08"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:background="@color/colorAccent"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-        </LinearLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
     </ScrollView>

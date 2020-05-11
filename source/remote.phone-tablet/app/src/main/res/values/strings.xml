@@ -15,5 +15,6 @@
     <string name="fragment_title_2">Current play Info</string>
     <string name="fragment_title_3">App Settings</string>
     <string name="fragment_title_4">Play History</string>
+    <string name="fragment_title_5">Search</string>
 
 </resources>

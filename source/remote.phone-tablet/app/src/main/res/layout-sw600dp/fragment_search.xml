@@ -1,0 +1,75 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".gui.fragment.SearchFragment">
+
+    <data>
+        <variable
+            name="frag"
+            type="ru.ps.vlcatv.remote.gui.fragment.SearchFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorMainBackground">
+
+        <ImageButton
+            android:id="@+id/imgbtn_micro"
+            android:layout_width="@dimen/button_min_size"
+            android:layout_height="@dimen/button_min_size"
+            android:background="@drawable/btn_round_selector_accent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/microphone_96px"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tv_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:backgroundTint="@color/colorAccent"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:fadingEdge="horizontal"
+            android:foregroundGravity="left|center_vertical"
+            android:inputType="textAutoCorrect|textPersonName"
+            android:nextFocusLeft="@id/imgbtn_micro"
+            android:nextFocusRight="@id/imgbtn_go_search"
+            android:nextFocusUp="@id/imgbtn_micro"
+            android:nextFocusDown="@id/imgbtn_go_search"
+            android:saveEnabled="true"
+            android:scrollHorizontally="false"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:text="@={frag.txtSearch}"
+            android:textColor="@color/colorMainText"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="@color/colorAccent"
+            android:textDirection="locale"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_go_search"
+            app:layout_constraintStart_toEndOf="@+id/imgbtn_micro"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_go_search"
+            android:layout_width="@dimen/button_min_size"
+            android:layout_height="@dimen/button_min_size"
+            android:background="@drawable/btn_round_selector_accent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_more_96px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

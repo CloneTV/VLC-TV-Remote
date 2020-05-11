@@ -26,6 +26,7 @@ import ru.ps.vlcatv.remote.gui.fragment.ErrorFragment;
 import ru.ps.vlcatv.remote.gui.fragment.PlayHistoryFragment;
 import ru.ps.vlcatv.remote.gui.fragment.PlayInfoFragment;
 import ru.ps.vlcatv.remote.gui.fragment.PlayTitleFragment;
+import ru.ps.vlcatv.remote.gui.fragment.SearchFragment;
 import ru.ps.vlcatv.remote.gui.fragment.SettingsFragment;
 
 public class AppMainActivity extends FragmentActivity implements SettingsInterface {
@@ -53,6 +54,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
             m_pagerAdapter.add(new PlayInfoFragment(), getResources().getString(R.string.fragment_title_2));
             m_pagerAdapter.add(new SettingsFragment(), getResources().getString(R.string.fragment_title_3));
             m_pagerAdapter.add(new PlayHistoryFragment(), getResources().getString(R.string.fragment_title_4));
+            m_pagerAdapter.add(new SearchFragment(), getResources().getString(R.string.fragment_title_5));
 
             m_timer = new Timer();
             m_timer.scheduleAtFixedRate(new statusTask(), 0, 5000);
@@ -122,6 +124,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
     private void event_FRAGMENT_TITLE() {
 
         if ((AppMain.getStatus().AppInfo.get()) ||
+                (AppMain.getStatus().AppSearch.get()) ||
                 (AppMain.getStatus().AppHistory.get()))
             return;
 
@@ -131,7 +134,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
         if (AppMain.getStatus().AppTitle.get()) {
             if (b) {
                 m_pagerAdapter.removePageFragments(
-                        new int[] { 1, 2 },
+                        new int[] { 1, 2, 5 },
                         FragmentManageAdapter.TOP,
                         FragmentManageAdapter.UP);
             }
@@ -149,7 +152,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
                 (AppMain.getStatus().PlayId.get() == -1)) {
 
             m_pagerAdapter.removePageFragments(
-                    new int[] { 1, 2 },
+                    new int[] { 1, 2, 5 },
                     FragmentManageAdapter.TOP,
                     FragmentManageAdapter.UP);
             return;
@@ -162,6 +165,21 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
         } else {
             m_pagerAdapter.replaceClearPageFragments(
                     new int[] { 2, 1 },
+                    FragmentManageAdapter.TOP,
+                    FragmentManageAdapter.DOWN);
+        }
+    }
+
+    private void event_BTN_SEARCH() {
+
+        if (!AppMain.getStatus().AppSearch.get()) {
+            m_pagerAdapter.replaceClearPageFragments(
+                    new int[] { 1, 5 },
+                    FragmentManageAdapter.TOP,
+                    FragmentManageAdapter.UP);
+        } else {
+            m_pagerAdapter.removePageFragments(
+                    new int[] { 5 },
                     FragmentManageAdapter.TOP,
                     FragmentManageAdapter.DOWN);
         }
@@ -271,6 +289,10 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
             case DataSharedControl.BTN_HISTORY_BACK:
             case DataSharedControl.BTN_HISTORY: {
                 event_BTN_HISTORY();
+                break;
+            }
+            case DataSharedControl.BTN_SEARCH: {
+                event_BTN_SEARCH();
                 break;
             }
             default: {

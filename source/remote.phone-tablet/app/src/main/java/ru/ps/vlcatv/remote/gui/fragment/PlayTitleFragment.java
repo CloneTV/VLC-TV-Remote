@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
+import org.jetbrains.annotations.NotNull;
+
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.data.DataSharedControl;
@@ -17,9 +19,9 @@ public class PlayTitleFragment extends Fragment implements FragmentInterface {
     public DataSharedControl status;
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+    public View onCreateView(@NotNull final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
 
-        status = AppMain.getStatus();
+        status = AppMain.getStatus(); // don't change! binding using
         FragmentPlayTitleBinding binding = DataBindingUtil.inflate(
                 inflater,
                 R.layout.fragment_play_title,
@@ -31,11 +33,11 @@ public class PlayTitleFragment extends Fragment implements FragmentInterface {
     @Override
     public void onResume() {
         super.onResume();
-        AppMain.getStatus().AppTitle.set(true);
+        status.AppTitle.set(true);
     }
     @Override
     public void onPause() {
-        AppMain.getStatus().AppTitle.set(false);
+        status.AppTitle.set(false);
         super.onPause();
     }
 

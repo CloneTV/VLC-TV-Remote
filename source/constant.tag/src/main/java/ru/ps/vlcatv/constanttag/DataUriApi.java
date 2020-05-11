@@ -26,7 +26,8 @@ public class DataUriApi {
     public final static String KEY_MENU = "KEY_MENU";
     public final static String KEY_BACK = "KEY_BACK";
     public final static String KEY_HOME = "KEY_HOME";
-    public final static String GET_ACTIVITY = "GET_ACTIVITY";
+    public final static String GET_MAIN_ACTIVITY = "RUN_APP";
+    public final static String GET_SEARCH_ACTIVITY = "RUN_SEARCH";
 
     public final static String TAG_DATA = "data";
     public final static String TAG_ERROR = "error";

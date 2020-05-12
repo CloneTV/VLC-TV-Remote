@@ -42,8 +42,8 @@
 
         <ImageButton
             android:id="@+id/imgbtn_search"
-            android:layout_width="82dp"
-            android:layout_height="82dp"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
             android:layout_gravity="top"
             android:layout_weight="1"
             android:background="@drawable/btn_round_selector_accent"
@@ -51,7 +51,7 @@
             android:onClick="OnClickBtn"
             android:padding="16dp"
             android:scaleType="fitEnd"
-            android:src="@drawable/search_more_96px" />
+            android:src="@drawable/search_database_96px" />
     </LinearLayout>
 
     <LinearLayout

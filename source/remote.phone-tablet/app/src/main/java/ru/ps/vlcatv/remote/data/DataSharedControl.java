@@ -4,6 +4,7 @@ import android.view.KeyEvent;
 import androidx.annotation.ColorRes;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Observable;
+import androidx.databinding.ObservableArrayList;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
@@ -87,6 +88,7 @@ public class DataSharedControl extends BaseObservable {
     public final ObservableBoolean AppSearch = new ObservableBoolean(false);
     public final ObservableBoolean AppError = new ObservableBoolean(false);
 
+    public final ObservableArrayList<String> SearchTag = new ObservableArrayList<>();
     public DataMediaItem MmItem  = new DataMediaItem();
     public EventPlayHistoryChange eventHistory = new EventPlayHistoryChange();
     public EventPlayStateChange eventState = new EventPlayStateChange();

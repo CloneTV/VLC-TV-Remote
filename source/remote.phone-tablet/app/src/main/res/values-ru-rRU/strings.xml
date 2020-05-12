@@ -17,4 +17,6 @@
     <string name="fragment_title_4">История</string>
     <string name="fragment_title_5">Поиск</string>
     <string name="voice_search">Voice searching...</string>
+    <string name="exception_search_1">Failed to recognize speech!</string>
+    <string name="exception_search_2">Bad recognize results!</string>
 </resources>

@@ -12,11 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableField;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,17 +32,23 @@ import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.databinding.FragmentSearchBinding;
+import ru.ps.vlcatv.remote.databinding.ListviewSearchItemBinding;
 
-import static android.app.Activity.RESULT_OK;
+interface CallFromHolderInterface {
+    public void setQuery();
+    public void setQuery(String s);
+}
 
-
-public class SearchFragment extends Fragment implements FragmentInterface, TextToSpeech.OnInitListener {
+public class SearchFragment extends Fragment
+        implements FragmentInterface, TextToSpeech.OnInitListener, CallFromHolderInterface {
 
     private static final String TAG = SearchFragment.class.getSimpleName();
     private static final int REQUEST_SPEECH = 0x00000010;
-    public ObservableField<String> txtSearch = new ObservableField<>("");
+    private SearchItemAdapter adapter = null;
     private TextToSpeech textToSpeech = null;
     private boolean isVoiceSearch = false;
+
+    public final ObservableField<String> txtSearch = new ObservableField<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +59,7 @@ public class SearchFragment extends Fragment implements FragmentInterface, TextT
             List activities = pm.queryIntentActivities(
                     new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0
             );
+            adapter = new SearchItemAdapter(this);
             isVoiceSearch = (activities.size() != 0);
             if (BuildConfig.DEBUG) Log.d(TAG, "isVoiceSearch=" + isVoiceSearch);
 
@@ -92,9 +103,17 @@ public class SearchFragment extends Fragment implements FragmentInterface, TextT
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onSendRequest();
+                setQuery();
             }
         });
+
+        RecyclerView recyclerView = v.findViewById(R.id.list_search_tag);
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false)
+        );
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(adapter);
+
         return v;
     }
 
@@ -105,15 +124,14 @@ public class SearchFragment extends Fragment implements FragmentInterface, TextT
         try {
             if (requestCode != REQUEST_SPEECH)
                 return;
-            if ((resultCode != RESULT_OK) || (data == null))
-                throw new RuntimeException("Failed to recognize speech!");
+            if ((resultCode != android.app.Activity.RESULT_OK) || (data == null))
+                throw new RuntimeException(getString(R.string.exception_search_1));
 
             ArrayList<String> results = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             if ((results == null) || (results.size() == 0))
-                throw new RuntimeException("Bad recognize results!");
+                throw new RuntimeException(getString(R.string.exception_search_2));
 
-            txtSearch.set(TextUtils.join(" ", results));
-            onSendRequest();
+            setQuery(TextUtils.join(" ", results));
 
         } catch (Exception e) {
             AppMain.printError(e.getLocalizedMessage());
@@ -155,7 +173,8 @@ public class SearchFragment extends Fragment implements FragmentInterface, TextT
     @Override
     public void onInit(int status) {}
 
-    public void onSendRequest() {
+    @Override
+    public void setQuery() {
         try {
             if (Utils.isempty(txtSearch.get()))
                 return;
@@ -168,11 +187,86 @@ public class SearchFragment extends Fragment implements FragmentInterface, TextT
             if (Utils.isempty(b64))
                 return;
 
-            AppMain.getRequest(DataUriApi.GET_SEARCH_ACTIVITY, b64);
-            if (BuildConfig.DEBUG) Log.e(TAG, "search=" + txtSearch.get() + ", Base64=" + b64);
+            /*
+            if (b64.charAt(b64.length() - 2) == '=')
+                b64 = b64.replaceAll("[=]", "");
+            */
+
+            AppMain.getRequest(DataUriApi.GET_SEARCH_ACTIVITY, b64.trim());
+            if (adapter != null)
+                adapter.add(txtSearch.get());
+            if (BuildConfig.DEBUG) Log.e(TAG, "search=[" + txtSearch.get() + "], Base64=[" + b64 + "]");
 
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e(TAG, e.getLocalizedMessage(), e);
+        }
+    }
+    @Override
+    public void setQuery(String s) {
+        if (Utils.isempty(s))
+            return;
+        txtSearch.set(s);
+        setQuery();
+    }
+
+    static protected class SearchItemAdapter extends RecyclerView.Adapter<SearchItemAdapter.SearchItemViewHolder> {
+
+        private CallFromHolderInterface rootClass;
+
+        SearchItemAdapter(CallFromHolderInterface iface) {
+            rootClass = iface;
+        }
+
+        @NonNull
+        @Override
+        public SearchItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            ListviewSearchItemBinding bind =
+                    DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
+                            R.layout.listview_search_item, parent, false);
+            return new SearchItemViewHolder(bind, rootClass);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull SearchItemViewHolder holder, final int position) {
+            String s = AppMain.getStatus().SearchTag.get(position);
+            holder.bind.setTag(s);
+        }
+
+        @Override
+        public int getItemCount() {
+            return AppMain.getStatus().SearchTag.size();
+        }
+
+        void add(String s)
+        {
+            if (!AppMain.getStatus().SearchTag.contains(s)) {
+                AppMain.getStatus().SearchTag.add(s);
+                notifyDataSetChanged();
+                if (BuildConfig.DEBUG) Log.e(TAG, "items.add=" + s);
+            }
+        }
+
+        static class SearchItemViewHolder extends RecyclerView.ViewHolder {
+            final ListviewSearchItemBinding bind;
+            final CallFromHolderInterface rootClass;
+
+            SearchItemViewHolder(@NonNull ListviewSearchItemBinding b, CallFromHolderInterface iface) {
+                super(b.getRoot());
+                rootClass = iface;
+                bind = b;
+                bind.getRoot()
+                        .findViewById(R.id.lv_tag)
+                        .setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                try {
+                                    rootClass.setQuery(
+                                            ((TextView) v).getText().toString()
+                                    );
+                                } catch (Exception ignoring) {}
+                            }
+                        });
+            }
         }
     }
 }

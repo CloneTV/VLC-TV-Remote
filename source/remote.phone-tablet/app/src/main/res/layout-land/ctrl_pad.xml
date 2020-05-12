@@ -98,17 +98,17 @@
                 android:src="@drawable/double_right_96px" />
 
             <ImageButton
-                android:id="@+id/imgbtn_history"
+                android:id="@+id/imgbtn_mlist"
                 android:layout_width="@dimen/button_size"
                 android:layout_height="@dimen/button_size"
-                android:layout_gravity="center"
+                android:layout_gravity="bottom"
                 android:layout_weight="1"
                 android:background="@drawable/btn_round_selector_accent"
-                android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_HISTORY, status.StateChange)}"
+                android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_MLIST, status.StateChange)}"
                 android:onClick="OnClickBtn"
                 android:padding="16dp"
                 android:scaleType="fitEnd"
-                android:src="@drawable/squared_menu_96px" />
+                android:src="@drawable/list_96px" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,17 +138,17 @@
                 android:src="@drawable/double_down_96px" />
 
             <ImageButton
-                android:id="@+id/imgbtn_mlist"
+                android:id="@+id/imgbtn_history"
                 android:layout_width="@dimen/button_size"
                 android:layout_height="@dimen/button_size"
-                android:layout_gravity="bottom"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:background="@drawable/btn_round_selector_accent"
-                android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_MLIST, status.StateChange)}"
+                android:backgroundTint="@{status.getCtrlButtonBg(ru.ps.vlcatv.remote.data.DataSharedControl.BTN_HISTORY, status.StateChange)}"
                 android:onClick="OnClickBtn"
                 android:padding="16dp"
                 android:scaleType="fitEnd"
-                android:src="@drawable/list_96px" />
+                android:src="@drawable/squared_menu_96px" />
         </LinearLayout>
     </LinearLayout>
 </layout>

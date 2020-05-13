@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.util.Log;
 
 import androidx.annotation.StringRes;
 
@@ -16,6 +15,7 @@ import ru.ps.vlcatv.remote.data.DataSettings;
 import ru.ps.vlcatv.remote.data.DataSharedControl;
 import ru.ps.vlcatv.remote.gui.activity.AppMainActivity;
 import ru.ps.vlcatv.remote.net.RemoteEngine;
+import ru.ps.vlcatv.utils.Log;
 
 public class AppMain extends Application {
 

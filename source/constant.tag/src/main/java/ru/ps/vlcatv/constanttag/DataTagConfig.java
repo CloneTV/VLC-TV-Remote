@@ -15,6 +15,7 @@ public class DataTagConfig {
     public final static String TAG_ADD_PLAY_LIST = "is_add_playlist";
     public final static String TAG_VOICE_SEARCH = "is_preferred_voice_search";
     public final static String TAG_REMOTE_ENABLE = "is_remote_server";
+    public final static String TAG_TRAKT_ENABLE = "is_trakt_api";
     public final static String TAG_SEARCH_TYPE = "search_type";
     public final static String TAG_SEEK_IDX = "seek_idx";
     public final static String TAG_SEARCH_LIST = "searchList";

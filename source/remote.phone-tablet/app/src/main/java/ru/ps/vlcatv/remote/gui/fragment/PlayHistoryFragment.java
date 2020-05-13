@@ -1,7 +1,6 @@
 package ru.ps.vlcatv.remote.gui.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,10 +22,11 @@ import java.util.Objects;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.data.DataMediaItem;
 import ru.ps.vlcatv.remote.data.SettingsInterface;
 import ru.ps.vlcatv.remote.databinding.FragmentPlayHistoryBinding;
+import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.Text;
 
 public class PlayHistoryFragment extends Fragment implements FragmentInterface, SettingsInterface {
     public DataMediaItem item = new DataMediaItem();
@@ -152,7 +152,7 @@ public class PlayHistoryFragment extends Fragment implements FragmentInterface, 
             holder.pb.setProgress(items[position].lastpos.get());
             holder.title.setText(items[position].title.get());
             holder.category.setText(items[position].category.get());
-            if (!Utils.isempty(items[position].poster.get())) {
+            if (!Text.isempty(items[position].poster.get())) {
                 holder.img.setOnClickListener(new View.OnClickListener() {
                     private MediaItemViewHolder hld = holder;
                     @Override

@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
@@ -18,7 +17,6 @@ import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.data.SettingsInterface;
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.data.DataSharedControl;
 import ru.ps.vlcatv.remote.databinding.ActivityMainBinding;
 import ru.ps.vlcatv.remote.gui.FragmentManageAdapter;
@@ -28,6 +26,8 @@ import ru.ps.vlcatv.remote.gui.fragment.PlayInfoFragment;
 import ru.ps.vlcatv.remote.gui.fragment.PlayTitleFragment;
 import ru.ps.vlcatv.remote.gui.fragment.SearchFragment;
 import ru.ps.vlcatv.remote.gui.fragment.SettingsFragment;
+import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.Text;
 
 public class AppMainActivity extends FragmentActivity implements SettingsInterface {
 
@@ -128,7 +128,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
                 (AppMain.getStatus().AppHistory.get()))
             return;
 
-        boolean b = ((Utils.isempty(AppMain.getStatus().Title.get())) ||
+        boolean b = ((Text.isempty(AppMain.getStatus().Title.get())) ||
                 (AppMain.getStatus().PlayId.get() == -1));
 
         if (AppMain.getStatus().AppTitle.get()) {
@@ -148,7 +148,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
 
     private void event_BTN_TITLE() {
 
-        if ((Utils.isempty(AppMain.getStatus().Title.get())) ||
+        if ((Text.isempty(AppMain.getStatus().Title.get())) ||
                 (AppMain.getStatus().PlayId.get() == -1)) {
 
             m_pagerAdapter.removePageFragments(
@@ -218,7 +218,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
 
     private void event_EVT_ERROR(String s) {
 
-        if (Utils.isempty(s))
+        if (Text.isempty(s))
             return;
 
         if (!AppMain.getStatus().AppError.get()) {
@@ -313,7 +313,7 @@ public class AppMainActivity extends FragmentActivity implements SettingsInterfa
                     AppMain.getStatus().PlayState.set(KeyEvent.KEYCODE_MEDIA_STOP);
                 }
                 String cmd = AppMain.getStatus().getCtrlCmd(id);
-                if (!Utils.isempty(cmd)) {
+                if (!Text.isempty(cmd)) {
                     AppMain.getRequest(cmd);
                     AppMain.getStatus().clickStateChange();
                 }

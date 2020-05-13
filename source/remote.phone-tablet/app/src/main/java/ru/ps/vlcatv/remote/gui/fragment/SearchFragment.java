@@ -7,7 +7,6 @@ import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.util.Base64;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,9 +29,10 @@ import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.R;
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.databinding.FragmentSearchBinding;
 import ru.ps.vlcatv.remote.databinding.ListviewSearchItemBinding;
+import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.Text;
 
 interface CallFromHolderInterface {
     public void setQuery();
@@ -176,7 +176,7 @@ public class SearchFragment extends Fragment
     @Override
     public void setQuery() {
         try {
-            if (Utils.isempty(txtSearch.get()))
+            if (Text.isempty(txtSearch.get()))
                 return;
 
             String b64 = new String(
@@ -184,7 +184,7 @@ public class SearchFragment extends Fragment
                       .encodeToString(Objects.requireNonNull(txtSearch.get()).getBytes(),
                     Base64.DEFAULT)
             );
-            if (Utils.isempty(b64))
+            if (Text.isempty(b64))
                 return;
 
             /*
@@ -203,7 +203,7 @@ public class SearchFragment extends Fragment
     }
     @Override
     public void setQuery(String s) {
-        if (Utils.isempty(s))
+        if (Text.isempty(s))
             return;
         txtSearch.set(s);
         setQuery();

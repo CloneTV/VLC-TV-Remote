@@ -1,7 +1,6 @@
 package ru.ps.vlcatv.remote.net;
 
 import android.os.Handler;
-import android.util.Log;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -18,8 +17,9 @@ import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.remote.JsonObjectConverterFactory;
 import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.data.SettingsInterface;
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.data.DataMediaItem;
+import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.Text;
 
 public class RemoteEngine implements SettingsInterface {
 
@@ -97,8 +97,8 @@ public class RemoteEngine implements SettingsInterface {
 
     private boolean checkInstance() {
         if (m_remoteInterface == null) {
-            if ((Utils.isempty(AppMain.getSettings().Address.get())) ||
-                    (Utils.isempty(AppMain.getSettings().Port.get()))) {
+            if ((Text.isempty(AppMain.getSettings().Address.get())) ||
+                    (Text.isempty(AppMain.getSettings().Port.get()))) {
                 AppMain.printError(R.string.warning_connect1);
             } else if ((countWarning > 1) && (countWarning++ < 6)) {
                 AppMain.printError(R.string.warning_connect2);

@@ -1,0 +1,22 @@
+<resources>
+    <string name="trakt_oauth_message_ERR">communication error</string>
+    <string name="trakt_oauth_message_EXCEPT1">network error, authorization aborted</string>
+    <string name="trakt_oauth_message_EXCEPT2">communication exception</string>
+    <string name="trakt_oauth_message_BAD_CODE">bad return code: </string>
+    <string name="trakt_oauth_message_BAD_DATA">bad response</string>
+    <string name="trakt_oauth_message_BAD_INIT">internal error init Trakt.tv API</string>
+    <string name="trakt_oauth_message_OK">Insert your user code to authenticate URL:</string>
+    <string name="trakt_oauth_message_RUN">running</string>
+    <string name="trakt_oauth_message_BAD_ID">internal error, bad id</string>
+    <string name="trakt_oauth_message_EXCEPT">poll exception</string>
+    <string name="trakt_oauth_message_EXPIRE">time limit expired</string>
+    <string name="trakt_oauth_message_CANCELED">canceled..</string>
+    <string name="trakt_oauth_message_SUCCESS">SUCCESSFUL</string>
+    <string name="trakt_oauth_message_NONE">status reset..</string>
+    <string name="trakt_oauth_pending1">Pending expired, run again..</string>
+    <string name="trakt_oauth_pending2" formatted="false">Wait pending %d: %d min left..</string>
+    <string name="trakt_oauth_format_1" formatted="false">Stage %d: %s %s</string>
+    <string name="trakt_oauth_format_2" formatted="false">Wait - %s</string>
+    <string name="trakt_oauth_format_3" formatted="false">Auth: %s %s</string>
+    <string name="trakt_oauth_format_4" formatted="false">Process: %s %s</string>
+</resources>

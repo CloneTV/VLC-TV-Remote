@@ -6,8 +6,8 @@ import androidx.preference.PreferenceManager;
 import android.content.SharedPreferences;
 
 import ru.ps.vlcatv.remote.AppMain;
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.data.event.BaseEventChange;
+import ru.ps.vlcatv.utils.Text;
 
 import static androidx.preference.PreferenceManager.getDefaultSharedPreferences;
 
@@ -36,7 +36,7 @@ public class DataSettings extends BaseEventChange {
         si.onSettingsChange();
     }
     public boolean isempty() {
-        return (Utils.isempty(Address.get()) || Utils.isempty(Port.get()));
+        return (Text.isempty(Address.get()) || Text.isempty(Port.get()));
     }
     public void getPreferences() {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(AppMain.getAppContext());

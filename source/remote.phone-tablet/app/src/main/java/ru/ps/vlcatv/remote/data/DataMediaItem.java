@@ -9,11 +9,11 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONObject;
 import java.util.Locale;
 
+import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.constanttag.DataTagPlayItem;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
-import ru.ps.vlcatv.remote.R;
-import ru.ps.vlcatv.remote.Utils;
+import ru.ps.vlcatv.utils.Text;
 
 public class DataMediaItem extends BaseObservable {
 
@@ -105,13 +105,13 @@ public class DataMediaItem extends BaseObservable {
             duration.set(obj.optInt(DataTagPlayItem.TAG_DURATION, -1));
             lastpos.set(obj.optInt(DataTagPlayItem.TAG_LASTPOS, -1));
             dateVisible.set(
-                    ((Utils.isempty(date.get())) ? View.GONE : View.VISIBLE)
+                    ((Text.isempty(date.get())) ? View.GONE : View.VISIBLE)
             );
             descVisible.set(
-                    ((Utils.isempty(description.get())) ? View.GONE : View.VISIBLE)
+                    ((Text.isempty(description.get())) ? View.GONE : View.VISIBLE)
             );
             ratingVisible.set(
-                    ((Utils.isempty(rating.get())) ? View.GONE : View.VISIBLE)
+                    ((Text.isempty(rating.get())) ? View.GONE : View.VISIBLE)
             );
             if ((season.get() > -1) && (episode.get() > -1)) {
                 serial.set(
@@ -146,7 +146,7 @@ public class DataMediaItem extends BaseObservable {
         if (duration > 0)
             time.set(String.format(Locale.getDefault(), "%d/%d/%d %s",
                 duration, current, remain,
-                    ((Utils.isempty(s)) ?
+                    ((Text.isempty(s)) ?
                             AppMain.getAppResources()
                                     .getQuantityString(R.plurals.plurals_minutes, remain) :
                             s)
@@ -181,7 +181,7 @@ public class DataMediaItem extends BaseObservable {
 
     public void updatePoster(ImageView imgv)
     {
-        if (Utils.isempty(poster.get())) {
+        if (Text.isempty(poster.get())) {
             imgVisible.set(View.GONE);
         } else {
             try {
@@ -197,6 +197,6 @@ public class DataMediaItem extends BaseObservable {
 
     public boolean isempty()
     {
-        return ((Utils.isempty(title.get())) || (id.get() == -1));
+        return ((Text.isempty(title.get())) || (id.get() == -1));
     }
 }

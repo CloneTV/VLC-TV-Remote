@@ -16,6 +16,7 @@ public class DataTagPlayItem {
     public final static String TAG_TYPE = "typeIdInt";
     public final static String TAG_DURATION = "durationInt";
     public final static String TAG_LASTPOS = "lastposInt";
+    public final static String TAG_TRAKTID = "traktidInt";
     public final static String TAG_SEARCHLIST = "searchList";
     public final static String TAG_CATTOTAL = "categoryTotalInt";
     public final static String TAG_CAT = "categoryTxt";

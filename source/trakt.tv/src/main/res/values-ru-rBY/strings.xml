@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trakt_oauth_message_ERR">ошибка связи</string>
+    <string name="trakt_oauth_message_EXCEPT1">ошибка сети, авторизация прервана</string>
+    <string name="trakt_oauth_message_EXCEPT2">ошибка сети, вызвано исключение</string>
+    <string name="trakt_oauth_message_BAD_CODE">неверный код возврата: </string>
+    <string name="trakt_oauth_message_BAD_DATA">плохой ответ от сервера</string>
+    <string name="trakt_oauth_message_BAD_INIT">внутренняя ошибка игициализации Trakt.tv API</string>
+    <string name="trakt_oauth_message_OK">Введите свой код пользователя для аутентификации URL:</string>
+    <string name="trakt_oauth_message_RUN">выполняется</string>
+    <string name="trakt_oauth_message_BAD_ID">внутренняя ошибка, неверный идентификаторid</string>
+    <string name="trakt_oauth_message_EXCEPT">вызвано исключение во время опроса</string>
+    <string name="trakt_oauth_message_EXPIRE">время попыток авторизации истело, начните с начала</string>
+    <string name="trakt_oauth_message_CANCELED">отменено..</string>
+    <string name="trakt_oauth_message_SUCCESS">Авторизация прошла успешно</string>
+    <string name="trakt_oauth_message_NONE">сброс статуса..</string>
+    <string name="trakt_oauth_pending1">Срок ожидания истек, запустите авторизацию снова..</string>
+    <string name="trakt_oauth_pending2" formatted="false">Ожидание авторизации %d: %d минут осталось..</string>
+    <string name="trakt_oauth_format_1" formatted="false">Шаг %d: %s %s</string>
+    <string name="trakt_oauth_format_2" formatted="false">Ожидаем - %s</string>
+    <string name="trakt_oauth_format_3" formatted="false">Авторизация: %s %s</string>
+    <string name="trakt_oauth_format_4" formatted="false">Процесс: %s %s</string>
+</resources>

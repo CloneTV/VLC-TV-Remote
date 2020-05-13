@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
-import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.R;
-import ru.ps.vlcatv.remote.Utils;
+import ru.ps.vlcatv.remote.AppMain;
+import ru.ps.vlcatv.utils.Text;
 
 public class SettingsFragment extends Fragment implements FragmentInterface {
 
@@ -27,7 +27,7 @@ public class SettingsFragment extends Fragment implements FragmentInterface {
 
         sIp = AppMain.getSettings().Address.get();
         tvIp = v.findViewById(R.id.tv_ip);
-        if (!Utils.isempty(sIp))
+        if (!Text.isempty(sIp))
             tvIp.setText(sIp);
         tvIp.addTextChangedListener(new TextWatcher() {
             @Override
@@ -41,7 +41,7 @@ public class SettingsFragment extends Fragment implements FragmentInterface {
         });
         sPort = AppMain.getSettings().Port.get();
         tvPort = v.findViewById(R.id.tv_port);
-        if (!Utils.isempty(sPort))
+        if (!Text.isempty(sPort))
             tvPort.setText(sPort);
         tvPort.addTextChangedListener(new TextWatcher() {
             @Override
@@ -68,7 +68,7 @@ public class SettingsFragment extends Fragment implements FragmentInterface {
     @Override
     public void onStop() {
         try {
-            if (!Utils.isempty(sIp)) {
+            if (!Text.isempty(sIp)) {
                 if (sIp.length() < 7)
                     throw new IllegalArgumentException(getString(R.string.settings_except_1));
 
@@ -85,7 +85,7 @@ public class SettingsFragment extends Fragment implements FragmentInterface {
             } else {
                 throw new IllegalArgumentException(getString(R.string.settings_except_1));
             }
-            if (!Utils.isempty(sPort)) {
+            if (!Text.isempty(sPort)) {
                 if (sPort.length() < 4)
                     throw new IllegalArgumentException(getString(R.string.settings_except_4));
                 if (Integer.parseInt(sPort) >= 65536)

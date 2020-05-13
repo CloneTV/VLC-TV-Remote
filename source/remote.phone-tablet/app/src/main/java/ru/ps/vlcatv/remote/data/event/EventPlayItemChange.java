@@ -1,7 +1,7 @@
 package ru.ps.vlcatv.remote.data.event;
 
-import ru.ps.vlcatv.remote.Utils;
 import ru.ps.vlcatv.remote.data.SettingsInterface;
+import ru.ps.vlcatv.utils.Text;
 
 public class EventPlayItemChange extends BaseEventChange {
     private int playId = -1;
@@ -14,7 +14,7 @@ public class EventPlayItemChange extends BaseEventChange {
     @Override
     public void onChangeProperty(String s)
     {
-        if (!Utils.isempty(s))
+        if (!Text.isempty(s))
             super.onChangeProperty();
     }
     @Override

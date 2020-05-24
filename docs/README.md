@@ -23,7 +23,7 @@ Devices can be in different networks, taking into account the network routing se
 - remembers the latest playbacks, making it easy to return to them  
 - VLC addOn `MediaPlayList`  
 - add remote control App from phone/tablet devices  
-- add [Trakt.tv](https://trakt.tv) seasons/episodes/shows/movies tracker  
+- add support [Trakt.tv](https://trakt.tv) seasons/episodes/shows/movies tracker  
 
 ---
 

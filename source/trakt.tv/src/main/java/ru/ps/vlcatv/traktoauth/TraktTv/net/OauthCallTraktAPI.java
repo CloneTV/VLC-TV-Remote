@@ -347,7 +347,10 @@ public class OauthCallTraktAPI {
                     trakt = o.optInt("trakt", -1);
                     if (trakt == -1)
                         continue;
-                    currentMediaObject = new MediaObject(mtype, trakt);
+                    currentMediaObject = new MediaObject()
+                            .setMovieType(mtype)
+                            .setMovieId(trakt)
+                            .build();
                     break;
                 }
 

@@ -9,13 +9,13 @@ It is understood that the remote device where the VLC player is running, connect
 Also, the devices must be connected over a local network using Ethernet or Wi-Fi.  
 Devices can be in different networks, taking into account the network routing settings.  
 
-- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
-- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
-- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.2.0/vlcatv-phone-tablet-remote-release.apk) (`minimum API24, Nougat 7.0`)
+- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
+- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
+- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/vlcatv-phone-tablet-remote-release.apk) (`minimum API24, Nougat 7.0`)
 
 ---
 
-## New in version 1.2.x:
+## New in version 1.3.x:
 
 - automatic find VLC server in local network  
 - ambilight background  
@@ -23,6 +23,7 @@ Devices can be in different networks, taking into account the network routing se
 - remembers the latest playbacks, making it easy to return to them  
 - VLC addOn `MediaPlayList`  
 - add remote control App from phone/tablet devices  
+- add [Trakt.tv](https://trakt.tv) seasons/episodes/show/movies tracker  
 
 ---
 
@@ -34,6 +35,15 @@ You can view information about the current video fragment, or the browsing histo
 ![VLC Android-TV remote - phone/tablet remote](img/atvremote-poster.png)  
 
 - [screenshot phone/tablet remote](phone-tablet-remote-Page.md)  
+
+---
+
+# Trakt.tv seasons/episodes/shows/movies tracker
+
+Synchronizing your browsing history on the [TRAKT.TV](https://trakt.tv) service.  
+The Trakt.tv service helps users synchronize the viewing of their TV shows and movies on multiple devices.  
+
+![VLC Android-TV remote - phone/tablet remote](img/atvremote-trakt.png)  
 
 ---
 

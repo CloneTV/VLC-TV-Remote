@@ -24,36 +24,40 @@ public class MediaObject extends ReflectAttribute {
         MEDIA_TYPE_NONE
     }
 
-    public MediaObject(String title, int year, String slug) {
+    public MediaObject() {}
+    public MediaObject setMovieTitle(String title) {
         mediaTitle = title;
+        return this;
+    }
+    public MediaObject setMovieYear(int year) {
         mediaYear = year;
+        return this;
+    }
+    public MediaObject setMovieSeason(int season, int episode) {
+        mediaISeason = season;
+        mediaIEpisode = episode;
+        mediaType = MediaObjectType.MEDIA_TYPE_EPISODE;
+        return this;
+    }
+    public MediaObject setMovieType(MediaObjectType t) {
+        mediaType = t;
+        return this;
+    }
+    public MediaObject setMovieId(MediaIdType t, int id) {
+        mediaIds = new MediaId(t, id);
+        return this;
+    }
+    public MediaObject setMovieId(int id) {
+        mediaIds = new MediaId(MediaIdType.ID_TYPE_TRAKT, id);
+        return this;
+    }
+    public MediaObject setMovieId(String slug) {
         mediaIds = new MediaId(MediaIdType.ID_TYPE_SLUG, slug);
         mediaType = MediaObjectType.MEDIA_TYPE_MOVIE;
+        return this;
     }
-    public MediaObject(String title, int year, String slug, int season, int episode) {
-        mediaTitle = title;
-        mediaYear = year;
-        mediaISeason = season;
-        mediaIEpisode = episode;
-        mediaIds = new MediaId(MediaIdType.ID_TYPE_SLUG, slug);
-        mediaType = MediaObjectType.MEDIA_TYPE_EPISODE;
-    }
-    public MediaObject(String title, int year, int season, int episode, MediaIdType t, int id, MediaObjectType ot) {
-        mediaTitle = title;
-        mediaYear = year;
-        mediaISeason = season;
-        mediaIEpisode = episode;
-        mediaIds = new MediaId(t, id);
-        mediaType = ot;
-    }
-
-    public MediaObject(MediaObjectType t, int id) {
-        mediaIds = new MediaId(MediaIdType.ID_TYPE_TRAKT, id);
-        mediaType = t;
-    }
-    public MediaObject(MediaIdType t, int id, MediaObjectType ot) {
-        mediaIds = new MediaId(t, id);
-        mediaType = ot;
+    public MediaObject build() {
+        return this;
     }
 
     // "{...,\"episode\":{\"ids\":{\"trakt\":75539}}}"

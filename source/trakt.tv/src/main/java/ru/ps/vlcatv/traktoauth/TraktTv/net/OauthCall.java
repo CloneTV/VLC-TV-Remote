@@ -68,16 +68,18 @@ public class OauthCall {
         api = new OauthCallTraktAPI(holder);
         client = HttpDebugLogging.httpClientInit();
     }
-    public void setResources(Resources res) {
+    public OauthCall setResources(Resources res) {
         OauthCallMessage.setResources(res);
+        return this;
     }
-    public void setPreferences(SharedPreferences sp) {
+    public OauthCall setPreferences(SharedPreferences sp) {
         holder.setPreferences(sp);
         if ((holder.isActive()) && (api.Init())) {
             state = State.STAGE_SUCCESSFUL;
         } else {
             state = State.STAGE_NONE;
         }
+        return this;
     }
 
     public void StartRegisterDevice() {

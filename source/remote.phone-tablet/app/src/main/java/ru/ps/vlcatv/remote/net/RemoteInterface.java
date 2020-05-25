@@ -1,10 +1,9 @@
 package ru.ps.vlcatv.remote.net;
 
-import org.json.JSONObject;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import ru.ps.vlcatv.utils.json.JSONObject;
 
 public interface RemoteInterface {
 

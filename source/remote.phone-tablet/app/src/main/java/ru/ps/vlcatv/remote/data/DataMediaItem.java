@@ -6,7 +6,6 @@ import androidx.databinding.BaseObservable;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
 import com.squareup.picasso.Picasso;
-import org.json.JSONObject;
 import java.util.Locale;
 
 import ru.ps.vlcatv.remote.R;
@@ -14,6 +13,7 @@ import ru.ps.vlcatv.constanttag.DataTagPlayItem;
 import ru.ps.vlcatv.remote.AppMain;
 import ru.ps.vlcatv.remote.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
+import ru.ps.vlcatv.utils.json.JSONObject;
 
 public class DataMediaItem extends BaseObservable {
 

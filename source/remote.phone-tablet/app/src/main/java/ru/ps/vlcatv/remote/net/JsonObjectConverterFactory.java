@@ -1,8 +1,5 @@
 package ru.ps.vlcatv.remote;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
@@ -10,6 +7,8 @@ import java.lang.reflect.Type;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONException;
 
 public class JsonObjectConverterFactory extends Converter.Factory {
     public static JsonObjectConverterFactory create() {

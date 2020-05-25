@@ -1,12 +1,12 @@
 package ru.ps.vlcatv.traktoauth.TraktTv.data;
 
 import androidx.annotation.Keep;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
 import ru.ps.vlcatv.utils.reflect.FieldReflect;
 import ru.ps.vlcatv.utils.reflect.ObjectReflect;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONArray;
+import ru.ps.vlcatv.utils.json.JSONException;
 
 @Keep
 public class MediaObject extends ReflectAttribute {

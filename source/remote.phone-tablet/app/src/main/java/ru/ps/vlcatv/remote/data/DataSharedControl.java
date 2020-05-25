@@ -8,7 +8,6 @@ import androidx.databinding.ObservableArrayList;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
-import org.json.JSONObject;
 
 import ru.ps.vlcatv.constanttag.DataTagVlcStatus;
 import ru.ps.vlcatv.constanttag.DataUriApi;
@@ -18,6 +17,7 @@ import ru.ps.vlcatv.remote.R;
 import ru.ps.vlcatv.remote.data.event.EventPlayHistoryChange;
 import ru.ps.vlcatv.remote.data.event.EventPlayItemChange;
 import ru.ps.vlcatv.remote.data.event.EventPlayStateChange;
+import ru.ps.vlcatv.utils.json.JSONObject;
 
 public class DataSharedControl extends BaseObservable {
     private static final String TAG = DataSharedControl.class.getSimpleName();

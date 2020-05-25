@@ -1,7 +1,5 @@
 package ru.ps.vlcatv.traktoauth.TraktTv.net;
 
-import org.json.JSONObject;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -13,6 +11,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import ru.ps.vlcatv.traktoauth.TraktTv.data.OauthDataHolder;
 import ru.ps.vlcatv.traktoauth.TraktTv.data.type.ScrobbleRequest;
+import ru.ps.vlcatv.utils.json.JSONObject;
 
 public interface OAuthTraktGetInterface {
 

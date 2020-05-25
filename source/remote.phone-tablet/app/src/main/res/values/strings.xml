@@ -1,10 +1,10 @@
 <resources>
+    <string name="app_description">The remote control for Android-TV VLC player allows you to control all functions from a tablet or phone. You can view information about the current video fragment, or the browsing history with photos and a description.</string>
     <string name="app_name">Remote for Android-TV</string>
     <string name="warning_connect1">Go to settings and add IP address and port</string>
     <string name="warning_connect2">Bad IP address and port, edit settings</string>
     <string name="settings_ip_address">IP address</string>
     <string name="settings_network_port">Network port</string>
-
     <string name="settings_except_1">IP address has incompatible length</string>
     <string name="settings_except_2">the IP address is in the wrong format</string>
     <string name="settings_except_3">IP address has invalid values in determining network parameters</string>

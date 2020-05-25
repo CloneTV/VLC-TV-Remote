@@ -12,12 +12,12 @@ android {
         versionName "1.2." + gitVersionName
         buildConfigField 'String', 'REVISION', "\"$gitVersionName\""
     }
+    buildFeatures {
+        dataBinding = true
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-    dataBinding {
-        enabled = true
     }
     buildTypes {
         release {
@@ -30,7 +30,12 @@ android {
             shrinkResources false
         }
     }
-
+    configurations {
+        all {
+            exclude module: 'commons-logging'
+            exclude group: 'org.json', module: 'json'
+        }
+    }
 }
 
 dependencies {

@@ -1,6 +1,6 @@
 package ru.ps.vlcatv.traktoauth.TraktTv.net;
 
-import org.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONObject;
 
 public interface OAuthTraktOutInterface {
     public void outResponse(OAuthTraktGetInterface.RequestId id, JSONObject obj, int traktid);

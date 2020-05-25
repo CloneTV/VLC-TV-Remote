@@ -23,7 +23,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
+    configurations {
+        all {
+            exclude module: 'commons-logging'
+            exclude group: 'org.json', module: 'json'
+        }
+    }
 }
 
 dependencies {

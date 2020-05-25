@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_description">Пульт ДУ для Android-TV VLC player позволяет управлять всеми функциями с планшета или телефона. Вы можете просмотреть информацию о текущем фрагменте видео или историю просмотра с фотографиями и описанием.</string>
     <string name="app_name">Пульт плеера Android-TV</string>
     <string name="warning_connect1">Зайдите в настройки и заполните IP-адрес и порт</string>
     <string name="warning_connect2">Неверный IP-адрес и порт, измените настройки..</string>

@@ -1,10 +1,7 @@
 package ru.ps.vlcatv.traktoauth.TraktTv.net;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Locale;
-
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
@@ -21,6 +18,8 @@ import ru.ps.vlcatv.traktoauth.TraktTv.data.type.ScrobbleRequest;
 import ru.ps.vlcatv.traktoauth.TraktTv.net.OAuthTraktGetInterface.RequestId;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONArray;
 
 public class OauthCallTraktAPI {
 

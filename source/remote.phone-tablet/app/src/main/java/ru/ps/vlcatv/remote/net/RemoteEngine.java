@@ -4,8 +4,6 @@ import android.os.Handler;
 import java.util.Locale;
 import java.util.Objects;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,6 +18,8 @@ import ru.ps.vlcatv.remote.data.SettingsInterface;
 import ru.ps.vlcatv.remote.data.DataMediaItem;
 import ru.ps.vlcatv.utils.Log;
 import ru.ps.vlcatv.utils.Text;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONArray;
 
 public class RemoteEngine implements SettingsInterface {
 

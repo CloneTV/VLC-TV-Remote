@@ -1,10 +1,9 @@
 package ru.ps.vlcatv.utils.reflect;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONArray;
 
 public class ActionJson implements ActionInterface {
     private JSONObject obj = null;

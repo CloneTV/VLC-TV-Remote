@@ -4,8 +4,6 @@ import android.content.SharedPreferences;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -15,6 +13,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
+import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.json.JSONException;
 
 public class ReflectAttribute implements Parcelable {
 

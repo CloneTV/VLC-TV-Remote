@@ -22,8 +22,8 @@ Devices can be in different networks, taking into account the network routing se
 - extended multimedia playlist, compatible `Kodi`, `XMBC`, `MediaServer`  
 - remembers the latest playbacks, making it easy to return to them  
 - VLC addOn `MediaPlayList`  
-- add remote control App from phone/tablet devices  
-- add support [Trakt.tv](https://trakt.tv) seasons/episodes/shows/movies tracker  
+- added remote control App from phone/tablet devices  
+- added support [Trakt.tv](https://trakt.tv) seasons/episodes/shows/movies tracker  
 
 ---
 

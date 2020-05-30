@@ -7,11 +7,19 @@ android {
     defaultConfig {
         minSdkVersion 24
         targetSdkVersion 29
+        /*
+        versionCode 12
+        versionName "1.2.12"
+        */
         versionCode gitVersion.version
-        versionName "1.2." + gitVersionName
+        versionName "2.0." + gitVersionName
         buildConfigField "String", "TIMEBUILD", "\"${new Date(System.currentTimeMillis()).format("yyyy-MM-dd")}\""
         buildConfigField "String", "VERSIONBUILD", "\"$versionName\""
         consumerProguardFiles 'consumer-rules.pro'
+        resConfigs "en", "ru"
+    }
+    buildFeatures {
+        dataBinding = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -19,8 +27,41 @@ android {
     }
     buildTypes {
         release {
+            debuggable false
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "DEBUG_DB", "false"
+        }
+        debug {
+            debuggable true
+            buildConfigField "boolean", "DEBUG_DB", "false"
+        }
+    }
+    flavorDimensions 'buildDbSupport'
+    productFlavors {
+        dbEnable {
+            dimension 'buildDbSupport'
+        }
+        dbDisable {
+            dimension 'buildDbNotSupport'
+        }
+        gitVersionIncrement {
+            dimension 'buildVersionIncrement'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+        }
+        dbEnable {
+            java.srcDirs = ['src/dbEnable/java']
+        }
+        dbDisable {
+            java.srcDirs = ['src/dbDisable/java']
+        }
+        gitVersionIncrement {
+            // versionCode gitVersion.version
+            // versionName "1.2." + gitVersionName
         }
     }
     configurations {

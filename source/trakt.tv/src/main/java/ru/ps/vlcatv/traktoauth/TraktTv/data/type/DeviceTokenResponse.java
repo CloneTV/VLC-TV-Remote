@@ -3,31 +3,31 @@ package ru.ps.vlcatv.traktoauth.TraktTv.data.type;
 import androidx.annotation.Keep;
 
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
-import ru.ps.vlcatv.utils.reflect.FieldReflect;
+import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 import ru.ps.vlcatv.traktoauth.TraktTv.data.OauthDataHolder;
 
 @Keep
 public class DeviceTokenResponse extends ReflectAttribute implements ResponseInterface {
 
-    @FieldReflect("access_token")
+    @IFieldReflect("access_token")
     private String AccessToken = null;
-    @FieldReflect("token_type")
+    @IFieldReflect("token_type")
     private String TokenType = null;
-    @FieldReflect("refresh_token")
+    @IFieldReflect("refresh_token")
     private String RefreshToken = null;
-    @FieldReflect("scope")
+    @IFieldReflect("scope")
     private String Scope = null;
 
-    @FieldReflect("expires_in")
+    @IFieldReflect("expires_in")
     private long ExpiresToken = 0L;
-    @FieldReflect("created_at")
+    @IFieldReflect("created_at")
     private long CreatedToken = 0L;
 
-    @FieldReflect("app_data_expired")
+    @IFieldReflect("app_data_expired")
     private long DataExpired = 0L;
 
     public DeviceTokenResponse() {
-        setPrefixPreference(DeviceCodeResponse.class.getSimpleName());
+        super.setPrefixName(DeviceCodeResponse.class.getSimpleName());
     }
 
     @Override

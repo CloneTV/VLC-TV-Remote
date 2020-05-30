@@ -3,29 +3,29 @@ package ru.ps.vlcatv.traktoauth.TraktTv.data.type;
 import androidx.annotation.Keep;
 
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
-import ru.ps.vlcatv.utils.reflect.FieldReflect;
+import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 import ru.ps.vlcatv.traktoauth.TraktTv.data.OauthDataHolder;
 
 @Keep
 public class DeviceCodeResponse extends ReflectAttribute implements ResponseInterface {
 
-    @FieldReflect("device_code")
+    @IFieldReflect("device_code")
     private String DevCode = null;
-    @FieldReflect("user_code")
+    @IFieldReflect("user_code")
     private String UserCode = null;
-    @FieldReflect("verification_url")
+    @IFieldReflect("verification_url")
     private String VerificationUrl = null;
 
-    @FieldReflect("expires_in")
+    @IFieldReflect("expires_in")
     private long ExpiresIn = 0L;
-    @FieldReflect("interval")
+    @IFieldReflect("interval")
     private long Interval = 0L;
 
     // Valid only pending User code request + <ExpiresIn> seconds
     private long DataCreated = 0L;
 
     public DeviceCodeResponse() {
-        setPrefixPreference(DeviceCodeResponse.class.getSimpleName());
+        super.setPrefixName(DeviceCodeResponse.class.getSimpleName());
     }
 
     @Override

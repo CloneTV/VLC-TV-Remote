@@ -8,10 +8,11 @@ android {
         minSdkVersion 24
         targetSdkVersion 29
         versionCode gitVersion.version
-        versionName "1.2." + gitVersionName
+        versionName "2.0." + gitVersionName
         buildConfigField "String", "TIMEBUILD", "\"${new Date(System.currentTimeMillis()).format("yyyy-MM-dd")}\""
         buildConfigField "String", "VERSIONBUILD", "\"$versionName\""
         consumerProguardFiles 'consumer-rules.pro'
+        resConfigs "en", "ru"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -39,6 +40,18 @@ android {
         all {
             exclude module: 'commons-logging'
             exclude group: 'org.json', module: 'json'
+        }
+    }
+    flavorDimensions 'buildDbSupport', 'buildVersionIncrement'
+    productFlavors {
+        dbEnable {
+            dimension 'buildDbSupport'
+        }
+        dbDisable {
+            dimension 'buildDbNotSupport'
+        }
+        gitVersionIncrement {
+            dimension 'buildVersionIncrement'
         }
     }
 }

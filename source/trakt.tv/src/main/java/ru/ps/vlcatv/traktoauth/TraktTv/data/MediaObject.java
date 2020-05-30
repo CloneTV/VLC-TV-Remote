@@ -2,8 +2,8 @@ package ru.ps.vlcatv.traktoauth.TraktTv.data;
 
 import androidx.annotation.Keep;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
-import ru.ps.vlcatv.utils.reflect.FieldReflect;
-import ru.ps.vlcatv.utils.reflect.ObjectReflect;
+import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
+import ru.ps.vlcatv.utils.reflect.annotation.IObjectReflect;
 import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONException;
@@ -16,6 +16,8 @@ public class MediaObject extends ReflectAttribute {
         ID_TYPE_SLUG,
         ID_TYPE_IMDB,
         ID_TYPE_TMDB,
+        ID_TYPE_OMDB,
+        ID_TYPE_TITLE,
         ID_TYPE_NONE
     }
     public enum MediaObjectType {
@@ -56,6 +58,10 @@ public class MediaObject extends ReflectAttribute {
         mediaType = MediaObjectType.MEDIA_TYPE_MOVIE;
         return this;
     }
+    public MediaObject setMovieId(String slug, MediaIdType type) {
+        mediaIds = new MediaId(type, slug);
+        return this;
+    }
     public MediaObject build() {
         return this;
     }
@@ -63,19 +69,19 @@ public class MediaObject extends ReflectAttribute {
     // "{...,\"episode\":{\"ids\":{\"trakt\":75539}}}"
     // "{...,\"episode\":{\"season\":1,\"number\":2,\"title\":\"Моя Мертвая Няня\",\"ids\":{\"tmdb\":64811}}}"
 
-    @FieldReflect("watched_at")
+    @IFieldReflect("watched_at")
     private String mediaUpdate = null;
-    @FieldReflect("title")
+    @IFieldReflect("title")
     private String mediaTitle = null;
-    @FieldReflect("year")
+    @IFieldReflect("year")
     private int mediaYear = -1;
 
-    @FieldReflect("season")
+    @IFieldReflect("season")
     private int mediaISeason = -1;
-    @FieldReflect("number") // episode
+    @IFieldReflect("number") // episode
     private int mediaIEpisode = -1;
 
-    @ObjectReflect("ids")
+    @IObjectReflect("ids")
     private MediaId mediaIds = null;
     private MediaObjectType mediaType = MediaObjectType.MEDIA_TYPE_NONE;
 
@@ -110,13 +116,13 @@ public class MediaObject extends ReflectAttribute {
 
     @Keep
     private static class MediaId extends ReflectAttribute {
-        @FieldReflect("trakt")
+        @IFieldReflect("trakt")
         private int traktId = -1;
-        @FieldReflect("tmdb")
+        @IFieldReflect("tmdb")
         private int tmdbId = -1;
-        @FieldReflect("slug")
+        @IFieldReflect("slug")
         private String slugId = null;
-        @FieldReflect("imdb")
+        @IFieldReflect("imdb")
         private String imdbId = null;
 
         boolean isempty = true;

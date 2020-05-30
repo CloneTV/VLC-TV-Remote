@@ -9,9 +9,9 @@ It is understood that the remote device where the VLC player is running, connect
 Also, the devices must be connected over a local network using Ethernet or Wi-Fi.  
 Devices can be in different networks, taking into account the network routing settings.  
 
-- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/avlctv-remote-release.apk) (`minimum API 24, Nougat 7.0`)
-- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`)
-- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.3.0/vlcatv-phone-tablet-remote-release.apk) (`minimum API24, Nougat 7.0`)
+- [download current APK release](https://github.com/CloneTV/VLC-TV-Remote/releases/download/2.1.0/atv-home-media-release.apk) (`minimum API 24, Nougat 7.0`)
+- [download VLC AddOn MediaPlayList](https://github.com/CloneTV/VLC-TV-Remote/releases/download/2.1.0/VLCAddOnMediaPlayList.exe) (`tested VLC version 3.0.8 Vetinari`, build `Lua 5.1.5` 32bit)
+- [download Tablet/Phone remote](https://github.com/CloneTV/VLC-TV-Remote/releases/download/2.1.0/atv-phone-tablet-remote-home-media-release.apk) (`minimum API24, Nougat 7.0`)
 
 ---
 

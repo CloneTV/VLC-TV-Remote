@@ -3,7 +3,7 @@ package ru.ps.vlcatv.traktoauth.TraktTv.data.type;
 import androidx.annotation.Keep;
 import ru.ps.vlcatv.traktoauth.BuildConfig;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
-import ru.ps.vlcatv.utils.reflect.FieldReflect;
+import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 
 @Keep
 public class ScrobbleRequest extends ReflectAttribute {
@@ -15,11 +15,11 @@ public class ScrobbleRequest extends ReflectAttribute {
     public ScrobbleRequest() {}
     public ScrobbleRequest(int pos) { MediaProgress = (float)pos; }
 
-    @FieldReflect("progress")
+    @IFieldReflect("progress")
     private float MediaProgress = 0;
-    @FieldReflect("app_version")
+    @IFieldReflect("app_version")
     private final String AppVersion = BuildConfig.VERSION_NAME;
-    @FieldReflect("app_date")
+    @IFieldReflect("app_date")
     private final String AppBuildDate = BuildConfig.TIMEBUILD;
 
 }

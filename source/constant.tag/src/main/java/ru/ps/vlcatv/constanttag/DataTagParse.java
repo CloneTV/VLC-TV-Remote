@@ -20,5 +20,8 @@ public class DataTagParse {
     public final static String TAG_EPISODE = "episode";
     public final static String TAG_POSTERF = "posterfile";
     public final static String TAG_POSTERU = "posterurl";
+    public final static String TAG_FOUND = "found";
+    public final static String TAG_RESPONSE = "Response";
+    public final static String TAG_ERROR = "Error";
     public final static String TAG_DOT = ".";
 }

@@ -16,6 +16,7 @@ import ru.ps.vlcatv.traktoauth.TraktTv.data.type.DeviceTokenRequest;
 import ru.ps.vlcatv.traktoauth.TraktTv.data.type.DeviceTokenResponse;
 import ru.ps.vlcatv.traktoauth.TraktTv.net.OauthCallMessage;
 import ru.ps.vlcatv.utils.Log;
+import ru.ps.vlcatv.utils.Text;
 
 public class OauthDataHolder {
     static final public String url = "https://api.trakt.tv/";
@@ -63,7 +64,7 @@ public class OauthDataHolder {
                 return true;
             }
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("set Device Code Response", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("set Device Code Response", Text.requireString(e.getLocalizedMessage()), e);
         }
         return false;
     }
@@ -76,7 +77,7 @@ public class OauthDataHolder {
                 return true;
             }
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("set Device Token Response", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("set Device Token Response", Text.requireString(e.getLocalizedMessage()), e);
         }
         return false;
     }
@@ -86,7 +87,7 @@ public class OauthDataHolder {
             tokenReq.clear();
             tokenRes.clear();
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("clear Device Code Response", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("clear Device Code Response", Text.requireString(e.getLocalizedMessage()), e);
         }
     }
     public String PendingTimeLeft(int count) {

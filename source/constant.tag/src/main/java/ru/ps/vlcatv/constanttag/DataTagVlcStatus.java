@@ -17,4 +17,8 @@ public class DataTagVlcStatus {
     public static final String TAG_INFO = "information";
     public static final String TAG_CAT = "category";
     public static final String TAG_META = "meta";
+    public static final String TAG_VLCVER = "apiversion";
+    public static final String TAG_PLAYING = "playing";
+    public static final String TAG_STOPPED = "stopped";
+    public static final String TAG_PAUSED = "paused";
 }

@@ -5,7 +5,7 @@ EXIT
 )
 
 adb connect %1
-adb push avlctv-remote-release.apk storage/sdcard/avlctv-remote.apk
+adb push atv-home-media-release.apk storage/sdcard/avlctv-remote.apk
 rem adb shell pm uninstall ru.ps.vlc.atv.remote
 adb shell pm install -r storage/sdcard/avlctv-remote.apk
 adb shell rm storage/sdcard/avlctv-remote.apk

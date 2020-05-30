@@ -52,13 +52,14 @@ Name: "tinymm"; Description: "{cm:tinymmDescription}"; Types: extended;
 [Files]
 Source: "..\VLC\*"; Check: CheckVlcIntallationPath; DestDir: "{code:GetVlcIntallationPath}"; Flags: ignoreversion recursesubdirs createallsubdirs; Components: luascript;
 Source: "..\avlctv-remote-install.cmd"; Check: CheckVlcIntallationPath; DestDir: "{code:GetVlcIntallationPath}\AVLCTVR"; Flags: ignoreversion; Components: apkfile;
-Source: "{tmp}\avlctv-remote-release.apk"; Check: GetAvlctvRemote; DestDir: "{tmp}"; Flags: external deleteafterinstall; Components: apkfile;
+Source: "{tmp}\atv-home-media-release.apk"; Check: GetAtvHomeMedia; DestDir: "{tmp}"; Flags: external deleteafterinstall; Components: apkfile;
+Source: "{tmp}\atv-phone-tablet-remote-home-media-release.apk"; Check: GetAvlctvRemote; DestDir: "{tmp}"; Flags: external deleteafterinstall; Components: apkfile;
 Source: "{tmp}\tmm_3.1.4_win.zip"; Check: GetTinymediamanager; DestDir: "{tmp}"; Flags: external deleteafterinstall; Components: tinymm;
 
 [Run]
-Filename: "cmd.exe"; Parameters: "/C move ""{tmp}\avlctv-remote-release.apk"" ""{code:GetVlcIntallationPath}\AVLCTVR"""; WorkingDir: {tmp}; Components: apkfile;
+Filename: "cmd.exe"; Parameters: "/C move ""{tmp}\atv-home-media-release.apk"" ""{code:GetVlcIntallationPath}\AVLCTVR"""; WorkingDir: {tmp}; Components: apkfile;
+Filename: "cmd.exe"; Parameters: "/C move ""{tmp}\atv-phone-tablet-remote-home-media-release.apk"" ""{code:GetVlcIntallationPath}\AVLCTVR"""; WorkingDir: {tmp}; Components: apkfile;
 Filename: "cmd.exe"; Parameters: "/C move ""{tmp}\tmm_3.1.4_win.zip"" ""{code:GetVlcIntallationPath}\AVLCTVR"""; WorkingDir: {tmp}; Components: tinymm;
-
 
 [Code]
 var
@@ -107,9 +108,14 @@ begin
 
 end;
 
+function GetAtvHomeMedia(): Boolean;
+begin
+  Result := idpDownloadFile('https://github.com/CloneTV/VLC-TV-Remote/releases/download/2.1.0/atv-home-media-release.apk', ExpandConstant('{tmp}\atv-home-media-release.apk'));
+end;
+
 function GetAvlctvRemote(): Boolean;
 begin
-  Result := idpDownloadFile('https://github.com/CloneTV/VLC-TV-Remote/releases/download/1.0/avlctv-remote-release.apk', ExpandConstant('{tmp}\avlctv-remote-release.apk'));
+  Result := idpDownloadFile('https://github.com/CloneTV/VLC-TV-Remote/releases/download/2.1.0/atv-phone-tablet-remote-home-media-release.apk', ExpandConstant('{tmp}\atv-phone-tablet-remote-home-media-release.apk'));
 end;
 
 function GetTinymediamanager(): Boolean;

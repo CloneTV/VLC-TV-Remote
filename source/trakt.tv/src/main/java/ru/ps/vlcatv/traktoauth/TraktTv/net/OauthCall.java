@@ -411,7 +411,7 @@ public class OauthCall {
 
         } catch (Exception e) {
             stageException(State.STAGE_EXCEPT, e);
-            if (BuildConfig.DEBUG) Log.e("", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("", Text.requireString(e.getLocalizedMessage()), e);
         }
     }
 
@@ -433,7 +433,7 @@ public class OauthCall {
                 i.setConnectInfo(t, s);
 
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e(TAG + " cbInfo", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e(TAG + " cbInfo", Text.requireString(e.getLocalizedMessage()), e);
         }
     }
     private void cbError(State t, String s) {
@@ -442,7 +442,7 @@ public class OauthCall {
                 i.setConnectError(t, s);
 
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e(TAG + " cbError", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e(TAG + " cbError", Text.requireString(e.getLocalizedMessage()), e);
         }
     }
     private void cbUserCode(String s) {
@@ -451,7 +451,7 @@ public class OauthCall {
                 i.setUserCode(s);
 
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e(TAG + " cbError", e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e(TAG + " cbError", Text.requireString(e.getLocalizedMessage()), e);
         }
     }
 

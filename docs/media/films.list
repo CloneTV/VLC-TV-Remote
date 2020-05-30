@@ -1,0 +1,1625 @@
+#EXTM3U
+#EXTINF:-1 ,Kinodrom SN
+http://serv24.vintera.tv:8081/hdmedia/hdmedia_3d/playlist.m3u8
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d5/79/d5793e9e8657ec63a5d678321d69f739.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/7c/d6/7cd6b37775b4fa721b10cfece34173ff.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/ec/a0/eca08678c4fef5750e04dbd7602c72fe.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/8b/32/8b32c420747015a60fd508a192f1c921.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/67/75/677582a9374b2518e3186ab07d196083.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d2/78/d278fd720e1914f9d42c7933dd52a862.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/a3/d0/a3d051ed1e63612017a4c972b421c5b0.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d2/6b/d26b8f7c9309220373003a0e355e84fc.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/5a/fc/5afc6a8bb0215656150711895daf1b7d.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/49/ba/49ba587275634216bd82d7d857ede506.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/9b/b0/9bb0cf85f6756ec5b4983dc8157b6301.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/ec/a0/eca0fc5773b12af5294a3ab70be3a581.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/a4/cd/a4cd0512a5ef5d62528f469b038b1e48.mp4
+#EXTINF:-1 ,007:Спектр (2015) (16+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/fhd/Spectre.2015.BDRip.1080p.m3u8
+#EXTINF:-1 ,1+1 Дома.Новый год (2013) (16+)
+http://meta.vcdn.biz/8e007bcbebd3daa2132ea8f33562b3c8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/39287121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,1+1 Дома:8 Марта (2014) (16+)
+http://meta.vcdn.biz/b0fa14e71ee7b7da70fd96815598d894_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/39287201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,100 футов (2008) (16+)
+http://vs348.vcdn.biz/a9bcb90450d15ceb8a6cf647ae5caf5f_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/96051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,11-11-11 (2011) (16+)
+http://meta.vcdn.biz/8d8fb0e37d1c69d80f5f03765dcce08f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28402171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,11:14 (2003) (18+)
+http://meta.vcdn.biz/bdb76d053a64383727f167c5a30c468f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17043071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,12 стульев (1971) 1 серия
+http://meta.vcdn.biz/4b588aac7030415339c7f1e141e9b430_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,12 стульев (1971) 2 серия
+http://meta.vcdn.biz/3fa347b53d3e660cd081052694651732_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,13 (2010) (18+)
+http://vs344.vcdn.biz/16b8485ac87fd162447d7aa421924b3d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/86831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,13-й район:Ультиматум (2009) (16+)
+https://vs8.vcdn.biz/eaafea3320cb012566d62af8a56c44f0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84761/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid1140936118-b2000000.m3u8
+#EXTINF:-1 ,21 и больше (2013) (16+)
+http://meta.vcdn.biz/23f8e5353ee6377c3d661940eea0a3e5_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/368771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
+#EXTINF:-1 ,32 декабря (2004) (12+)
+http://meta.vcdn.biz/d177b6aec53aa84ddc3eb5ac8eafa1ed_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/252111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,4:0 в пользу Танечки (1982)
+http://meta.vcdn.biz/4f241829cdafd6854f22aa8abc58cb51_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/222141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,4:44 Последний день на Земле (2011) (16+)
+http://meta.vcdn.biz/8c92d2063b036c3d43aa035721d7faea_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/463941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,51 (2011) (16+)
+http://vs343.vcdn.biz/04b8a6ecac162e146bd80c593066c020_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/87781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/2/type.amlst/playlist.m3u8
+#EXTINF:-1 ,713-й просит посадку (1962)
+http://meta.vcdn.biz/ce01148fee0aefec20dd1a3a07b3d86b_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/320411/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,8 новых свиданий (2015) (12+)
+http://meta.vcdn.biz/fdbdfa689c8f49ebe2df3c058db658aa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/29521911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Angry Birds в кино (2016)
+http://212.113.38.100/realhls/st2/fhd/AHGp1.61ordC.v.K11Ho.2016.D.BDRip.1080p.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Kingsman:Золотое кольцо (2017) (18+)
+http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Kingsman.The.Golden.Circle.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Kingsman:Секретная служба (2014) (18+)
+http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40//fhd/Kingsman.The.Secret.Service.2014.1080p.m3u8
+#EXTINF:-1 ,SuperАлиби (2017) (18+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/SuPerALebi.2O17.D.WEB-DL.1O8Op.m3u8
+#EXTINF:-1 ,А вы любили когда-нибудь? (1973)
+http://meta.vcdn.biz/722a3504b73c8ba4a6046e5c6f2a17e1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/302711/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Абитуриентка (1973)
+http://meta.vcdn.biz/e13c9269b280b6613da7f3e68cbd6f74_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/336231/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Абориген (1988)
+http://meta.vcdn.biz/3ec4a012e3e268788e6ff9365d94b760_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/215151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Авария - дочь мента (1989) (16+)
+http://meta.vcdn.biz/002024ef58516c4913ca0fd093f16418_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аватар (2009) (12+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/Avatar.Extended.Version.2009.BDRip.1080p.x264.DUB.Full.m3u8
+#EXTINF:-1 ,Автомобиль скрипка и собака Клякса (1974)
+http://meta.vcdn.biz/ab90d27af8a288671b10a2f02a08955c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Автопортрет неизвестного (1988)
+http://meta.vcdn.biz/d8a5c73a8f84c0c541574ce7cb402e6c_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/315531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Агония (1981) 1 серия
+http://meta.vcdn.biz/3befac41df32a65c2f6ec221e23f253c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Агония (1981) 2 серия
+http://meta.vcdn.biz/e7bdd20d76a7f157eb3993e17d71f688_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адмирал Нахимов (1946)
+http://meta.vcdn.biz/3484c25a4ddf1c4d73427bea990e8a30_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адмирал Ушаков (1953)
+http://meta.vcdn.biz/5bd2cbfac76e3777b271e895c258e797_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адреналин:Высокое Напряжение (2009) (18+)
+http://meta.vcdn.biz/689596ba691df036a2f6b5b76ffc3d0c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38070773/u_uid/0/u_vod/3/u_device/cms_webandroid/a/5/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адрес вашего дома (1973)
+http://meta.vcdn.biz/7761a7c5c8a690d80e9b56ff53c4287d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/344611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адъютант его превосходительства (1969) 1 серия
+http://meta.vcdn.biz/ff8c3d3c196f2a1c3e5df39058da17f7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адъютант его превосходительства (1969) 2 серия
+http://meta.vcdn.biz/5be822013dfb1ea9e3b3c535b4cf1b3e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917661/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адъютант его превосходительства (1969) 3 серия
+http://meta.vcdn.biz/5c048c99597ef6c4591db2dd1dd2ee53_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адъютант его превосходительства (1969) 4 серия
+http://meta.vcdn.biz/de96d1d567771b7484edd3188bf5e2e6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Адъютант его превосходительства (1969) 5 серия
+http://meta.vcdn.biz/8b2abd8b008d10b9aba86eb801d28596_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Айболит-66 (1966)
+http://meta.vcdn.biz/d12ae1f6a70ffa319fb505cf6dd2cdbe_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Академик Иван Павлов (1949)
+http://meta.vcdn.biz/8d57f31c4f979b8391a91b63629a07d6_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/360641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Академия вампиров (2014) (12+)
+http://vs307.vcdn.biz/19275bde0e3db2fb4fe2f97403450ebe_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/14705871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Акваланги на дне (1965)
+http://meta.vcdn.biz/4678a073dc647c7234ceebbec4a9a417_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/172361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Акванавты (1979)
+http://meta.vcdn.biz/f39a5f98a9409dd3bdb67a3c0b9124b0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/209811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Актриса (1942)
+http://meta.vcdn.biz/eb02332c7837c118810045a28c43d142_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/292041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Акция (1987)
+http://meta.vcdn.biz/cb880abea7032297b2ae0ee42215d70d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алеко (1953)
+http://meta.vcdn.biz/f74fdccb4ae2712d137eda721ba344f2_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/319841/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Александр Пархоменко (1942)
+http://meta.vcdn.biz/81a147215649ad93331c299026135524_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/225361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Александр Попов (1949)
+http://meta.vcdn.biz/046d9ac81665e488657d82daacd2a935_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/365501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аленький цветочек (1977)
+http://meta.vcdn.biz/c26878d65b2e3204294aae95af561183_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/170471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алиса в стране чудес (2014)
+http://meta.vcdn.biz/df875d404646717634166dec117b46f1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/32457341/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алитет уходит в горы (1949)
+http://meta.vcdn.biz/128c6d4a8f55306a07ef3b2567f24f74_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/342491/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алые погоны (1980) 1 серия
+http://meta.vcdn.biz/ba18269072372067a4909166502651e6_megogo/vod/hls/b/450_900_1350/u_sid/0/o/197021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алые погоны (1980) 2 серия
+http://meta.vcdn.biz/68d7f423d668a14584c0c4d87a0f255f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/235271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алые погоны (1980) 3 серия
+http://meta.vcdn.biz/cc2e40d22c1eb8130175bb24e421f959_megogo/vod/hls/b/450_900_1350/u_sid/0/o/240621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алёша Птицын вырабатывает характер (1953)
+http://meta.vcdn.biz/83abd72deb87469e82be7fd86917eee0_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/234741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Алёшкина охота (1965)
+http://meta.vcdn.biz/083daffad75cf20c50a87601c98f32a6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33066871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Американская дочь (1995)
+http://meta.vcdn.biz/aaf5bd434e0d266d4c6e94d53fb38a29_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Андриеш (1954)
+http://meta.vcdn.biz/73bd087f546120306766df0347674ca0_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/349901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Анна и командор (1974)
+http://meta.vcdn.biz/ee22a82e154075a2dac8715de4c89028_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/198891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аннычка (1968)
+http://meta.vcdn.biz/0cb0509778d4de1f5d973f8368af79ab_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/257891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Антон Иванович сердится (1941)
+http://meta.vcdn.biz/169565b3c2125103617fd3b743cfa42b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/268751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Анюта (1982)
+http://meta.vcdn.biz/53ea483ed7a1c517fe07eea66e6350ea_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/239381/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аплодисменты аплодисменты… (1984)
+http://meta.vcdn.biz/48aa5f11c9e703aea5990c1c949d1685_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/289761/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аполлон 18 (2011) (16+)
+http://vs352.vcdn.biz/8f8c3de6abccceecac25b0f61cce0df7_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/84981/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Артист из Кохановки (1961)
+http://meta.vcdn.biz/c69e5cece00d559b906ea4e31cfdfa67_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/226721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Асса (1987)
+http://meta.vcdn.biz/fdd1702ad69bd64ff8729674748c20fd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18363271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/1/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Асса (1987) (16+)
+https://vs59.vcdn.biz/bce38d172d04fc27b603f8c5654f438d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18363271/u_uid/0/u_vod/3/u_device/cms_html5/a/1/type.amlst/chunklist-sid965019601-b2000000.m3u8
+#EXTINF:-1 ,Астерикс на Олимпийских играх (2008) (12+)
+http://vs352.vcdn.biz/720866e7e1499b21ffc6c0128213da53_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/86621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ася (1977)
+http://meta.vcdn.biz/a6e5dcb6832120d8facf33031bfd3894_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/138871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Атака титанов.Фильм 1 (2015) (16+)
+http://vs327.vcdn.biz/45c4e20f52bb4b3abae5f94e9c3d00a4_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/34355791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Атака титанов.Фильм 2 (2015) (16+)
+http://meta.vcdn.biz/4238b9859d4fab573ad9b6f5b9083f8c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/34467021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Африканыч (1970)
+http://meta.vcdn.biz/ed99b94a63d24c4bf79aef913cd5ae61_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/296761/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ах водевиль водевиль… (1979)
+http://meta.vcdn.biz/6414ea7b683404b0aff2557de8ea083c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аэлита не приставай к мужчинам (1988)
+http://meta.vcdn.biz/4799d2e3be144a0479c8caa14af273fb_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Аэроград (1935)
+http://meta.vcdn.biz/06ef6574440bf911e8d206e81ae60144_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/241211/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бабочки (1991) (12+)
+https://vs59.vcdn.biz/cb59c1ec865329deffd136b38f51dcfe_megogo/vod/hls/b/450_900_1350_2000/o/46200341/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid911154448-b2000000.m3u8
+#EXTINF:-1 ,Баллада о Беринге и его друзьях (1970)
+http://meta.vcdn.biz/d92930dd5efc13fa415f0645bcd9ded7_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/279721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Баллада о старом оружии (1986)
+http://meta.vcdn.biz/167e444e37677568bb88c25afa25b6d0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/254741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Балтийская слава (1957)
+http://meta.vcdn.biz/3f09c9df83a2438739eddb2eb79b9c8f_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/275391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Балтийское небо (1960) 1 серия
+http://meta.vcdn.biz/ff3e8057586fa39188376296c2806a87_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/177741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Балтийское небо (1960) 2 серия
+http://meta.vcdn.biz/46aca8d6190284ff74bb0cb2580895cf_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/214491/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Банкет (1986)
+http://meta.vcdn.biz/dbb19037f4a0a47b504b5738ddf385ce_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/289491/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Баранкин будь человеком!
+http://meta.vcdn.biz/bb16b8ecc7a3f813d8cc3e448985b616_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/280051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бармен из "Золотого якоря" (1986)
+http://meta.vcdn.biz/b85aa2bd7ffc683a1a12b23dac2f80da_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/234021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Барышня и хулиган (1970)
+http://meta.vcdn.biz/3c6a94a8e4665f7986fcea8caf04da96_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/341021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Батальон (2015) (12+)
+https://vs6.vcdn.biz/b64feffce984d0190fd9e9f98e5355f6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/33395091/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid1937700458-b2000000.m3u8
+#EXTINF:-1 ,Батальоны просят огня (1985) 1 серия
+http://meta.vcdn.biz/ac1033b2e1083f56b1062cec74b41bbe_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24936891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Батальоны просят огня (1985) 2 серия
+http://meta.vcdn.biz/5d49e986d69f8ecc16599070e23068c5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24937601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Батальоны просят огня (1985) 3 серия
+http://meta.vcdn.biz/3e47cd9e9a31a7a978e2cc03cc40c39a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24936901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Батальоны просят огня (1985) 4 серия
+http://meta.vcdn.biz/c05d9982551436780f2ef8e63a6b7454_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24937611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без вести пропавший (1956)
+http://meta.vcdn.biz/210b824b32d20716e3a78b2fcbe60035_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/160261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без видимых причин (1982)
+http://meta.vcdn.biz/ac9908b9fd5328dc6c7b42ff2981fe40_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/269051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без вины виноватые (1945)
+http://meta.vcdn.biz/0e466d8688c8e24000dd7d6fd995cbd4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без году неделя (1982)
+http://meta.vcdn.biz/e7b4950feb02fbae4c0e4898f4623964_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/237311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без компромиссов (2011) (18+)
+http://vs327.vcdn.biz/b26fa4d967fc044c2c965a172477ea69_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/91201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/9/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без особого риска (1983)
+http://meta.vcdn.biz/4121d940d50a54ba20c3214cf7f2807d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/27135951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без права на провал (1984)
+http://meta.vcdn.biz/176a565b2d4b311ab561fd82a4c14667_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/174261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Без сына не приходи! (1986)
+http://meta.vcdn.biz/9f79998dd00bd3a1bc3edd14512fc1b5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/226531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Безотцовщина (1976)
+http://meta.vcdn.biz/ce03cead62523202c7764935bcc361f9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Безумный день (1956)
+http://meta.vcdn.biz/b167c10dce3ec585b75b69d39e90d049_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Безумный день инженера Баркасова (1982) 1 серия
+http://meta.vcdn.biz/9bfd1f6f472fe663f0ce0b9d532927f9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/35194701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Безумный день инженера Баркасова (1982) 2 серия
+http://meta.vcdn.biz/38dab26625c06165ba176ea49f3e7eed_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/35194691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белая птица с черной отметиной (1971)
+http://meta.vcdn.biz/4bb9b702c702bc52abd80f9f23a219aa_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/232211/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белоснежка:Месть гномов (2012) (12+)
+http://meta.vcdn.biz/8697ade9b9e83381bc55bde4719d08c4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/90961/u_uid/0/u_vod/3/u_device/cms_webandroid/a/9/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белые ночи (1959)
+http://meta.vcdn.biz/6e9429b044b965fb2b42a930c9ec90e1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белые тучи (1968)
+http://meta.vcdn.biz/9b1ba1d050a77568614d7f3bfc6ff1fd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/349771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый Бим - Черное ухо 1 серия (1976)
+http://meta.vcdn.biz/0f531bdfb029d811b24dd77054e6e1b7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/167401/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый Бим - Черное ухо 2 серия (1976)
+http://meta.vcdn.biz/4a2857d3d0cb89ce3d86b53902a6805b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/178941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый взрыв (1971)
+http://meta.vcdn.biz/ffab914d487495f6d1fb5ec5a5915042_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/183061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый пудель (1955)
+http://meta.vcdn.biz/a686929e2145592d88b6b8319002403f_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/185641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый танец (1981)
+http://meta.vcdn.biz/2c09e973028b462d1c19de250e7dc054_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/291361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Белый тигр (2012) (16+)
+http://meta.vcdn.biz/58d2adc4164dd1029311124324e95637_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17551451/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Берег (1983) 1 серия
+http://meta.vcdn.biz/13fd073f7745d388f342e337e6b0c3ac_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24942641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Берег (1983) 2 серия
+http://meta.vcdn.biz/f50d2ae1a1afbe9f0f162293281400a5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24920581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Берегись автомобиля (1966)
+http://meta.vcdn.biz/f71c3d14f25839cca346e0daf26b39c8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/69644581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Берем все на себя (1980)
+http://meta.vcdn.biz/13d3ab1ae5a827848707f55031566937_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/148291/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бесприданница (1936)
+http://meta.vcdn.biz/5b15125ea3f0f3b0c4e274ab2d612f80_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30106601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бессмертный гарнизон (1956)
+http://meta.vcdn.biz/632a0ee0640ac60d64483c6ce693ee09_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363031/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бессонная ночь (1960)
+http://meta.vcdn.biz/9bb667d927ade36fef07ee1c2bf5bd43_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33086911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бешеное золото (1976)
+http://meta.vcdn.biz/22780665d432bed370ceb0d50fe9678c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18363001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бешеный бык (1980) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//m1/Beshenyi.Byk.1980.BDRip.XviD.HQ-VIDEO.m3u8
+#EXTINF:-1 ,Бирюк (1977)
+http://meta.vcdn.biz/20fde757f57664a8ea9f6da8af3d360d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/339191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Битва преподов (2017) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Fist.Fight.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Бич божий (1988)
+http://meta.vcdn.biz/2ad805bcc1040165d479fc6191cb9d3f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/267801/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Блокада.Фильм 1 (1975)
+http://meta.vcdn.biz/6a92be1fddeb2b00ac015d254cedb8a8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/153661/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Блокада.Фильм 2 (1977)
+http://meta.vcdn.biz/2cc8294f3fbdc311690333d4bcec8854_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/177041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Блондинка за углом (1964)
+http://meta.vcdn.biz/e7ef7743bdf419b1a24c41f2aa53d78a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/144291/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Боба и слон (1972)
+http://meta.vcdn.biz/a4bc9dc42e6c41f0f591f4b5c4855b52_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/203041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бобик в гостях у Барбоса (1977)
+http://meta.vcdn.biz/6a2d5902759b5195da00e2e2f84ca891_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Богатая невеста (1937)
+http://meta.vcdn.biz/3fdbeec22fb408a17a3873cf76101aaa_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/236951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Богатырь идёт в Марто (1954)
+http://meta.vcdn.biz/5e93b162ea9e51f469951662c74d0218_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/163091/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Богдан Хмельницкий (1941)
+http://meta.vcdn.biz/3e24758455d9f79d2b043c8cb3f8aed2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/243921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Богдан-Зиновий Хмельницкий (2006) (16+)
+http://meta.vcdn.biz/546536a79634ef4da4f5ed3b72c8f4fa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/101591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Боевой киносборник № 9 (1942)
+http://meta.vcdn.biz/5c467c5d197f0a443f872893e14f7130_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/169461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бой под Соколом (1942)
+http://meta.vcdn.biz/9d2e7e88fa5f27edd0b204f1354ab1fb_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/27138051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая жизнь (1939) 1 серия
+http://meta.vcdn.biz/554e35fcc6f2a1eb0237c215e691552b_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/270471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая жизнь (1946) 2 серия
+http://meta.vcdn.biz/0137272bddd3afeb2acd8ca064b24112_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/133471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая перемена (1972) 1 серия
+http://meta.vcdn.biz/e608df15d21142302bc52c060028664b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая перемена (1972) 2 серия
+http://meta.vcdn.biz/752533970874007ae8b95b34c9f8d5ec_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая перемена (1972) 3 серия
+http://meta.vcdn.biz/01c41e8b61278fdd3bcdc9886f413ed8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая перемена (1972) 4 серия
+http://meta.vcdn.biz/1fbeed6813ab1228f1b785cafabf0db6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большая семья (1954)
+http://meta.vcdn.biz/aad9c39d3f215ac68730ee3a30c64365_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/211261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большие и маленькие (1963)
+http://meta.vcdn.biz/76f675cab073eebd00ba3c223c219ed5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33086971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большие хлопоты из-за маленького мальчика (1967)
+http://meta.vcdn.biz/6b6333aa667fe4a99d16e9f83e825dc2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/287801/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Большое космическое путешествие (1974)
+http://meta.vcdn.biz/c13a1f2bb58b4ae79d5519ae93c2acc4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/180351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Борис Годунов (1986) 1 серия
+http://meta.vcdn.biz/5526eca572e01f5ad971fee61d2f6d09_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24942741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Борис Годунов (1986) 2 серия
+http://meta.vcdn.biz/7f2dad183d46290727473e7706df98fa_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24942731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Боцман (1975)
+http://meta.vcdn.biz/c29a3acd4fba1672ce82aa52ce1bdbbd_megogo/vod/hls/b/450_900/u_sid/0/o/214301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Браслет 2 (1967)
+http://meta.vcdn.biz/669b4b90966e520904228dbfa864bb7f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/332591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Брат героя (1940)
+http://meta.vcdn.biz/75b2ab60b6cdf9e7b5ccd8784684e410_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/27224771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Братья Карамазовы (1968) 1 серия
+http://meta.vcdn.biz/7dfccbc8a44af0ad2b4282dc33f1f4cd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Братья Карамазовы (1968) 2 серия
+http://meta.vcdn.biz/5fac40c3f41759c48caebdad2878de48_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Братья Карамазовы (1968) 3 серия
+http://meta.vcdn.biz/c40ed23ae71d4a1534a4707c7ee545bd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24961331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бриллиантовая рука (1969)
+http://meta.vcdn.biz/9c2d4fa083dc02cb745742f040039ea2_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17552141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бродячий автобус (1989)
+http://meta.vcdn.biz/d5425a21d7e770af95fdbc26e5fcf327_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/305001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Будем ждать возвращайся (1981)
+http://meta.vcdn.biz/a3ab183666cbc18eba49331ea9e1f2aa_megogo/vod/hls/b/450_900/u_sid/0/o/298261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Будни уголовного розыска (1973)
+http://meta.vcdn.biz/7a505f1798015cced0558eb6b245469e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/154901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бумажные глаза Пришвина (1990)
+http://meta.vcdn.biz/bd4511543d2037ebb1b5652f4468803f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/364381/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Бунтующая юность (2009) (16+)
+https://vs8.vcdn.biz/8e0b9bacc600217b451c6c2ed4a6e38f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85381/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1875546420-b2000000.m3u8
+#EXTINF:-1 ,Бурьян (1966)
+http://meta.vcdn.biz/ffdeb48639f4cb05258992bc060e62fe_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/164471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Буря в Арктике (2010) (16+)
+https://vs8.vcdn.biz/6e98ba937172109ce852e8827e9e0b08_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/81696201/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid108014429-b2000000.m3u8
+#EXTINF:-1 ,Быстрее собственной тени (1980)
+http://meta.vcdn.biz/b0390eba9bcf1910620b205194be1da9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33073011/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Быть братом (1976) 1 серия
+http://meta.vcdn.biz/9303936091103125adb8f389f632cad8_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/319101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Быть братом (1976) 2 серия
+http://meta.vcdn.biz/201f3544b73abd43855a713a462563f7_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/334911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В доме отца (2011) (18+)
+https://vs6.vcdn.biz/78a866a6fdc881b014b2bb6cf6465e4b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/12051881/u_uid/0/u_vod/3/u_device/cms_html5/a/3/type.amlst/chunklist-sid1100243686-b2000000.m3u8
+#EXTINF:-1 ,В июне 1941 1 серия (2008) (16+)
+http://vs307.vcdn.biz/51dbe3030758cb9cca887078c4ab8769_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/106781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В июне 1941 2 серия (2008) (16+)
+http://vs307.vcdn.biz/f495a316237aee459ad0833cfc925021_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/146481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В июне 1941 3 серия (2008) (16+)
+http://vs307.vcdn.biz/f67f81d7e3f2f60ec57bbfde46e934b6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/155791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В июне 1941 4 серия (2008) (16+)
+http://vs307.vcdn.biz/6b20d7a5f1331bd5850c824b28e56275_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/157441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В поисках Дори (2016)
+http://212.113.38.100/hls/9294ee296545be39852a921d967daca2//fhd/Finding.Dory.2016.D.WEB-DL.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,В порту
+http://meta.vcdn.biz/f78103850f0847a7755efd664ef70b49_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/106071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,В семнадцать мальчишеских лет (1986)
+http://meta.vcdn.biz/c6a2f3f2dcdb187ec44a29dafeeb060b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/51790591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Валериан и город тысячи планет (2017) (12+)
+http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Valerian.and.the.City.of.a.Thousand.Planets.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Ведьмы из Сугаррамурди (2013) (16+)
+http://meta.vcdn.biz/45a1c8c16fc29bcf5754df97c402fcaf_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/3150121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Великая стена (2016) (12+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7//fhd/The.Great.Wall.2016.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Вертикаль (1967)
+http://meta.vcdn.biz/db7d985e020e0c2759437ab5443bba49_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/165621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Видели ночь (2015) (18+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7//fhd/All.Nighter.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Вий (1967)
+http://meta.vcdn.biz/e04fe6f4f7b250b359b7b3d12b700021_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18344141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Вики Кристина Барселона (2008) (16+)
+http://vs315.vcdn.biz/be2502edaef9d35b06ea8daab1936ed2_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/86961/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Винные войны (2017) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//m1/Wine.War.2017.WEBRip.HiWayGrope.m3u8
+#EXTINF:-1 ,Виолет и Дейзи (2012) (16+)
+http://vs309.vcdn.biz/198b3d9eec3ce7104c387558c924a752_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/1317691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Вовка в тридевятом царстве (1965)
+http://meta.vcdn.biz/11ad6a321b10ff92a07143c8a59f5271_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/171131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Воздушные пираты (1992) (16+)
+http://vs327.vcdn.biz/c7a88fe919ab18fb1285164d866df5b2_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/208501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Вокзал для двоих 1 серия (1982)
+http://vs342.vcdn.biz/25e11b2c61083b5756580f24be2161f4_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/24923461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Вокзал для двоих 2 серия (1982)
+http://vs327.vcdn.biz/c95f45c874ad04182802228b649f7ff7_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/24923471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Волк с Уолл-стрит (2013) (18+)
+http://212.113.38.100/hls/bf95b1b3e49edf0a36e85abe34263e93//fhd/The.Wolf.Of.Wall.Street.2013.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Ворон (2011) (16+)
+https://vs6.vcdn.biz/f1944d9381efcd80eab65ff461c02c18_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/91531/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid653348440-b2000000.m3u8
+#EXTINF:-1 ,Воскресный папа (1986)
+http://meta.vcdn.biz/52c1fdd468decc1cb56a9602b7c4a250_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/260241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Воскрешая чемпиона (2007) (16+)
+http://meta.vcdn.biz/b3b872932d698f36dc8a9f955def6d87_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/66222041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Вот я какой (2011) (16+)
+https://vs6.vcdn.biz/858429d2fffc5086b8aa121411e539e8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/43894201/u_uid/0/u_vod/3/u_device/cms_html5/a/3/type.amlst/chunklist-sid963592018-b2000000.m3u8
+#EXTINF:-1 ,Враг (2014) (18+)
+http://meta.vcdn.biz/b85827124b0066b630f5ee31bb87a234_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18228921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Врата (2009) (12+)
+http://vs348.vcdn.biz/108eceb30087b1e452aa43fce38e4b95_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/102271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Время монстров (2019) (16+)
+https://vs805.vcdn.biz/8f93b76174d9f371a2d1375ad4ea7c9d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/79377261/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid1568266065-b2000000.m3u8
+#EXTINF:-1 ,Всё могу (2015) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/Vsjo.mogu.2015.BDRip.1080p.m3u8
+#EXTINF:-1 ,Выйти замуж за капитана (1985)
+https://vs9.vcdn.biz/50f0d3e16515ea3e1ed31c5b0d1fa068_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/195631/u_uid/0/u_vod/3/u_device/cms_html5/a/1/type.amlst/chunklist-sid38655766-b1500000.m3u8
+#EXTINF:-1 ,Высота 89 1 серия (2004) (16+)
+http://vs317.vcdn.biz/ff9c0054309ba0844b98e749f01a322c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/109061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Высота 89 2 серия (2004) (16+)
+http://vs306.vcdn.biz/f9327a5cbf3f927a7fc6f6a409143cec_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/156171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Высота 89 3 серия (2004) (16+)
+http://vs322.vcdn.biz/264aaa6ae4cf78e014a10b8df8971186_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/155141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Выход на посадку (2007) (16+)
+http://meta.vcdn.biz/91d4ceed6c8c474aa9be6fa6e24844af_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/163851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Гадкий я 3 (2017)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22/fhd/Despicable.Me.3.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Галлоуз Хилл (2014) (16+)
+https://vs59.vcdn.biz/decf48d08014e8087b2b58d94e0432ec_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/29033441/u_uid/0/u_vod/3/u_device/cms_html5/a/3/type.amlst/chunklist-sid1518505619-b2000000.m3u8
+#EXTINF:-1 ,Гараж (1980)
+http://meta.vcdn.biz/6344c74ae717149084450daebdf1368c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17553821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Гардемарины вперёд! 4 серия (1987) (12+)
+http://meta.vcdn.biz/90c19089ba13201444ca8cfaab06e75a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24923111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Гена-Бетон (2013) (16+)
+http://212.113.38.100/hls/94f3c3d640b2673fd32df8a7d31782d5/4/_genabeton.flv.m3u8
+#EXTINF:-1 ,Гениальный папа (2011) (16+)
+https://vs6.vcdn.biz/4a134d5f0e76b9dde1617230dff9ea5c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/108641/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid225878400-b2000000.m3u8
+#EXTINF:-1 ,Герой (2016) (12+)
+http://212.113.38.100/realhls/st8/fhd/GerOy.2O16.O.WEB-DL.1080P.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Гибель Орла (1940)
+https://vs8.vcdn.biz/d8c2891713bc120ee467a388a7245658_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33104321/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid788513949-b2000000.m3u8
+#EXTINF:-1 ,Гитлер капут! (2008) (16+)
+http://vs343.vcdn.biz/b8474bef5ceea22561b2a52a323f7c8f_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/95051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/1/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Глава 27 (2008) (18+)
+http://vs342.vcdn.biz/b27462f5ffaf80d0070e322cefc96ecb_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/12873731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Город Греха (2017) (16+)
+http://212.113.38.100/realhls/st1/m1/City.Of.Sin.2017.P.WEB-DLRip.14OOMB.mp4/index.m3u8
+#EXTINF:-1 ,Д'Артаньян и три мушкетера (1978) 1 серия
+http://meta.vcdn.biz/9c533ae22cc7bcdf00ddfd785488c113_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/100281/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Д'Артаньян и три мушкетера (1978) 2 серия
+http://meta.vcdn.biz/79577d6b0f316214f31af02823178316_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/138071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Д'Артаньян и три мушкетера (1978) 3 серия
+http://meta.vcdn.biz/b23ae4b74ca773eeef41d55c16ba1fd9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/140791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дай лапу Друг (1967)
+http://meta.vcdn.biz/3f215e0a25e16daf6ce9d0d9c4dd1ddd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30116001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дайте нам мужчин! (1985)
+http://meta.vcdn.biz/19c7744239fb2c17b1a9e99fda60c5d1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/256471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Далеко от Родины (1961)
+http://meta.vcdn.biz/6f5d41ed4fb262d014c494ab63a97801_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/239421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дама с попугаем (1988)
+http://meta.vcdn.biz/48fea7b0687adc58f3848a2e5f64cd65_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/220351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дамское танго (1983)
+http://meta.vcdn.biz/9d5777a4cdab8d3e31e62f80a3e9ef1f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/169521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Даниил - князь Галицкий (1987)
+http://meta.vcdn.biz/883e409b2cf9a9c9c64a6745a2886383_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/157981/u_uid/0/u_vod/3/u_device/cms_webandroid/a/2/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Даурия (1971) 1 серия
+http://meta.vcdn.biz/e2272c563eab40a1ed39ac4059044aa3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/162201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Даурия (1971) 2 серия
+http://meta.vcdn.biz/3e22138c89512e0ea34b0e3aaeb2f4fc_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/193421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дача (1973)
+http://meta.vcdn.biz/e8a47a4776bec8f03ba5b169fd295fd2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18257371/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дачная поездка сержанта Цыбули (1979)
+http://meta.vcdn.biz/acfb1d47e13879aef8a85bcd088b9d76_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/135621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два Фёдора (1958)
+http://meta.vcdn.biz/f9a77a97a55176a26813743f91f29b1f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/266761/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два берега (1987)
+http://meta.vcdn.biz/1932e299cedad006f1fe69494de907de_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33073441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два билета на дневной сеанс (1966)
+http://meta.vcdn.biz/462fb7ed15b948ecd443ef5f022ba2eb_megogo/vod/hls/b/450_900_1350/u_sid/0/o/233521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два воскресенья (1963)
+http://meta.vcdn.biz/3993d4cd44f28f213a6e44d0b82a8239_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/290121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два года над пропастью (1966)
+http://meta.vcdn.biz/6746208a375f3b9d9181fbb1232dc36f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/191531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два гусара (1984) 1 серия
+http://meta.vcdn.biz/e1db35caa9e93f3989fb0df40d96bc01_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/258611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два гусара (1984) 2 серия
+http://meta.vcdn.biz/f76ce9a004a20dc77e20d73a62097c49_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/384721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два дня чудес (1970)
+http://meta.vcdn.biz/1e480c04366d2c116edb7294b821ea24_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/226631/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два долгих гудка в тумане (1980)
+http://meta.vcdn.biz/97807e3c7019d2bc26aaf01491e67e19_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/275111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1955)
+http://meta.vcdn.biz/9e8e4fdfa7e293fdd230c032bff574c8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/185531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 1 серия
+http://meta.vcdn.biz/dcce43d7e70e9763d68dd1bc23f5eb1a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24923131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 2 серия
+http://meta.vcdn.biz/cc34e7d49cdc386f86f3f6bb99cd6927_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24923141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 3 серия
+http://meta.vcdn.biz/4d9fcd5d6ffb1c3c69aaa00c731521d1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24923151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 4 серия
+http://meta.vcdn.biz/29c7b7a6ce78be219160d3dc14c6c65b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924931/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 5 серия
+http://meta.vcdn.biz/0b0c969153e5c6ac633023702b0f0543_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два капитана (1976) 6 серия
+http://meta.vcdn.biz/29557e5d1bec00a7b6a1cddd76387488_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Два-Бульди-два (1929)
+http://meta.vcdn.biz/12bca9d260354a07e2929dbc92d313a5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30417101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Двадцать дней без войны (1976)
+http://meta.vcdn.biz/de1296007823878703314d0a7f4b3e13_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/168511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дважды рождённый (1988)
+http://meta.vcdn.biz/746bdac7b09578407622f1292265c9d6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18257321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Две жизни (1961)
+http://meta.vcdn.biz/5140165747672eb1199e354de0b5ff42_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/242101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Двенадцатая ночь (1955)
+http://meta.vcdn.biz/16d51392607648e1907d74d242303c7d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/204641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Двенадцать месяцев (1972) 1 серия
+http://meta.vcdn.biz/a8935c1bb2bd1fca3f46b34290777d39_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/107891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Двенадцать месяцев (1972) 2 серия
+http://meta.vcdn.biz/21774209322f6dafb6a8138713c54bd9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/146871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Двое и одна (1988)
+http://meta.vcdn.biz/9b0aac45598367c73cfb28b4dfdcdcba_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46278941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девичья весна (1960)
+http://meta.vcdn.biz/85e682c19f6cf355e2d1a5b5070a88b3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/512821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девочка и крокодил (1956)
+http://meta.vcdn.biz/174dce39a184172e7f0738a62209bca8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/239511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девочка хочешь сниматься в кино? (1977)
+http://meta.vcdn.biz/0dd4b04dd94326efc43d8b01f145d594_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/337351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девственники берегитесь! (2013) (16+)
+http://meta.vcdn.biz/013f27cdb9a01b5a0a8505de0643452f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/521681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девушка с коробкой (1927)
+http://meta.vcdn.biz/b00c42a8bf0790bd6943c5e51f54af05_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/307761/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девушка с маяка (1956)
+http://meta.vcdn.biz/947e0e3ec2de13ff311a2cf40bc05608_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/235861/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девчата (1961)
+http://meta.vcdn.biz/4fca15afc592ed8b22219a1d3b6de282_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17552101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Девять дней одного года (1961)
+http://meta.vcdn.biz/d9221b200004562843e79ea50ad8bee2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18257301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дед Мороз всегда звонит трижды (2011) (16+)
+http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26/m1/Ded.Moroz.Zvonit3.2011.DVDRip-AVC.ExKinoRay.m3u8
+#EXTINF:-1 ,Дежа вю (1989)
+http://meta.vcdn.biz/b6013191411897f88feca7df038f6db8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/141711/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дела давно минувших дней (1972)
+http://meta.vcdn.biz/1af0074fbd59de8d1b90b3f753a27e3e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/196321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дело «пёстрых» (1958)
+http://meta.vcdn.biz/a5f8065833e27c355bcfb165fb02fa7c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18257191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дело Румянцева (1955)
+http://meta.vcdn.biz/2c402dbd1d9b756797672670db99a58c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/162311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дело было в Пенькове (1957)
+http://meta.vcdn.biz/f5adc809b55a4be48a9b7a1eec47a421_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/152731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Деловые люди (1962) 1 серия
+http://meta.vcdn.biz/330a6c827a9c9dffbca09f0fe29c2181_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924981/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Деловые люди (1962) 2 серия
+http://meta.vcdn.biz/8fa0f08a27b43f998c05a39addd0ae23_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Демон Внутри (2016) (18+)
+http://212.113.38.100/hls/bf95b1b3e49edf0a36e85abe34263e93//fhd/The.Autopsy.of.Jane.Doe.2016.BDRip.1080p.ExKInoRay.m3u8
+#EXTINF:-1 ,День гнева (1985)
+http://meta.vcdn.biz/8997e727d59a225df028716b85a29b2d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/188431/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,День дурака (2014) (16+)
+http://meta.vcdn.biz/307cc6c3280cd7a6012cb91699875cbc_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/8076801/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,День и вся жизнь (1969)
+http://meta.vcdn.biz/c00cdb875ad3b149a53c7de7c9a0535f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30116151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,День сурка (1993) (12+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a/fhd/Groundhog.Day.1993.1080p.BluRay.12xRus.2xUkr.Eng.Sub.m3u8
+#EXTINF:-1 ,Дети понедельника (1997) (12+)
+http://meta.vcdn.biz/b40c32c3d66b28872e23e7d23370a609_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18257141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Детка (2014) (16+)
+http://212.113.38.100/hls/f85a05338fc5db1ee67137ba18855137/fhd/detka_laggies_2014_bdrip_1080p.m3u8
+#EXTINF:-1 ,Джентльмены удачи (1971)
+http://meta.vcdn.biz/cd9b37cd3a2a1c2d426f23f6a0ca355b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17551911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дикарь (2017) (18+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//mhd/dikar.720.m3u8
+#EXTINF:-1 ,Дикий (2018) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//mhd/Braven.2018.720p.WEB-DL.Kinozal-Reliz.by.WSM.m3u8
+#EXTINF:-1 ,Дозор джунглей (2017)
+http://212.113.38.100/hls/d035c828e0f94e0ed07758760768fbd2//fhd/Dozor.Junglet.2017.BDRip.1080p.m3u8
+#EXTINF:-1 ,Дориан Грей (2009) (16+)
+http://vs310.vcdn.biz/e79cc81a8f68072fa7e465f209b718db_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/491551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/9/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дубравка (1967)
+http://meta.vcdn.biz/94d83e7cc46ce05f657219ff9b1b5c2c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/201771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Евгений Онегин (1958)
+http://meta.vcdn.biz/52838c65e3ac975c115f5cc45098d91a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/172271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Евдокия (1961)
+http://meta.vcdn.biz/73a4b1972e2c1359ce029a8a552196dc_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/187351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Его звали Роберт (1967)
+http://meta.vcdn.biz/d8d934c3d4fa771cea38da7da2198b1e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/283941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Егорка (1984)
+http://meta.vcdn.biz/6d4da4a34ae3a579ae66b4d234cf409c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33104511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Единица с "обманом" (1984)
+http://meta.vcdn.biz/e07cdcd53251a519be300ccac615ed74_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/254681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Единожды солгав (1987)
+http://meta.vcdn.biz/ef4db6b221eb1803dc27963768777802_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/243251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Единственная (1977)
+http://meta.vcdn.biz/a2f7ae879bddbb4cd3432a3215919ee0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/161721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Екатерина Воронина (1957)
+http://meta.vcdn.biz/35c949769bfcae6fe33d316bd3193387_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29586631/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Елки-Палки! (1988)
+http://meta.vcdn.biz/cb115e07fb4112c243634ff0609e0920_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/244721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Если враг не сдается... (1982)
+http://meta.vcdn.biz/86d7ae8bd28e059be3c0fea7140b23ec_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/143851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Если можешь прости... (1984)
+http://meta.vcdn.biz/f3cd016df19b7bba7541943311bc54e3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/226911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Если ты прав... (1963)
+http://meta.vcdn.biz/c98696347891524538819a8706fdc026_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Есть идея! (1977)
+http://meta.vcdn.biz/4d83930d6be26caf7861418c73d441c8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Есть такой парень (1956)
+http://meta.vcdn.biz/db1f3c29219048abfe4e07c721f832a8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/238471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ехали в трамвае Ильф и Петров (1971)
+http://meta.vcdn.biz/0ad7a15c0df9d134446e52bf5f1051a5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18237701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ехали мы ехали (1962)
+http://meta.vcdn.biz/65d0bb488d95ccd04ffae0600843bc0c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/185061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Еще раз про любовь (1968)
+http://meta.vcdn.biz/fcc45d290205514e7be1d44a8c09c07a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18237411/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Жених (2016) (12+)
+http://vs314.vcdn.biz/60b2bec536461575abc61e410d52de30_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/38269751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Женя Женечка и Катюша (1967) (12+)
+http://meta.vcdn.biz/85b3170066c3519006bf703816ebd3b9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/154841/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Жизнь Пи (2012)
+http://212.113.38.100/hls/4cda492f2a5d6c51c63cb0c669c063d0/fhd/Life.of.Pi.2012.BDRip1080p.m3u8
+#EXTINF:-1 ,Жили три холостяка 1 серия (1973)
+http://meta.vcdn.biz/1f74f7c77e83c780890cdbfed03310ee_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24946131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Жили три холостяка 2 серия (1973)
+http://meta.vcdn.biz/2f089f3ca6ea8dcc327aaccbc9b9fc3c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24946111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Жмот (2016) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Radin.BDRip.1080.ExKinoRay.m3u8
+#EXTINF:-1 ,За витриной универмага (1956)
+http://meta.vcdn.biz/5facf825c57f00fa529ac22464ca8548_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18236971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За власть советов (1956)
+http://meta.vcdn.biz/e4635d2d49c58cac01b2431d7c3c3ca7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/245301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За все в ответе (1978) 1 серия
+http://meta.vcdn.biz/3da42c64dc7c30967aebc8a1f8e8cde9_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/347481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За все в ответе (1978) 2 серия
+http://meta.vcdn.biz/f466a1a97345e3c9aea32eb25ffd84cb_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/357001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За двумя зайцами (1961)
+http://meta.vcdn.biz/3cf9f28cd34ba600aaa4c58e42ad8cfa_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/104881/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За облаками – небо (1973)
+http://meta.vcdn.biz/e51fe9b0c09c2d2633fcbcdfe9b703c2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29594861/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За прекрасных дам! (1989)
+http://meta.vcdn.biz/5e96e8f6a1135fec61ed27f33a862b7d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/224071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За спичками (1980)
+http://meta.vcdn.biz/51ec5e4aad6784a60a92fae26c9f3982_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17553681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,За твою судьбу (1972)
+http://meta.vcdn.biz/0f987866b1355baf7949ec5dd047af27_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/255461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Забавы молодых (1987)
+http://meta.vcdn.biz/4a540444d1480964cacbae26fb62ab4b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/241841/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Забытая мелодия для флейты (1987) 1 серия
+http://meta.vcdn.biz/7016ae1d900d3bb7bcf32f87cb184d5d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24937651/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Забытая мелодия для флейты (1987) 2 серия
+http://meta.vcdn.biz/aac31e50f822c67509dd221ab0120989_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24937661/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Завещание профессора Доуэля (1984)
+http://meta.vcdn.biz/adc0418c6ef99ceae13d4cb6768dbdc6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/188171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Завтра была война (1987)
+http://meta.vcdn.biz/f6ff80590f9ec9da12e019ab33056532_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/189461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Завтра третьего апреля… (1969)
+http://meta.vcdn.biz/f52133150b609e958b77e4612193cba6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/285791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Заезжий молодец (2014) (12+)
+http://meta.vcdn.biz/abe1450601d956a66b802e8ed73856f0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/46896961/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зайчик (1964)
+http://meta.vcdn.biz/aaf73e497ca6add0649fcc95e1169317_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/187021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Закатать в асфальт (2019) (18+)
+https://vs817.vcdn.biz/d14cb617011d1bcf6bb0e6cf1fe4749b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/77263081/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid990217147-b2000000.m3u8
+#EXTINF:-1 ,Законный брак (1985)
+http://meta.vcdn.biz/60965927e33726d5b24f7616d2e69fed_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18236601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Замри-умри-воскресни! (1989)
+http://meta.vcdn.biz/1e84a787ce2cf7ecfb0cdf29da025a9b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/174251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Запасной игрок (1954)
+http://meta.vcdn.biz/23305644a122cfa4df1fe18bae282f64_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/184611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Запорожец за Дунаем (1937)
+http://meta.vcdn.biz/9401f5ec4401ba23c367131ecc03fdc7_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/266431/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Запорожец за Дунаем (1953)
+http://meta.vcdn.biz/e2d398083973ea9d825a93fdfa2a6464_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/265911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Застывшие во времени (2011) (16+)
+http://meta.vcdn.biz/128203bd635296bb3e6ebf5194cac865_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/43437311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Затерянные в песках (1984)
+http://meta.vcdn.biz/359f25f46a9d35473eac90ced064bf52_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/332141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Затерянные во льдах (2019) (12+)
+https://vs805.vcdn.biz/568abb78337784c80381e0fde7e8beba_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/76640071/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1840337488-b2000000.m3u8
+#EXTINF:-1 ,Защитники (2017) (12+)
+http://meta.vcdn.biz/d4ef869510d15cfa7bd768c9b7fc43d4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38269611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Заячий заповедник (1973)
+http://meta.vcdn.biz/aa9aa846cf0067e1773d4cd10dd17cd9_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/315071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звезда балета (1964)
+http://meta.vcdn.biz/84e9b90659b0bd1f8b7d98268104ab39_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/263461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звезда и смерть Хоакина Мурьеты (1982)
+http://meta.vcdn.biz/a56ce06bb24b06a6eb1fcca4cf1ed8de_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/184711/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звезда пленительного счастья (1975) 1 серия
+http://meta.vcdn.biz/2f18169085365380043dc0a49a7c5ce0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/203311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звезда пленительного счастья (1975) 2 серия
+http://meta.vcdn.biz/59f265711540720d07c29f972a5ada8d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/268551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звездная командировка (1982)
+http://meta.vcdn.biz/09c4aefa6519da1c7151e525d66afecb_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/192131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звенигора (1927)
+http://meta.vcdn.biz/5e9732468b1914d7c24ff8795f27de5f_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/237331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звонят откройте дверь (1965)
+http://meta.vcdn.biz/4405d1917f9aed94fd23c251a183a635_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18236221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Звёздный мальчик (1957)
+http://meta.vcdn.biz/d59c56de369fa28c18a70bc4081d5a66_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/18236391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Здравствуй и прощай (1972)
+http://meta.vcdn.biz/4203cfcb92fd01621dbc515c1a3b784e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/175891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зеленый огонь козы (1989)
+http://meta.vcdn.biz/c3838faf0cdfa1262601acc3029ac2dd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/344381/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зелёный фургон (1983) 1 серия
+http://meta.vcdn.biz/3ec79b5f0fd591e50fbc43c92d1c6778_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/174051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зелёный фургон (1983) 2 серия
+http://meta.vcdn.biz/c257d819699e9e4c738a64a3fdb4b587_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/192691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Земля Санникова (1973)
+http://meta.vcdn.biz/2f30499904c0cccbf6cee1cceaa37e1f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18236141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Земля до востребования (1972) 1 серия
+http://meta.vcdn.biz/01f192cc781653c3ec72b4ca60718485_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/294971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Земля до востребования (1972) 2 серия
+http://meta.vcdn.biz/3e24ff82db8e3a19a1bd2895fd4a2108_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/285901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Земля отцов (1966)
+http://meta.vcdn.biz/a388577d80ed2947e60e77f5696f3bb6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/69868151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Земные и небесные приключения (1974)
+http://meta.vcdn.biz/6a0f5b72c3e0062f7e7c8eba8ec678b8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/233701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зеркало (1974)
+http://meta.vcdn.biz/9d82f7b22e2183dcdb0d1722a48db5a6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18236121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зигзаг удачи (1968)
+http://meta.vcdn.biz/57d7873dc557d4773daeddd601285076_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18236071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зимнее утро (1966)
+http://meta.vcdn.biz/34696916b17d3a59da06f67c89c61901_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/324771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зимний вечер в Гаграх (1985)
+http://meta.vcdn.biz/3e594a63527057d2a6c9db8b86151427_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/18235561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зимняя вишня (1985)
+http://meta.vcdn.biz/e8538198d79cf56734d87b5470e43978_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/163941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зловредное воскресенье (1985)
+http://meta.vcdn.biz/68aa443a8f0b5d7a1f59bddd653aa015_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/32743461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Злой дух Ямбуя (1977)
+http://meta.vcdn.biz/56ef72b03ab32ec5a8a9f57a86be01c9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/160751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Змеелов (1985)
+http://meta.vcdn.biz/2e61249113b3d485b3e21e6ecc26b1a6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18235541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Зозуля с дипломом (1971)
+http://meta.vcdn.biz/6cabbb3615013e7a8ac15e28cfc7d267_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/335991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотая мина (1977) 1 серия
+http://meta.vcdn.biz/cacf38d6d08e02a72f0c3d3ebae82280_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/175811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотая мина (1977) 2 серия
+http://meta.vcdn.biz/3c0674a474b364a71ceec80ef4828039_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/213951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотая речка (1976)
+http://meta.vcdn.biz/ec2b5c159f65c470b59491eb425d1c62_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/193701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотая цепь (1986)
+http://meta.vcdn.biz/0abfee9c322f4de13911f4e87d06c540_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/255481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золото (2017) (18+)
+http://vs321.vcdn.biz/88e1f3ddedaffdd509f2cbac9ba17fbd_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/47098541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотое озеро (1935)
+http://meta.vcdn.biz/82920d7d140a9b2953ce8df25fd8abd8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29595171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотой ключик (1939)
+http://meta.vcdn.biz/551e4d0de3c194e21e02a6017fa5a303_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18235461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотой теленок (1968) 1 серия
+http://meta.vcdn.biz/92c87fcd1adc73d2e6237b24af639291_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24946141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Золотой теленок (1968) 2 серия
+http://meta.vcdn.biz/1880f728112960867a47fb52f027c922_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24946231/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Иван Васильевич меняет профессию (1973)
+http://meta.vcdn.biz/2b155b249e947d1faaba44473b22a27a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17551871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Игра в правду (2013) (18+)
+http://meta.vcdn.biz/11a4717af01c9676edc78779fcd647f4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/792191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Идеальная жена (2007) (16+)
+http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40//fhd/Ideal.naia.zhena.BDRip.1080.m3u8
+#EXTINF:-1 ,Идеальный голос (2012) (12+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Pitch.Perfect.2012.BDRip1080p.m3u8
+#EXTINF:-1 ,Идеальный голос 2 (2015) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Pitch.Perfect.2.2015.BDRip.1080p.Rus.Eng.m3u8
+#EXTINF:-1 ,Из тьмы (2015) (16+)
+http://vs315.vcdn.biz/f4843ce348c325d78f29d1e1cc874e9d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/36395591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Иллюзия обмана (2013) (16+)
+http://meta.vcdn.biz/adaae24d289e094f9d057346bf3115f1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/4598951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ирония судьбы или С легким паром! (1975)
+http://meta.vcdn.biz/54c44e907515d375c4a28db5fc42791c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/35644531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Искупление грехов (2012) (16+)
+https://vs9.vcdn.biz/67192af79ab0879de764461d67aa82ed_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/43404451/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid881320427-b2000000.m3u8
+#EXTINF:-1 ,Искусство жить в Одессе (1989)
+http://meta.vcdn.biz/12d0a966ad65a77f156fc6d1b421f88b_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/195081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,История игрушек забытая временем (2014)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/mhd/_Istoriia_igrushek.2014.720p.BluRay.x264-LEO.flv.m3u8
+#EXTINF:-1 ,Исходный код (2011) (16+)
+http://vs349.vcdn.biz/3593df5d034fec66769972970f87d951_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/98291/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Канадская граница (2015) (16+)
+http://212.113.38.100/hls/31f01d291c5d9bef093befed3f9743e2/m1/Kanadskaya.granica.2015.m3u8
+#EXTINF:-1 ,Каникулы (2015) (16+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7//fhd/Kanikuly.1080p.2015.m3u8
+#EXTINF:-1 ,Каникулы Бонифация
+http://meta.vcdn.biz/57ee8c950467640a5477ab61c1c7cb02_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/179681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Квнщики (2018) (18+)
+http://212.113.38.100/hls/a922b2a2f268052b1fe18387cd7ad0af//mhd/kvnciki.m3u8
+#EXTINF:-1 ,Кикбоксер:Возмездие (2016) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/Kickboxer.Retaliation.2018.WEB-DL.1080p.m3u8
+#EXTINF:-1 ,Китайский продавец (2017) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//m1/China.Salesman.2017.D.WEB-DLRip.14OOMB_KOSHARA.m3u8
+#EXTINF:-1 ,Клин клином (2012) (16+)
+http://vs351.vcdn.biz/de0bb0fff83d9d87393c8b9581d5a4c7_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/501301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Конг:Остров черепа (2017) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Kong.Skull.Island.2017.WEB-DL.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Королева бензоколонки (1963)
+http://meta.vcdn.biz/7356724d29353ab6ac97ba6d9aff93f6_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/105831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Край (2010) (16+)
+http://vs320.vcdn.biz/c154189a8259af1c8bdf072702f6ab8c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/10255131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Красавица и чудовище (2017) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Beauty.and.the.Beast.2017.BDRip.1080.ExKinoRay.m3u8
+#EXTINF:-1 ,Крепись (2014) (18+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/mhd/_KPep1C.2O15.P.BDRip.720p.flv.m3u8
+#EXTINF:-1 ,Крестные отцы (2016) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//mhd/Compadres.2016.P.WEB-DL.72Op.m3u8
+#EXTINF:-1 ,Крик 4 (2011) (18+)
+http://vs313.vcdn.biz/bf4b9196d118a02d9d94d52c7bb3f667_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85861/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Кука (2007) (12+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//m1/Kuka.2007.RUS.BDRip.XviD.AC3.-HQ-ViDEO.m3u8
+#EXTINF:-1 ,Кукарача (1982)
+https://vs8.vcdn.biz/ac1811a1281575449eb7a699acd541c7_megogo/vod/hls/b/450_900_1350_2000/o/29605681/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid312774965-b2000000.m3u8
+#EXTINF:-1 ,Ларри Краун (2011) (18+)
+https://vs8.vcdn.biz/44be922a1ba67dd87cd215da1e383baa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85221/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid2095614912-b2000000.m3u8
+#EXTINF:-1 ,Ласковое безразличие мира (2018) (16+)
+https://vs6.vcdn.biz/433e589b971ecb1646451f1cf819e9c3_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/82185041/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid599831836-b2000000.m3u8
+#EXTINF:-1 ,Лев (2017) (16+)
+http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40//fhd/Lion.2016.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Лига справедливости (2017) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/Justice.League.2017.Lic.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Лицо Ангела (2015) (16+)
+http://vs315.vcdn.biz/ce23c43d48c07f1fb9e88f329c101bce_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/29039191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Личный интерес (1986) 1 серия
+http://meta.vcdn.biz/984b4029e578667657fa5d37aed4adc6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/52498771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Личный интерес (1986) 2 серия
+http://meta.vcdn.biz/95a6f45fb333ca21c55c778656a30ad5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/52470401/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Любовь в Большом городе (2009) (16+)
+http://meta.vcdn.biz/025d93d572cbbfe5b13385ceddce51db_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/87431/u_uid/0/u_vod/3/u_device/cms_webandroid/a/1/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Любовь в Большом городе 2 (2010) (16+)
+http://meta.vcdn.biz/3f362ccf2542b5ee4689c0800c22b4c9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/88321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/2/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Любовь по наследству (2017) (12+)
+http://212.113.38.100/hls/a8edbd4a0110e4db5ab2a30a2562a2c7//m1/Ljubov.po.nasledstvu.2017.ExKinoRay.m3u8
+#EXTINF:-1 ,Люди Икс (2000) (12+)
+http://212.113.38.100/hls/85a575b735b714c22207270431b98443/ms2/1-X-Men.2000.BDRip.1080p.BluRay..m3u8
+#EXTINF:-1 ,Люди Икс 2 (2003) (12+)
+http://212.113.38.100/hls/85a575b735b714c22207270431b98443/ms2/2-X-Men-2.United.2003.BDRip.1080p.BluRay..m3u8
+#EXTINF:-1 ,Люди Икс 3:Последняя битва (2006) (12+)
+http://212.113.38.100/hls/85a575b735b714c22207270431b98443/ms2/3-X-Men.The.Last.Stand.2006.1080p.REVISITED.BluRay..m3u8
+#EXTINF:-1 ,Максимальный удар (2017) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//mhd/maksimalniy.udar.m3u8
+#EXTINF:-1 ,Максимка (1953)
+http://meta.vcdn.biz/07d7d901b9dcefa5998f2048c2cc589b_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/232601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Манолете (2008) (16+)
+http://vs310.vcdn.biz/cc267c228299e2e18f11e7adb6c56963_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13564591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/5/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Мара.Пожиратель снов (2018) (18+)
+https://vs8.vcdn.biz/7132ce0b897b322748ef5771b66f71b9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/71104151/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid525442330-b2000000.m3u8
+#EXTINF:-1 ,Маршалл (2017) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//m1/marshall.m3u8
+#EXTINF:-1 ,Матч (2012) (16+)
+http://meta.vcdn.biz/b5f91f9e3acb1dac65d567ac9d2691b9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/90711/u_uid/0/u_vod/3/u_device/cms_webandroid/a/1/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Матч-реванш (1968)
+http://meta.vcdn.biz/671440a66f507f6689810d5632a87f07_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/248561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 1
+http://vs313.vcdn.biz/81d5df4d13b936cf08bb4abe38c922cd_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4251991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 10
+http://vs324.vcdn.biz/7a538ba1791c19c58301568b8ed7318d_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 11
+http://vs341.vcdn.biz/6c828b68c1a1e60e7860654cc8d882c8_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 12
+http://vs329.vcdn.biz/c69954aceaa0833cf1565e2e9b84bdb6_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252161/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 13
+http://vs346.vcdn.biz/6d68ff1be078477e66fb797e5b636ec4_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 14
+http://vs341.vcdn.biz/e11db1e64babdf36f05e32680127c76c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252181/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 15
+http://vs346.vcdn.biz/51f29f68f1b05bdd7170ff4afaf24545_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 16
+http://vs329.vcdn.biz/63b93a1fa6bde8e0d331cfbede8c69cd_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 17
+http://vs323.vcdn.biz/45983040cd22a2dba7a9b0eaea8f8114_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252211/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 18
+http://vs341.vcdn.biz/54a30c89aabc3d86b93db4fa4b71929e_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 19
+http://vs308.vcdn.biz/42e51a7ffe7ef4673bf079c9184ccbda_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 2
+http://vs329.vcdn.biz/c92ddbcd28918d07ec6402fa8e50452b_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 20
+http://vs313.vcdn.biz/6cf2568bae9cbaab42b7b7974837036d_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 21
+http://vs306.vcdn.biz/abf8269218c5b15e00fe6e6d5c936d45_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 22
+http://vs312.vcdn.biz/0659907273746d90e62ddf5da6a2b0a4_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252291/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 23
+http://vs306.vcdn.biz/e806887d5c8b106c9259502993b61e6e_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 24
+http://vs311.vcdn.biz/5b94bdc1c7c17a7853d5e7d6a6674fc9_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 25
+http://vs325.vcdn.biz/024c20520415ec69e3a88579c642ab27_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 26
+http://vs327.vcdn.biz/052166db18fbd90ac1667e52437a7845_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252341/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 27
+http://vs346.vcdn.biz/e3ead48f08c38b2db911af22d93e8358_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 28
+http://vs317.vcdn.biz/8b2fa4fb8310ed685e1720f6ff6bf2a5_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 29
+http://vs324.vcdn.biz/732dc357273ebee4b808542393ddb6ff_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252371/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 3
+http://vs318.vcdn.biz/d3f9a329c471d9c8b439b6e0bec9bd5c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252011/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 30
+http://vs320.vcdn.biz/fe7a52d25cbd57b1be40a47a6be95cb1_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252381/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 31
+http://vs340.vcdn.biz/c0dab8acd75871cccb84f357396f48cc_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252401/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 32
+http://vs327.vcdn.biz/846bdf9d969d5354affc39031e7e6a55_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 33
+http://vs311.vcdn.biz/1b691a49d2154e5575a3afa4fd796211_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 34
+http://vs315.vcdn.biz/c42c7f259125ce8e102b444b46d44f7c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 35
+http://vs324.vcdn.biz/1dbba7bf61a9843202f8bf7e0b1d4d0d_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 36
+http://vs342.vcdn.biz/5d729512067ab6b640b211150ce83de1_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024631/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 37
+http://vs308.vcdn.biz/aab57756612cc6392854f465e656206f_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 39
+http://vs324.vcdn.biz/028f3f737a879a6bd680196dab168149_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024661/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 4
+http://vs322.vcdn.biz/f66d49f2c3ae52b7af1690a17b08b26d_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 40
+http://vs324.vcdn.biz/528aa0748b086f2dd6e70aee8942d4eb_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024671/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 41
+http://vs327.vcdn.biz/70f9bbd3afa1c4e16e5359882f65fe4c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/8180011/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 42
+http://vs313.vcdn.biz/4f0bf55ce4004734213b7babfab26aa6_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/9630581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 43
+http://vs325.vcdn.biz/271bd453d1810fe917975ea9e270b671_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/14701441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 44
+http://vs341.vcdn.biz/1dba615e5ccfa377bd2e550d02857e9e_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/21528141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 45
+http://vs310.vcdn.biz/6e9dc5280fdee541c03aa63ce31cb238_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/24181751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 46
+http://vs327.vcdn.biz/9628a3a59b6710b07c246bf53d43dd80_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/24953901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 47
+http://vs327.vcdn.biz/427ec2ab47e714239536d5be5b7dfcc3_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/28780911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 48
+http://vs315.vcdn.biz/8d435efe2c70646114ac7e419b8985aa_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/30070651/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 49
+http://vs342.vcdn.biz/96e5948a88f54d75271d626f7f69c948_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/31861381/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 5
+http://vs308.vcdn.biz/0645634dfdb3efad5d85390e79d3bef3_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 50
+http://vs308.vcdn.biz/cd7b09d004a360776376615c704fb0f6_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/32579081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 6
+http://vs342.vcdn.biz/20322600187ea6c7056e982eda54e80f_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 7
+http://vs320.vcdn.biz/370322e8d42932359f6547b393a516b7_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 74
+http://vs340.vcdn.biz/fd136f811e727bf9da425337381a8fb0_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/71460021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 75
+http://vs344.vcdn.biz/c375c70084cfcf30c0a031255dcc4e5c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/72142051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 76
+http://vs310.vcdn.biz/3bde53435f1465c17adfcb53218ee346_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/74597871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 77
+http://vs313.vcdn.biz/62c38bd14440f434d7e437485c58e5a4_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/76055851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 78
+http://vs307.vcdn.biz/48a78d92268c79a857129719a00abacd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/77369301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 8
+http://vs313.vcdn.biz/2c220850c970b1399b102e0c80a2e259_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 9
+http://vs322.vcdn.biz/5f79d93f48152c95576a822c7b28634b_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/4252081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Машина времени в джакузи (2010) (16+)
+http://meta.vcdn.biz/d348db240a5d529f86e4eb399e94913a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28774551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Место встречи изменить нельзя 1 серия (1979)
+http://meta.vcdn.biz/026205421c47494c790cea782643c4e2_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/92521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Место встречи изменить нельзя 2 серия (1979)
+http://meta.vcdn.biz/6f869c4e20fc3922aee40eb669bdcd76_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/96451/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Место встречи изменить нельзя 3 серия (1979)
+http://meta.vcdn.biz/bc6e787bed566786a69ee1d24efae77a_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/102861/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Место встречи изменить нельзя 4 серия (1979)
+http://meta.vcdn.biz/02946e92013c87eb3823f037b8d6081f_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/102281/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Место встречи изменить нельзя 5 серия (1979)
+http://meta.vcdn.biz/c920a1ca27168bcabf331af56c439448_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/103101/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Метеор на ринге (1970)
+http://meta.vcdn.biz/2ea0a43107f21fae9eb683c938b55e5b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/276911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Меч короля Артура (2017) (16+)
+http://212.113.38.100/hls/3e27638fa78b5c63608c5425aa4988a5/fhd/King.Arthur.Legend.of.the.Sword.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Мешок яблок
+http://meta.vcdn.biz/205890ba7115ef3242f37288bbf3d339_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/138241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Миллион для чайников (2012) (16+)
+https://vs8.vcdn.biz/a08ae5047a62778fcf37eb1317278227_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/468441/u_uid/0/u_vod/3/u_device/cms_html5/a/4/type.amlst/chunklist-sid97523099-b2000000.m3u8
+#EXTINF:-1 ,Мимино (1977)
+http://meta.vcdn.biz/469c1b53697234d41df48154fd0605bc_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17552481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Мисс Медоуз (2014) (16+)
+https://vs6.vcdn.biz/07280d0779329fa872cef7c1dbd6fc7d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/33530761/u_uid/0/u_vod/3/u_device/cms_html5/a/3/type.amlst/chunklist-sid1625837445-b2000000.m3u8
+#EXTINF:-1 ,Молодая Виктория (2009) (12+)
+http://vs318.vcdn.biz/08d2634148580f5e27be3e37ef1e5d31_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/83251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Морозко (1964)
+http://meta.vcdn.biz/1663f9d440053cd04d8941fb137ffe41_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/154731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Москва-Кассиопея (1974)
+http://meta.vcdn.biz/9c9c66b4ec2967ee95a3ce88d10bcecf_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/168151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Москва-Лопушки (2014) (12+)
+http://meta.vcdn.biz/1de27daf30663cc1d4fd6406545ffe67_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/15797031/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,На Дерибасовской хорошая погода...(1993) (16+)
+http://meta.vcdn.biz/a4ed81ac11d556dcdf3178a8a2b07fa9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46296431/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,На карте не значится (2009) (18+)
+https://vs7.vcdn.biz/20624c2c82116986cf17fa5690c11d23_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/103541/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2043633528-b2000000.m3u8
+#EXTINF:-1 ,Невероятные приключения итальянцев в России (1974)
+http://meta.vcdn.biz/795e512c210b2abb546ad1b73842d031_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17555551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Несносные леди (2016) (12+)
+https://vs8.vcdn.biz/46a036449009aa8eca3c9795a0269b71_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38750511/u_uid/0/u_vod/3/u_device/cms_html5/a/4/type.amlst/chunklist-sid1472777447-b2000000.m3u8
+#EXTINF:-1 ,Неуловимые мстители (1967)
+http://meta.vcdn.biz/908314b418767f07a79b990f9f11a48b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17776201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Новогодний корпоратив (2016) (18+)
+http://212.113.38.100/hls/9294ee296545be39852a921d967daca2//fhd/Office.Christmas.Party.2016.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Новые приключения неуловимых (1968)
+http://meta.vcdn.biz/9ad343ad3b95d1119fabd83182350287_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/17776181/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Нью-Йорк я люблю тебя (2008) (18+)
+https://vs7.vcdn.biz/ef38b000f73a9bbaf5c7d9baa430364d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/101481/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid1334897969-b2000000.m3u8
+#EXTINF:-1 ,Ограбление по...
+http://meta.vcdn.biz/10cd15fd2014ac69372a6f919fb5450e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/201521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Оксана в стране чудес (2011) (12+)
+http://meta.vcdn.biz/022a9ff7d1ddba9583f1fd01b60bc05b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/97891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Операция Ы и другие приключения Шурика (1965)
+http://meta.vcdn.biz/bcf67455a7627a1647d7b8595fa7bf11_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17552351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Отпетые напарники (2016) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/Skiptrace.2016.D.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Паркер (2012) (16+)
+http://meta.vcdn.biz/774630e6d03f53ba894f7b8e8ad2e53b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/4598061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/12/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Пастор Шепард (2010) (16+)
+http://vs321.vcdn.biz/ac676950ed8f58d3cb36d5ce5b225391_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/43440201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Патруль времени (1994) (18+)
+http://vs307.vcdn.biz/4c8249b96543183c9e8bdeac6a7b958f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13565061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/5/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Первопечатник Иван Федоров (1941)
+https://vs9.vcdn.biz/c25d469f4fc33078e09ad72c99027c58_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33075071/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1969285622-b2000000.m3u8
+#EXTINF:-1 ,Перевозчик:Наследие (2015) (16+)
+http://meta.vcdn.biz/c6951116f0ab6b227c29bd835df245a0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/34180001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Петля Ориона (1982)
+http://meta.vcdn.biz/0bde3568eb36d2983ef531b58066c175_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/171991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Пираньи 3DD (2012) (18+)
+http://vs314.vcdn.biz/9d4cd61dffe8e5f1ff004db46c9f9bd7_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/91641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Пираты XX века (1979)
+http://meta.vcdn.biz/e19e9fd589af7d4893317deb863a54d2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/169531/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Планета 51 (2009) (12+)
+http://212.113.38.100/hls/4cda492f2a5d6c51c63cb0c669c063d0/mhd/_Planet_51.2009.720p.BluRay.x264.mkv.flv.m3u8
+#EXTINF:-1 ,Планета обезьян:Война (2017) (16+)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22/fhd/War.for.the.Planet.of.the.Apes.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Плохой Санта 2 (2016) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a/fhd/Bad.Santa.2.2016.1080p.WEB-DL.Rus.HDCLUB.m3u8
+#EXTINF:-1 ,Плюшевый монстр (2017)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/Lino.Plushevy.monster.2017.WEB-DL.1080p.Rus.m3u8
+#EXTINF:-1 ,Побег (1994) (18+)
+https://vs8.vcdn.biz/5faa2168000b4c655f52f56beac2ad2d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/15809101/u_uid/0/u_vod/3/u_device/cms_html5/a/10/type.amlst/chunklist-sid1569323484-b2000000.m3u8
+#EXTINF:-1 ,Побег из Рио (2016) (18+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//mhd/9o1Ng.7o.8R421l.2016.D.BDRip.720p.m3u8
+#EXTINF:-1 ,Повелитель луж (2002)
+http://meta.vcdn.biz/fd261becfd6f2932533e55e5cc6ce026_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/273441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Подстава (2011) (16+)
+http://vs324.vcdn.biz/2d4c4ae080454daa9b8207944185d39d_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/181051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Поезд в Пусан (2016) (16+)
+http://vs327.vcdn.biz/2675600efd9691283d6e70cf75fb23e1_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/40783951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Познавая белый свет (1978) (12+)
+https://vs59.vcdn.biz/c7206e5d4fd15d7a43e4195b5d1ef5d3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/72631831/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid529323668-b2000000.m3u8
+#EXTINF:-1 ,Пол:Секретный материальчик (2011) (16+)
+http://212.113.38.100/hls/4cda492f2a5d6c51c63cb0c669c063d0//fhd/Paul.Theatrical.Cut.2011.BDRip.1080p.m3u8
+#EXTINF:-1 ,Полное превращение (2015) (16+)
+http://212.113.38.100/hls/bf95b1b3e49edf0a36e85abe34263e93//fhd/p0LH0e.pPeBPash4eH1e.2015.O.WEB-DL.1080p.m3u8
+#EXTINF:-1 ,Попса (2005) (12+)
+http://vs341.vcdn.biz/001715d503db37f4a9cedd0f726b9634_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46299851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Последний дюйм (1958)
+http://meta.vcdn.biz/743922580d0c0f3b09d134e8ca96991d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/135851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Последствия (2017) (18+)
+http://meta.vcdn.biz/482a117971b0ade8e27ad327e525073f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/47411541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Правила для плохих девчонок (2009) (18+)
+http://meta.vcdn.biz/b2ea16e4857c0a9f0fda9b8f824f719e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/73510661/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Правила съема:Метод Хитча (2005) (12+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/Hitch.2005.1080p.F-HD.m3u8
+#EXTINF:-1 ,Предложение (2009) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/The.Proposal.2009.BDRip.1080p.Rus.Ukr.Eng.m3u8
+#EXTINF:-1 ,Прежде чем я усну (2014) (16+)
+http://meta.vcdn.biz/db6bd5bf57b85c59a91a482b364d9061_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/32907171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Буратино (1975) 1 серия
+http://vs326.vcdn.biz/8344d72c561095442cb1b30bcc521f00_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/100561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Буратино (1975) 2 серия
+http://vs343.vcdn.biz/e604afe69f8cbcb03c2d444632190fd7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/148551/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Гекльберри Финна (2013)
+http://vs311.vcdn.biz/6182da338319a649742cab2fffc61a8b_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/28774181/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Электроника 1 серия (1980)
+http://meta.vcdn.biz/2fef9fb6042b7cd5663150442935258e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/97831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Электроника 2 серия (1980)
+http://meta.vcdn.biz/db8b61860ba2a2092c7b2039c8134151_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/106211/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения Электроника 3 серия (1980)
+http://meta.vcdn.biz/ebfbd442ee87ab6ec04ff031aecb7987_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/146971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приключения желтого чемоданчика (1970)
+http://meta.vcdn.biz/3cee8f34369801a0f0e952acef3d2cbf_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/179641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Приколисты (2009) (16+)
+http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40//fhd/Funny.People.Unrated.2009.BD.Rip.1080p.m3u8
+#EXTINF:-1 ,Пришелец (2018) (12+)
+https://vs59.vcdn.biz/c5780acff5dcfd4cce681dd16a81ed29_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/71726541/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid807835757-b2000000.m3u8
+#EXTINF:-1 ,Проклятие:Начало конца (2015) (16+)
+http://vs307.vcdn.biz/cd2f001aeb1072f2075cff379821443c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/32233951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Профессионал (2011) (16+)
+https://vs8.vcdn.biz/f9dab7d5444e4a9e6e4ff86358eb6f68_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/109421/u_uid/0/u_vod/3/u_device/cms_html5/a/11/type.amlst/chunklist-sid1632720120-b2000000.m3u8
+#EXTINF:-1 ,Пункт назначения (2000) (16+)
+http://212.113.38.100/realhls/st5/ms2/Punkt_naznacheniia.2000.BDRip.1080p.Rus.Eng.mp4/index.m3u8
+#EXTINF:-1 ,Пункт назначения 2 (2003) (16+)
+http://212.113.38.100/realhls/st5/ms2/Punkt_naznacheniia.2.2003.BDRip.1080p.Rus.Eng.mp4/index.m3u8
+#EXTINF:-1 ,Пункт назначения 3 (2006) (16+)
+http://212.113.38.100/realhls/st5/ms2/Punkt_naznacheniia.3.2006.BDRip.1080p.Rus.Eng.mp4/index.m3u8
+#EXTINF:-1 ,Пункт назначения 4 (2009) (16+)
+http://212.113.38.100/realhls/st5/ms2/Punkt_naznacheniia.4.2009.BDRip.1080p.Rus.Eng.mp4/index.m3u8
+#EXTINF:-1 ,Пункт назначения 5 (2011) (16+)
+http://212.113.38.100/realhls/st5/ms2/Punkt_naznacheniia.5.2011.BDRip.1080p.Rus.Eng.mp4/index.m3u8
+#EXTINF:-1 ,Райское озеро (2008) (18+)
+http://vs307.vcdn.biz/6863b9876567505b116ee8b0bf42b64a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28774061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Реальная белка (2013)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22/fhd/The.Nut.Job.2014.BDRip.1080p.Rus.m3u8
+#EXTINF:-1 ,Реальная белка 2 (2017)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22/fhd/The.Nut.Job.2.Nutty.by.Nature.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Риддик (2013) (16+)
+http://meta.vcdn.biz/5954497f813c97362390aa884cafda01_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/5068491/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Рикки-Тикки-Тави (1975)
+http://meta.vcdn.biz/0bb7a76c2a07abad15f7db60067fadf3_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/100061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Римские приключения (2012) (18+)
+https://vs8.vcdn.biz/5cb68e538feaabdcb73ae97569dd362a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85901/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid1998741875-b2000000.m3u8
+#EXTINF:-1 ,Рио (2011)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/mhd/_Rio.2011.x264.BDRip.720p.mkv.flv.m3u8
+#EXTINF:-1 ,Рэмбо 4 (2008) (16+)
+http://vs343.vcdn.biz/056f7065ae225044608b23e5af50a73a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/86931/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,С любимыми не расставайтесь (1979)
+http://meta.vcdn.biz/be8104ba61607bc3e2948244fcee0ff9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Савраска (1989)
+http://meta.vcdn.biz/2caf82b67e46d30ab33c13b069f45498_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/218991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Салават Юлаев (1940)
+http://meta.vcdn.biz/ebdd7a497ba041e1778916952d2713d4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Самая обаятельная и привлекательная (1985)
+http://meta.vcdn.biz/e36976f418f621dcf8b2447a31612399_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17553181/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Самоубийца (1990) (12+)
+http://meta.vcdn.biz/60b29c0c378543290efee69595048153_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46302243/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Самый красивый конь (1977)
+http://meta.vcdn.biz/5c31ac43a978b54163ee6a42cae225c6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Санктум (2011) (16+)
+http://vs308.vcdn.biz/c45a2475e43ac5e6d8530cc9399309c4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/25110651/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сашка (1981)
+http://meta.vcdn.biz/6a00f138730e427f91f9f54f21ac3640_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сбежавшая невеста (1999) (16+)
+http://meta.vcdn.biz/2fc80eff741de386d273a8f7d9930441_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13637451/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадебный подарок (1982)
+http://meta.vcdn.biz/07b7ecd578cc539204f52cd39e8da07d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/278261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадьба (1944)
+http://meta.vcdn.biz/5c18af22360f16bf4be1e1139693ace2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадьба (1973)
+http://meta.vcdn.biz/6d27927bae6d6e3ff143dfea19009f90_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/336051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадьба Кречинского (1974) 1 серия
+http://meta.vcdn.biz/d57783616f6e807922cd2fd9c8423cd4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/336991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадьба Кречинского (1974) 2 серия
+http://meta.vcdn.biz/8205b9f57710268dd42e20fbab3c494c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/380221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свадьба в Малиновке (1967)
+http://meta.vcdn.biz/11371fd209fa4d5d8d955eb620219229_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сватанье на Гончаровке (1958)
+http://meta.vcdn.biz/331b9a95a7635fa3864d8d89be46bb51_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/240671/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сверстницы (1959)
+http://meta.vcdn.biz/846393cac3bde11f875202d64e3c5629_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Светлая личность (1988)
+http://meta.vcdn.biz/e73ce70fb3cc4d4c8c5d80081dc3c600_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/185751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Светлый путь (1940)
+http://meta.vcdn.biz/f129ef01861524cb2d649ba368761280_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775431/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свидание (1982)
+http://meta.vcdn.biz/bc3ab5a04dcdd8420bf181b2363b97d8_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/254161/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свидетельство о бедности (1977)
+http://meta.vcdn.biz/e9245f89a11dcfa089b78645cf878cf6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/257311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свистать всех наверх! (1970)
+http://meta.vcdn.biz/92058d04365f2896b738108a3ace46e5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33077261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Свой парень (1974)
+http://meta.vcdn.biz/9b77242b98611d996c18e2eac94400c5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сегодня - новый аттракцион (1965)
+http://meta.vcdn.biz/8ce2995795500ab2c7e4a5be26616fac_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/292121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Седьмой спутник (1967)
+http://meta.vcdn.biz/d44a5c36a7a67f494137a2c05b295aee_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/496471/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сезон убийц (2013) (16+)
+http://meta.vcdn.biz/89bcb9f2256e7c20acfa980b0d84b2f1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/593811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/12/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сезон чудес (1985)
+http://meta.vcdn.biz/83483cac41326d61192009aaec153087_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/248351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Секретный фарватер (1986) 1 серия
+http://meta.vcdn.biz/7500c8b853bac0eb1d1aa34e4eace10a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/137561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Секретный фарватер (1986) 2 серия
+http://meta.vcdn.biz/92f3554274c3596e208fb92482fda412_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/158541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Секретный фарватер (1986) 3 серия
+http://meta.vcdn.biz/28bf14d8c0f2a29ae543ad4caf4c9936_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/161411/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Секретный фарватер (1986) 4 серия
+http://meta.vcdn.biz/6905a793c3901b216bf93722b780753f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/170851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Секс за деньги любовь-бесплатно (2011) (16+)
+http://meta.vcdn.biz/c0aabcb77110b9900dce658571289de5_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/25030811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сельская учительница (1947)
+http://meta.vcdn.biz/e3fc0cf24012dc52b732ee3c74f7ccd8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/297991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сельский врач (1951)
+http://meta.vcdn.biz/18f4959a4576b7c29285f527e89de9ef_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30073391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семейное ограбление (2017) (16+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Mes.tresors.2017.BDREMUX.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Семейное счастье (1969)
+http://meta.vcdn.biz/72acd45c51e89f55c93e5d6d0ad37b67_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семейный круг (1980)
+http://meta.vcdn.biz/f10a2e4f12b2fcc43f9f3f69cc3af3ad_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/297441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семейный план (1997) (12+)
+http://meta.vcdn.biz/41ffa4cba1a11dc6f2bfdb83a8747b3e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/13637601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семейный план (1997) (12+)
+https://vs7.vcdn.biz/0c9af5405b41dc3f00bd578d7d09ffb4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/13637601/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid623536447-b2000000.m3u8
+#EXTINF:-1 ,Семеро солдатиков (1983)
+http://meta.vcdn.biz/a766f7b7b571612d82c23a079fcde9dd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29587701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семнадцатый трансатлантический (1972)
+http://meta.vcdn.biz/1ae1f4ac3eece22add790e1260d8d754_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/218351/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семь невест ефрейтора Збруева (1970)
+http://meta.vcdn.biz/086bb02169ac8ae2340d4dabd7f14101_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/83031/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семь нянек (1962)
+http://meta.vcdn.biz/5f2e8a741b2fbf1deb72bc33b2f9d4c6_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17749191/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семь стихий (1984)
+http://meta.vcdn.biz/4f298380b5cc34cd6c4c5a028a06524e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33077391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семья Коцюбинских (1971) 1 серия
+http://meta.vcdn.biz/6b54ea09004a3abfeaa0abdc52d2624e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/238901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Семья Коцюбинских (1971) 2 серия
+http://meta.vcdn.biz/af5234148f94c381d659d5709766bf70_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/377421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сентиментальный роман (1976)
+http://meta.vcdn.biz/0bb7b2bd1960b455262c45c6232b1c21_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/317421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сердца четырех (1941)
+http://meta.vcdn.biz/44e4bcd75d01d220a858abfdff9e1cf0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17749151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сердце Бонивура (1971) 1 серия
+http://meta.vcdn.biz/c0b88bec8f684539ff903006ed9118e1_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/204981/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сердце Бонивура (1971) 2 серия
+http://meta.vcdn.biz/3588de0c86f6cf0fdd604d8b1e26cf0c_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/224231/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сердце друга (1966)
+http://meta.vcdn.biz/5e7b2008ddf0e5a9999013f20a543163_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33077421/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сердце матери (1965)
+http://meta.vcdn.biz/3f662838b047ed4f421bdd51d253c3a4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29588291/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Серебряное копытце
+http://meta.vcdn.biz/4d4f60e0da5da4d80e702f32d7f86186_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/268771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Серебряное ревю (1982)
+http://meta.vcdn.biz/d6d8e4fdbe836ed333063f6095222665_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33077461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Серебряный тренер (1963)
+http://meta.vcdn.biz/0cd3bfc10b24ef7cecf023aafaf16b4a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/341631/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сережа (1960)
+http://meta.vcdn.biz/7b90769df4f76b4020eadb2cd2a9a32e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17749141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сержант милиции (1974) 1 серия
+http://meta.vcdn.biz/c02e9434e0be01eb1289728601a27a80_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/189061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сержант милиции (1974) 2 серия
+http://meta.vcdn.biz/a2ec831df7ee815933796a0ab44b57da_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/198861/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сержант милиции (1974) 3 серия
+http://meta.vcdn.biz/7a3679f95b530a4ee6b7bc04126fcfa3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/97691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сеть (2016) (16+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/set_geumul-2016-web-dlrip.1080p.m3u8
+#EXTINF:-1 ,Сибириада 1 серия (1978)
+http://meta.vcdn.biz/2ebce87c8a871751d5340e0c6126cc56_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24959891/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сибириада 2 серия (1978)
+http://meta.vcdn.biz/1984a6f70bebe927601b35f0cda70116_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24959911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сибиряки (1940)
+http://meta.vcdn.biz/c6f30a05d095e9ca8aa96027dae35c87_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/29588411/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сильва 1 серия (1981)
+http://meta.vcdn.biz/abe6f36535c226ed914163771e78e2f0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/181321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сильнее урагана (1960)
+http://meta.vcdn.biz/c8f449386ccb5d839bfe613596aec110_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/270521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сирано де Бержерак (1990) (12+)
+https://vs6.vcdn.biz/55e17bab976e31f9124cc096b22e81d9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/142481/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1118914904-b2000000.m3u8
+#EXTINF:-1 ,Сироп (2011) (16+)
+https://vs7.vcdn.biz/f07ebaf2ce66e973764f8157213db36d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/547831/u_uid/0/u_vod/3/u_device/cms_html5/a/4/type.amlst/chunklist-sid1773233072-b2000000.m3u8
+#EXTINF:-1 ,Сицилианская защита (1980)
+http://meta.vcdn.biz/4f46cde6aef12d91ee3243dafdb42dc0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/276321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сказ про то как царь Петр арапа женил (1976)
+http://meta.vcdn.biz/04cf7b3cd234322d82617f971ab38ed7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17748981/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сказка о Мальчише-Кибальчише (1964)
+http://meta.vcdn.biz/995bab23835dd016fde3dcc27e2ccfb3_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/162641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сказка о потерянном времени (1964)
+http://meta.vcdn.biz/9fcd007bbf77c87df720d579c2b54335_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17748951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сказка про влюбленного маляра (1987)
+http://meta.vcdn.biz/0c4fde0c121b66c6a72758c2db0f6c8c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/225951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сказка странствий (1982)
+http://meta.vcdn.biz/c0cd5391239706d60adb2cb8d9a558ea_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17748691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Скайлайн (2010) (16+)
+http://meta.vcdn.biz/4dbd29edd604f1bafc3a184520dd33ed_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/17/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Служебный роман (1977)
+http://meta.vcdn.biz/4624371dab140ea3839e78e197456613_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17552201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Служебный роман.Наше время (2011) (16+)
+http://meta.vcdn.biz/379967ef7b5a5ded5998d0b5246216ab_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/515401/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Случай в квадрате 36-80 (1982)
+https://vs9.vcdn.biz/054bed973b8c85e3c9284fb50a794138_megogo/vod/hls/b/450_900_1350_2000/o/17748561/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1590963231-b2000000.m3u8
+#EXTINF:-1 ,Сноуден (2016) (16+)
+http://vs309.vcdn.biz/5bc078a168e718cd682649a454f2653c_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/38258941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/3/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Собачье сердце 1 серия (1988)
+http://meta.vcdn.biz/dd52c82bc55940255c1638064fb4b0a6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/95121/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Собачье сердце 2 серия (1988)
+http://meta.vcdn.biz/252a55404ee90fba8222451c42047825_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/104851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Солдат Джейн (1997) (18+)
+http://meta.vcdn.biz/8618b52b28e70243620e779373284061_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13638031/u_uid/0/u_vod/3/u_device/cms_webandroid/a/11/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Солдатик (2018)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/SOLDATIK_2019_WEB-DL_1080p-BLUEBIRD.m3u8
+#EXTINF:-1 ,Солдаты (1956) (16+)
+http://meta.vcdn.biz/125c0c5a4dd18f00526d8b20a74feb06_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/185791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Солярис (1972)
+http://meta.vcdn.biz/4cee6c4f85a9a077fb304707acb31315_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17748451/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Спасти или уничтожить 1 серия (2012) (16+)
+http://vs307.vcdn.biz/d74b9307d31947f8dcdf9717716720ab_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/40529161/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Спасти или уничтожить 2 серия (2012) (16+)
+http://vs324.vcdn.biz/3ff27f7d811af98f4057eaf024734287_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/40529171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Спасти или уничтожить 3 серия (2012) (16+)
+http://vs324.vcdn.biz/2c2468c339b3374221dc175bb6c64463_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/40530081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Спасти или уничтожить 4 серия (2012) (16+)
+http://vs307.vcdn.biz/72de82fd0a37985bd6ef25a9d3bbf0e1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/40397181/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Средь бела дня (2011) (16+)
+http://vs329.vcdn.biz/d23f2b02fc860d12d10dda64d78f761f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/194361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Сталкер (1979)
+http://meta.vcdn.biz/dd7753f230e83606e9e2a965f022c894_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17555671/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Старая старая сказка (1968)
+http://meta.vcdn.biz/1ed07b8ba689c8ffe4cdc16cee4ae5ca_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/177691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Старик Хоттабыч (1956)
+http://meta.vcdn.biz/0abb07648247dd3e3085e2929609255b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/108701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Стоун (2010) (16+)
+http://meta.vcdn.biz/54c1d9ea145feb8e9469d6f4e8c84d29_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28408271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/7/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Странные явления (2017) (18+)
+https://vs817.vcdn.biz/bab47c9d3d4eba053f6fafaab7b580aa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84837221/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid1885916014-b2000000.m3u8
+#EXTINF:-1 ,Стукач (2012) (12+)
+http://meta.vcdn.biz/82d84ba3400b49c16a8f851f1fd306cc_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13668441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Судья Дредд (2012) (18+)
+http://meta.vcdn.biz/dcd8973adb14430cea34b6905411b3d6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/91341/u_uid/0/u_vod/3/u_device/cms_webandroid/a/15/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Суперкоманда (2013)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/mhd/_Metegol.2013.BDRip.720p.Rus.Esp.AlexFilm.mkv.flv.m3u8
+#EXTINF:-1 ,Табор уходит в небо (1976)
+http://meta.vcdn.biz/79ecfd12d30b8cbc987d467350c54dc0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17692151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Такси (1998) (16+)
+http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40/ms2/Taxi.1998.WEB-DL.720p.P2.m3u8
+#EXTINF:-1 ,Талан (2018) (16+)
+https://vs7.vcdn.biz/322c501f57a729a9a4d49525abd633c7_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/83217191/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2107097206-b2000000.m3u8
+#EXTINF:-1 ,Там где сердце (2000) (16+)
+http://meta.vcdn.biz/de813a6234167a3b381f0d55e4d9ef19_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17032261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Танцы насмерть (2017) (12+)
+http://212.113.38.100/hls/bf95b1b3e49edf0a36e85abe34263e93//fhd/Tancy.nasmertj.2017.WEB-DL.1080p.m3u8
+#EXTINF:-1 ,Тарас Бульба (2009) (16+)
+http://vs326.vcdn.biz/52540e11de0df03b67816ccb4ea4bace_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/1006001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/2/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Тарзан (2013)
+http://meta.vcdn.biz/87e99f66b740024fe4a41e91d5edb56b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13669111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Телохранитель (2010) (18+)
+http://meta.vcdn.biz/c8facf5a754b80ade4fbf4817e600597_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/87711/u_uid/0/u_vod/3/u_device/cms_webandroid/a/9/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Темные воды (2019) (16+)
+http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Dark.Waters.2019.BDRip.1080p.seleZen.m3u8
+#EXTINF:-1 ,Тепловой удар (2013) (18+)
+https://vs6.vcdn.biz/ace52b94b4fa582d7a17efcc8b754d3d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38099001/u_uid/0/u_vod/3/u_device/cms_html5/a/3/type.amlst/chunklist-sid1585084341-b2000000.m3u8
+#EXTINF:-1 ,Территория девственниц (2007) (16+)
+https://vs7.vcdn.biz/481a88a43935a2d84450f0d9d110deac_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/514031/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2120511358-b2000000.m3u8
+#EXTINF:-1 ,Тимур и его команда 1 серия (1976)
+http://vs310.vcdn.biz/0b44e939a9398f78ba4dc37d6e23c25b_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/153591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Тимур и его команда 2 серия (1976)
+http://meta.vcdn.biz/d8ff542342c15f2aadd582381aa3c0cd_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/172681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Тихоокеанский рубеж (2013) (12+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/Pacific.Rim.2013.BluRay.1080p.x264-CHD.m3u8
+#EXTINF:-1 ,Тоня против всех (2017) (18+)
+http://212.113.38.100/hls/6c4669a788be90c2652da0dfcc6e48c7//fhd/I.Tonya.2017.BDRip.1080p.m3u8
+#EXTINF:-1 ,Трансформеры:Последний рыцарь (2017) (12+)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22/fhd/Transformers.The.Last.Knight.2017.D.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Третий лишний 2 (2015) (18+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7//fhd/Ted.2.2015.1080p.BDRip-WiKi.m3u8
+#EXTINF:-1 ,Три богатыря и принцесса Египта (2017)
+http://212.113.38.100/hls/65c0fd6e3d2c554ab4325d0bbf2dba22//fhd/Tri.bogatyrja.i.princessa.Egipta.2017.Rus.m3u8
+#EXTINF:-1 ,Три дня (2008) (16+)
+http://vs308.vcdn.biz/420948d17a881f9979e8d615a2b864c9_megogo/vod/hls/b/450_900_1350/u_sid/0/o/143971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Три плюс два (1963)
+http://meta.vcdn.biz/babc270a7ba2350260c1ce763d1fc65a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/145781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Тридцать три (1965)
+http://meta.vcdn.biz/c70b2ce37a0c675dab6ce81db2ffd96d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17692081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У матросов нет вопросов (1980)
+http://meta.vcdn.biz/acd992c3e658bfd8fb1d07a3acc09de3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У них есть Родина (1949)
+http://meta.vcdn.biz/d343351f973b241225433fbcd5c7def2_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У озёра (1969)
+http://meta.vcdn.biz/95179abf3446e6474b0d69bf1aeb1577_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/233681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У призраков в плену (1984)
+http://meta.vcdn.biz/c93285a11fb7a24b1259764f05633b26_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/310601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У самого синего моря (1935)
+http://meta.vcdn.biz/b74db823c1bfdc4e8d313f741b071e2d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30021871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,У тихой пристани (1958)
+http://meta.vcdn.biz/6d97585603db93a8cd22b5d06ff699ec_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17692061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Убить дракона (1988)
+http://meta.vcdn.biz/8015bd68a1c906f1034ae08563f96e17_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17692051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Удар! Ещё удар! (1968)
+http://meta.vcdn.biz/c6c7bd0c1d985b8be89f306128461238_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/232251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Узнай меня (1979)
+http://meta.vcdn.biz/f73d8913bb7d966d89f8d73d9cf5021f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/227321/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Уик-энд в Париже (2013) (16+)
+https://vs8.vcdn.biz/0462d6919fe343ef7385a756e81510b6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/1994001/u_uid/0/u_vod/3/u_device/cms_html5/a/5/type.amlst/chunklist-sid1828820923-b2000000.m3u8
+#EXTINF:-1 ,Укротительница тигров (1954)
+http://meta.vcdn.biz/cf2416e32916bafbc5304e17f8210689_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/198201/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Уличные танцы 3:Все звезды (2013)
+https://vs6.vcdn.biz/3844b6f1e15f6e614b0d7e0340f78291_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/13731591/u_uid/0/u_vod/3/u_device/cms_html5/a/2/type.amlst/chunklist-sid1126197222-b2000000.m3u8
+#EXTINF:-1 ,Унижение (2015) (18+)
+http://vs307.vcdn.biz/d31ef18190c91875c3556d26a173671f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/25018621/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Уникум (1983)
+http://meta.vcdn.biz/13ffa5e138495a429410b3df4ecfbbbd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/238991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Усатый нянь (1977)
+http://meta.vcdn.biz/e27aef5d6b0c4660d36b81e89cafa9c6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/156581/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Утро без отметок (1983)
+http://meta.vcdn.biz/afa8ef3e2782b6bd1488b0d24cbbe138_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092491/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Уходя-уходи (1978)
+http://meta.vcdn.biz/4d4885132ad8657ad5c2904302772a0f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/199141/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ученик лекаря (1983)
+http://meta.vcdn.biz/61e41dbb5aa46547661cfd0eb0b8d269_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ученик мастера (2012) (16+)
+http://vs322.vcdn.biz/c337a629816996e32d38e13cf64807b2_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/141701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Учитель (1939)
+http://meta.vcdn.biz/bc82c1d52fc331074213dbb57dcb2aad_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/256521/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Учитель пения (1972)
+http://meta.vcdn.biz/2e880883c7212dd1a57e796229032218_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/249691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Учитель танцев (1952)
+http://meta.vcdn.biz/1a636b60f5d87172dbe7014888408152_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/52260241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Феи:Загадка пиратского острова (2014)
+http://212.113.38.100/hls/917d9a4f0ebbbec712fefae018f51b58/mhd/_The.Pirate.Fairy.2014.720p.BluRay.DTS.x264.-CtrlHD.mkv.flv.m3u8
+#EXTINF:-1 ,Феи:Потерянное сокровище (2009)
+http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Tinker.Bell.and.the.Lost.Treasure.2009.BDRip.1080p.m3u8
+#EXTINF:-1 ,Форма воды (2017) (18+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/The.Shape.of.Water.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Формула любви (1984)
+http://meta.vcdn.biz/c0c0758e19e4c3cb2618b6c37fe2cdd9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17553441/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Формула радуги (1966)
+http://meta.vcdn.biz/b3b6cc067ab1cd1ab4ec6d717529252e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/267261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хакер (2002) (16+)
+http://meta.vcdn.biz/7f3f90e26624ddf69d25d4cf437a84e0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/38099061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ханума 1 серия (1978)
+http://meta.vcdn.biz/83ae82e50fbd28a0cc5a55bef0120821_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/181851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ханума 2 серия (1978)
+http://meta.vcdn.biz/c3fef851aad8f1cfd0fccd868557d02c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/179231/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хлеб золото наган (1980)
+http://meta.vcdn.biz/b811f20dc2e6b5ef1b33e68650cc6fe9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/225721/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хлеб и соль (1970)
+http://meta.vcdn.biz/aa927441b6a9dc2c677f839fb32cb990_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/228631/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ход белой королевы (1971)
+http://meta.vcdn.biz/65c684420faf5410aa4582add8d71298_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/222911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Холодный март (1987)
+http://meta.vcdn.biz/0791495a13d1c7acd0d7c37ee5b30b72_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/343921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хомут для Маркиза (1977)
+http://meta.vcdn.biz/20d1b42920f8afb1a3ad6ffc1df542ee_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092681/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хорошо сидим! (1986)
+http://meta.vcdn.biz/6498efe7d58a6a04c4fb4c736b391aab_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17691991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хотите верьте хотите-нет (1964)
+http://meta.vcdn.biz/b4062f4e721724df34a975b0c5cc66d4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092761/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хочу вашего мужа (1992) (16+)
+http://meta.vcdn.biz/7a0df59b65603f57d9b5ba594b840840_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/159971/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хочу верить (1965)
+http://meta.vcdn.biz/b27f188cf5d2456f120f36cb99c9b48a_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/243911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хочу как Бриджет (2013) (12+)
+http://meta.vcdn.biz/b1cf8acc2cb069b632032325dc60c6aa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/3151501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хочу как Бриджет (2013) (12+)
+https://vs7.vcdn.biz/f9f50000d2a8bffe2f3ff4266d8694b9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/3151501/u_uid/0/u_vod/3/u_device/cms_html5/a/4/type.amlst/chunklist-sid1486953483-b2000000.m3u8
+#EXTINF:-1 ,Храни меня мой талисман (1986)
+http://meta.vcdn.biz/ecdd919bdc40cf6d0a2d39b659765a1c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/225261/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хроника пикирующего бомбардировщика (1967)
+http://meta.vcdn.biz/78eb3aaa92b02ad119387ae7be8e8053_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/168071/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хрустальный башмачок - балет (1960)
+http://meta.vcdn.biz/b4143332649654d8b4f663e5a1833fb0_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30092771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Хуторок в степи (1970)
+http://meta.vcdn.biz/8cebef886d0c5bed54f5aed57a825bb8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33078241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Цифровая радиостанция (2012) (16+)
+http://vs321.vcdn.biz/4928801e2f7eb074c410dc3a1fdc5568_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/32917741/u_uid/0/u_vod/3/u_device/cms_webandroid/a/4/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Цыган 1 серия (1979)
+http://meta.vcdn.biz/31e8532bdb4c6997023f7810cd9f8e8a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/157821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Цыган 2 серия (1979)
+http://meta.vcdn.biz/cab1adfe3e9fb048ce6e8e63d364b1ac_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/500731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Цыган 3 серия (1979)
+http://meta.vcdn.biz/ced4eaebe01a977aacb269e0238d5acb_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/184731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Цыган 4 серия (1979)
+http://meta.vcdn.biz/8011ddc6b71c03170075275f52dd051a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/184821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,ЧП - Чрезвычайное происшествие 1 серия (1958)
+http://meta.vcdn.biz/9d74ed4f5b3c1e380fa5fdb7f988ebf7_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/176651/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,ЧП - Чрезвычайное происшествие 2 серия (1958)
+http://meta.vcdn.biz/989463b1047f34e4a94b98c7af3339e0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/228921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,ЧП районного масштаба (1988) (16+)
+http://meta.vcdn.biz/709a741fa1c7633f59e2927f8f528244_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/82871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чародеи 1 серия (1982)
+http://meta.vcdn.biz/b170dec7135e5137c352ada23a4da3c4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/139251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чародеи 2 серия (1982)
+http://meta.vcdn.biz/068be0608428dae2ac19a8b283003d2b_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/168371/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Частный детектив или Операция «Кооперация» (1989)
+http://meta.vcdn.biz/c52b75613cc4aa8ed744fe6242b775dc_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17691901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в зеленом кимоно (1991)
+http://meta.vcdn.biz/fedb5cefa24f9a52cca6684067cdc7ef_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/170271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в проходном дворе 1 серия (1971)
+http://meta.vcdn.biz/35720b3f869c2f33813d319affb8fd2c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/264511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в проходном дворе 2 серия (1971)
+http://meta.vcdn.biz/5f3e45eeaf7714b382c43cc9db2c68be_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/286081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в проходном дворе 3 серия (1971)
+http://meta.vcdn.biz/0ebb155ba54b70febc88d150100c9ab9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/284301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в проходном дворе 4 серия (1971)
+http://meta.vcdn.biz/f53bdd5f2ca5f51f29474b1fb27696be_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/297791/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек в футляре (1983)
+http://meta.vcdn.biz/d9e287fce26ee2d3b4c4fb445e02610d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/271021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек с киноаппаратом (1929)
+http://meta.vcdn.biz/d3141bc1f8a2ecd4cf7b1472fdf41e36_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/230781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/1/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Человек-амфибия (1962)
+http://meta.vcdn.biz/4cb516da563366b76082b31a65f507fd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/106021/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Челюсти (2011) (16+)
+http://meta.vcdn.biz/188a0e3f0c7e49983e8023253af6ceaf_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84901/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чемпион мира (1954)
+http://meta.vcdn.biz/3f8b559b51a5ceae8aa32dd28d726b63_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33078331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Через тернии к звёздам (1980) 1серия
+http://meta.vcdn.biz/8a48e5187f7d55201ff3157cd0f78637_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/502331/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Через тернии к звёздам (1980) 2серия
+http://meta.vcdn.biz/ffd7000b24243b3c0ff23ef0937682f7_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/210591/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чермен (1970)
+http://meta.vcdn.biz/84b06a7cf91221cadf4e70b6b0525dd3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30054271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Черная курица или подземные жители (1982)
+http://meta.vcdn.biz/87aff47611f8c3438fb8f50fdcd8dd85_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/174831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Черная рада (2000) (12+)
+http://meta.vcdn.biz/22771519ce0365e7b72f73b320a3670a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/106171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Черные береты (1995) (12+)
+http://meta.vcdn.biz/eb9ac27bc37f876b54077077467d51af_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46314241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чертов пьяница (1991)
+http://meta.vcdn.biz/e76fecb28dcbb063d1fbccc7104bdd2c_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/46314301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чертова дюжина (1970)
+http://meta.vcdn.biz/5ca57325993b18656193747db0aea7eb_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/183391/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Честное волшебное (1975)
+http://meta.vcdn.biz/d520dac87b25c340e870cc3d9d613849_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30100061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Четвертак (1995) (12+)
+http://meta.vcdn.biz/f839dbf730c8e3b24158e3163e4c1a67_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/557821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чистильщик (2007) (16+)
+http://meta.vcdn.biz/9e569202242e7bf263aacaf508dfd018_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/93641/u_uid/0/u_vod/3/u_device/cms_webandroid/a/13/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чудак из пятого «Б» (1973)
+http://meta.vcdn.biz/e24c4a10b8fec95a37ff434ef859f0c9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30100361/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чудаки (1974)
+http://meta.vcdn.biz/af740f3e8ffdb57122678331323dd09e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30054281/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чудо (2017) (12+)
+http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/Wonder.2017.BDRip.1080p.ExKinoRay.m3u8
+#EXTINF:-1 ,Чудо-юдо (2017)
+http://212.113.38.100/hls/31f01d291c5d9bef093befed3f9743e2//fhd/Chudo-Judo.2017.1080p.WEB-DL.Rus.m3u8
+#EXTINF:-1 ,Чужая жена и муж под кроватью (1984)
+http://meta.vcdn.biz/574604f2b8f1fffc8439094fe63ba4c9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/260821/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чужая компания (1979)
+http://meta.vcdn.biz/4bc7017b843885dc0b2e28a91a54b245_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33078481/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чужая родня (1955)
+http://meta.vcdn.biz/adc5598546068be27771abaa7755cc91_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/215701/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чужие дети (1958)
+http://meta.vcdn.biz/09e9d256315ba197402e2057277a56c4_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30054311/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чужой в доме (2010) (12+)
+http://meta.vcdn.biz/eb360efb984a51235a57742152b61e63_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/157781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чучело 1 серия (1983)
+http://meta.vcdn.biz/a2d40c3de995f5a4a3a66972f4172e1f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24978001/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чучело 2 серия (1983)
+http://meta.vcdn.biz/33c474d834f7474f9268e9d4df42b66f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24939371/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чёрная чайка (1962)
+http://meta.vcdn.biz/a93eee5a6e8579cba6054a1662bc5196_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/267501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чёрный капитан (1973)
+http://meta.vcdn.biz/f1478cc0c1d936818925737c433c42cb_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/171691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чёрный принц Аджуба (1989)
+http://meta.vcdn.biz/7f2a5c23808f674b340e08c03585d3de_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30099781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Шайбу! Шайбу!!
+http://meta.vcdn.biz/926398b57aecd70e9508d75304d5acff_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/232131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Шальные деньги (2008) (12+)
+https://vs6.vcdn.biz/1c6454c14a54199f5cce5625f2a6bb41_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/147241/u_uid/0/u_vod/3/u_device/cms_html5/a/11/type.amlst/chunklist-sid229810705-b2000000.m3u8
+#EXTINF:-1 ,Шары ярости (2007) (16+)
+http://vs326.vcdn.biz/28f4dc40f4e3022a9c35352a92118f34_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/94751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Шпионы по соседству (2016) (16+)
+http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a/fhd/Keeping.Up.With.The.Joneses.2016.BDRip.1080p.m3u8
+#EXTINF:-1 ,Штрафной удар (1963)
+http://meta.vcdn.biz/26667c793c17cde7f71a31faa1df8244_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30101831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Щедрое лето (1950)
+http://meta.vcdn.biz/56710842d9488abdf26186db6ed3f46b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/229781/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Щедрый вечер (1977)
+http://meta.vcdn.biz/29cea0a7320a8d958d4dc61c62a4648d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/254811/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Щорс (1939)
+http://meta.vcdn.biz/1c06a2f3270acf4747df0eccde2616c6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/227501/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эверли (2015) (18+)
+http://vs307.vcdn.biz/8f53233a1eb192226cce7e4090240d2e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/4392301/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эквилибрист (1976)
+http://meta.vcdn.biz/1b10a66ccc197ddf0e9bfbd782e2dde8_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/324611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эксперимент доктора Абста (1968)
+http://meta.vcdn.biz/0f4b49f1bbb9bc6e09d54c2dd0be8cf8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/210271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эскадрилья N 5 (1939)
+http://meta.vcdn.biz/2e79cc1c2b322222c51b5f7976e963a4_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/196051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эскадрон гусар летучих 1 серия (1981)
+http://meta.vcdn.biz/a9f771b08b292ed84ccd44789ebac477_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102031/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эскадрон гусар летучих 2 серия (1981)
+http://meta.vcdn.biz/fa233d58266e351e26d4e020815b5d9a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эта тревожная зима (1975)
+http://meta.vcdn.biz/9c0ef17265fda8973bff6d6da9b52e84_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30417871/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Это было в разведке (1968)
+http://meta.vcdn.biz/62a81f3ed5151a7022b60359e72ff95d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Это мы не проходили (1975)
+http://meta.vcdn.biz/dda095b26f6b22e61018d11ead2f9a5d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Это начиналось так (1956)
+http://meta.vcdn.biz/95b052bb6d76f50470b538176b2d4741_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30386851/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Это чертово сердце (2018) (16+)
+https://vs815.vcdn.biz/4f4752d76eb8dd505c6c44d1caa07f77_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/69749231/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid708256189-b2000000.m3u8
+#EXTINF:-1 ,Этюды о Врубеле (1989)
+http://meta.vcdn.biz/97239b81143c261243b24a9f1a45a923_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/215511/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Эффект Ромашкина (1973)
+http://meta.vcdn.biz/72356057f813c077e197f88ed3fad944_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/329541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юнга Северного флота (1973)
+http://meta.vcdn.biz/2bc44017c50973641f0774d8c4304f45_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102131/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юнга со шхуны Колумб (1963)
+http://meta.vcdn.biz/f253b0a0e1992833f0dbd424a886780d_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/235251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юность Бемби (1986)
+http://meta.vcdn.biz/1448b5fb20b82828c643778f25bfb4c9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/238461/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юность Петра 1 серия (1980)
+http://meta.vcdn.biz/95cff1827cf8277b1227c0a55ad7cd30_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/167561/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юность Петра 2 серия (1980)
+http://meta.vcdn.biz/19d17110b9890cccecb0ea246d0fa4c3_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/166841/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юность командиров (1939)
+http://meta.vcdn.biz/2e57cf0a34e7eaf7f21b7ecdb9a3c56e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юность наших отцов (1958)
+http://meta.vcdn.biz/91bfcc68ef39f4b81f47b80ab2f3defb_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30419941/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юркины рассветы 1 серия (1974)
+http://meta.vcdn.biz/a117065c1eef1a3cc21e67e63ec4c987_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/169111/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юркины рассветы 2 серия (1974)
+http://meta.vcdn.biz/3eda86c6c85e097622190919d091b099_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/192061/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юркины рассветы 3 серия (1974)
+http://meta.vcdn.biz/9d441b475375ed3f0060c84756b63ca9_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/209051/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Юркины рассветы 4 серия (1974)
+http://meta.vcdn.biz/1c782deaf94b5fdf01e01cc36b582a93_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/210151/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я бабушка Илико и Илларион (1962)
+http://meta.vcdn.biz/66cd94c121f2478cb603da12ece451a8_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/250081/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я вас дождусь (1982)
+http://meta.vcdn.biz/0796de1d85f6d45f5ec2fa9e11fb1cad_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30419951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я вас любил (1967)
+http://meta.vcdn.biz/04f389b8fb15e68bfa502d7db31855cd_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102451/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я купил папу (1963)
+http://meta.vcdn.biz/d320a0f163e3d379118a1bd2a61b6ea8_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30421091/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я очень возбужден (2013) (16+)
+http://vs340.vcdn.biz/559c19c8e9f1dd16d5ea16f3a22d1d7e_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/13732221/u_uid/0/u_vod/3/u_device/cms_webandroid/a/5/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Я шагаю по Москве (1963)
+http://meta.vcdn.biz/a478862138758caed5663ff3fb6a4c45_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17691751/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Яблоко на ладони (1981)
+http://meta.vcdn.biz/791cfd25ba56ad1bc30222f2f34d1057_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/279171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Яков Сведлов (1940)
+http://meta.vcdn.biz/35004f043f1eb60c6930f6b9e7fdcb91_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/30102601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Яна плюс Янко (2017) (12+)
+http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7//fhd/YaHa.YaHk0.2O17.O.WEB-DL.1O8Op.m3u8
+#EXTINF:-1 ,Ярослав Мудрый 1 серия (1981)
+http://meta.vcdn.biz/c371fa0eb77e1d68cd27cc7e18797c61_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/149921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ярослав Мудрый 2 серия (1981)
+http://meta.vcdn.biz/506815196b1541202b25f49ba7f3ab5a_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/164921/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ярославна королева Франции (1978)
+http://meta.vcdn.biz/acab127c2313a14f9fffcd7c69a05b06_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/215691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Ярость (1966)
+http://meta.vcdn.biz/f10f07f955d0382675e026ac6d1648ad_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/179251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8

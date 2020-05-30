@@ -81,8 +81,8 @@ public class OauthCallTraktAPI {
             return true;
 
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("Trakt Init", e.getLocalizedMessage(), e);
-            foreachOutInterfaceError(RequestId.REQ_INIT, e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("Trakt Init", Text.requireString(e.getLocalizedMessage()), e);
+            foreachOutInterfaceError(RequestId.REQ_INIT, Text.requireString(e.getLocalizedMessage()), e);
         }
         clear();
         return false;
@@ -90,6 +90,10 @@ public class OauthCallTraktAPI {
 
     public void scrobbleStart(MediaObject.MediaObjectType mediaType, String query, String filename) {
         search(mediaType, query, filename);
+    }
+    public void scrobbleStart(
+            MediaObject.MediaObjectType mediaType, MediaObject.MediaIdType mId, String sValue) {
+        search(mediaType, mId, sValue);
     }
 
     public void scrobblePlay(int pos) {
@@ -118,7 +122,7 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_SCROB_PLAY));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("scrobble Stop", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("scrobble Stop", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
@@ -149,7 +153,7 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_SCROB_STOP));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("scrobble Stop", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("scrobble Stop", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
@@ -180,12 +184,33 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_SCROB_PAUSE));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("scrobble Pause", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("scrobble Pause", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
 
     /// Don't using directly!!!
+    private void search(
+            MediaObject.MediaObjectType mediaType, MediaObject.MediaIdType mId, String sValue) {
+        if (isActive()) {
+            try {
+                if (mId == MediaObject.MediaIdType.ID_TYPE_TITLE) {
+                    search(mediaType, sValue, null);
+                    return;
+                }
+                currentMediaObject = new MediaObject()
+                        .setMovieType(mediaType)
+                        .setMovieId(sValue, mId)
+                        .build();
+
+                addHistory();
+                scrobbleNew();
+
+            } catch (Exception e) {
+                if (BuildConfig.DEBUG) Log.e("-- TRAKT search:", Text.requireString(e.getLocalizedMessage()), e);
+            }
+        }
+    }
     private void search(MediaObject.MediaObjectType mediaType, String query, String filename) {
         if ((isActive()) || (!Text.isempty(query))) {
             try {
@@ -210,7 +235,7 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_SEARCH, mediaType, filename));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("search", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("search", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
@@ -241,7 +266,7 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_SCROB_NEW));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("scrobble Start", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("scrobble Start", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
@@ -271,7 +296,7 @@ public class OauthCallTraktAPI {
                         .enqueue(new CallbackDefault(RequestId.REQ_HISTORY_ADD));
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("history add", e.getLocalizedMessage(), e);
+                if (BuildConfig.DEBUG) Log.e("history add", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }
@@ -370,7 +395,7 @@ public class OauthCallTraktAPI {
             foreachOutInterfaceResponse(id, trakt, obj);
 
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("pre Response out: " + id.toString(), e.getLocalizedMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("pre Response out: " + id.toString(), Text.requireString(e.getLocalizedMessage()), e);
         }
     }
 

@@ -11,6 +11,7 @@ android {
         versionCode gitVersion.version
         versionName "1.2." + gitVersionName
         buildConfigField 'String', 'REVISION', "\"$gitVersionName\""
+        resConfigs "en", "ru"
     }
     buildFeatures {
         dataBinding = true

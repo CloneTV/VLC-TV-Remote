@@ -1,9 +1,7 @@
 package ru.ps.vlcatv.utils.playlist;
 
 import androidx.annotation.Keep;
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.util.Log;
 
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
@@ -17,10 +15,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.db.DbManager;
-import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.parse.ParseContainer;
 import ru.ps.vlcatv.utils.playlist.parse.ParseObject;
@@ -483,8 +479,7 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
 
         if ((Text.isempty(date.get())) && (pa.itemPremiered != null)) {
             try {
-                @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
                 date.set(fmt.format(
                         Objects.requireNonNull(pa.itemPremiered))
                 );
@@ -581,8 +576,7 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
 
         if (pa.itemPremiered != null) {
             try {
-                @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat fmt = new SimpleDateFormat("yyyy");
+                SimpleDateFormat fmt = new SimpleDateFormat("yyyy", Locale.getDefault());
                 date.set(fmt.format(
                         Objects.requireNonNull(pa.itemPremiered))
                 );
@@ -676,10 +670,8 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             }
             if (crc == po.itemCrc)
                 return;
-
             copy(po);
-            if (dbIndex > 0)
-                toDb(playListRoot.getDbManager(), true);
+
         } catch (Exception ignore) {}
     }
 
@@ -749,5 +741,4 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             */
         } catch (Exception ignore) {}
     }
-
 }

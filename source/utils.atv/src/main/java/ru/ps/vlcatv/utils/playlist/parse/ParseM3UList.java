@@ -7,10 +7,11 @@ import ru.ps.vlcatv.utils.Log;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.playlist.PlayList;
 import ru.ps.vlcatv.utils.playlist.PlayListConstant;
-import ru.ps.vlcatv.utils.playlist.PlayListEpg;
+import ru.ps.vlcatv.utils.playlist.PlayListEpgDefault;
 import ru.ps.vlcatv.utils.playlist.PlayListGroup;
 import ru.ps.vlcatv.utils.playlist.PlayListItem;
 import ru.ps.vlcatv.utils.playlist.PlayListItemUrls;
+import ru.ps.vlcatv.utils.playlist.PlayListUtils;
 
 public class ParseM3UList {
 
@@ -25,7 +26,7 @@ public class ParseM3UList {
                 ParseObject po = null;
                 scanner = new Scanner(text);
                 String[] array = null;
-                PlayListEpg epgList = new PlayListEpg(playList.getDbManager());
+                PlayListEpgDefault epgList = new PlayListEpgDefault(playList.getDbManager());
 
                 while (scanner.hasNextLine()) {
                     String s = scanner.nextLine();
@@ -57,9 +58,13 @@ public class ParseM3UList {
                                     grp = playList.groups.get(PlayList.IDX_ONLINE_FILMS);
                                     break;
                                 }
+                                case PlayList.IDX_ONLINE_USER_DEFINE: {
+                                    grp = playList.groups.get(PlayList.IDX_ONLINE_USER_DEFINE);
+                                    break;
+                                }
                             }
                             if (grp != null) {
-                                PlayListItem item = playList.findItemByTitle(po.itemTitle, grp);
+                                PlayListItem item = PlayListUtils.findItemByTitle(grp, po.itemTitle);
                                 if (item != null) {
                                     boolean b = false;
                                     for (PlayListItemUrls purl : item.urls)

@@ -259,4 +259,156 @@ public class PlayListUtils {
         list.itemsEdit.add(ite);
     }
 
+    ////
+    /// FIND
+
+    public static PlayListItem findItemByVlcId(PlayListGroup group, long id) {
+        if (group == null)
+            return null;
+
+        PlayListItem item;
+        if ((item = findItemByVlcId__(group, id)) != null)
+            return item;
+        for (PlayListGroup grp : group.groups) {
+            if ((item = findItemByVlcId__(grp, id)) != null)
+                return item;
+        }
+        return null;
+    }
+    public static PlayListItem findItemByUrl(PlayListGroup group, String url) {
+        if (group == null)
+            return null;
+
+        PlayListItem item;
+        if ((item = findItemByUrl__(group, url)) != null)
+            return item;
+        for (PlayListGroup grp : group.groups) {
+            if ((item = findItemByUrl__(grp, url)) != null)
+                return item;
+        }
+        return null;
+    }
+    public static PlayListItem findItemByTitle(PlayListGroup group, String title) {
+        if (group == null)
+            return null;
+
+        for (PlayListItem item : group.items) {
+            String s = item.title.get();
+            if ((!Text.isempty(s)) && (s.equals(title)))
+                return item;
+        }
+        return null;
+    }
+    public static PlayListItem findItemByDbId(PlayListGroup group, long id) {
+        if (group == null)
+            return null;
+
+        PlayListItem item;
+        if ((item = findItemByDbId__(group, id)) != null)
+            return item;
+        for (PlayListGroup grp : group.groups) {
+            if ((item = findItemByDbId__(grp, id)) != null)
+                return item;
+        }
+        return null;
+    }
+    public static PlayListGroup findGroupByVlcId(PlayListGroup group, long id) {
+        if (group == null)
+            return null;
+
+        PlayListGroup gr;
+        if ((gr = findGroupByVlcId__(group, id)) != null)
+            return gr;
+        for (PlayListGroup grp : group.groups) {
+            if ((gr = findGroupByVlcId__(grp, id)) != null)
+                return gr;
+        }
+        return null;
+    }
+    public static PlayListGroup findGroupByItemVlcId(PlayListGroup group, long id) {
+        if (group == null)
+            return null;
+
+        PlayListGroup gr;
+        if ((gr = findGroupByItemVlcId_(group, id)) != null)
+            return gr;
+        for (PlayListGroup grp : group.groups) {
+            if ((gr = findGroupByItemVlcId_(grp, id)) != null)
+                return gr;
+        }
+        return null;
+    }
+
+    /// FIND private
+
+    private static PlayListItem findItemByVlcId__(PlayListGroup grp, long id) {
+
+        for (PlayListItem pli : grp.items)
+            if (pli.getVlcId() == id)
+                return pli;
+
+        for (PlayListGroup gr : grp.groups) {
+            PlayListItem pli;
+            if ((pli = findItemByVlcId__(gr, id)) != null)
+                return pli;
+        }
+        return null;
+    }
+    private static PlayListItem findItemByDbId__(PlayListGroup grp, long id) {
+
+        for (PlayListItem pli : grp.items)
+            if (pli.dbIndex == id)
+                return pli;
+
+        for (PlayListGroup gr : grp.groups) {
+            PlayListItem pli;
+            if ((pli = findItemByVlcId__(gr, id)) != null)
+                return pli;
+        }
+        return null;
+    }
+    private static PlayListItem findItemByUrl__(PlayListGroup grp, String url) {
+        for (PlayListItem pli : grp.items)
+            if (pli.uri.equals(url))
+                return pli;
+
+        for (PlayListGroup gr : grp.groups) {
+            PlayListItem pli;
+            if ((pli = findItemByUrl__(gr, url)) != null)
+                return pli;
+        }
+        return null;
+    }
+    private static PlayListGroup findGroupByVlcId__(PlayListGroup grp, long id) {
+
+        if (grp.getVlcId() == id)
+            return grp;
+
+        for (PlayListGroup gr : grp.groups) {
+            if (gr.getVlcId() == id)
+                return gr;
+            PlayListGroup grs;
+            if ((grs = findGroupByVlcId__(gr, id)) != null)
+                return grs;
+        }
+        return null;
+    }
+    private static PlayListGroup findGroupByItemVlcId_(PlayListGroup grp, long id) {
+        if (grp == null)
+            return null;
+
+        if (grp.items.size() > 0)
+            for (PlayListItem item : grp.items)
+                if (item.getVlcId() == id)
+                    return grp;
+
+        for (PlayListGroup gr : grp.groups) {
+            PlayListGroup grr;
+            if ((grr = findGroupByItemVlcId_(gr, id)) != null)
+                return grr;
+        }
+        return null;
+    }
+
+
 }

@@ -285,8 +285,7 @@ public class ActionDb implements ActionInterface {
             else if (type == Date.class) {
                 try {
                     if (val != null) {
-                        @SuppressLint("SimpleDateFormat")
-                        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         cVal.put(name, (String) fmt.format(val));
                     }
                 } catch (Exception ignore) {}
@@ -302,8 +301,7 @@ public class ActionDb implements ActionInterface {
                 if (clz == String.class)
                     cVal.put(name, (String) ((ObservableField<String>) val).get());
                 else if (clz == Date.class) {
-                    @SuppressLint("SimpleDateFormat")
-                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                     Date date = (Date) ((ObservableField<Date>) val).get();
                     if (date != null)
                         cVal.put(name, fmt.format(date));
@@ -391,8 +389,7 @@ public class ActionDb implements ActionInterface {
 
                             } else if (clz == Date.class) {
                                 do {
-                                    @SuppressLint("SimpleDateFormat")
-                                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                     String s = cursor.getString(idf);
                                     if (Text.isempty(s))
                                         break;
@@ -425,8 +422,7 @@ public class ActionDb implements ActionInterface {
                 try {
                     String s = cursor.getString(idf);
                     if (!Text.isempty(s)) {
-                        @SuppressLint("SimpleDateFormat")
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         tf.field.set(obj, format.parse(s));
                     } else {
                         tf.field.set(obj, null);
@@ -467,8 +463,7 @@ public class ActionDb implements ActionInterface {
                 try {
                     String s = cursor.getString(idf);
                     if (!Text.isempty(s)) {
-                        @SuppressLint("SimpleDateFormat")
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         list.add(format.parse(s));
                     }
                 } catch (Exception ignore) {}

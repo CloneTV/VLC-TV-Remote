@@ -1,7 +1,7 @@
 package ru.ps.vlcatv.utils.playlist;
 
 import androidx.annotation.Keep;
-import android.annotation.SuppressLint;
+
 import android.content.ContentValues;
 import android.os.Parcel;
 import android.util.Log;
@@ -52,7 +52,6 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
 
     public ObservableBoolean isChange = new ObservableBoolean(false);
     private PlayList playListRoot = null;
-    private boolean isUpdateDb = false;
 
     public PlayListItem() {}
     public PlayListItem(PlayList pl, String s, String u, long id, int d, int grpId, int grpIdx) {
@@ -293,8 +292,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         if (stat.lastView == null)
             return "";
         try {
-            @SuppressLint("SimpleDateFormat")
-            SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
             return fmt.format(stat.lastView);
         } catch (Exception ignore) {}
         return "";
@@ -794,8 +792,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
 
         if ((Text.isempty(date.get())) && (pa.itemPremiered != null)) {
             try {
-                @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
                 date.set(fmt.format(
                         Objects.requireNonNull(pa.itemPremiered))
                 );
@@ -893,8 +890,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         }
         if (pa.itemPremiered != null) {
             try {
-                @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy");
+                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
                 date.set(fmt.format(
                         Objects.requireNonNull(pa.itemPremiered))
                 );
@@ -937,13 +933,13 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                             copy(item);
 
                         } catch (Exception e) {
-                            if (BuildConfig.DEBUG) Log.e("- update From Db exception (1): ", e.getMessage(), e);
+                            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (1): ", e.getMessage(), e);
                         }
                     }
                 }
             }
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("- update From Db exception (2): ", e.getMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (2): ", e.getMessage(), e);
         }
         reloadBindingData();
     }
@@ -978,7 +974,6 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                 return;
             }
             copy(po);
-            isUpdateDb = true;
 
         } catch (Exception ignore) {}
         reloadBindingData();
@@ -1016,7 +1011,6 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                 if (po.itemType == PlayListConstant.TYPE_NONE)
                     return;
                 copy(po);
-                isUpdateDb = true;
             }
         } catch (Exception ignore) {}
     }
@@ -1035,16 +1029,10 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                     PlayListUtils.setItemListSkip(new PlayListItemTrailers(trailer.get()), trailers);
                 PlayListUtils.setItemListSkip(new PlayListItemTrailers(s), trailers);
                 trailer.set(s);
-                isUpdateDb = true;
             }
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e("- update Trailer exception: ", e.getMessage(), e);
         }
-        if ((isUpdateDb) && (dbIndex > 0)) {
-            toDb(playListRoot.getDbManager());
-            if (BuildConfig.DEBUG) Log.e("- updated ITEM save: (" +  (dbIndex > 0) + ") ", "index=" + dbIndex + ", parent=" + dbParent);
-        }
-        isUpdateDb = false;
     }
 
     ///

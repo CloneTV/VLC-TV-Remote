@@ -33,4 +33,5 @@ public class DataTagConfig {
     public final static String TAG_PATH_ONLINE_IPTV_LOCAL = "online_iptv";
     public final static String TAG_PATH_ONLINE_RADIO_LOCAL = "online_radio";
     public final static String TAG_PATH_ONLINE_FILM_LOCAL = "online_film";
+    public final static String TAG_PATH_ONLINE_USER_LOCAL = "online_user";
 }

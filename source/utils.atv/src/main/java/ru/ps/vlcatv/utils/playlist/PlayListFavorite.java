@@ -19,10 +19,18 @@ public class PlayListFavorite extends ReflectAttribute {
     PlayListFavorite() {}
     public PlayListFavorite(String title, String uri, String desc, String img, String epg) {
         itemTitle = title;
-        itemDesc = desc;
         itemUrl = uri;
+        itemDesc = desc;
         itemImage = img;
         itemEpg = epg;
+    }
+    public PlayListFavorite(String title, String uri, String desc, String img, String epg, String ent) {
+        itemTitle = title;
+        itemUrl = uri;
+        itemDesc = desc;
+        itemImage = img;
+        itemEpg = epg;
+        itemEpgNotify = ent;
     }
 
     public final int itemType = PlayListConstant.TYPE_ONLINE;
@@ -39,4 +47,5 @@ public class PlayListFavorite extends ReflectAttribute {
     public String itemUrl = null;
     @IFieldReflect("epg")
     public String itemEpg = null;
+    public String itemEpgNotify = null;
 }

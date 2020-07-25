@@ -25,6 +25,8 @@ mimes = {
     avi = "video/x-msvideo",
     flv = "video/x-flv",
     ts  = "video/MP2T",
+    m3u  = "application/mpegurl",
+    m3u8  = "application/x-mpegurl",
 }
 check_ext = {
     "mp4",

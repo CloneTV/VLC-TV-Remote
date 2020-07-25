@@ -22,6 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
@@ -91,8 +92,7 @@ public class ActionParcelable implements ActionInterface {
                 if (clazz == String.class) {
                     par.writeString((String)((ObservableField<String>) val).get());
                 } else if (clazz == Date.class) {
-                    @SuppressLint("SimpleDateFormat")
-                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                     Date date = (Date) ((ObservableField<Date>) val).get();
                     if (date != null)
                         par.writeString(fmt.format(date));

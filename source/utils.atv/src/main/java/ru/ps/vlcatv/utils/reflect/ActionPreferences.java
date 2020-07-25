@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 import ru.ps.vlcatv.utils.Text;
@@ -71,8 +72,7 @@ public class ActionPreferences implements ActionInterface {
                 try {
                     String s = pref.getString(prefixName, "");
                     if (!Text.isempty(s)) {
-                        @SuppressLint("SimpleDateFormat")
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         prefed.putString(prefixName, (String) format.format((Date) val));
                     }
                 } catch (Exception ignore) {}
@@ -117,8 +117,7 @@ public class ActionPreferences implements ActionInterface {
             if (clazz == String.class) {
                 prefed.putString(prefixName, (String) ((ObservableField<String>) val).get());
             } else if (clazz == Date.class) {
-                @SuppressLint("SimpleDateFormat")
-                SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                 Date date = (Date) ((ObservableField<Date>) val).get();
                 if (date != null)
                     prefed.putString(prefixName, fmt.format(date));
@@ -167,8 +166,7 @@ public class ActionPreferences implements ActionInterface {
                 try {
                     String s = pref.getString(prefixName, "");
                     if (!Text.isempty(s)) {
-                        @SuppressLint("SimpleDateFormat")
-                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         return format.parse(s);
                     }
                     return null;
@@ -227,8 +225,7 @@ public class ActionPreferences implements ActionInterface {
                         } else if (clz == Date.class) {
                             //noinspection ConstantConditions
                             do {
-                                @SuppressLint("SimpleDateFormat")
-                                SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd");
+                                SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                                 String s = pref.getString(prefixName, "");
                                 if (Text.isempty(s))
                                     break;

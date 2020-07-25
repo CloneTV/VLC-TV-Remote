@@ -1,10 +1,7 @@
 package ru.ps.vlcatv.utils.playlist;
 
-import android.view.View;
-
 import androidx.databinding.ObservableBoolean;
 
-import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.playlist.parse.ParseObject;
 
 public interface PlayListObjectInterface {

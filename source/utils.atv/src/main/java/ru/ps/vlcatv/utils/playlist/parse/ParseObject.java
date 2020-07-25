@@ -24,8 +24,8 @@ import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.PlayList;
 import ru.ps.vlcatv.utils.playlist.PlayListActors;
 import ru.ps.vlcatv.utils.playlist.PlayListConstant;
-import ru.ps.vlcatv.utils.playlist.PlayListEpg;
-import ru.ps.vlcatv.utils.playlist.PlayListEpgItem;
+import ru.ps.vlcatv.utils.playlist.PlayListEpgDefault;
+import ru.ps.vlcatv.utils.playlist.PlayListEpgDefaultItem;
 import ru.ps.vlcatv.utils.playlist.PlayListItemIds;
 import ru.ps.vlcatv.utils.playlist.PlayListItemStatistic;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
@@ -44,7 +44,7 @@ public class ParseObject extends ReflectAttribute {
     public ParseObject(JSONObject obj) {
         merge(obj);
     }
-    public ParseObject(String[] str, PlayListEpg epgList) {
+    public ParseObject(String[] str, PlayListEpgDefault epgList) {
         merge(str, epgList);
     }
     public ParseObject(String[] str) {
@@ -214,8 +214,7 @@ public class ParseObject extends ReflectAttribute {
         if (Text.isempty(s))
             return;
         try {
-            @SuppressLint("SimpleDateFormat")
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
             itemPremiered = format.parse(s);
         } catch (Exception ignore) {}
     }
@@ -223,8 +222,7 @@ public class ParseObject extends ReflectAttribute {
         if (Text.isempty(s))
             return;
         try {
-            @SuppressLint("SimpleDateFormat")
-            SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy");
+            SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy", Locale.getDefault());
             itemPremiered = format.parse(s);
         } catch (Exception ignore) {}
     }
@@ -607,7 +605,7 @@ public class ParseObject extends ReflectAttribute {
         return itemType;
     }
 
-    public int merge(String[] array, PlayListEpg epgList) {
+    public int merge(String[] array, PlayListEpgDefault epgList) {
 
         itemType = PlayListConstant.TYPE_NONE;
         try {
@@ -706,7 +704,7 @@ public class ParseObject extends ReflectAttribute {
                         }
 
                         boolean isImageAdded = false;
-                        PlayListEpgItem epgItem = null;
+                        PlayListEpgDefaultItem epgItem = null;
                         playListType = PlayList.IDX_ONLINE_TV;
                         name = name.replace('_', ' ').trim().toUpperCase();
 

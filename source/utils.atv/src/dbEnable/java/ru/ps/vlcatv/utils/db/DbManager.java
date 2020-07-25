@@ -40,7 +40,7 @@ public class DbManager {
     public DbManager open(final int v, Class<?> clz) throws SQLException {
         dbh = DbHelper.createDbHelper(wContext.get(), v, clz);
         if (dbh == null)
-            throw new RuntimeException("db init: fatal error");
+            throw new RuntimeException("Db init: fatal error");
 
         db = dbh.getWritableDatabase();
         utils = new DbUtils(this);
@@ -233,7 +233,7 @@ public class DbManager {
         mTimeMark = new Date().getTime();
         if (db == null) {
             db = dbh.getWritableDatabase();
-            if (BuildConfig.DEBUG_DB) Log.e("Connect check", " DB base open = " + (db != null));
+            if (BuildConfig.DEBUG_DB) Log.e("- Connect check", " Db base open = " + (db != null));
         }
         return (db != null);
     }
@@ -254,7 +254,7 @@ public class DbManager {
                     }
                 }
                 if (BuildConfig.DEBUG_DB) Log.e(
-                        "Connect task status",
+                        "- Connect task status",
                         String.format(
                                 Locale.getDefault(),
                                 " DB base %s",
@@ -262,7 +262,7 @@ public class DbManager {
                         )
                 );
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("dbConnectTask", Text.requireString(e.getLocalizedMessage()), e);
+                if (BuildConfig.DEBUG) Log.e("- dbConnectTask", Text.requireString(e.getLocalizedMessage()), e);
             }
         }
     }

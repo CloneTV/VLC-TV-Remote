@@ -47,10 +47,12 @@ public class PlayListConstant {
             /// "https://smarttvnews.ru/apps/AutoIPTV.m3u"
             "aHR0cHM6Ly9zbWFydHR2bmV3cy5ydS9hcHBzL0F1dG9JUFRWLm0zdQ==",
             /// "https://smarttvnews.ru/apps/iptvfreefull.m3u"
-            "aHR0cHM6Ly9zbWFydHR2bmV3cy5ydS9hcHBzL2lwdHZmcmVlZnVsbC5tM3U="
+            "aHR0cHM6Ly9zbWFydHR2bmV3cy5ydS9hcHBzL2lwdHZmcmVlZnVsbC5tM3U=",
+            /// "http://dmitry-tv.my1.ru/iptv/Playlist-02.m3u" (Яндекс ТВ)
+            "aHR0cDovL2RtaXRyeS10di5teTEucnUvaXB0di9QbGF5bGlzdC0wMi5tM3U="
     };
     ///
-    public static final String TV_EPG_ONLINE_JTV_URI = "https://www.teleguide.info/download/old/jtv.zip";
+    public static final String TV_EPG_ONLINE_JTV_URI = "https://www.teleguide.info/download/new3/jtv.zip";
     /// "23be17be"
     //public static final String OMDB_API_ID = "MjNiZTE3YmU=";
 

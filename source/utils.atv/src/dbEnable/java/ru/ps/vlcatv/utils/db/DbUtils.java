@@ -129,7 +129,7 @@ public class DbUtils {
                 }
 
             } catch (Exception e) {
-                if (BuildConfig.DEBUG) Log.e("DB delete All Tables", Text.requireString(e.getLocalizedMessage()), e);
+                if (BuildConfig.DEBUG) Log.e("- Db delete All Tables", Text.requireString(e.getLocalizedMessage()), e);
             }
         } finally {
             if (cursor != null)

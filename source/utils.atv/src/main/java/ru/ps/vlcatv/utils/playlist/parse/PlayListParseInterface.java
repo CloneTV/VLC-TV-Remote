@@ -18,8 +18,10 @@ public interface PlayListParseInterface {
     public static final int ID_FMT_EPISODE = 1008;
     public static final int ID_FMT_HISTORY = 1009;
     public static final int ID_FMT_FAVORITE = 1010;
-    public static final int ID_FMT_TV_ONLINE = 1011;
+    public static final int ID_FMT_IPTV_ONLINE = 1011;
     public static final int ID_FMT_RADIO_ONLINE = 1012;
+    public static final int ID_FMT_FILMS_ONLINE = 1013;
+    public static final int ID_FMT_USER_ONLINE = 1014;
 
     public void downloadFile(String uri, String file, ObservableLong event);
     public Object downloadNfo(String uri);
@@ -33,6 +35,8 @@ public interface PlayListParseInterface {
     public void loadStage1();
     public void loadStage2();
     public void loadStageEnd();
+    public void saveStage(int idx);
+    public void updateStageOnce();
     public void newMedia();
     public String getStringFormat(int idx);
     public String getStringFormat(int idx, int val);

@@ -1,9 +1,6 @@
 package ru.ps.vlcatv.utils.playlist;
 
-import android.util.Log;
-
 import androidx.annotation.Keep;
-
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
 import ru.ps.vlcatv.utils.reflect.annotation.IBaseTableReflect;
@@ -21,8 +18,7 @@ import ru.ps.vlcatv.utils.reflect.annotation.IUniqueReflect;
                 @IUniqueReflect(IUnique = {"title_id"})
         }
 )
-
-public class PlayListEpgItem extends ReflectAttribute {
+public class PlayListEpgDefaultItem extends ReflectAttribute {
 
     @IFieldReflect("title_id")
     public String titleId = null;
@@ -35,7 +31,7 @@ public class PlayListEpgItem extends ReflectAttribute {
     @IFieldReflect("change_id")
     public boolean isNameChange = true;
 
-    PlayListEpgItem() {
+    PlayListEpgDefaultItem() {
         dbParent = 1;
     }
 

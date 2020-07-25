@@ -14,13 +14,13 @@ import ru.ps.vlcatv.utils.reflect.annotation.IBaseTableReflect;
 @IBaseTableReflect(
         IThisTableName = "TableEpgList"
 )
-public class PlayListEpg extends ReflectAttribute {
+public class PlayListEpgDefault extends ReflectAttribute {
 
     @IArrayReflect(value = "epg_list", SkipRecursion = false)
-    private List<PlayListEpgItem> epgList = new ArrayList<>();
+    private List<PlayListEpgDefaultItem> epgList = new ArrayList<>();
 
-    PlayListEpg() {}
-    public PlayListEpg(DbManager dbm) {
+    PlayListEpgDefault() {}
+    public PlayListEpgDefault(DbManager dbm) {
         dbParent = 0;
         if (dbm != null)
             fromDb(dbm, 0);
@@ -28,10 +28,10 @@ public class PlayListEpg extends ReflectAttribute {
     public boolean isEmpty() {
         return (epgList.size() == 0);
     }
-    public PlayListEpgItem find(String name) {
+    public PlayListEpgDefaultItem find(String name) {
         if (Text.isempty(name))
             return null;
-        for (PlayListEpgItem epg : epgList)
+        for (PlayListEpgDefaultItem epg : epgList)
             if (epg.titleId.equals(name))
                 return epg;
         return null;
@@ -39,7 +39,7 @@ public class PlayListEpg extends ReflectAttribute {
     public boolean findEpgId(String name) {
         if (Text.isempty(name))
             return false;
-        for (PlayListEpgItem epg : epgList)
+        for (PlayListEpgDefaultItem epg : epgList)
             if (name.startsWith(epg.epgId))
                 return true;
         return false;

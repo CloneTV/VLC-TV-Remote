@@ -4,14 +4,19 @@ import android.content.ContentValues;
 import android.content.Context;
 
 import androidx.annotation.Keep;
+import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Log;
@@ -39,6 +44,13 @@ public class PlayList extends ReflectAttribute {
 
         private static final String TAG = PlayList.class.getSimpleName();
         private static final String PL_EXCEPT1 = "not property init before run";
+        public static final int DB_ACTION_EMPTY = -1;
+        public static final int DB_ACTION_USING = 1;
+        public static final int DB_ACTION_CLOSE = 2;
+        public static final int DB_ACTION_SAVE_PART = 3;
+        public static final int DB_ACTION_SAVE_ALL = 4;
+        public static final int DB_ACTION_EMPTY_GET_VLC = 5;
+
         public static final int IDX_EMPTY = -1;
         public static final int IDX_ROOT_EMPTY = 0;
         public static final int IDX_HISTORY = 1;                // not saved to db!
@@ -46,12 +58,14 @@ public class PlayList extends ReflectAttribute {
         public static final int IDX_ONLINE_TV = 3;
         public static final int IDX_ONLINE_RADIO = 4;
         public static final int IDX_ONLINE_FILMS = 5;
+        public static final int IDX_ONLINE_USER_DEFINE = 6;
+        public static final int IDX_GROUP_LAST = IDX_ONLINE_USER_DEFINE;
 
         private Executor mExecutor = null;
         private PlayListParseInterface pif = null;
         private DbManager dbMgr = null;
         private PlayStatusInterface playStatus = null;
-        public AtomicBoolean isUpdateDb = new AtomicBoolean(false);
+        private AtomicInteger actionStateDb = new AtomicInteger(DB_ACTION_EMPTY);
         public AtomicBoolean isCompleteDb = new AtomicBoolean(false);
 
         public boolean isRandomTitle = false;
@@ -82,37 +96,33 @@ public class PlayList extends ReflectAttribute {
         public List<PlayListHistoryIndex> history = new ArrayList<>();
         @IArrayReflect(value = "favorites", SkipRecursion = false)
         public List<PlayListFavorite> favorites = new ArrayList<>();
+        @IArrayReflect(value = "schedule", SkipRecursion = false)
+        public List<PlayListSchedule> schedule = new ArrayList<>();
 
         @IArrayReflect(value = "groups", SkipRecursion = true)
         public List<PlayListGroup> groups = new ArrayList<>();
 
         @IArrayReflect(value = "items_edit", SkipRecursion = true)
         public List<PlayListItemEdit> itemsEdit = new ArrayList<>();
-        public PlayListItem currentPlay = null;
+        public final ObservableField<PlayListItem> currentPlay = new ObservableField<>();
+        private PlayListItem currentPlayOld = null;
 
-        ////
+        /// public base method
 
-        public PlayList() {
+        PlayList() {
                 dbIndex = 1;
         }
-
         public PlayList(Context context, PlayListParseInterface ifc, PlayStatusInterface psi) {
                 setInstance(new DbManager(context), ifc, psi);
                 dbMgr.open(ConstantDataDb.BaseVersion, this.getClass());
                 dbIndex = 1;
-                /* init(); */
+                currentPlay.addOnPropertyChangedCallback(changePlayItemCb);
         }
         public boolean isBusy() {
-                return (isUpdateDb.get() || !isCompleteDb.get());
+                return ((actionStateDb.get() != DB_ACTION_EMPTY) || !isCompleteDb.get());
         }
         public boolean isEmpty() {
                 return (groups.size() == 0);
-        }
-
-        private Executor getExecutor() {
-                if (mExecutor == null)
-                        mExecutor =Executors.newSingleThreadExecutor();
-                return mExecutor;
         }
         public void setInstance(DbManager dbm, PlayListParseInterface ifc, PlayStatusInterface psi) {
                 dbMgr =  dbm;
@@ -122,83 +132,154 @@ public class PlayList extends ReflectAttribute {
                 playStatus = psi;
         }
         public int getOffset() {
-                return IDX_ONLINE_FILMS + 1;
+                return IDX_GROUP_LAST + 1;
+        }
+        public PlayListGroup getGroup() {
+                return (groups.size() > getOffset()) ? groups.get(getOffset()) : null;
+        }
+        public int getDbState() {
+                return actionStateDb.get();
+        }
+        private void setDbState_(int i) {
+                actionStateDb.set(i);
+                if (pif != null)
+                        pif.saveStage(i);
+                if (BuildConfig.DEBUG) Log.w(
+                        TAG + " Db State",
+                        " change=" + i + ", time=" + new Date(System.currentTimeMillis())
+                );
+        }
+        private Executor getExecutor() {
+                if (mExecutor == null)
+                        mExecutor = Executors.newSingleThreadExecutor();
+                return mExecutor;
         }
 
-        /// find
+        /// schedule
 
-        public PlayListItem findItemByVlcId(long id) {
-                for (PlayListGroup grp : groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByVlcId__(grp, id)) != null)
-                                return pli;
-                }
+        public PlayListFavorite getScheduleEx() {
+                try {
+                        long now = Calendar.getInstance().getTime().getTime();
+                        for (PlayListSchedule p : schedule) {
+                                long offset = (now - ((Date) p.get(PlayListSchedule.GET_DATE)).getTime());
+                                if (offset > -30000) {   // 30 seconds
+                                        schedule.remove(p);
+                                        if (offset > 600000)  // 10 minutes
+                                                return null;
+                                        PlayListFavorite fav = (PlayListFavorite) p.get(PlayListSchedule.GET_FAVORITE);
+                                        if (BuildConfig.DEBUG) Log.d(TAG + " EPG schedule found=" + offset, " title=" + fav.itemTitle);
+                                        getExecutor().execute(new Runnable() {
+                                                final PlayListSchedule item = p;
+                                                @Override
+                                                public void run() {
+                                                        try {
+                                                                if (waitDb_(DB_ACTION_USING)) {
+                                                                   item.DbDelete(dbMgr);
+                                                                   waitDbEnd_();
+                                                                }
+                                                        } catch (Exception ignore) {}
+                                                }
+                                        });
+                                        return fav;
+                                }
+                        }
+                } catch (Exception ignore) {}
                 return null;
         }
-        public PlayListItem findItemByUrl(String url) {
-                for (PlayListGroup grp : groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByUrl__(grp, url)) != null)
-                                return pli;
-                }
-                return null;
+        public void addSchedule(final Date d, final PlayListFavorite fav) {
+                if (d == null)
+                        return;
+                long now = Calendar.getInstance().getTime().getTime();
+                if (now >= d.getTime())
+                        return;
+                addScheduleEx_(fav, d);
         }
-        public PlayListItem findItemByTitle(String title, PlayListGroup grp) {
-                for (PlayListItem item : grp.items) {
-                        if ((!Text.isempty(item.title.get())) && (item.title.get().equals(title)))
-                                return item;
-                }
-                return null;
+        private void addScheduleEx_(final PlayListFavorite fav, final Date d) {
+                if ((Text.isempty(fav.itemTitle)) || (d == null))
+                        return;
+                getExecutor().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                                try {
+                                        for (PlayListSchedule p : schedule)
+                                                if ((Date) p.get(PlayListSchedule.GET_DATE) == d)
+                                                        return;
+
+                                        schedule.add(new PlayListSchedule(d, fav));
+                                        PlayListItem item;
+                                        if ((item = PlayListUtils.findItemByTitle(groups.get(IDX_ONLINE_TV), fav.itemTitle)) == null)
+                                                if ((item = PlayListUtils.findItemByTitle(groups.get(IDX_ONLINE_RADIO), fav.itemTitle)) == null)
+                                                        return;
+                                        item.trailerInfo.set(fav.itemEpgNotify);
+
+                                } catch (Exception ignore) {}
+                        }
+                });
         }
-        public PlayListItem findItemByDbId(long id) {
-                for (PlayListGroup grp : groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByDbId__(grp, id)) != null)
-                                return pli;
-                }
-                return null;
+        private void saveSchedule_() {
+                try {
+                        long now = Calendar.getInstance().getTime().getTime();
+                        for (PlayListSchedule p : schedule) {
+                                long play = ((Date) p.get(PlayListSchedule.GET_DATE)).getTime();
+                                if (now > play) {
+                                        schedule.remove(p);
+                                        if (waitDb_(DB_ACTION_USING)) {
+                                                p.DbDelete(dbMgr);
+                                                waitDbEnd_();
+                                        }
+                                }
+                        }
+                } catch (Exception ignore) {}
         }
-        public PlayListGroup findGroupByVlcId(long id) {
-                for (PlayListGroup grp : groups) {
-                        PlayListGroup gr;
-                        if ((gr = findGroupByVlcId__(grp, id)) != null)
-                                return gr;
+
+        /// favorites
+
+        public void AddFavoritesEx(PlayListFavorite fav) { // remote 184 Green button
+                boolean b = false;
+                for (PlayListFavorite f : favorites)
+                        if (f.itemUrl.equals(fav.itemUrl)) {
+                                b = true;
+                                break;
+                        }
+                if (!b) {
+                        favorites.add(fav);
+                        loadFavorites_();
+                        getExecutor().execute(new Runnable() {
+                                @Override
+                                public void run() {
+                                        if (waitDb_(DB_ACTION_SAVE_PART)) {
+                                                toDb(dbMgr, -1, true);
+                                                waitDbEnd_();
+                                        }
+                                }
+                        });
                 }
-                return null;
         }
-        public PlayListGroup findGroupByItemVlcId(long id, int offset) {
-                if (offset >= groups.size())
-                        return null;
-                for (int i = offset; i < groups.size(); i++) {
-                        PlayListGroup gr;
-                        if ((gr = findGroupByItemVlcId_(groups.get(i), id)) != null)
-                                return gr;
-                }
-                return null;
+        public void RemoveFavoritesEx(String url) { // remote 183 RED button
+                boolean b = false;
+                for (PlayListFavorite f : favorites)
+                        if (f.itemUrl.equals(url)) {
+                                favorites.remove(f);
+                                loadFavorites_();
+                                getExecutor().execute(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                                if (waitDb_(DB_ACTION_SAVE_PART)) {
+                                                        toDb(dbMgr, -1, true);
+                                                        waitDbEnd_();
+                                                }
+                                        }
+                                });
+                                break;
+                        }
         }
 
         ///
 
-        public void saveItem(PlayListItem item) {
-                if (BuildConfig.DEBUG) Log.d("- SAVE Media Item ="  + item.type, " title=" + item.title.get());
-                try {
-                        if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
-                                item.reloadBindingData();
-                                ContentValues cv = new ContentValues();
-                                cv.put("uri", item.uri);
-                                item.toDb(dbMgr, item.dbParent, cv);
-                        } else {
-                                item.toDb(dbMgr);
-                        }
-
-                } catch (Exception e) {
-                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                }
-        }
         public void load(final JSONObject obj) {
                 if (obj == null)
                         return;
-                if ((groups.size() > IDX_ONLINE_FILMS) && (isCompleteDb.get())) {
+                if ((groups.size() > IDX_GROUP_LAST) && (isCompleteDb.get())) {
                         pif.loadStage2();
                         return;
                 }
@@ -222,7 +303,7 @@ public class PlayList extends ReflectAttribute {
         public PlayStatusInterface getPlayStatus() {
                 return playStatus;
         }
-        public void setNewStatus(final JSONObject obj) {
+        public void setNewStatusEx(final JSONObject obj) {
                 if (playStatus != null)
                         getExecutor().execute(new Runnable() {
                                 @Override
@@ -235,219 +316,70 @@ public class PlayList extends ReflectAttribute {
         ///
         /// public method
 
-        public void addHistory(PlayListItem item) {
-                if ((item == null) || (dbMgr == null))
-                        return;
-
+        public void ClearDbEx() {
                 getExecutor().execute(new Runnable() {
                         @Override
                         public void run() {
-                                if (BuildConfig.DEBUG) Log.d("- ADD History ="  + item.type, " title=" + item.title.get());
-                                switch (item.type) {
-                                        case PlayListConstant.TYPE_MOVIE:
-                                        case PlayListConstant.TYPE_SERIES:
-                                        case PlayListConstant.TYPE_VIDEO: {
-
-                                                long hiId = 0, vlcId = item.getVlcId();
-                                                if (history.size() > 0)
-                                                        hiId = history.get(history.size() - 1).historyVlcId;
-
-                                                if (hiId != vlcId) {
-                                                        history.add(
-                                                                new PlayListHistoryIndex(
-                                                                        vlcId,
-                                                                        item.stat.lastProgress.get()
-                                                                )
-                                                        );
-                                                        if (groups.size() > 0) {
-                                                                final PlayListGroup grp = groups.get(IDX_HISTORY);
-                                                                grp.items.add(0, item);
-                                                                synchronized (grp) {
-                                                                        grp.notify();
-                                                                }
-                                                        }
-                                                        if (!isUpdateDb.get()) {
-                                                                isUpdateDb.set(true);
-                                                                try {
-                                                                        toDb(dbMgr, -1, true);
-                                                                        if (BuildConfig.DEBUG) Log.d("- SAVE MAIN PLAYLIST TABLE TO DB", " OK");
-                                                                } catch (Exception ignore) {}
-                                                                isUpdateDb.set(false);
-                                                        }
-                                                        if (pif != null)
-                                                                pif.loadStage1();
-                                                        if (BuildConfig.DEBUG) Log.d("- ADD ITEM TO HISTORY", " VLC ID=" + vlcId);
-                                                }
-                                                break;
-                                        }
-                                }
-                                saveItem(item);
-                        }
-                });
-        }
-        public void AddFavorites(PlayListFavorite fav) { // remote 184 Green button
-                boolean b = false;
-                for (PlayListFavorite f : favorites)
-                        if (f.itemUrl.equals(fav.itemUrl)) {
-                                b = true;
-                                break;
-                        }
-                if (!b) {
-                        favorites.add(fav);
-                        loadFavorites_();
-                        getExecutor().execute(new Runnable() {
-                                @Override
-                                public void run() {
-                                        if (!isUpdateDb.get()) {
-                                                isUpdateDb.set(true);
-                                                toDb(dbMgr, -1, true);
-                                                isUpdateDb.set(false);
-                                        }
-                                }
-                        });
-                }
-        }
-        public void RemoveFavorites(String url) { // remote 183 RED button
-                boolean b = false;
-                for (PlayListFavorite f : favorites)
-                        if (f.itemUrl.equals(url)) {
-                                favorites.remove(f);
-                                loadFavorites_();
-                                getExecutor().execute(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                                if (!isUpdateDb.get()) {
-                                                        isUpdateDb.set(true);
-                                                        toDb(dbMgr, -1, true);
-                                                        isUpdateDb.set(false);
-                                                }
-                                        }
-                                });
-                                break;
-                        }
-        }
-
-        public void Clear() {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                isUpdateDb.set(true);
                                 Clear_();
-                                isUpdateDb.set(false);
                                 isCompleteDb.set(false);
                         }
                 });
         }
         public void saveToDb() {
-                if (!isUpdateDb.get()) {
-                        isUpdateDb.set(true);
-                        saveToDb_();
-                        isUpdateDb.set(false);
-                }
+                saveToDb_();
         }
-        public void closeDb() {
+        public void closeDbEx() {
                 getExecutor().execute(new Runnable() {
                         @Override
                         public void run() {
-                                if (!isUpdateDb.get()) {
-                                        isUpdateDb.set(true);
-                                        closeDb_();
-                                        isUpdateDb.set(false);
-                                }
+                                closeDb_();
                         }
                 });
         }
 
         public void updateAll() {
-                isUpdateDb.set(true);
                 updateAll_();
                 saveToDb_();
-                isUpdateDb.set(false);
         }
-        /*
-        public void createFromVlc(final JSONObject obj) {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                createFromVlc_(obj);
-                                toDb(dbMgr);
-                        }
-                });
-        }
-        public void updateFromDb() {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                updateFromDb_();
-                        }
-                });
-        }
-        public void updateFromNfo() {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                updateFromNfo_();
-                                pif.updateDataEnd();
-                                toDb(dbMgr);
-                                pif.saveDataEnd();
-                        }
-                });
-        }
-        public void updateTrailers() {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                updateTrailers_();
-                                pif.updateDataEnd();
-                                toDb(dbMgr);
-                                pif.saveDataEnd();
-                        }
-                });
-        }
-        public void updateFromOmdb() {
-                getExecutor().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                                updateFromOmdb_();
-                                pif.updateDataEnd();
-                                toDb(dbMgr);
-                                pif.saveDataEnd();
-                        }
-                });
-        }
-        */
 
         ///
         /// VLC play list private method
 
         private void Clear_() {
-                if (currentPlay != null) {
-                        saveItem(currentPlay);
-                        toDb(dbMgr, -1, true);
+                if (currentPlay.get() != null) {
+                        if (waitDb_(DB_ACTION_SAVE_PART)) {
+                                toDb(dbMgr, -1, true);
+                                waitDbEnd_();
+                        }
                         synchronized(currentPlay) {
-                                currentPlay = null;
+                                currentPlay.set(null);
                         }
                         groups.clear();
                 }
         }
         private void saveToDb_() {
-                if (dbMgr != null) {
-
+                saveSchedule_();
+                if (waitDb_(DB_ACTION_SAVE_PART)) {
                         toDb(dbMgr, -1, true);
-                        if (groups.size() <= (IDX_ONLINE_FILMS + 1))
-                                return;
+                        waitDbEnd_();
+                }
+                if (groups.size() <= (IDX_GROUP_LAST + 1))
+                        return;
 
-                        if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- BEGIN = " + new Date().toString());
+                if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- BEGIN = " + new Date().toString());
 
+                if (waitDb_(DB_ACTION_SAVE_ALL)) {
                         for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
                                 groups.get(i).toDb(dbMgr);
-
-                        if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- END = " + new Date().toString());
+                        waitDbEnd_();
                 }
+                if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- END = " + new Date().toString());
         }
         private void closeDb_() {
-                if (dbMgr != null)
-                        dbMgr.close();
+                if ((dbMgr != null) && (waitDb_(DB_ACTION_CLOSE))) {
+                                dbMgr.close();
+                                dbMgr = null;
+                        }
                 if (pif != null)
                         pif.close();
         }
@@ -457,6 +389,7 @@ public class PlayList extends ReflectAttribute {
                 if ((dbMgr == null) || (pif == null))
                         throw new RuntimeException(PL_EXCEPT1);
 
+                setDbState_(DB_ACTION_EMPTY_GET_VLC);
                 JSONArray root = jArray_(obj);
                 if (root == null)
                         return;
@@ -482,80 +415,38 @@ public class PlayList extends ReflectAttribute {
                         updateFromVlc__(plg);
 
                 createDate.set(new Date(System.currentTimeMillis()));
+                setDbState_(DB_ACTION_EMPTY);
                 if (BuildConfig.DEBUG) Log.d("- CREATE PlayList from VLC", "- END = " + new Date().toString());
         }
         private void updateAll_() {
                 if ((dbMgr == null) || (pif == null))
                         throw new RuntimeException(PL_EXCEPT1);
 
-                if (groups.size() <= IDX_ONLINE_FILMS + 1)
+                if (groups.size() <= IDX_GROUP_LAST + 1)
                         return;
 
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All", "- BEGIN = " + new Date().toString());
+                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All from external API", "- BEGIN = " + new Date().toString());
 
-                for (int i = IDX_HISTORY + 1; i < groups.size(); i++)
+                for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
                         updateAll__(groups.get(i));
 
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All", "- END = " + new Date().toString());
+                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All from external API", "- END = " + new Date().toString());
         }
         private void updateFromDb_() {
                 if ((dbMgr == null) || (pif == null))
                         throw new RuntimeException(PL_EXCEPT1);
 
-                if (groups.size() <= IDX_ONLINE_FILMS + 1)
+                if (groups.size() <= IDX_GROUP_LAST + 1)
                         return;
 
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from DB", "- BEGIN = " + new Date().toString());
-
-                for (int i = IDX_HISTORY + 1; i < groups.size(); i++)
-                        updateFromDb__(groups.get(i));
-
+                if (waitDb_(DB_ACTION_USING)) {
+                        for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
+                                updateFromDb__(groups.get(i));
+                        waitDbEnd_();
+                }
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from DB", "- END = " + new Date().toString());
         }
-        private void updateFromNfo_() {
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
-
-                if (groups.size() <= IDX_ONLINE_FILMS + 1)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from NFO", "- BEGIN = " + new Date().toString());
-
-                for (int i = IDX_ONLINE_FILMS + 1; i < groups.size(); i++)
-                        updateFromNfo__(groups.get(i));
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from NFO", "- END = " + new Date().toString());
-        }
-        /*
-        private void updateTrailers_() {
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
-
-                if (groups.size() <= IDX_ONLINE_FILM + 1)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList Trailers", "- BEGIN = " + new Date().toString());
-
-                for (int i = IDX_ONLINE_FILM + 1; i < groups.size(); i++)
-                        updateTrailers__(groups.get(i));
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList Trailers", "- END = " + new Date().toString());
-        }
-        private void updateFromOmdb_() {
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
-
-                if (groups.size() <= IDX_ONLINE_FILM + 1)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from OMDB", "- BEGIN + " + new Date().toString());
-
-                for (int i = IDX_ONLINE_FILM + 1; i < groups.size(); i++)
-                        updateFromOmdb__(groups.get(i));
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from OMDB", "- END " + new Date().toString());
-        }
-        */
 
         /// Load
 
@@ -579,18 +470,31 @@ public class PlayList extends ReflectAttribute {
                 //
                 {
                         final String s1 = pif.downloadM3u8(null, IDX_ONLINE_RADIO);
-                        if (!Text.isempty(s1))
+                        if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_RADIO);
-                        else
-                                ParseM3UList.parseM3u8(this, PlayListConstant.RADIO_ONLINE, IDX_ONLINE_RADIO);
+                        } else {
+                                final String s2 = pif.downloadM3u8(PlayListConstant.RADIO_ONLINE, IDX_ONLINE_RADIO);
+                                if (!Text.isempty(s2))
+                                        ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_RADIO);
+                        }
                 }
                 //
                 {
                         final String s1 = pif.downloadM3u8(null, IDX_ONLINE_FILMS);
-                        if (!Text.isempty(s1))
+                        if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_FILMS);
-                        else
-                                ParseM3UList.parseM3u8(this, PlayListConstant.FILMS_ONLINE, IDX_ONLINE_FILMS);
+                        } else {
+                                final String s2 = pif.downloadM3u8(PlayListConstant.FILMS_ONLINE, IDX_ONLINE_FILMS);
+                                if (!Text.isempty(s2))
+                                        ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_FILMS);
+                        }
+                }
+                //
+                {
+                        final String s1 = pif.downloadM3u8(null, IDX_ONLINE_USER_DEFINE);
+                        if (!Text.isempty(s1)) {
+                                ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_USER_DEFINE);
+                        }
                 }
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Online", "- END");
         }
@@ -629,7 +533,7 @@ public class PlayList extends ReflectAttribute {
 
                         grp.items.clear();
                         int i = (history.size() - 1),
-                            hm = pif.getHistoryMax();
+                                hm = pif.getHistoryMax();
 
                         for (; ((i >= 0) && (hm >= 0)); i--, hm--) {
                                 PlayListHistoryIndex hi = history.get(i);
@@ -637,7 +541,7 @@ public class PlayList extends ReflectAttribute {
                                         continue;
 
                                 PlayListItem item;
-                                if ((item = findItemByVlcId(hi.historyVlcId)) != null)
+                                if ((item = PlayListUtils.findItemByVlcId(getGroup(), hi.historyVlcId)) != null)
                                         grp.items.add(item);
                         }
                         if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from History", "- END");
@@ -646,76 +550,6 @@ public class PlayList extends ReflectAttribute {
                 }
         }
 
-        /// FIND
-
-        private PlayListItem findItemByVlcId__(PlayListGroup grp, long id) {
-
-                for (PlayListItem pli : grp.items)
-                        if (pli.getVlcId() == id)
-                                return pli;
-
-                for (PlayListGroup gr : grp.groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByVlcId__(gr, id)) != null)
-                                return pli;
-                }
-                return null;
-        }
-        private PlayListItem findItemByDbId__(PlayListGroup grp, long id) {
-
-                for (PlayListItem pli : grp.items)
-                        if (pli.dbIndex == id)
-                                return pli;
-
-                for (PlayListGroup gr : grp.groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByVlcId__(gr, id)) != null)
-                                return pli;
-                }
-                return null;
-        }
-        private PlayListItem findItemByUrl__(PlayListGroup grp, String url) {
-                for (PlayListItem pli : grp.items)
-                        if (pli.uri.equals(url))
-                                return pli;
-
-                for (PlayListGroup gr : grp.groups) {
-                        PlayListItem pli;
-                        if ((pli = findItemByUrl__(gr, url)) != null)
-                                return pli;
-                }
-                return null;
-        }
-        private PlayListGroup findGroupByVlcId__(PlayListGroup grp, long id) {
-
-                if (grp.getVlcId() == id)
-                        return grp;
-
-                for (PlayListGroup gr : grp.groups) {
-                        if (gr.getVlcId() == id)
-                                return gr;
-                        PlayListGroup grs;
-                        if ((grs = findGroupByVlcId__(gr, id)) != null)
-                                return grs;
-                }
-                return null;
-        }
-        private PlayListGroup findGroupByItemVlcId_(PlayListGroup grp, long id) {
-                if (grp == null)
-                        return null;
-
-                if (grp.items.size() > 0)
-                   for (PlayListItem item : grp.items)
-                           if (item.getVlcId() == id)
-                                   return grp;
-
-                for (PlayListGroup gr : grp.groups) {
-                        PlayListGroup grr;
-                        if ((grr = findGroupByItemVlcId_(gr, id)) != null)
-                                return grr;
-                }
-                return null;
-        }
 
         /// UPDATE
 
@@ -850,54 +684,6 @@ public class PlayList extends ReflectAttribute {
                         for (PlayListGroup gp : grp.groups)
                                 updateFromNfo__(gp);
         }
-        /*
-        private void updateTrailers__(PlayListGroup grp) {
-                if (grp == null)
-                        return;
-
-                try {
-                        grp.updateTrailer();
-                } catch (Exception e) {
-                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                }
-                if (grp.items.size() > 0)
-                        for (PlayListItem item : grp.items) {
-                                try {
-                                        item.updateTrailer();
-                                } catch (Exception e) {
-                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                                }
-                        }
-
-                if (grp.groups.size() > 0)
-                        for (PlayListGroup gp : grp.groups)
-                                updateTrailers__(gp);
-        }
-        private void updateFromOmdb__(PlayListGroup grp) {
-                if (grp == null)
-                        return;
-
-                try {
-                        grp.updateFromOmdb();
-                } catch (Exception e) {
-                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                }
-
-                if (grp.items.size() > 0)
-                        for (PlayListItem item : grp.items) {
-                                try {
-                                        Thread.sleep(500);
-                                        item.updateFromOmdb();
-                                } catch (Exception e) {
-                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                                }
-                        }
-
-                if (grp.groups.size() > 0)
-                        for (PlayListGroup gp : grp.groups)
-                                updateFromOmdb__(gp);
-        }
-        */
         private void updateFromDb__(PlayListGroup grp) {
                 if (grp == null)
                         return;
@@ -958,17 +744,24 @@ public class PlayList extends ReflectAttribute {
         private JSONArray jArray_(JSONObject obj) {
                 return obj.optJSONArray("children");
         }
-        private void initPlayList() {
-
-                if ((dbMgr != null) && (!dbMgr.isEmpty())) {
-                        try {
-                                fromDb(dbMgr, -1, 1, true);
-                        } catch (Exception e) {
-                                if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+        private boolean waitDb_(int type) {
+                try {
+                        if ((actionStateDb.get() == DB_ACTION_CLOSE) ||
+                            ((type == DB_ACTION_SAVE_PART) && (actionStateDb.get() == DB_ACTION_SAVE_PART)))
+                                return false;
+                        while (actionStateDb.get() != DB_ACTION_EMPTY) {
+                                Thread.yield();
+                                Thread.sleep(1000);
                         }
-                }
-
-                ///
+                        setDbState_(type);
+                        return true;
+                } catch (Exception ignore) {}
+                return false;
+        }
+        private void waitDbEnd_() {
+                setDbState_(DB_ACTION_EMPTY);
+        }
+        private void initPlayList() {
 
                 if (groups.size() > 0)
                         groups.clear();
@@ -999,7 +792,7 @@ public class PlayList extends ReflectAttribute {
                 groups.add(grp);
                 grp = new PlayListGroup(
                         this,
-                        pif.getStringFormat(PlayListParseInterface.ID_FMT_TV_ONLINE),
+                        pif.getStringFormat(PlayListParseInterface.ID_FMT_IPTV_ONLINE),
                         IDX_ONLINE_TV + 100000L,
                         IDX_ONLINE_TV + 1,
                         true
@@ -1015,9 +808,17 @@ public class PlayList extends ReflectAttribute {
                 groups.add(grp);
                 grp = new PlayListGroup(
                         this,
-                        pif.getStringFormat(PlayListParseInterface.ID_FMT_RADIO_ONLINE),
+                        pif.getStringFormat(PlayListParseInterface.ID_FMT_FILMS_ONLINE),
                         IDX_ONLINE_FILMS + 100000L,
                         IDX_ONLINE_FILMS + 1,
+                        true
+                );
+                groups.add(grp);
+                grp = new PlayListGroup(
+                        this,
+                        pif.getStringFormat(PlayListParseInterface.ID_FMT_USER_ONLINE),
+                        IDX_ONLINE_USER_DEFINE + 100000L,
+                        IDX_ONLINE_USER_DEFINE + 1,
                         true
                 );
                 groups.add(grp);
@@ -1025,45 +826,160 @@ public class PlayList extends ReflectAttribute {
 
         ///
 
+        private Observable.OnPropertyChangedCallback changePlayItemCb =
+                new Observable.OnPropertyChangedCallback() {
+                        @Override
+                        public void onPropertyChanged(Observable sender, int propertyId) {
+                                try {
+                                        final PlayListItem item = currentPlayOld;
+                                        if ((item != null) && (history.size() > 0)) {
+                                                long vid = item.getVlcId();
+                                                if (vid > 0L)
+                                                        for (PlayListHistoryIndex p : history)
+                                                                if (p.historyVlcId == vid) {
+                                                                        p.historyPosition = item.stat.lastProgress.get();
+                                                                        p.historyDate = new Date(System.currentTimeMillis());
+                                                                        getExecutor().execute(
+                                                                                new Runnable() {
+                                                                                        @Override
+                                                                                        public void run() {
+                                                                                                if (waitDb_(DB_ACTION_USING)) {
+                                                                                                        try {
+                                                                                                                if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
+                                                                                                                        ContentValues cv = new ContentValues();
+                                                                                                                        cv.put("uri", item.uri);
+                                                                                                                        item.toDb(dbMgr, item.dbParent, cv);
+                                                                                                                } else {
+                                                                                                                        item.toDb(dbMgr);
+                                                                                                                }
+                                                                                                        } catch (Exception ignore) {}
+                                                                                                        waitDbEnd_();
+                                                                                                }
+                                                                                        }
+                                                                                }
+                                                                        );
+                                                                        break;
+                                                                }
+                                        }
+                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
+                                try {
+                                        final PlayListItem item;
+                                        currentPlayOld = item = currentPlay.get();
+                                        if (item == null)
+                                                return;
+
+                                        switch (item.type) {
+                                                case PlayListConstant.TYPE_MOVIE:
+                                                case PlayListConstant.TYPE_SERIES:
+                                                case PlayListConstant.TYPE_VIDEO: {
+                                                        long hid = 0,
+                                                             vid = item.getVlcId();
+
+                                                        if (history.size() > 0)
+                                                                hid = history.get(history.size() - 1).historyVlcId;
+                                                        if (vid != hid) {
+                                                                history.add(
+                                                                        new PlayListHistoryIndex(
+                                                                                vid,
+                                                                                item.stat.lastProgress.get()
+                                                                        )
+                                                                );
+                                                                if (groups.size() > 0) {
+                                                                        final PlayListGroup grp = groups.get(IDX_HISTORY);
+                                                                        item.reloadBindingData();
+                                                                        grp.items.add(0, item);
+                                                                        synchronized (grp) {
+                                                                                grp.notify();
+                                                                        }
+                                                                }
+                                                                if (pif != null)
+                                                                    pif.loadStage1();
+
+                                                                getExecutor().execute(
+                                                                        new Runnable() {
+                                                                                @Override
+                                                                                public void run() {
+                                                                                        if (waitDb_(DB_ACTION_USING)) {
+                                                                                                try {
+                                                                                                        if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
+                                                                                                                ContentValues cv = new ContentValues();
+                                                                                                                cv.put("uri", item.uri);
+                                                                                                                item.toDb(dbMgr, item.dbParent, cv);
+                                                                                                        } else {
+                                                                                                                item.toDb(dbMgr);
+                                                                                                        }
+                                                                                                } catch (Exception ignore) {}
+                                                                                                waitDbEnd_();
+                                                                                        }
+                                                                                }
+                                                                        }
+                                                                );
+                                                        }
+                                                        break;
+                                                }
+                                                case PlayListConstant.TYPE_AUDIO:
+                                                case PlayListConstant.TYPE_ONLINE: {
+                                                        // item.visibleWatched() = ...
+                                                        break;
+                                                }
+                                        }
+                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
+
+                                getExecutor().execute(
+                                        new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                        if (waitDb_(DB_ACTION_SAVE_PART)) {
+                                                                try {
+                                                                        toDb(dbMgr, -1, true);
+                                                                        if (BuildConfig.DEBUG) Log.d("- SAVE ITEM/HISTORY :: SAVE MAIN PLAYLIST TABLE TO DB", " OK");
+                                                                } catch (Exception ignore) {}
+                                                                waitDbEnd_();
+                                                        }
+                                                }
+                                        }
+                                );
+                        }
+                };
+
         private Runnable initPlayListRunnable(final JSONObject obj) {
                 return  new Runnable() {
                         @Override
                         public void run() {
                                 try {
-                                        if (dbMgr != null) {
-
-                                                initPlayList();
-                                                createFromVlc_(obj);
-                                                loadOnline_();
-                                                loadFavorites_();
-                                                pif.loadStage1();
-                                                isCompleteDb.set(true);
-                                                isUpdateDb.set(true);
-
-                                                if (dbMgr.isEmpty()) {
-                                                        pif.loadStageOnce();
-                                                        updateFromNfo_();
-                                                        pif.loadStageEnd();
-                                                        saveToDb_();
-                                                } else {
-                                                        updateFromDb_();
-                                                        loadHistory_();
-                                                        pif.loadStageEnd();
+                                        boolean b = !dbMgr.isEmpty();
+                                        if (b) {
+                                                if (waitDb_(DB_ACTION_USING)) {
+                                                        fromDb(dbMgr, -1, 1, true);
+                                                        waitDbEnd_();
                                                 }
-                                                isUpdateDb.set(false);
-                                        } else {
-                                                initPlayList();
-                                                createFromVlc_(obj);
-                                                loadOnline_();
+                                        }
+
+                                        ///
+
+                                        initPlayList();
+                                        createFromVlc_(obj);
+                                        loadOnline_();
+                                        if (b) {
                                                 loadFavorites_();
+                                                loadHistory_();
+                                        }
+                                        pif.loadStage1();
+                                        isCompleteDb.set(true);
+
+                                        if (b) {
+                                                updateFromDb_();
                                                 pif.loadStageEnd();
-                                                isCompleteDb.set(true);
+                                        } else {
+                                                pif.loadStageOnce();
+                                                updateAll_();
+                                                pif.loadStageEnd();
+                                                saveToDb_();
+                                                pif.updateStageOnce();
                                         }
                                         if (BuildConfig.DEBUG) Log.d("- LOAD PlayList", "- END = " + new Date().toString());
 
-                                } catch (Exception e) {
-                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                                }
+                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
                         }
                 };
         }

@@ -1,32 +1,4 @@
 #EXTM3U
-#EXTINF:-1 ,Kinodrom SN
-http://serv24.vintera.tv:8081/hdmedia/hdmedia_3d/playlist.m3u8
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/d5/79/d5793e9e8657ec63a5d678321d69f739.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/7c/d6/7cd6b37775b4fa721b10cfece34173ff.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/ec/a0/eca08678c4fef5750e04dbd7602c72fe.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/8b/32/8b32c420747015a60fd508a192f1c921.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/67/75/677582a9374b2518e3186ab07d196083.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/d2/78/d278fd720e1914f9d42c7933dd52a862.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/a3/d0/a3d051ed1e63612017a4c972b421c5b0.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/d2/6b/d26b8f7c9309220373003a0e355e84fc.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/5a/fc/5afc6a8bb0215656150711895daf1b7d.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/49/ba/49ba587275634216bd82d7d857ede506.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/9b/b0/9bb0cf85f6756ec5b4983dc8157b6301.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/ec/a0/eca0fc5773b12af5294a3ab70be3a581.mp4
-#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
-http://live62.ru/upload/video/storage/a4/cd/a4cd0512a5ef5d62528f469b038b1e48.mp4
 #EXTINF:-1 ,007:Спектр (2015) (16+)
 http://212.113.38.100/hls/cfbb47c3747e5614262140f3d6c145a7/fhd/Spectre.2015.BDRip.1080p.m3u8
 #EXTINF:-1 ,1+1 Дома.Новый год (2013) (16+)
@@ -1623,3 +1595,31 @@ http://meta.vcdn.biz/506815196b1541202b25f49ba7f3ab5a_megogo/vod/hls/b/450_900_1
 http://meta.vcdn.biz/acab127c2313a14f9fffcd7c69a05b06_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/215691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
 #EXTINF:-1 ,Ярость (1966)
 http://meta.vcdn.biz/f10f07f955d0382675e026ac6d1648ad_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/179251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Kinodrom SN
+http://serv24.vintera.tv:8081/hdmedia/hdmedia_3d/playlist.m3u8
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d5/79/d5793e9e8657ec63a5d678321d69f739.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/7c/d6/7cd6b37775b4fa721b10cfece34173ff.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/ec/a0/eca08678c4fef5750e04dbd7602c72fe.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/8b/32/8b32c420747015a60fd508a192f1c921.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/67/75/677582a9374b2518e3186ab07d196083.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d2/78/d278fd720e1914f9d42c7933dd52a862.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/a3/d0/a3d051ed1e63612017a4c972b421c5b0.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/d2/6b/d26b8f7c9309220373003a0e355e84fc.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/5a/fc/5afc6a8bb0215656150711895daf1b7d.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/49/ba/49ba587275634216bd82d7d857ede506.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/9b/b0/9bb0cf85f6756ec5b4983dc8157b6301.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/ec/a0/eca0fc5773b12af5294a3ab70be3a581.mp4
+#EXTINF:-1 ,#EXTVLCOPT:network-caching=1000
+http://live62.ru/upload/video/storage/a4/cd/a4cd0512a5ef5d62528f469b038b1e48.mp4

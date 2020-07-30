@@ -23,7 +23,6 @@ import java.util.regex.Pattern;
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.db.DbManager;
-import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.parse.ParseContainer;
 import ru.ps.vlcatv.utils.playlist.parse.ParseObject;
@@ -66,6 +65,10 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     public PlayListItem(PlayList pl, PlayListFavorite fav) {
         playListRoot = pl;
         copy(fav);
+    }
+    public PlayListItem(PlayList pl, ParseObject po) {
+        playListRoot = pl;
+        copy(po);
     }
 
     /// Parcelable
@@ -364,6 +367,10 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         return PlayListUtils.getIdsLong(PlayListConstant.IDS_VLC, ids);
     }
     @Override
+    public String getImdbId() {
+        return PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
+    }
+    @Override
     public long getDbIndex() {
         return dbIndex;
     }
@@ -596,6 +603,8 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
 
     @Override
     public void copy(PlayListFavorite fav) {
+        if (fav == null)
+            return;
         type = fav.itemType;
         setTitle(fav.itemTitle);
         setDescription(fav.itemDesc);
@@ -610,7 +619,6 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
 
     @Override
     public void copy(PlayListItem item) {
-
         if (item == null)
             return;
 
@@ -706,15 +714,19 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         switch (pa.itemType) {
             case PlayListConstant.TYPE_MOVIE:
             case PlayListConstant.TYPE_SERIES: {
-                copyNfo(pa);
+                copyNFO(pa);
                 break;
             }
             case PlayListConstant.TYPE_ONLINE: {
-                copyM3u8(pa);
+                copyM3U8(pa);
                 break;
             }
             case PlayListConstant.TYPE_SOURCE_OMDB: {
-                copyOmdb(pa);
+                copyOMDB(pa);
+                break;
+            }
+            case PlayListConstant.TYPE_SOURCE_IMDB: {
+                copyIMDB(pa);
                 break;
             }
             default:
@@ -722,7 +734,33 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         }
     }
 
-    private void copyOmdb(ParseObject pa) {
+    private void copyIMDB(ParseObject pa) {
+
+        if (type == PlayListConstant.TYPE_ONLINE)
+            onlineType = pa.playListType;
+
+        if (pa.itemPremiered != null) {
+            try {
+                SimpleDateFormat fmt = new SimpleDateFormat("yyyy", Locale.getDefault());
+                date.set(fmt.format(pa.itemPremiered));
+            } catch (Exception ignore) {}
+        }
+        if (pa.imageList.size() > 0) {
+            for (ParseContainer c : pa.imageList)
+                PlayListUtils.setItemListSkip(new PlayListItemImages(c.valId), images);
+            if (type == PlayListConstant.TYPE_ONLINE) {
+                setImage(PlayListUtils.getListRandom(images));
+            } else {
+                if (Text.isempty(poster.get()))
+                    setImage(PlayListUtils.getListRandom(images));
+            }
+        }
+        if (pa.idList.size() > 0)
+            PlayListUtils.setIdsSkip(pa.idList, ids, PlayListItemIds.class);
+        if (!Text.isempty(pa.itemTitle))
+            PlayListUtils.setItemListSkip(new PlayListItemTitles(pa.itemTitle), titles);
+    }
+    private void copyOMDB(ParseObject pa) {
 
         if ((!Text.isempty(pa.itemDescription)) && (Text.isempty(description.get())))
             setDescription(pa.itemDescription);
@@ -734,15 +772,33 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         if (pa.imageList.size() > 0) {
             for (ParseContainer c : pa.imageList)
                 PlayListUtils.setItemListSkip(new PlayListItemImages(c.valId), images);
-            if (Text.isempty(poster.get()))
+            if (type == PlayListConstant.TYPE_ONLINE) {
                 setImage(PlayListUtils.getListRandom(images));
+            } else {
+                if (Text.isempty(poster.get()))
+                    setImage(PlayListUtils.getListRandom(images));
+            }
         }
-        if ((pa.itemSeason > 0) || (pa.itemEpisode > 0)) {
+
+        boolean b = ((pa.itemSeason > 0) || (pa.itemEpisode > 0));
+        if (b)
             setSeason(pa.itemSeason, pa.itemEpisode);
-            type = PlayListConstant.TYPE_SERIES;
-        } else if (type == PlayListConstant.TYPE_LEAF) {
-            type = PlayListConstant.TYPE_MOVIE;
+
+        switch (type) {
+            case PlayListConstant.TYPE_ONLINE: {
+                if (b)
+                    onlineType = PlayListConstant.TYPE_SERIES;
+                break;
+            }
+            case PlayListConstant.TYPE_LEAF: {
+                if (b)
+                    type = PlayListConstant.TYPE_SERIES;
+                else
+                    type = PlayListConstant.TYPE_MOVIE;
+                break;
+            }
         }
+
         if (pa.ratingList.size() > 0) {
             ParseContainer pc = pa.findFromParseContainer(PlayListConstant.IDS_AWARDS, pa.ratingList);
             if (pc != null)
@@ -800,7 +856,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         }
     }
 
-    private void copyM3u8(ParseObject pa) {
+    private void copyM3U8(ParseObject pa) {
         crc = pa.itemCrc;
         uri = pa.itemUri;
         type = pa.itemType;
@@ -827,7 +883,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         PlayListUtils.setIdsSkip(new PlayListItemIds(PlayListConstant.IDS_VLC, 0), ids);
     }
 
-    private void copyNfo(ParseObject pa) {
+    private void copyNFO(ParseObject pa) {
 
         if (pa.itemCrc > 0)
             crc = pa.itemCrc;
@@ -919,7 +975,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     }
 
     @Override
-    public void updateFromDb() {
+    public void updateFromDB() {
         try {
             if (!Text.isempty(uri)) {
                 if (playListRoot != null) {
@@ -933,19 +989,19 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                             copy(item);
 
                         } catch (Exception e) {
-                            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (1): ", e.getMessage(), e);
+                            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (1): ", Text.requireString(e.getLocalizedMessage()), e);
                         }
                     }
                 }
             }
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (2): ", e.getMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("- update From Db update exception (2): ", Text.requireString(e.getLocalizedMessage()), e);
         }
         reloadBindingData();
     }
 
     @Override
-    public void updateFromNfo() {
+    public void updateFromNFO() {
         try {
             if ((Text.isempty(nfo)) ||
                 (nfo.endsWith(".none")))
@@ -957,10 +1013,9 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
             if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            JSONObject obj = (JSONObject) pif.downloadNfo(nfo);
-            if (obj == null)
+            ParseObject po = PlayListUtils.parseObject((JSONObject) pif.downloadNFO(nfo));
+            if (po == null)
                 return;
-            ParseObject po = new ParseObject(obj);
             switch (po.itemType) {
                 case PlayListConstant.TYPE_LEAF:
                 case PlayListConstant.TYPE_MOVIE:
@@ -980,59 +1035,57 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     }
 
     @Override
-    public void updateFromOmdb() {
+    public void updateFromMOVEDB() {
         try {
             PlayListParseInterface pif;
             if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String imdb = PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
-            if (!Text.isempty(imdb)) {
-                JSONObject obj = (JSONObject) pif.downloadOmdb(imdb);
-                if (obj == null) {
-                    if (isDataEmpty()) {
-                        List<PlayListItemTitles> list;
-                        if (titles.size() > 0) {
-                            list = titles;
-                        } else {
-                            list = new ArrayList<>();
-                            list.add(new PlayListItemTitles(title.get()));
-                        }
-                        try {
-                            JSONArray arr;
-                            if ((arr = (JSONArray) pif.searchOmdb(list)) != null)
-                                PlayListUtils.addEditList(arr, playListRoot, this);
-                        } catch (Exception ignore) {}
-                    }
-                    return;
-                }
-
-                ParseObject po = new ParseObject(obj);
-                if (po.itemType == PlayListConstant.TYPE_NONE)
-                    return;
-                copy(po);
+            String imdb;
+            if ((imdb = getImdbId()) == null) {
+                copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadIMDB(
+                                        title.get(),
+                                        ((episode.get() > 0) ?
+                                                PlayListParseInterface.ID_FMT_EPISODE :
+                                                PlayListParseInterface.ID_FMT_MOVIE
+                                        )
+                                )
+                        )
+                );
+                imdb = getImdbId();
             }
+            if (!Text.isempty(imdb))
+                copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadOMDB(imdb)
+                        )
+                );
+
         } catch (Exception ignore) {}
+        reloadBindingData();
     }
 
     @Override
-    public void updateTrailer() {
+    public void updateTRAILER() {
         try {
             PlayListParseInterface pif;
             if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String s = pif.checkTrailer(uri);
+            String s = pif.checkTRAILER(uri);
             if (!Text.isempty(s)) {
-                if (BuildConfig.DEBUG) Log.e("- Local trailer found: " + title.get(), "" + s);
+                if (BuildConfig.DEBUG) Log.e("- ITEM Local trailer found: " + title.get(), "" + s);
                 if (!Text.isempty(trailer.get()))
                     PlayListUtils.setItemListSkip(new PlayListItemTrailers(trailer.get()), trailers);
                 PlayListUtils.setItemListSkip(new PlayListItemTrailers(s), trailers);
                 trailer.set(s);
             }
         } catch (Exception e) {
-            if (BuildConfig.DEBUG) Log.e("- update Trailer exception: ", e.getMessage(), e);
+            if (BuildConfig.DEBUG) Log.e("- update ITEM Trailer exception: ", Text.requireString(e.getLocalizedMessage()), e);
         }
+        reloadBindingData();
     }
 
     ///

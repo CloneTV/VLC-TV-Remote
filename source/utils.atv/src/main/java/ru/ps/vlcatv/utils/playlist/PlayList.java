@@ -7,12 +7,10 @@ import androidx.annotation.Keep;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -25,6 +23,10 @@ import ru.ps.vlcatv.utils.db.ConstantDataDb;
 import ru.ps.vlcatv.utils.db.DbManager;
 import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONObject;
+import ru.ps.vlcatv.utils.playlist.method.MethodCheckAll;
+import ru.ps.vlcatv.utils.playlist.method.MethodCreateFromVlc;
+import ru.ps.vlcatv.utils.playlist.method.MethodUpdateAll;
+import ru.ps.vlcatv.utils.playlist.method.MethodUpdateFromDB;
 import ru.ps.vlcatv.utils.playlist.parse.ParseM3UList;
 import ru.ps.vlcatv.utils.playlist.parse.PlayListParseInterface;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
@@ -43,7 +45,12 @@ import ru.ps.vlcatv.utils.reflect.annotation.IUniqueReflect;
 public class PlayList extends ReflectAttribute {
 
         private static final String TAG = PlayList.class.getSimpleName();
-        private static final String PL_EXCEPT1 = "not property init before run";
+        private static final String TAG1 = " - LOAD PlayList";
+        public static final String PL_EXCEPT1 = "not property init before run";
+        public static final String PL_STAGE_BEGIN = "- BEGIN = ";
+        public static final String PL_STAGE_BREAK = "- BREAK = ";
+        public static final String PL_STAGE_END = "- END = ";
+
         public static final int DB_ACTION_EMPTY = -1;
         public static final int DB_ACTION_USING = 1;
         public static final int DB_ACTION_CLOSE = 2;
@@ -174,8 +181,11 @@ public class PlayList extends ReflectAttribute {
                                                 public void run() {
                                                         try {
                                                                 if (waitDb_(DB_ACTION_USING)) {
-                                                                   item.DbDelete(dbMgr);
-                                                                   waitDbEnd_();
+                                                                        try {
+                                                                                item.DbDelete(dbMgr);
+                                                                        } finally {
+                                                                                waitDbEnd_();
+                                                                        }
                                                                 }
                                                         } catch (Exception ignore) {}
                                                 }
@@ -207,6 +217,9 @@ public class PlayList extends ReflectAttribute {
 
                                         schedule.add(new PlayListSchedule(d, fav));
                                         PlayListItem item;
+                                        if ((item = PlayListUtils.findItemByTitle(groups.get(IDX_ONLINE_FAV), fav.itemTitle)) != null)
+                                                item.trailerInfo.set(fav.itemEpgNotify);
+
                                         if ((item = PlayListUtils.findItemByTitle(groups.get(IDX_ONLINE_TV), fav.itemTitle)) == null)
                                                 if ((item = PlayListUtils.findItemByTitle(groups.get(IDX_ONLINE_RADIO), fav.itemTitle)) == null)
                                                         return;
@@ -224,8 +237,11 @@ public class PlayList extends ReflectAttribute {
                                 if (now > play) {
                                         schedule.remove(p);
                                         if (waitDb_(DB_ACTION_USING)) {
-                                                p.DbDelete(dbMgr);
-                                                waitDbEnd_();
+                                                try {
+                                                        p.DbDelete(dbMgr);
+                                                } finally {
+                                                        waitDbEnd_();
+                                                }
                                         }
                                 }
                         }
@@ -248,8 +264,11 @@ public class PlayList extends ReflectAttribute {
                                 @Override
                                 public void run() {
                                         if (waitDb_(DB_ACTION_SAVE_PART)) {
-                                                toDb(dbMgr, -1, true);
-                                                waitDbEnd_();
+                                                try {
+                                                        toDb(dbMgr, -1, true);
+                                                } finally {
+                                                        waitDbEnd_();
+                                                }
                                         }
                                 }
                         });
@@ -265,8 +284,11 @@ public class PlayList extends ReflectAttribute {
                                         @Override
                                         public void run() {
                                                 if (waitDb_(DB_ACTION_SAVE_PART)) {
-                                                        toDb(dbMgr, -1, true);
-                                                        waitDbEnd_();
+                                                        try {
+                                                                toDb(dbMgr, -1, true);
+                                                        } finally {
+                                                                waitDbEnd_();
+                                                        }
                                                 }
                                         }
                                 });
@@ -336,32 +358,46 @@ public class PlayList extends ReflectAttribute {
                         }
                 });
         }
-
+        public void checkAll() {
+                if ((dbMgr == null) || (pif == null))
+                        throw new RuntimeException(PlayList.PL_EXCEPT1);
+                MethodCheckAll.go(groups);
+                saveToDb_();
+        }
         public void updateAll() {
-                updateAll_();
+                if ((dbMgr == null) || (pif == null))
+                        throw new RuntimeException(PlayList.PL_EXCEPT1);
+                MethodUpdateAll.go(groups);
                 saveToDb_();
         }
 
         ///
-        /// VLC play list private method
+        /// play list private method
 
         private void Clear_() {
-                if (currentPlay.get() != null) {
+                try {
+                        if (currentPlay.get() != null)
+                                synchronized (currentPlay) {
+                                        currentPlay.set(null);
+                                }
                         if (waitDb_(DB_ACTION_SAVE_PART)) {
-                                toDb(dbMgr, -1, true);
-                                waitDbEnd_();
-                        }
-                        synchronized(currentPlay) {
-                                currentPlay.set(null);
+                                try {
+                                        toDb(dbMgr, -1, true);
+                                } finally {
+                                        waitDbEnd_();
+                                }
                         }
                         groups.clear();
-                }
+                } catch (Exception ignore) {}
         }
         private void saveToDb_() {
                 saveSchedule_();
                 if (waitDb_(DB_ACTION_SAVE_PART)) {
-                        toDb(dbMgr, -1, true);
-                        waitDbEnd_();
+                        try {
+                                toDb(dbMgr, -1, true);
+                        } finally {
+                                waitDbEnd_();
+                        }
                 }
                 if (groups.size() <= (IDX_GROUP_LAST + 1))
                         return;
@@ -369,9 +405,12 @@ public class PlayList extends ReflectAttribute {
                 if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- BEGIN = " + new Date().toString());
 
                 if (waitDb_(DB_ACTION_SAVE_ALL)) {
-                        for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
-                                groups.get(i).toDb(dbMgr);
-                        waitDbEnd_();
+                        try {
+                                for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
+                                        groups.get(i).toDb(dbMgr);
+                        } finally {
+                                waitDbEnd_();
+                        }
                 }
                 if (BuildConfig.DEBUG) Log.d("- SAVE PlayList to DB", "- END = " + new Date().toString());
         }
@@ -383,72 +422,8 @@ public class PlayList extends ReflectAttribute {
                 if (pif != null)
                         pif.close();
         }
-        private void createFromVlc_(JSONObject obj) {
-                if (obj == null)
-                        return;
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
 
-                setDbState_(DB_ACTION_EMPTY_GET_VLC);
-                JSONArray root = jArray_(obj);
-                if (root == null)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- CREATE PlayList from VLC", "- BEGIN = " + new Date().toString());
-
-                for (int i = 0; i < root.length(); i++) {
-
-                        JSONObject ele = root.optJSONObject(i);
-                        if (ele == null)
-                                continue;
-
-                        String strName = jName_(ele);
-                        if (Text.isempty(strName))
-                                continue;
-                        PlayListGroup plg = new PlayListGroup(
-                                this, strName, jId_(ele), (groups.size() + 1), true
-                        );
-                        groups.add(plg);
-                        createFromVlc__(plg, jArray_(ele));
-                }
-                for (PlayListGroup plg : groups)
-                        updateFromVlc__(plg);
-
-                createDate.set(new Date(System.currentTimeMillis()));
-                setDbState_(DB_ACTION_EMPTY);
-                if (BuildConfig.DEBUG) Log.d("- CREATE PlayList from VLC", "- END = " + new Date().toString());
-        }
-        private void updateAll_() {
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
-
-                if (groups.size() <= IDX_GROUP_LAST + 1)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All from external API", "- BEGIN = " + new Date().toString());
-
-                for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
-                        updateAll__(groups.get(i));
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList All from external API", "- END = " + new Date().toString());
-        }
-        private void updateFromDb_() {
-                if ((dbMgr == null) || (pif == null))
-                        throw new RuntimeException(PL_EXCEPT1);
-
-                if (groups.size() <= IDX_GROUP_LAST + 1)
-                        return;
-
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from DB", "- BEGIN = " + new Date().toString());
-                if (waitDb_(DB_ACTION_USING)) {
-                        for (int i = IDX_ONLINE_FAV + 1; i < groups.size(); i++)
-                                updateFromDb__(groups.get(i));
-                        waitDbEnd_();
-                }
-                if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from DB", "- END = " + new Date().toString());
-        }
-
-        /// Load
+        /// private Load
 
         private void loadOnline_() {
                 if (pif == null)
@@ -456,12 +431,12 @@ public class PlayList extends ReflectAttribute {
 
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Online", "- BEGIN");
                 {
-                        final String s1 = pif.downloadM3u8(null, IDX_ONLINE_TV);
+                        final String s1 = pif.downloadM3U8(null, IDX_ONLINE_TV);
                         if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_TV);
                         } else {
                                 for (String uri : PlayListConstant.TV_ONLINE_ARRAY) {
-                                        final String s2 = pif.downloadM3u8(uri, IDX_ONLINE_TV);
+                                        final String s2 = pif.downloadM3U8(uri, IDX_ONLINE_TV);
                                         if (!Text.isempty(s2))
                                                 ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_TV);
                                 }
@@ -469,29 +444,29 @@ public class PlayList extends ReflectAttribute {
                 }
                 //
                 {
-                        final String s1 = pif.downloadM3u8(null, IDX_ONLINE_RADIO);
+                        final String s1 = pif.downloadM3U8(null, IDX_ONLINE_RADIO);
                         if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_RADIO);
                         } else {
-                                final String s2 = pif.downloadM3u8(PlayListConstant.RADIO_ONLINE, IDX_ONLINE_RADIO);
+                                final String s2 = pif.downloadM3U8(PlayListConstant.RADIO_ONLINE, IDX_ONLINE_RADIO);
                                 if (!Text.isempty(s2))
                                         ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_RADIO);
                         }
                 }
                 //
                 {
-                        final String s1 = pif.downloadM3u8(null, IDX_ONLINE_FILMS);
+                        final String s1 = pif.downloadM3U8(null, IDX_ONLINE_FILMS);
                         if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_FILMS);
                         } else {
-                                final String s2 = pif.downloadM3u8(PlayListConstant.FILMS_ONLINE, IDX_ONLINE_FILMS);
+                                final String s2 = pif.downloadM3U8(PlayListConstant.FILMS_ONLINE, IDX_ONLINE_FILMS);
                                 if (!Text.isempty(s2))
                                         ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_FILMS);
                         }
                 }
                 //
                 {
-                        final String s1 = pif.downloadM3u8(null, IDX_ONLINE_USER_DEFINE);
+                        final String s1 = pif.downloadM3U8(null, IDX_ONLINE_USER_DEFINE);
                         if (!Text.isempty(s1)) {
                                 ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_USER_DEFINE);
                         }
@@ -550,200 +525,8 @@ public class PlayList extends ReflectAttribute {
                 }
         }
 
+        /// DB Lock and Wait
 
-        /// UPDATE
-
-        private void updateFromVlc__(PlayListGroup plg) {
-                if (plg == null)
-                        return;
-
-                for (PlayListGroup ccg : plg.groups)
-                        updateFromVlc__(ccg);
-
-                try {
-                        if ((plg.items.size() > 0) && (plg.season.get() > 0)) {
-                                plg.episodes.set(plg.items.size());
-
-                                if (plg.parent != null) {
-                                        long timeTotal = 0;
-                                        int episodesTotal = 0;
-                                        PlayListGroup parent = plg.parent;
-
-                                        for (PlayListGroup grp : parent.groups) {
-                                                long timeSeason = 0;
-                                                for (PlayListItem pli : grp.items)
-                                                        timeSeason += pli.stat.totalProgress.get();
-
-                                                if (timeSeason > 0)
-                                                        grp.totalTime.set(timeSeason);
-                                                grp.episodes.set(grp.items.size());
-                                                episodesTotal += grp.items.size();
-                                                timeTotal += timeSeason;
-                                        }
-                                        parent.totalTime.set(timeTotal);
-                                        parent.episodes.set(episodesTotal);
-                                        parent.season.set(parent.groups.size());
-                                }
-                        }
-                } catch (Exception ignore) {}
-        }
-        private void createFromVlc__(PlayListGroup plg, JSONArray array) {
-                if ((plg == null) || (array == null))
-                        return;
-
-                int grpIdx = 0,
-                        grpId = PlayListUtils.getIdsInt(PlayListConstant.IDS_GRP_ID, plg.ids);
-
-                for (int i = 0; i < array.length(); i++) {
-                        try {
-                                JSONObject ele = array.optJSONObject(i);
-                                String strName = jName_(ele);
-                                switch (jType(ele)) {
-                                        case PlayListConstant.TYPE_NODE: {
-                                                PlayListGroup ccg = new PlayListGroup(
-                                                        this, strName, jId_(ele), grpId, false
-                                                );
-                                                ccg.parent = plg;
-                                                plg.groups.add(ccg);
-                                                createFromVlc__(ccg, jArray_(ele));
-                                                break;
-                                        }
-                                        case PlayListConstant.TYPE_LEAF: {
-                                                PlayListItem pli = new PlayListItem(
-                                                        this, strName,
-                                                        jUri_(ele), jId_(ele), jDuration_(ele),
-                                                        grpId, grpIdx++
-                                                );
-                                                if (i == 0) {
-                                                        plg.setSeason(pli.season.get());
-                                                        plg.setNfoFake(pli.uri);
-                                                        if (plg.parent != null)
-                                                                plg.parent.setNfo(pli.uri);
-                                                }
-                                                plg.items.add(pli);
-                                                break;
-                                        }
-                                }
-                        } catch (Exception ignore) {}
-                }
-        }
-        private void updateAll__(PlayListGroup grp) {
-                if (grp == null)
-                        return;
-
-                try {
-                        grp.updateFromNfo();
-                } catch (Exception ignore) {}
-                try {
-                        grp.updateFromOmdb();
-                } catch (Exception ignore) {}
-                /*
-                try {
-                        grp.updateTrailer();
-                } catch (Exception ignore) {}
-                 */
-
-                if (grp.items.size() > 0)
-                        for (PlayListItem item : grp.items) {
-                                try {
-                                        if (item.isDataEmpty())
-                                                item.updateFromNfo();
-                                } catch (Exception ignore) {}
-                                try {
-                                        item.updateFromOmdb();
-                                } catch (Exception ignore) {}
-                                try {
-                                        item.updateTrailer();
-                                } catch (Exception ignore) {}
-                        }
-
-                if (grp.groups.size() > 0)
-                        for (PlayListGroup gp : grp.groups)
-                                updateAll__(gp);
-        }
-        private void updateFromNfo__(PlayListGroup grp) {
-                if (grp == null)
-                        return;
-
-                try {
-                        grp.updateFromNfo();
-                } catch (Exception e) {
-                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                }
-                if (grp.items.size() > 0)
-                        for (PlayListItem item : grp.items) {
-                                if (item.isDataEmpty())
-                                        try {
-                                                item.updateFromNfo();
-                                        } catch (Exception e) {
-                                                if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                                        }
-                        }
-
-                if (grp.groups.size() > 0)
-                        for (PlayListGroup gp : grp.groups)
-                                updateFromNfo__(gp);
-        }
-        private void updateFromDb__(PlayListGroup grp) {
-                if (grp == null)
-                        return;
-
-                try {
-                        grp.updateFromDb();
-                } catch (Exception e) {
-                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                }
-                if (grp.items.size() > 0) {
-                        boolean isStart = true;
-                        for (PlayListItem item : grp.items) {
-                                try {
-                                        if (isStart) {
-                                                isStart = false;
-
-                                                if (grp.parent != null) {
-                                                        if (Text.isempty(grp.parent.nfo))
-                                                                grp.parent.setNfo(item.uri);
-                                                        grp.parent.updateFromDb(item.type);
-                                                }
-                                                if (Text.isempty(grp.nfo)) {
-                                                        grp.setNfoFake(item.uri);
-                                                        grp.updateFromDb();
-                                                }
-                                        } // END isStart (update group)
-                                        item.updateFromDb();
-                                } catch (Exception e) {
-                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
-                                }
-                        }
-                }
-                if (grp.groups.size() > 0)
-                        for (PlayListGroup gp : grp.groups)
-                                updateFromDb__(gp);
-        }
-        private int jType(JSONObject obj) {
-                String s = obj.optString("type", null);
-                switch (s) {
-                        case "node": return PlayListConstant.TYPE_NODE;
-                        case "leaf": return PlayListConstant.TYPE_LEAF;
-                        default: return PlayListConstant.TYPE_NONE;
-                }
-
-        }
-        private String jName_(JSONObject obj) {
-                return obj.optString("name", null);
-        }
-        private String jUri_(JSONObject obj) {
-                return obj.optString("uri", null);
-        }
-        private long jId_(JSONObject obj) {
-                return obj.optLong("id", -1);
-        }
-        private int jDuration_(JSONObject obj) {
-                return obj.optInt("duration", -1);
-        }
-        private JSONArray jArray_(JSONObject obj) {
-                return obj.optJSONArray("children");
-        }
         private boolean waitDb_(int type) {
                 try {
                         if ((actionStateDb.get() == DB_ACTION_CLOSE) ||
@@ -761,6 +544,9 @@ public class PlayList extends ReflectAttribute {
         private void waitDbEnd_() {
                 setDbState_(DB_ACTION_EMPTY);
         }
+
+        /// INIT play list data
+
         private void initPlayList() {
 
                 if (groups.size() > 0)
@@ -852,8 +638,10 @@ public class PlayList extends ReflectAttribute {
                                                                                                                 } else {
                                                                                                                         item.toDb(dbMgr);
                                                                                                                 }
-                                                                                                        } catch (Exception ignore) {}
-                                                                                                        waitDbEnd_();
+                                                                                                        } catch (Exception ignore) {
+                                                                                                        } finally {
+                                                                                                                waitDbEnd_();
+                                                                                                        }
                                                                                                 }
                                                                                         }
                                                                                 }
@@ -908,8 +696,11 @@ public class PlayList extends ReflectAttribute {
                                                                                                         } else {
                                                                                                                 item.toDb(dbMgr);
                                                                                                         }
-                                                                                                } catch (Exception ignore) {}
-                                                                                                waitDbEnd_();
+                                                                                                } catch (Exception ignore) {
+                                                                                                } finally {
+                                                                                                        waitDbEnd_();
+                                                                                                }
+
                                                                                         }
                                                                                 }
                                                                         }
@@ -933,8 +724,11 @@ public class PlayList extends ReflectAttribute {
                                                                 try {
                                                                         toDb(dbMgr, -1, true);
                                                                         if (BuildConfig.DEBUG) Log.d("- SAVE ITEM/HISTORY :: SAVE MAIN PLAYLIST TABLE TO DB", " OK");
-                                                                } catch (Exception ignore) {}
-                                                                waitDbEnd_();
+                                                                } catch (Exception ignore) {
+
+                                                                } finally {
+                                                                        waitDbEnd_();
+                                                                }
                                                         }
                                                 }
                                         }
@@ -947,18 +741,32 @@ public class PlayList extends ReflectAttribute {
                         @Override
                         public void run() {
                                 try {
+                                        if ((dbMgr == null) || (pif == null))
+                                                throw new RuntimeException(PL_EXCEPT1);
+
                                         boolean b = !dbMgr.isEmpty();
                                         if (b) {
                                                 if (waitDb_(DB_ACTION_USING)) {
-                                                        fromDb(dbMgr, -1, 1, true);
-                                                        waitDbEnd_();
+                                                        try {
+                                                                fromDb(dbMgr, -1, 1, true);
+                                                        } finally {
+                                                                waitDbEnd_();
+                                                        }
                                                 }
                                         }
 
                                         ///
 
                                         initPlayList();
-                                        createFromVlc_(obj);
+                                        try {
+                                                if (obj != null) {
+                                                        setDbState_(DB_ACTION_EMPTY_GET_VLC);
+                                                        MethodCreateFromVlc.go(PlayList.this, obj);
+                                                }
+                                        } finally {
+                                                if (obj != null)
+                                                        setDbState_(DB_ACTION_EMPTY);
+                                        }
                                         loadOnline_();
                                         if (b) {
                                                 loadFavorites_();
@@ -968,16 +776,22 @@ public class PlayList extends ReflectAttribute {
                                         isCompleteDb.set(true);
 
                                         if (b) {
-                                                updateFromDb_();
+                                                if (waitDb_(DB_ACTION_USING)) {
+                                                        try {
+                                                                MethodUpdateFromDB.go(groups);
+                                                        } finally {
+                                                                waitDbEnd_();
+                                                        }
+                                                }
                                                 pif.loadStageEnd();
                                         } else {
                                                 pif.loadStageOnce();
-                                                updateAll_();
+                                                MethodUpdateAll.go(groups);
                                                 pif.loadStageEnd();
                                                 saveToDb_();
                                                 pif.updateStageOnce();
                                         }
-                                        if (BuildConfig.DEBUG) Log.d("- LOAD PlayList", "- END = " + new Date().toString());
+                                        if (BuildConfig.DEBUG) Log.d(TAG1, PL_STAGE_END + new Date().toString());
 
                                 } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
                         }

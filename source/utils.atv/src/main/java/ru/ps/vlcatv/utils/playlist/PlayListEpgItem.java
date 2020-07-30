@@ -1,6 +1,8 @@
 package ru.ps.vlcatv.utils.playlist;
 
 import androidx.annotation.Keep;
+import androidx.databinding.ObservableInt;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -13,6 +15,9 @@ public class PlayListEpgItem {
     @IFieldReflect("epg_date")
     public String epgDate = null;
     private Date date = null;
+
+    public ObservableInt pbMax = new ObservableInt(0);
+    public ObservableInt pbCur = new ObservableInt(0);
 
     PlayListEpgItem() {}
     public PlayListEpgItem(String t, Date d) {
@@ -30,13 +35,13 @@ public class PlayListEpgItem {
     public Date getDate() {
         return date;
     }
-    public PlayListEpgItem get(final Date d1) {
-        return get(d1.getTime());
-    }
-    public PlayListEpgItem get(final long l1) {
+    public PlayListEpgItem get(final long d1, final long d2) {
         if (date == null)
             return null;
-        if (l1 > (date.getTime() + 3600))
+        final long tm = date.getTime();
+        if ((d1 > tm) && (d2 > d1))
+            return this;
+        else if (d1 > tm)
             return null;
         return this;
     }

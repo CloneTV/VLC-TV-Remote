@@ -29,6 +29,7 @@ public class DataTagConfig {
     public final static String TAG_PLAYER_TARGET = "player_target";
     public final static String TAG_PATH_VLC_TRAILER = "vlc_trailer_path";
     public final static String TAG_PATH_OMDB_API_KEY = "omdb_api_key";
+    public final static String TAG_PATH_IMDB_API_KEY = "imdb_api_key";
     public final static String TAG_TYPE_ONLINE = "online_type";
     public final static String TAG_PATH_ONLINE_IPTV_LOCAL = "online_iptv";
     public final static String TAG_PATH_ONLINE_RADIO_LOCAL = "online_radio";

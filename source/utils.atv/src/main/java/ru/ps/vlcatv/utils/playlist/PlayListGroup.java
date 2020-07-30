@@ -2,6 +2,7 @@ package ru.ps.vlcatv.utils.playlist;
 
 import androidx.annotation.Keep;
 import android.content.ContentValues;
+import android.util.Log;
 
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
+import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.db.DbManager;
 import ru.ps.vlcatv.utils.json.JSONObject;
@@ -216,6 +218,12 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
         return PlayListUtils.getIdsLong(PlayListConstant.IDS_VLC, ids);
     }
 
+    @Override
+    public String getImdbId() {
+        if (season.get() == 0)
+            return null;
+        return PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
+    }
     @Override
     public long getDbIndex() {
         return dbIndex;
@@ -439,11 +447,15 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             case PlayListConstant.TYPE_FOLDER_MOVIE:
             case PlayListConstant.TYPE_FOLDER:
             case PlayListConstant.TYPE_SHOWS: {
-                copyNfo(pa);
+                copyNFO(pa);
                 break;
             }
             case PlayListConstant.TYPE_SOURCE_OMDB: {
-                copyOmdb(pa);
+                copyOMDB(pa);
+                break;
+            }
+            case PlayListConstant.TYPE_SOURCE_IMDB: {
+                copyIMDB(pa);
                 break;
             }
             default:
@@ -451,7 +463,36 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
         }
     }
 
-    private void copyOmdb(ParseObject pa) {
+    private void copyIMDB(ParseObject pa) {
+
+        if ((type == PlayListConstant.TYPE_NONE) || (type == PlayListConstant.TYPE_NODE))
+            type = pa.playListType;
+
+        if (pa.itemPremiered != null) {
+            try {
+                SimpleDateFormat fmt = new SimpleDateFormat("yyyy", Locale.getDefault());
+                date.set(fmt.format(pa.itemPremiered));
+            } catch (Exception ignore) {}
+        }
+        if (pa.imageList.size() > 0) {
+            if (Text.isempty(poster.get()))
+                setImage(PlayListUtils.getListRandom(pa.imageList));
+        }
+        if (pa.idList.size() > 0)
+            PlayListUtils.setIdsSkip(pa.idList, ids, PlayListGroupIds.class);
+        if (!Text.isempty(pa.itemTitle)) {
+            if (Text.isempty(title.get())) {
+                title.set(pa.itemTitle);
+            } else {
+                String s = description.get();
+                if (Text.isempty(s))
+                    description.set(s);
+                else
+                    description.set(s + ", " + pa.itemTitle);
+            }
+        }
+    }
+    private void copyOMDB(ParseObject pa) {
 
         if ((!Text.isempty(pa.itemDescription)) && (Text.isempty(description.get())))
             setDescription(pa.itemDescription);
@@ -459,12 +500,27 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             title.set(pa.itemTitle);
         if ((pa.imageList.size() > 0) && (Text.isempty(poster.get())))
             setImage(pa.imageList.get(0).valId);
-        if (pa.itemSeason > 0) {
+
+        boolean b = (pa.itemSeason > 0);
+        if (b)
             setSeason(pa.itemSeason);
-            type = PlayListConstant.TYPE_SHOWS;
-        } else if (type == PlayListConstant.TYPE_NODE) {
-            type = PlayListConstant.TYPE_FOLDER_MOVIE;
+
+        switch (type) {
+            case PlayListConstant.TYPE_NONE:
+            case PlayListConstant.TYPE_NODE:
+            case PlayListConstant.TYPE_ONLINE: {
+                if (b) {
+                    if (groups.size() > 0)
+                        type = PlayListConstant.TYPE_SHOWS;
+                    else
+                        type = PlayListConstant.TYPE_SEASON;
+                } else {
+                    type = PlayListConstant.TYPE_FOLDER_MOVIE;
+                }
+                break;
+            }
         }
+
         if (pa.ratingList.size() > 0)
             rating.set(pa.getRating());
         PlayListUtils.setIdsSkip(pa.idList, ids, PlayListGroupIds.class);
@@ -487,7 +543,7 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
         }
     }
 
-    private void copyNfo(ParseObject pa) {
+    private void copyNFO(ParseObject pa) {
         crc = pa.itemCrc;
 
         if (!Text.isempty(pa.itemTitle))
@@ -599,11 +655,11 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
                 (items.size() == 0));
     }
     @Override
-    public void updateFromDb() {
-        updateFromDb(0);
+    public void updateFromDB() {
+        updateFromDB(0);
     }
     @Override
-    public void updateFromDb(int type) {
+    public void updateFromDB(int type) {
         try {
             if (!Text.isempty(nfo)) {
                 if (playListRoot != null) {
@@ -642,7 +698,7 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
     }
 
     @Override
-    public void updateFromNfo() {
+    public void updateFromNFO() {
         try {
             if ((Text.isempty(nfo)) ||
                 (nfo.endsWith(".none")))
@@ -652,7 +708,7 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            JSONObject obj = (JSONObject) pif.downloadNfo(nfo);
+            JSONObject obj = (JSONObject) pif.downloadNFO(nfo);
             if (obj == null)
                 return;
             ParseObject po = new ParseObject(obj);
@@ -676,69 +732,67 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
     }
 
     @Override
-    public void updateTrailer() {
-        /*
+    public void updateTRAILER() {
         try {
             PlayListParseInterface pif;
-            if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
+            if ((items.size() == 0) ||
+                (season.get() == 0) ||
+                (playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String s = pif.checkTrailer(uri);
-            if (BuildConfig.DEBUG) Log.e("- Trailer Local: " + title.get(), "" + s);
+            String uri = trailer.get();
+            if (Text.isempty(uri)) {
+                List<PlayListItemTrailers> trailers = items.get(0).trailers;
+                if (trailers.size() == 0)
+                    return;
+                uri = PlayListUtils.getListRandom(trailers);
+            }
+            String s = pif.checkTRAILER(uri);
             if (!Text.isempty(s)) {
-                if (!Text.isempty(trailer.get()))
-                    PlayListUtils.setItemListSkip(new PlayListItemTrailers(trailer.get()), trailers);
-                PlayListUtils.setItemListSkip(new PlayListItemTrailers(s), trailers);
+                if (BuildConfig.DEBUG) Log.e("- GROUP Local trailer found: " + title.get(), "" + s);
                 trailer.set(s);
             }
-        } catch (Exception ignore) {}
-        */
+        } catch (Exception e) {
+            if (BuildConfig.DEBUG) Log.e("- update GROUP Trailer exception: ", e.getMessage(), e);
+        }
+        reloadBindingData();
     }
 
     @Override
-    public void updateFromOmdb() {
+    public void updateFromMOVEDB() {
         try {
             PlayListParseInterface pif;
-            if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
+            if ((season.get() == 0) ||
+                (playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String imdb = PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
-            if (!Text.isempty(imdb)) {
-                JSONObject obj = (JSONObject) pif.downloadOmdb(imdb);
-                if (obj == null)
+            String imdb;
+            if ((imdb = getImdbId()) == null) {
+                String s = title.get();
+                if (Text.isempty(s))
                     return;
-
-                ParseObject po = new ParseObject(obj);
-                if (po.itemType == PlayListConstant.TYPE_NONE)
-                    return;
-                copy(po);
-            }
-
-            /* ToDo: normalize search criteria
-            } else if (!Text.isempty(title.get())) {
-                JSONArray arr = (JSONArray) pif.downloadOmdb(
-                        null,
-                        title.get(),
-                        PlayListConstant.OMDB_API_ID
+                int pos = s.lastIndexOf('/');
+                if (pos > 0)
+                    s = s.substring(0, pos);
+                copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadIMDB(
+                                        s,
+                                        PlayListParseInterface.ID_FMT_SEASON
+                                )
+                        )
                 );
-                PlayListUtils.addEditList(arr, playListRoot, this);
-
-            } else if ((!Text.isempty(nfo)) && (!nfo.endsWith(".none"))) {
-                int pos = nfo.lastIndexOf('/');
-                if (pos > 0) {
-                    String s = nfo.substring((pos + 1), nfo.length());
-                    pos = s.lastIndexOf('.');
-                    if (pos > 0)
-                        s = s.substring(0, pos);
-                    JSONArray arr = (JSONArray) pif.downloadOmdb(
-                            null,
-                            s,
-                            PlayListConstant.OMDB_API_ID
-                    );
-                    PlayListUtils.addEditList(arr, playListRoot, this);
-                }
+                imdb = getImdbId();
             }
-            */
+            if (!Text.isempty(imdb))
+                copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadOMDB(imdb)
+                        )
+                );
+
         } catch (Exception ignore) {}
+        reloadBindingData();
     }
+
 }

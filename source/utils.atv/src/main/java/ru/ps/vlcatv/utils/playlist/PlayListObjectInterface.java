@@ -39,6 +39,7 @@ public interface PlayListObjectInterface {
     public long getVlcId();
     public long getDbIndex();
     public long getDbParent();
+    public String getImdbId();
     public String getDescription(ObservableBoolean b);
     public default String getTotalSeasonViewTime(ObservableBoolean b) {
         return "";
@@ -52,9 +53,9 @@ public interface PlayListObjectInterface {
 
     public boolean isDataEmpty();
     public boolean isEmpty();
-    public default void updateFromDb(int type) {}
-    public void updateFromDb();
-    public void updateFromNfo();
-    public void updateFromOmdb();
-    public void updateTrailer();
+    public default void updateFromDB(int type) {}
+    public void updateFromDB();
+    public void updateFromNFO();
+    public void updateFromMOVEDB();
+    public void updateTRAILER();
 }

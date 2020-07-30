@@ -19,6 +19,7 @@ public class PlayListConstant {
     public static final int TYPE_CARD_CTRL = 1027;
     public static final int TYPE_CARD_SEARCH_TAG = 1028;
     public static final int TYPE_SOURCE_OMDB = 1029;
+    public static final int TYPE_SOURCE_IMDB = 1030;
     public static final int TYPE_NONE = -1;
 
     public static final String IDS_VLC = "vlc";
@@ -54,6 +55,5 @@ public class PlayListConstant {
     ///
     public static final String TV_EPG_ONLINE_JTV_URI = "https://www.teleguide.info/download/new3/jtv.zip";
     /// "23be17be"
-    //public static final String OMDB_API_ID = "MjNiZTE3YmU=";
-
+    /// "k_k19g0kAJ"
 }

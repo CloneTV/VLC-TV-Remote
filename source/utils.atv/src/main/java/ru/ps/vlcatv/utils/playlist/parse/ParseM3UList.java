@@ -41,6 +41,7 @@ public class ParseM3UList {
                         po = new ParseObject(array, epgList);
                         if (po.itemType == PlayListConstant.TYPE_ONLINE) {
 
+                            boolean isNotPoster = false;
                             PlayListGroup grp = null;
                             switch (idx) {
                                 case PlayList.IDX_ONLINE_TV: {
@@ -56,10 +57,12 @@ public class ParseM3UList {
                                 }
                                 case PlayList.IDX_ONLINE_FILMS: {
                                     grp = playList.groups.get(PlayList.IDX_ONLINE_FILMS);
+                                    isNotPoster = true;
                                     break;
                                 }
                                 case PlayList.IDX_ONLINE_USER_DEFINE: {
                                     grp = playList.groups.get(PlayList.IDX_ONLINE_USER_DEFINE);
+                                    isNotPoster = true;
                                     break;
                                 }
                             }
@@ -75,8 +78,11 @@ public class ParseM3UList {
                                     if (!b)
                                         item.urls.add(new PlayListItemUrls(po.itemUri));
                                 } else {
-                                    item = new PlayListItem();
-                                    item.copy(po);
+                                    item = new PlayListItem(playList, po);
+                                    if (isNotPoster) {
+                                        item.trailer.set("");
+                                        item.trailers.clear();
+                                    }
                                     grp.items.add(item);
                                 }
                             }

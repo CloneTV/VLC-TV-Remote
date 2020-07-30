@@ -11,6 +11,9 @@ import ru.ps.vlcatv.utils.playlist.parse.ParseObject;
 
 public class PlayListUtils {
 
+    ///
+    /// SET ITEM LIST
+
     private static <M> void idsInterfaceToList_(PlayListIdsInterface pif, List<M> dst, Class<M> clazz) {
         try {
             M clz = clazz.newInstance();
@@ -85,7 +88,7 @@ public class PlayListUtils {
     }
 
     ///
-    /// PlayList*Tables methods
+    /// PlayList*Tables methods SET NEW
 
     public static List<PlayListActorsIndex> setNewActors(List<PlayListActors> src, List<PlayListActors> dst) {
         List<PlayListActorsIndex> list = new ArrayList<>();
@@ -134,7 +137,7 @@ public class PlayListUtils {
     }
 
     ///
-    /// PlayListIds Interface
+    /// PlayListIds Interface IDS
 
     public static <T> void setIdsReplace(T obj, List<T> dst) {
         if (dst.size() == 0) {
@@ -242,6 +245,7 @@ public class PlayListUtils {
     }
 
     ////
+    /// TO EDIT ITEMS
 
     public static void addEditList(JSONArray arr, PlayList list, PlayListObjectInterface plo) {
         if (arr == null)
@@ -410,5 +414,16 @@ public class PlayListUtils {
         return null;
     }
 
+    ////
+    /// UTILS
+
+    public static ParseObject parseObject(final JSONObject obj) {
+        if (obj == null)
+            return null;
+        final ParseObject po = new ParseObject(obj);
+        if (po.itemType == PlayListConstant.TYPE_NONE)
+            return null;
+        return po;
+    }
 
 }

@@ -218,6 +218,14 @@ public class ParseObject extends ReflectAttribute {
             itemPremiered = format.parse(s);
         } catch (Exception ignore) {}
     }
+    public void setPremiered2(String s) {
+        if (Text.isempty(s))
+            return;
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy", Locale.getDefault());
+            itemPremiered = format.parse(s);
+        } catch (Exception ignore) {}
+    }
     public void setPremiered3(String s) {
         if (Text.isempty(s))
             return;
@@ -343,9 +351,78 @@ public class ParseObject extends ReflectAttribute {
             JSONArray arr = null;
             JSONObject ele = null;
 
-            /// OMDB source compatible
             String str;
-            if ((str = obj.optString("Response",null)) != null) {
+            ///////////////////////////////////////////////////////////////////////////////
+            /// IMDB source compatible
+            if ((str = obj.optString("searchType",null)) != null) {
+
+                if (Text.isempty(str))
+                    return PlayListConstant.TYPE_NONE;
+
+                switch (str) {
+                    case "Movie":
+                        playListType = PlayListConstant.TYPE_MOVIE;
+                        break;
+                    case "Series":
+                        playListType = PlayListConstant.TYPE_SEASON;
+                        break;
+                    case "Episode":
+                        playListType = PlayListConstant.TYPE_SERIES;
+                        break;
+                    default:
+                        return PlayListConstant.TYPE_NONE;
+                }
+
+                setItemType(PlayListConstant.TYPE_SOURCE_IMDB);
+                arr = new JSONArray(obj.optString("results", ""));
+                if (arr.length() == 0)
+                    return PlayListConstant.TYPE_NONE;
+                ele = arr.getJSONObject(0);
+                if (ele == null)
+                    return PlayListConstant.TYPE_NONE;
+
+                addIds(
+                        PlayListConstant.IDS_IMDB,
+                        ele.optString("id", null)
+                );
+                addImage("poster", ele.optString("image", null), -1);
+                addTitle(ele.optString("title", null));
+
+                str = ele.optString("description", null);
+                if ((!Text.isempty(str)) && (!str.equals("N/A"))) {
+                    try {
+                        Pattern[] p = new Pattern[] {
+                                Pattern.compile(
+                                        "\\((\\d+)\\) aka (.*)$",
+                                        Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE
+                                ),
+                                Pattern.compile(
+                                        "\\((\\d+)\\)",
+                                        Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE
+                                )
+                        };
+                        Matcher m = p[0].matcher(str);
+                        if (m.find()) {
+                            setPremiered2(m.group(0));
+                            str = m.group(1);
+                            if (!Text.isempty(str)) {
+                                addTitle(str.replace("\"", "").trim());
+                            }
+                        } else {
+                            m = p[1].matcher(str);
+                            if (m.find()) {
+                                setPremiered1(m.group(0));
+                            } else {
+                                setDescription(str);
+                            }
+                        }
+                    } catch (Exception ignore) {}
+                }
+                return itemType;
+
+            ///////////////////////////////////////////////////////////////////////////////
+            /// OMDB source compatible
+            } else if ((str = obj.optString("Response",null)) != null) {
 
                 if (!str.equals("True"))
                     return PlayListConstant.TYPE_NONE;
@@ -353,7 +430,6 @@ public class ParseObject extends ReflectAttribute {
                     if (BuildConfig.DEBUG) Log.e("-- OMDB Media Item error: ", str);
                     return PlayListConstant.TYPE_NONE;
                 }
-
 
                 setItemType(PlayListConstant.TYPE_SOURCE_OMDB);
 
@@ -363,6 +439,8 @@ public class ParseObject extends ReflectAttribute {
                 );
                 itemTitle = obj.optString("Title", "");
                 itemDescription = obj.optString("Plot", "");
+                 if (itemDescription.equals("N/A"))
+                     itemDescription = "";
                 addImage("poster", obj.optString("Poster", null), -1);
                 addRating(PlayListConstant.IDS_RATING, obj.optString("imdbRating",null));
                 addRating(PlayListConstant.IDS_VOTES, obj.optString("imdbVotes",null));
@@ -417,6 +495,7 @@ public class ParseObject extends ReflectAttribute {
                 if ((str = obj.optString("Released", null)) != null)
                     setPremiered3(str);
 
+            ///////////////////////////////////////////////////////////////////////////////
             /// SHOW/SEASON NFO source compatible
             } else if ((ele = obj.optJSONObject("tvshow")) != null) {
 
@@ -440,6 +519,7 @@ public class ParseObject extends ReflectAttribute {
                             -1
                     );
 
+            ///////////////////////////////////////////////////////////////////////////////
             /// SERIES NFO source compatible
             } else if ((ele = obj.optJSONObject("episodedetails")) != null) {
 
@@ -450,6 +530,7 @@ public class ParseObject extends ReflectAttribute {
                         ele.optInt("episode", -1)
                 );
 
+            ///////////////////////////////////////////////////////////////////////////////
             /// MOVIE NFO source compatible
             } else if ((ele = obj.optJSONObject("movie")) != null) {
 
@@ -493,6 +574,7 @@ public class ParseObject extends ReflectAttribute {
                 //
             }
 
+            ///////////////////////////////////////////////////////////////////////////////
             /// All NFO source compatible
             if (ele != null) {
 

@@ -9,7 +9,8 @@ public class ParseControllerIMDB {
 
     private static final String TAG = ParseControllerIMDB.class.getSimpleName();
     private static final String TAG_IF_ERROR = "errorMessage";
-    private static final String TAG_MSG_ERROR = "Maximum usage";
+    private static final String TAG_MSG_ERROR1 = "Maximum usage";
+    private static final String TAG_MSG_ERROR2 = "Your account has been suspended";
     private static final String TAG_TYPE = "searchType";
     public final static String TAG_MOVIE = "SearchMovie";
     public final static String TAG_SEASON = "SearchSeries";
@@ -33,7 +34,7 @@ public class ParseControllerIMDB {
             final JSONObject obj = new JSONObject(s.trim());
             String str = obj.optString(TAG_IF_ERROR, null);
             if (!Text.isempty(str)) {
-                if (str.startsWith(TAG_MSG_ERROR))
+                if ((str.startsWith(TAG_MSG_ERROR1)) || (str.startsWith(TAG_MSG_ERROR2)))
                     netError = true;
                 if (BuildConfig.DEBUG) Log.e(TAG, str);
                 return null;

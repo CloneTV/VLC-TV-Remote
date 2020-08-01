@@ -1,8 +1,6 @@
 package ru.ps.vlcatv.utils.playlist.parse;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
-
 import androidx.annotation.Keep;
 
 import java.io.UnsupportedEncodingException;
@@ -24,8 +22,9 @@ import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.PlayList;
 import ru.ps.vlcatv.utils.playlist.PlayListActors;
 import ru.ps.vlcatv.utils.playlist.PlayListConstant;
-import ru.ps.vlcatv.utils.playlist.PlayListEpgDefault;
-import ru.ps.vlcatv.utils.playlist.PlayListEpgDefaultItem;
+import ru.ps.vlcatv.utils.playlist.PlayListOnlineRenameList;
+import ru.ps.vlcatv.utils.playlist.PlayListOnlineRenameItem;
+import ru.ps.vlcatv.utils.playlist.PlayListItem;
 import ru.ps.vlcatv.utils.playlist.PlayListItemIds;
 import ru.ps.vlcatv.utils.playlist.PlayListItemStatistic;
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
@@ -36,6 +35,8 @@ import ru.ps.vlcatv.utils.reflect.annotation.IObjectReflect;
 @Keep
 public class ParseObject extends ReflectAttribute {
 
+    private static final String RADIO_POSTER = "file:///android_asset/logo/radio_all_poster.webp";
+    private static final boolean WRITE_LIST = false;
     private static final String[] m38uRadio = new String[] {
             "radio",
             "радио"
@@ -44,11 +45,11 @@ public class ParseObject extends ReflectAttribute {
     public ParseObject(JSONObject obj) {
         merge(obj);
     }
-    public ParseObject(String[] str, PlayListEpgDefault epgList) {
-        merge(str, epgList);
+    public ParseObject(String[] str, PlayListOnlineRenameList epgList, int type) {
+        merge(str, epgList, type);
     }
-    public ParseObject(String[] str) {
-        merge(str, null);
+    public ParseObject(String[] str, int type) {
+        merge(str, null, type);
     }
 
     @IFieldReflect("crc")
@@ -100,25 +101,25 @@ public class ParseObject extends ReflectAttribute {
     @IArrayReflect(value = "alt_titles", SkipRecursion = false)
     public List<String> titleList = new ArrayList<>();
 
-    @IArrayReflect(value = "genres", SkipRecursion = false)
-    public List<String> genreList = new ArrayList<>();
-
     @IArrayReflect(value = "trailers", SkipRecursion = false)
     public List<String> trailerList = new ArrayList<>();
 
-    @IArrayReflect(value = "producers", SkipRecursion = false)
+    @IArrayReflect(value = "genres", SkipRecursion = PlayListItem.isBuildLite)
+    public List<String> genreList = new ArrayList<>();
+
+    @IArrayReflect(value = "producers", SkipRecursion = PlayListItem.isBuildLite)
     public List<String> producerList = new ArrayList<>();
 
-    @IArrayReflect(value = "studios", SkipRecursion = false)
+    @IArrayReflect(value = "studios", SkipRecursion = PlayListItem.isBuildLite)
     public List<String> studioList = new ArrayList<>();
 
-    @IArrayReflect(value = "user_note", SkipRecursion = false)
+    @IArrayReflect(value = "user_note", SkipRecursion = PlayListItem.isBuildLite)
     public List<String> userNoteList = new ArrayList<>();
 
-    @IArrayReflect(value = "tag_search", SkipRecursion = false)
+    @IArrayReflect(value = "tag_search", SkipRecursion = PlayListItem.isBuildLite)
     public List<String> tagList = new ArrayList<>();
 
-    @IArrayReflect(value = "country", SkipRecursion = false)
+    @IArrayReflect(value = "country", SkipRecursion = PlayListItem.isBuildLite)
     public List<String> countryList = new ArrayList<>();
 
     ///
@@ -467,23 +468,27 @@ public class ParseObject extends ReflectAttribute {
                         PlayListConstant.IDS_SERIES_ID,
                         obj.optString("seriesID", null)
                 );
-                addProducer(obj.optString("Director", null));
-                addToList_(countryList, obj.optString("Country"));
 
-                if ((str = obj.optString("Writer", null)) != null) {
-                    String[] items = str.split(",");
-                    for (String item : items)
-                        addProducer(item.trim());
-                }
-                if ((str = obj.optString("Genre", null)) != null) {
-                    String[] items = str.split(",");
-                    for (String item : items)
-                        addToList_(genreList, item.trim());
-                }
-                if ((str = obj.optString("Actors", null)) != null) {
-                    String[] items = str.split(",");
-                    for (String item : items)
-                        addActor(item.trim(), "", "", "");
+                if (!PlayListItem.isBuildLite) {
+
+                    addProducer(obj.optString("Director", null));
+                    addToList_(countryList, obj.optString("Country"));
+
+                    if ((str = obj.optString("Writer", null)) != null) {
+                        String[] items = str.split(",");
+                        for (String item : items)
+                            addProducer(item.trim());
+                    }
+                    if ((str = obj.optString("Genre", null)) != null) {
+                        String[] items = str.split(",");
+                        for (String item : items)
+                            addToList_(genreList, item.trim());
+                    }
+                    if ((str = obj.optString("Actors", null)) != null) {
+                        String[] items = str.split(",");
+                        for (String item : items)
+                            addActor(item.trim(), "", "", "");
+                    }
                 }
                 if ((str = obj.optString("Runtime", null)) != null) {
                     String[] items = str.split(" ");
@@ -550,23 +555,26 @@ public class ParseObject extends ReflectAttribute {
                     }
                 }
 
-                arr = ele.optJSONArray("producer");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++) {
-                        JSONObject j = arr.optJSONObject(k);
-                        if (j != null)
-                            addProducer(j.optString("name", null));
-                    }
+                if (!PlayListItem.isBuildLite) {
 
-                arr = ele.optJSONArray("country");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(countryList, arr.opt(k));
+                    arr = ele.optJSONArray("producer");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++) {
+                            JSONObject j = arr.optJSONObject(k);
+                            if (j != null)
+                                addProducer(j.optString("name", null));
+                        }
 
-                arr = ele.optJSONArray("genre");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(genreList, arr.opt(k));
+                    arr = ele.optJSONArray("genre");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(genreList, arr.opt(k));
+
+                    arr = ele.optJSONArray("country");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(countryList, arr.opt(k));
+                }
 
                 jobj = ele.optJSONObject("fanart");
                 if (jobj != null)
@@ -578,38 +586,41 @@ public class ParseObject extends ReflectAttribute {
             /// All NFO source compatible
             if (ele != null) {
 
-                arr = ele.optJSONArray("studio");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(studioList, arr.opt(k));
+                if (!PlayListItem.isBuildLite) {
 
-                arr = ele.optJSONArray("credits");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(producerList, arr.opt(k));
+                    arr = ele.optJSONArray("studio");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(studioList, arr.opt(k));
 
-                arr = ele.optJSONArray("actor");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++) {
-                        JSONObject j = arr.optJSONObject(k);
-                        if (j != null)
-                            addActor(
-                                j.optString("name", null),
-                                j.optString("role", null),
-                                j.optString("profile", null),
-                                j.optString("thumb", null)
-                            );
-                    }
+                    arr = ele.optJSONArray("credits");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(producerList, arr.opt(k));
 
-                arr = ele.optJSONArray("user_note");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(userNoteList, arr.opt(k));
+                    arr = ele.optJSONArray("actor");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++) {
+                            JSONObject j = arr.optJSONObject(k);
+                            if (j != null)
+                                addActor(
+                                        j.optString("name", null),
+                                        j.optString("role", null),
+                                        j.optString("profile", null),
+                                        j.optString("thumb", null)
+                                );
+                        }
 
-                arr = ele.optJSONArray("tag");
-                if (arr != null)
-                    for (int k = 0; k < arr.length(); k++)
-                        addToList_(tagList, arr.opt(k));
+                    arr = ele.optJSONArray("user_note");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(userNoteList, arr.opt(k));
+
+                    arr = ele.optJSONArray("tag");
+                    if (arr != null)
+                        for (int k = 0; k < arr.length(); k++)
+                            addToList_(tagList, arr.opt(k));
+                }
 
                 arr = ele.optJSONArray("uniqueid");
                 if (arr != null)
@@ -687,7 +698,7 @@ public class ParseObject extends ReflectAttribute {
         return itemType;
     }
 
-    public int merge(String[] array, PlayListEpgDefault epgList) {
+    public int merge(String[] array, PlayListOnlineRenameList renameList, int type) {
 
         itemType = PlayListConstant.TYPE_NONE;
         try {
@@ -786,23 +797,30 @@ public class ParseObject extends ReflectAttribute {
                         }
 
                         boolean isImageAdded = false;
-                        PlayListEpgDefaultItem epgItem = null;
+                        PlayListOnlineRenameItem renameItem = null;
                         playListType = PlayList.IDX_ONLINE_TV;
                         name = name.replace('_', ' ').trim().toUpperCase();
 
-                        if (!epgList.isEmpty())
-                            epgItem = epgList.find(name);
+                        if ((renameList != null) && (!renameList.isEmpty()))
+                            renameItem = renameList.find(name);
 
-                        if (epgItem != null) {
+                        if (renameItem != null) {
 
                             try {
-                                addTitle(epgItem.getName(name));
-                                if (!Text.isempty(epgItem.epgId))
-                                    addIds(PlayListConstant.IDS_EPG, epgItem.epgId);
-                                if (!Text.isempty(epgItem.posterDefault)) {
-                                    addImage("poster", epgItem.posterDefault, -1);
+                                itemDimension = name;
+                                name = renameItem.getName(name);
+                                addTitle(name);
+
+                                if (!Text.isempty(renameItem.epgId))
+                                    addIds(PlayListConstant.IDS_EPG, renameItem.epgId);
+
+                                if (!Text.isempty(renameItem.posterDefault)) {
+                                    addImage("poster", renameItem.posterDefault, -1);
                                     isImageAdded = true;
+                                    if ((BuildConfig.DEBUG) && (WRITE_LIST))
+                                        onlineParseDebugLog_(name, renameItem.posterDefault, renameItem.epgId);
                                 }
+
                             } catch (Exception ignore) {}
 
                         } else {
@@ -811,20 +829,18 @@ public class ParseObject extends ReflectAttribute {
 
                         lc = name.toLowerCase();
 
-                        if (!isImageAdded) {
+                        if ((!isImageAdded) && (type == PlayList.IDX_ONLINE_RADIO)) {
+                            addImage(
+                                    "poster",
+                                    RADIO_POSTER,
+                                    -1
+                            );
+
+                        } else if (!isImageAdded) {
 
                             final String s1;
                             final String s2 = lc.replace(' ', '_')
-                                    .replace("\"", "")
-                                    .replace('.', '_')
-                                    .replace(':', '_')
-                                    .replace(';', '_')
-                                    .replace('-', '_')
-                                    .replace('+', '_')
-                                    .replace('%', '_')
-                                    .replace('!', '_')
-                                    .replace('/', '_')
-                                    .replace('\\', '_');
+                                    .replaceAll("\\W", "_");
 
                             int i;
                             for (i = (s2.length() - 1); i > 0; i--)
@@ -836,15 +852,6 @@ public class ParseObject extends ReflectAttribute {
                             else
                                 s1 = s2;
 
-                            /*
-                            Log.d("--mp3 name",
-                                    String.format(
-                                            Locale.getDefault(),
-                                            "%s.webp",
-                                            s1
-                                    ));
-                            */
-
                             addImage(
                                     "poster",
                                     String.format(
@@ -854,6 +861,7 @@ public class ParseObject extends ReflectAttribute {
                                     ),
                                     -1
                             );
+                            if ((BuildConfig.DEBUG) && (WRITE_LIST)) onlineParseDebugLog_(name, s1, (renameItem != null) ? renameItem.epgId : null);
                         }
                         for (String r : m38uRadio) {
                             if (lc.contains(r)) {
@@ -969,5 +977,12 @@ public class ParseObject extends ReflectAttribute {
             } catch (Exception ignore) {}
         }
         return "";
+    }
+    private void onlineParseDebugLog_(String name, String poster, String epg) {
+        if ((BuildConfig.DEBUG) && (WRITE_LIST)) Log.d(
+                "--",
+                "[" + name + "]|[" + poster + "]" +
+                        ((Text.isempty(epg)) ? "" : "|[" +  epg + "]")
+        );
     }
 }

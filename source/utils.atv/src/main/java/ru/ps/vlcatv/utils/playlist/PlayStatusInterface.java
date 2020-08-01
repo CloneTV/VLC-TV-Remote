@@ -39,11 +39,13 @@ public interface PlayStatusInterface {
     public int getPlayPosition();
     public int getPlayId();
     public int getAudioVolume();
-    public int getPlayState();
     public int getVlcApiVersion();
+    public int getPlayState();
     public boolean getPlayIsRepeat();
     public boolean getPlayIsLoop();
     public boolean getPlayIsRandom();
     public boolean getPlayIsFullscreen();
     public boolean isPlay();
+    public int getLastCommand();
+    public void setLastCommand(int event);
 }

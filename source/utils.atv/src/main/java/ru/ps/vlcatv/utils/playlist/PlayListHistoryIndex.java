@@ -2,6 +2,7 @@ package ru.ps.vlcatv.utils.playlist;
 
 import androidx.annotation.Keep;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
@@ -22,7 +23,12 @@ public class PlayListHistoryIndex extends ReflectAttribute {
     public PlayListHistoryIndex(long l, int pos) {
         historyVlcId = l;
         historyPosition = pos;
-        historyDate = new Date(System.currentTimeMillis());
+        historyDate = Calendar.getInstance().getTime();
+    }
+    public PlayListHistoryIndex(long l, int pos, Date date) {
+        historyVlcId = l;
+        historyPosition = pos;
+        historyDate = date;
     }
     @IFieldReflect("idx_id")
     public long historyVlcId = -1;

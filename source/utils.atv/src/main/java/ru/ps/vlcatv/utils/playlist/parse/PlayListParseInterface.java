@@ -33,6 +33,7 @@ public interface PlayListParseInterface {
     public boolean isEmpty();
     public void close();
     public void loadStageOnce();
+    public void loadStageNoVlc();
     public void loadStage1();
     public void loadStage2();
     public void loadStageEnd();

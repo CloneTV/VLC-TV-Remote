@@ -21,7 +21,6 @@ import ru.ps.vlcatv.utils.Log;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.db.ConstantDataDb;
 import ru.ps.vlcatv.utils.db.DbManager;
-import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.method.MethodCheckAll;
 import ru.ps.vlcatv.utils.playlist.method.MethodCreateFromVlc;
@@ -76,8 +75,8 @@ public class PlayList extends ReflectAttribute {
         public AtomicBoolean isCompleteDb = new AtomicBoolean(false);
 
         public boolean isRandomTitle = false;
-        public boolean isRandomImage = false;
-        public boolean isRandomTrailer = false;
+        public boolean isRandomImage = true;
+        public boolean isRandomTrailer = true;
 
         @IFieldReflect("unique_root")
         String uniqueId = TAG;
@@ -86,17 +85,17 @@ public class PlayList extends ReflectAttribute {
         @IFieldReflect("creates")
         public ObservableField<Date> createDate = new ObservableField<>();
 
-        @IArrayReflect(value = "actors", SkipRecursion = false)
+        @IArrayReflect(value = "actors", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListActors> actors = new ArrayList<>();
-        @IArrayReflect(value = "genres", SkipRecursion = false)
+        @IArrayReflect(value = "genres", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListGenres> genres = new ArrayList<>();
-        @IArrayReflect(value = "tags", SkipRecursion = false)
+        @IArrayReflect(value = "tags", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListTags> tags = new ArrayList<>();
-        @IArrayReflect(value = "studios", SkipRecursion = false)
+        @IArrayReflect(value = "studios", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListStudios> studios = new ArrayList<>();
-        @IArrayReflect(value = "producers", SkipRecursion = false)
+        @IArrayReflect(value = "producers", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListProducers> producers = new ArrayList<>();
-        @IArrayReflect(value = "country", SkipRecursion = false)
+        @IArrayReflect(value = "country", SkipRecursion = PlayListItem.isBuildLite)
         public List<PlayListCountry> country = new ArrayList<>();
 
         @IArrayReflect(value = "history", SkipRecursion = false)
@@ -112,7 +111,7 @@ public class PlayList extends ReflectAttribute {
         @IArrayReflect(value = "items_edit", SkipRecursion = true)
         public List<PlayListItemEdit> itemsEdit = new ArrayList<>();
         public final ObservableField<PlayListItem> currentPlay = new ObservableField<>();
-        private PlayListItem currentPlayOld = null;
+        private final ObservableField<PlayListItem> currentPlayOld = new ObservableField<>();
 
         /// public base method
 
@@ -123,6 +122,110 @@ public class PlayList extends ReflectAttribute {
                 setInstance(new DbManager(context), ifc, psi);
                 dbMgr.open(ConstantDataDb.BaseVersion, this.getClass());
                 dbIndex = 1;
+                // item.visibleWatched() = ...
+                Observable.OnPropertyChangedCallback changePlayItemCb = new Observable.OnPropertyChangedCallback() {
+                        @Override
+                        public void onPropertyChanged(Observable sender, int propertyId) {
+
+                                final PlayList pl = PlayList.this;
+                                try {
+                                        if (pl.actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                                                return;
+
+                                        if (BuildConfig.DEBUG) Log.e(TAG + " (onPropertyChanged)", " START=" + propertyId);
+                                        final PlayListItem item;
+                                        synchronized (pl.currentPlayOld) {
+                                                item = pl.currentPlayOld.get();
+                                        }
+                                        if (item != null) {
+                                                long vid = item.getVlcId();
+                                                if (pl.history.size() > 0) {
+                                                        if (vid > 0L) {
+                                                                for (PlayListHistoryIndex p : pl.history) {
+                                                                        if (p.historyVlcId == vid) {
+                                                                                p.historyPosition = item.stat.lastProgress.get();
+                                                                                p.historyDate = Calendar.getInstance().getTime();
+                                                                                break;
+                                                                        }
+                                                                }
+                                                        }
+                                                } else {
+                                                        pl.history.add(
+                                                                new PlayListHistoryIndex(
+                                                                        vid,
+                                                                        item.stat.lastProgress.get(),
+                                                                        Calendar.getInstance().getTime()
+                                                                )
+                                                        );
+                                                }
+                                                saveItem_(item);
+                                        }
+
+                                } catch (Exception e) {
+                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+                                }
+                                try {
+                                        final PlayListItem item;
+                                        synchronized (pl.currentPlay) {
+                                                item = pl.currentPlay.get();
+                                        }
+                                        synchronized (pl.currentPlayOld) {
+                                                pl.currentPlayOld.set(item);
+                                        }
+                                        if (item == null)
+                                                return;
+
+                                        switch (item.type) {
+                                                case PlayListConstant.TYPE_MOVIE:
+                                                case PlayListConstant.TYPE_SERIES:
+                                                case PlayListConstant.TYPE_VIDEO: {
+                                                        PlayListHistoryIndex plIdx = null;
+                                                        long hid = 0,
+                                                             vid = item.getVlcId();
+
+                                                        if (pl.history.size() > 0) {
+                                                                plIdx = pl.history.get(pl.history.size() - 1);
+                                                                if (plIdx != null)
+                                                                        hid = plIdx.historyVlcId;
+                                                        }
+                                                        if (vid != hid) {
+                                                                pl.history.add(
+                                                                        new PlayListHistoryIndex(
+                                                                                vid,
+                                                                                item.stat.lastProgress.get()
+                                                                        )
+                                                                );
+                                                                if (pl.groups.size() > PlayList.IDX_HISTORY) {
+                                                                        final PlayListGroup grp = pl.groups.get(PlayList.IDX_HISTORY);
+                                                                        grp.items.add(0, item);
+                                                                        item.reloadBindingData();
+                                                                        synchronized (grp) {
+                                                                                grp.notifyAll();
+                                                                        }
+                                                                }
+                                                                saveItem_(item);
+                                                                if (pl.pif != null)
+                                                                        pl.pif.loadStage1();
+                                                        } else if (hid != 0) {
+                                                                plIdx.historyPosition = item.stat.lastProgress.get();
+                                                                plIdx.historyDate = Calendar.getInstance().getTime();
+                                                                break;
+                                                        }
+                                                        break;
+                                                }
+                                                case PlayListConstant.TYPE_AUDIO:
+                                                case PlayListConstant.TYPE_ONLINE: {
+                                                        // item.visibleWatched() = ...
+                                                        break;
+                                                }
+                                        }
+
+                                } catch (Exception e) {
+                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+                                }
+                                saveMain_();
+                        }
+                };
                 currentPlay.addOnPropertyChangedCallback(changePlayItemCb);
         }
         public boolean isBusy() {
@@ -138,12 +241,18 @@ public class PlayList extends ReflectAttribute {
                         psi.setPlayList(this);
                 playStatus = psi;
         }
-        public int getOffset() {
+        public int getGroupSize() {
+            return groups.size();
+        }
+        public int getGroupOffset() {
                 return IDX_GROUP_LAST + 1;
         }
         public PlayListGroup getGroup() {
-                return (groups.size() > getOffset()) ? groups.get(getOffset()) : null;
+                return (groups.size() > getGroupOffset()) ? groups.get(getGroupOffset()) : null;
         }
+        public PlayListGroup getGroup(int idx) {
+			return (groups.size() > idx) ? groups.get(idx) : null;
+		}
         public int getDbState() {
                 return actionStateDb.get();
         }
@@ -153,13 +262,93 @@ public class PlayList extends ReflectAttribute {
                         pif.saveStage(i);
                 if (BuildConfig.DEBUG) Log.w(
                         TAG + " Db State",
-                        " change=" + i + ", time=" + new Date(System.currentTimeMillis())
+                        " change=" + i + ", time=" + Calendar.getInstance().getTime().toString()
                 );
         }
         private Executor getExecutor() {
                 if (mExecutor == null)
                         mExecutor = Executors.newSingleThreadExecutor();
                 return mExecutor;
+        }
+
+        ///
+
+        public DbManager getDbManager() {
+                return dbMgr;
+        }
+        public PlayListParseInterface getParseInterface() {
+                return pif;
+        }
+        public void setPlayStatus(PlayStatusInterface s) {
+                synchronized (playStatus) {
+                        playStatus = s;
+                }
+        }
+        public PlayStatusInterface getPlayStatus() {
+                return playStatus;
+        }
+        public void setNewStatusEx(final JSONObject obj) {
+                if (playStatus != null)
+                        getExecutor().execute(new Runnable() {
+                                @Override
+                                public void run() {
+                                        playStatus.setNewStatus(obj);
+                                }
+                        });
+        }
+        private void saveItem_(final PlayListItem item) {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
+                getExecutor().execute(
+                        new Runnable() {
+                                final PlayList pl = PlayList.this;
+                                @Override
+                                public void run() {
+                                        if (pl.waitDb_(PlayList.DB_ACTION_USING)) {
+                                                try {
+                                                        if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
+                                                                ContentValues cv = new ContentValues();
+                                                                cv.put("uri", item.uri);
+                                                                item.toDb(pl.dbMgr, item.dbParent, cv);
+                                                                if (BuildConfig.DEBUG) Log.d("- SAVE ITEM FROM HISTORY TO DB", " OK");
+                                                        } else {
+                                                                item.toDb(pl.dbMgr);
+                                                        }
+                                                } catch (Exception e) {
+                                                        if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+                                                } finally {
+                                                        pl.waitDbEnd_();
+                                                }
+                                        }
+                                }
+                        }
+                );
+        }
+        private void saveMain_() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
+                getExecutor().execute(
+                        new Runnable() {
+                                final PlayList pl = PlayList.this;
+                                @Override
+                                public void run() {
+                                        try {
+                                                if (pl.waitDb_(PlayList.DB_ACTION_SAVE_PART)) {
+                                                        try {
+                                                                pl.toDb(pl.dbMgr, -1, true);
+                                                                if (BuildConfig.DEBUG) Log.d("- SAVE MAIN PLAYLIST FROM HISTORY TO DB", " OK");
+                                                        } catch (Exception e) {
+                                                                if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+                                                        } finally {
+                                                                pl.waitDbEnd_();
+                                                        }
+                                                }
+                                        } catch (Exception e) {
+                                                if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
+                                        }
+                                }
+                        }
+                );
         }
 
         /// schedule
@@ -299,46 +488,30 @@ public class PlayList extends ReflectAttribute {
         ///
 
         public void load(final JSONObject obj) {
-                if (obj == null)
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE) {
+                        Clear_();
                         return;
+                }
                 if ((groups.size() > IDX_GROUP_LAST) && (isCompleteDb.get())) {
                         pif.loadStage2();
                         return;
                 }
                 try {
-                        new Thread(initPlayListRunnable(obj)).start();
+                        if (obj == null)
+                                new Thread(initVlcDisablePlayListRunnable).start();
+                        else
+                                new Thread(initVlcEnablePlayListRunnable(obj)).start();
                 } catch (Exception e) {
                         if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
                 }
-        }
-        public DbManager getDbManager() {
-                return dbMgr;
-        }
-        public PlayListParseInterface getParseInterface() {
-                return pif;
-        }
-        public void setPlayStatus(PlayStatusInterface s) {
-                synchronized (playStatus) {
-                        playStatus = s;
-                }
-        }
-        public PlayStatusInterface getPlayStatus() {
-                return playStatus;
-        }
-        public void setNewStatusEx(final JSONObject obj) {
-                if (playStatus != null)
-                        getExecutor().execute(new Runnable() {
-                                @Override
-                                public void run() {
-                                        playStatus.setNewStatus(obj);
-                                }
-                        });
         }
 
         ///
         /// public method
 
         public void ClearDbEx() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
                 getExecutor().execute(new Runnable() {
                         @Override
                         public void run() {
@@ -348,9 +521,13 @@ public class PlayList extends ReflectAttribute {
                 });
         }
         public void saveToDb() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
                 saveToDb_();
         }
         public void closeDbEx() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
                 getExecutor().execute(new Runnable() {
                         @Override
                         public void run() {
@@ -359,12 +536,16 @@ public class PlayList extends ReflectAttribute {
                 });
         }
         public void checkAll() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
                 if ((dbMgr == null) || (pif == null))
                         throw new RuntimeException(PlayList.PL_EXCEPT1);
                 MethodCheckAll.go(groups);
                 saveToDb_();
         }
         public void updateAll() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
                 if ((dbMgr == null) || (pif == null))
                         throw new RuntimeException(PlayList.PL_EXCEPT1);
                 MethodUpdateAll.go(groups);
@@ -430,15 +611,20 @@ public class PlayList extends ReflectAttribute {
                         return;
 
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Online", "- BEGIN");
+                PlayListOnlineRenameList renameList = null;
+                try {
+                        renameList = new PlayListOnlineRenameList(getDbManager());
+                } catch (Exception ignore) {}
+                //
                 {
                         final String s1 = pif.downloadM3U8(null, IDX_ONLINE_TV);
                         if (!Text.isempty(s1)) {
-                                ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_TV);
+                                ParseM3UList.parseM3u8(this, renameList, s1, IDX_ONLINE_TV);
                         } else {
                                 for (String uri : PlayListConstant.TV_ONLINE_ARRAY) {
                                         final String s2 = pif.downloadM3U8(uri, IDX_ONLINE_TV);
                                         if (!Text.isempty(s2))
-                                                ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_TV);
+                                                ParseM3UList.parseM3u8(this, renameList, s2, IDX_ONLINE_TV);
                                 }
                         }
                 }
@@ -446,80 +632,92 @@ public class PlayList extends ReflectAttribute {
                 {
                         final String s1 = pif.downloadM3U8(null, IDX_ONLINE_RADIO);
                         if (!Text.isempty(s1)) {
-                                ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_RADIO);
+                                ParseM3UList.parseM3u8(this, renameList, s1, IDX_ONLINE_RADIO);
                         } else {
                                 final String s2 = pif.downloadM3U8(PlayListConstant.RADIO_ONLINE, IDX_ONLINE_RADIO);
                                 if (!Text.isempty(s2))
-                                        ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_RADIO);
+                                        ParseM3UList.parseM3u8(this, renameList, s2, IDX_ONLINE_RADIO);
                         }
                 }
                 //
                 {
                         final String s1 = pif.downloadM3U8(null, IDX_ONLINE_FILMS);
                         if (!Text.isempty(s1)) {
-                                ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_FILMS);
+                                ParseM3UList.parseM3u8(this, renameList, s1, IDX_ONLINE_FILMS);
                         } else {
                                 final String s2 = pif.downloadM3U8(PlayListConstant.FILMS_ONLINE, IDX_ONLINE_FILMS);
                                 if (!Text.isempty(s2))
-                                        ParseM3UList.parseM3u8(this, s2, IDX_ONLINE_FILMS);
+                                        ParseM3UList.parseM3u8(this, renameList, s2, IDX_ONLINE_FILMS);
                         }
                 }
                 //
                 {
                         final String s1 = pif.downloadM3U8(null, IDX_ONLINE_USER_DEFINE);
                         if (!Text.isempty(s1)) {
-                                ParseM3UList.parseM3u8(this, s1, IDX_ONLINE_USER_DEFINE);
+                                ParseM3UList.parseM3u8(this, renameList, s1, IDX_ONLINE_USER_DEFINE);
                         }
                 }
                 if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Online", "- END");
         }
         private void loadFavorites_() {
                 try {
-                        if (favorites.size() == 0)
+                        if ((favorites.size() == 0) || (groups.size() <= IDX_ONLINE_FAV))
                                 return;
-                        PlayListGroup grp = groups.get(IDX_ONLINE_FAV);
+
+                        final PlayListGroup grp = groups.get(IDX_ONLINE_FAV);
                         if (grp == null)
                                 return;
 
-                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- BEGIN");
+                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- BEGIN: " + favorites.size());
 
                         grp.items.clear();
                         for (PlayListFavorite fav : favorites) {
-                                PlayListItem item = new PlayListItem(PlayList.this, fav);
+                                final PlayListItem item = new PlayListItem(PlayList.this, fav);
                                 if (!item.isEmpty())
                                         grp.items.add(item);
                         }
-                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- END");
+                        synchronized (grp) {
+                                grp.notifyAll();
+                        }
+                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- END: " + favorites.size());
 
                 } catch (Exception e) {
                         if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
                 }
         }
         private void loadHistory_() {
-                if ((history.size() == 0) || (groups.size() <= IDX_HISTORY))
-                        return;
-
                 try {
-                        PlayListGroup grp = groups.get(IDX_HISTORY);
+                        if ((history.size() == 0) || (groups.size() <= IDX_HISTORY))
+                                return;
+
+                        final PlayListGroup grp = groups.get(IDX_HISTORY);
                         if (grp == null)
                                 return;
 
-                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from History", "- BEGIN");
+                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from History", "- BEGIN: " + history.size());
 
                         grp.items.clear();
                         int i = (history.size() - 1),
-                                hm = pif.getHistoryMax();
+                            hm = pif.getHistoryMax();
 
                         for (; ((i >= 0) && (hm >= 0)); i--, hm--) {
-                                PlayListHistoryIndex hi = history.get(i);
+                                final PlayListHistoryIndex hi = history.get(i);
                                 if (hi == null)
                                         continue;
 
-                                PlayListItem item;
-                                if ((item = PlayListUtils.findItemByVlcId(getGroup(), hi.historyVlcId)) != null)
-                                        grp.items.add(item);
+                                for (int n = getGroupOffset(); n < getGroupSize(); n++) {
+                                    final PlayListItem item;
+                                    if ((item = PlayListUtils.findItemByVlcId(getGroup(n), hi.historyVlcId)) != null) {
+                                        if (BuildConfig.DEBUG)
+                                           grp.items.add(item);
+                                           break;
+                                    }
+                                }
                         }
-                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from History", "- END");
+                        synchronized (grp) {
+                                grp.notifyAll();
+                        }
+                        if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from History", "- END: " + history.size());
                 } catch (Exception e) {
                         if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e);
                 }
@@ -547,7 +745,7 @@ public class PlayList extends ReflectAttribute {
 
         /// INIT play list data
 
-        private void initPlayList() {
+        private void initPlayList_() {
 
                 if (groups.size() > 0)
                         groups.clear();
@@ -612,136 +810,12 @@ public class PlayList extends ReflectAttribute {
 
         ///
 
-        private Observable.OnPropertyChangedCallback changePlayItemCb =
-                new Observable.OnPropertyChangedCallback() {
-                        @Override
-                        public void onPropertyChanged(Observable sender, int propertyId) {
-                                try {
-                                        final PlayListItem item = currentPlayOld;
-                                        if ((item != null) && (history.size() > 0)) {
-                                                long vid = item.getVlcId();
-                                                if (vid > 0L)
-                                                        for (PlayListHistoryIndex p : history)
-                                                                if (p.historyVlcId == vid) {
-                                                                        p.historyPosition = item.stat.lastProgress.get();
-                                                                        p.historyDate = new Date(System.currentTimeMillis());
-                                                                        getExecutor().execute(
-                                                                                new Runnable() {
-                                                                                        @Override
-                                                                                        public void run() {
-                                                                                                if (waitDb_(DB_ACTION_USING)) {
-                                                                                                        try {
-                                                                                                                if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
-                                                                                                                        ContentValues cv = new ContentValues();
-                                                                                                                        cv.put("uri", item.uri);
-                                                                                                                        item.toDb(dbMgr, item.dbParent, cv);
-                                                                                                                } else {
-                                                                                                                        item.toDb(dbMgr);
-                                                                                                                }
-                                                                                                        } catch (Exception ignore) {
-                                                                                                        } finally {
-                                                                                                                waitDbEnd_();
-                                                                                                        }
-                                                                                                }
-                                                                                        }
-                                                                                }
-                                                                        );
-                                                                        break;
-                                                                }
-                                        }
-                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
-                                try {
-                                        final PlayListItem item;
-                                        currentPlayOld = item = currentPlay.get();
-                                        if (item == null)
-                                                return;
-
-                                        switch (item.type) {
-                                                case PlayListConstant.TYPE_MOVIE:
-                                                case PlayListConstant.TYPE_SERIES:
-                                                case PlayListConstant.TYPE_VIDEO: {
-                                                        long hid = 0,
-                                                             vid = item.getVlcId();
-
-                                                        if (history.size() > 0)
-                                                                hid = history.get(history.size() - 1).historyVlcId;
-                                                        if (vid != hid) {
-                                                                history.add(
-                                                                        new PlayListHistoryIndex(
-                                                                                vid,
-                                                                                item.stat.lastProgress.get()
-                                                                        )
-                                                                );
-                                                                if (groups.size() > 0) {
-                                                                        final PlayListGroup grp = groups.get(IDX_HISTORY);
-                                                                        item.reloadBindingData();
-                                                                        grp.items.add(0, item);
-                                                                        synchronized (grp) {
-                                                                                grp.notify();
-                                                                        }
-                                                                }
-                                                                if (pif != null)
-                                                                    pif.loadStage1();
-
-                                                                getExecutor().execute(
-                                                                        new Runnable() {
-                                                                                @Override
-                                                                                public void run() {
-                                                                                        if (waitDb_(DB_ACTION_USING)) {
-                                                                                                try {
-                                                                                                        if ((item.dbIndex <= 0) || (item.dbParent <= 0)) {
-                                                                                                                ContentValues cv = new ContentValues();
-                                                                                                                cv.put("uri", item.uri);
-                                                                                                                item.toDb(dbMgr, item.dbParent, cv);
-                                                                                                        } else {
-                                                                                                                item.toDb(dbMgr);
-                                                                                                        }
-                                                                                                } catch (Exception ignore) {
-                                                                                                } finally {
-                                                                                                        waitDbEnd_();
-                                                                                                }
-
-                                                                                        }
-                                                                                }
-                                                                        }
-                                                                );
-                                                        }
-                                                        break;
-                                                }
-                                                case PlayListConstant.TYPE_AUDIO:
-                                                case PlayListConstant.TYPE_ONLINE: {
-                                                        // item.visibleWatched() = ...
-                                                        break;
-                                                }
-                                        }
-                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
-
-                                getExecutor().execute(
-                                        new Runnable() {
-                                                @Override
-                                                public void run() {
-                                                        if (waitDb_(DB_ACTION_SAVE_PART)) {
-                                                                try {
-                                                                        toDb(dbMgr, -1, true);
-                                                                        if (BuildConfig.DEBUG) Log.d("- SAVE ITEM/HISTORY :: SAVE MAIN PLAYLIST TABLE TO DB", " OK");
-                                                                } catch (Exception ignore) {
-
-                                                                } finally {
-                                                                        waitDbEnd_();
-                                                                }
-                                                        }
-                                                }
-                                        }
-                                );
-                        }
-                };
-
-        private Runnable initPlayListRunnable(final JSONObject obj) {
-                return  new Runnable() {
+        private Runnable initVlcEnablePlayListRunnable(final JSONObject obj) {
+                return new Runnable() {
                         @Override
                         public void run() {
                                 try {
-                                        if ((dbMgr == null) || (pif == null))
+                                        if ((dbMgr == null) || (pif == null) || (obj == null))
                                                 throw new RuntimeException(PL_EXCEPT1);
 
                                         boolean b = !dbMgr.isEmpty();
@@ -757,21 +831,17 @@ public class PlayList extends ReflectAttribute {
 
                                         ///
 
-                                        initPlayList();
+                                        initPlayList_();
                                         try {
-                                                if (obj != null) {
-                                                        setDbState_(DB_ACTION_EMPTY_GET_VLC);
-                                                        MethodCreateFromVlc.go(PlayList.this, obj);
-                                                }
+                                                setDbState_(DB_ACTION_EMPTY_GET_VLC);
+                                                MethodCreateFromVlc.go(PlayList.this, obj);
                                         } finally {
-                                                if (obj != null)
-                                                        setDbState_(DB_ACTION_EMPTY);
+                                                setDbState_(DB_ACTION_EMPTY);
                                         }
                                         loadOnline_();
-                                        if (b) {
-                                                loadFavorites_();
-                                                loadHistory_();
-                                        }
+                                        loadFavorites_();
+                                        if (b)
+                                           loadHistory_();
                                         pif.loadStage1();
                                         isCompleteDb.set(true);
 
@@ -797,4 +867,48 @@ public class PlayList extends ReflectAttribute {
                         }
                 };
         }
+        private Runnable initVlcDisablePlayListRunnable = new Runnable() {
+                        @Override
+                        public void run() {
+                                try {
+                                        if ((dbMgr == null) || (pif == null))
+                                                throw new RuntimeException(PL_EXCEPT1);
+
+                                        if (waitDb_(DB_ACTION_USING)) {
+                                                try {
+                                                        fromDb(dbMgr, -1, 1, true);
+                                                } finally {
+                                                        waitDbEnd_();
+                                                }
+                                        }
+
+                                        ///
+
+                                        initPlayList_();
+                                        pif.loadStageNoVlc();
+
+                                        loadFavorites_();
+                                        loadOnline_();
+                                        isCompleteDb.set(true);
+
+                                        if (!dbMgr.isEmpty()) {
+                                                if (waitDb_(DB_ACTION_USING)) {
+                                                        try {
+                                                                MethodUpdateFromDB.go(groups);
+                                                        } finally {
+                                                                waitDbEnd_();
+                                                        }
+                                                }
+                                                pif.loadStageEnd();
+                                        } else {
+                                                MethodUpdateAll.go(groups);
+                                                pif.loadStageEnd();
+                                                saveToDb_();
+                                        }
+                                        pif.loadStageEnd();
+                                        if (BuildConfig.DEBUG) Log.d(TAG1, PL_STAGE_END + new Date().toString());
+
+                                } catch (Exception e) { if (BuildConfig.DEBUG) Log.e(TAG, Text.requireString(e.getLocalizedMessage()), e); }
+                        }
+                };
 }

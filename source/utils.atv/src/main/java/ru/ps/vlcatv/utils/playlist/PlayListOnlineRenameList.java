@@ -12,26 +12,26 @@ import ru.ps.vlcatv.utils.reflect.annotation.IBaseTableReflect;
 
 @Keep
 @IBaseTableReflect(
-        IThisTableName = "TableEpgList"
+        IThisTableName = "TableOnlineRenameList"
 )
-public class PlayListEpgDefault extends ReflectAttribute {
+public class PlayListOnlineRenameList extends ReflectAttribute {
 
-    @IArrayReflect(value = "epg_list", SkipRecursion = false)
-    private List<PlayListEpgDefaultItem> epgList = new ArrayList<>();
+    @IArrayReflect(value = "rename_list", SkipRecursion = false)
+    private List<PlayListOnlineRenameItem> renameList = new ArrayList<>();
 
-    PlayListEpgDefault() {}
-    public PlayListEpgDefault(DbManager dbm) {
+    PlayListOnlineRenameList() {}
+    public PlayListOnlineRenameList(DbManager dbm) {
         dbParent = 0;
         if (dbm != null)
             fromDb(dbm, 0);
     }
     public boolean isEmpty() {
-        return (epgList.size() == 0);
+        return (renameList.size() == 0);
     }
-    public PlayListEpgDefaultItem find(String name) {
+    public PlayListOnlineRenameItem find(String name) {
         if (Text.isempty(name))
             return null;
-        for (PlayListEpgDefaultItem epg : epgList)
+        for (PlayListOnlineRenameItem epg : renameList)
             if (epg.titleId.equals(name))
                 return epg;
         return null;
@@ -39,7 +39,7 @@ public class PlayListEpgDefault extends ReflectAttribute {
     public boolean findEpgId(String name) {
         if (Text.isempty(name))
             return false;
-        for (PlayListEpgDefaultItem epg : epgList)
+        for (PlayListOnlineRenameItem epg : renameList)
             if (name.startsWith(epg.epgId))
                 return true;
         return false;

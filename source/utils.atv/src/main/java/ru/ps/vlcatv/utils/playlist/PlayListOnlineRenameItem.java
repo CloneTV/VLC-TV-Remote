@@ -9,8 +9,8 @@ import ru.ps.vlcatv.utils.reflect.annotation.IUniqueReflect;
 
 @Keep
 @IBaseTableReflect(
-        IThisTableName = "TableEpgItems",
-        IParentTable = "TableEpgList",
+        IThisTableName = "TableOnlineRenameItems",
+        IParentTable = "TableOnlineRenameList",
         IParentKey = "idx",
         IParentSyncDelete = IBaseTableReflect.CASCADE,
         IParentSyncUpdate = IBaseTableReflect.DEFAULT,
@@ -18,7 +18,7 @@ import ru.ps.vlcatv.utils.reflect.annotation.IUniqueReflect;
                 @IUniqueReflect(IUnique = {"title_id"})
         }
 )
-public class PlayListEpgDefaultItem extends ReflectAttribute {
+public class PlayListOnlineRenameItem extends ReflectAttribute {
 
     @IFieldReflect("title_id")
     public String titleId = null;
@@ -31,7 +31,7 @@ public class PlayListEpgDefaultItem extends ReflectAttribute {
     @IFieldReflect("change_id")
     public boolean isNameChange = true;
 
-    PlayListEpgDefaultItem() {
+    PlayListOnlineRenameItem() {
         dbParent = 1;
     }
 

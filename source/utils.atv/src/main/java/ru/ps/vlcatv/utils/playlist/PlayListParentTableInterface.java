@@ -1,11 +1,16 @@
 package ru.ps.vlcatv.utils.playlist;
 
 public interface PlayListParentTableInterface {
+    public default String getUrl() {
+        return "";
+    }
     public default String getName() {
         return "";
     }
-    public default void setName(String s) {
+    public default String getEpg() {
+        return "";
     }
+    public default void setName(String s) {}
     public default long getId() {
         return -1L;
     }

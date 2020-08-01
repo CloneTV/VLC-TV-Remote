@@ -49,6 +49,7 @@ import ru.ps.vlcatv.utils.reflect.annotation.IUniqueReflect;
 )
 public final class PlayListItem extends ReflectAttribute implements PlayListObjectInterface {
 
+    public static final boolean isBuildLite = true;
     public ObservableBoolean isChange = new ObservableBoolean(false);
     private PlayList playListRoot = null;
 
@@ -140,37 +141,38 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     @IArrayReflect(value = "ids", SkipRecursion = false)
     public List<PlayListItemIds> ids = new ArrayList<>();
 
-    @IArrayReflect(value = "titles", SkipRecursion = true)
+    @IArrayReflect(value = "titles", SkipRecursion = false)
     public List<PlayListItemTitles> titles = new ArrayList<>();
 
-    @IArrayReflect(value = "images", SkipRecursion = true)
+    @IArrayReflect(value = "images", SkipRecursion = false)
     public List<PlayListItemImages> images = new ArrayList<>();
 
-    @IArrayReflect(value = "trailers", SkipRecursion = true)
+    @IArrayReflect(value = "trailers", SkipRecursion = false)
     public List<PlayListItemTrailers> trailers = new ArrayList<>();
-
-    @IArrayReflect(value = "actors", SkipRecursion = false)
-    public List<PlayListActorsIndex> actorIdx = new ArrayList<>();
-
-    @IArrayReflect(value = "producers", SkipRecursion = false)
-    public List<PlayListProducersIndex> producerIdx = new ArrayList<>();
-
-    @IArrayReflect(value = "genres", SkipRecursion = false)
-    public List<PlayListGenresIndex> genreIdx = new ArrayList<>();
-
-    @IArrayReflect(value = "tags", SkipRecursion = false)
-    public List<PlayListTagsIndex> tagIdx = new ArrayList<>();
-
-    @IArrayReflect(value = "studios", SkipRecursion = false)
-    public List<PlayListStudiosIndex> studiosIdx = new ArrayList<>();
-
-    @IArrayReflect(value = "country", SkipRecursion = false)
-    public List<PlayListCountryIndex> countryIdx = new ArrayList<>();
 
     @IArrayReflect(value = "urls", SkipRecursion = false)
     public List<PlayListItemUrls> urls = new ArrayList<>();
 
+    @IArrayReflect(value = "actors", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListActorsIndex> actorIdx = new ArrayList<>();
+
+    @IArrayReflect(value = "producers", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListProducersIndex> producerIdx = new ArrayList<>();
+
+    @IArrayReflect(value = "genres", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListGenresIndex> genreIdx = new ArrayList<>();
+
+    @IArrayReflect(value = "tags", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListTagsIndex> tagIdx = new ArrayList<>();
+
+    @IArrayReflect(value = "studios", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListStudiosIndex> studiosIdx = new ArrayList<>();
+
+    @IArrayReflect(value = "country", SkipRecursion = PlayListItem.isBuildLite)
+    public List<PlayListCountryIndex> countryIdx = new ArrayList<>();
+
     ///
+
 
     @Override
     public void setDuration() {
@@ -700,6 +702,9 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
             trailer.set(item.trailer.get());
         }
 
+        if (PlayListItem.isBuildLite)
+            return;
+
         if ((item.producerIdx != null) && (item.producerIdx.size() > 0))
             producerIdx = item.producerIdx;
         if ((item.actorIdx != null) && (item.actorIdx.size() > 0))
@@ -807,6 +812,18 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         }
         PlayListUtils.setIdsSkip(pa.idList, ids, PlayListItemIds.class);
 
+        if ((Text.isempty(date.get())) && (pa.itemPremiered != null)) {
+            try {
+                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+                date.set(fmt.format(
+                        Objects.requireNonNull(pa.itemPremiered))
+                );
+            } catch (Exception ignore) {}
+        }
+
+        if (PlayListItem.isBuildLite)
+            return;
+
         if (playListRoot != null) {
             if (pa.actorList.size() > 0) {
                 List<PlayListActorsIndex> actor_idx;
@@ -845,42 +862,41 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
                     tagIdx.addAll(tag_idx);
             }
         }
-
-        if ((Text.isempty(date.get())) && (pa.itemPremiered != null)) {
-            try {
-                SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
-                date.set(fmt.format(
-                        Objects.requireNonNull(pa.itemPremiered))
-                );
-            } catch (Exception ignore) {}
-        }
     }
 
-    private void copyM3U8(ParseObject pa) {
-        crc = pa.itemCrc;
-        uri = pa.itemUri;
-        type = pa.itemType;
+    private void copyM3U8(ParseObject po) {
+        crc = po.itemCrc;
+        uri = po.itemUri;
+        type = po.itemType;
 
         duration.set("");
-        urls.add(new PlayListItemUrls(pa.itemUri));
 
-        if (!Text.isempty(pa.itemTitle))
+        if (!Text.isempty(po.itemTitle))
             title.set(
-                    pa.itemTitle
+                    po.itemTitle
             );
-        else if (pa.titleList.size() > 0)
+        else if (po.titleList.size() > 0)
             title.set(
-                    pa.titleList.get(0)
+                    po.titleList.get(0)
             );
 
-        if (pa.imageList.size() > 0)
-            for (ParseContainer pc : pa.imageList) {
+        if (po.imageList.size() > 0)
+            for (ParseContainer pc : po.imageList) {
                 poster.set(pc.valId);
                 break;
             }
-        if (pa.idList.size() > 0)
-            PlayListUtils.setIdsSkip(pa.idList, ids, PlayListItemIds.class);
+        if (po.idList.size() > 0)
+            PlayListUtils.setIdsSkip(po.idList, ids, PlayListItemIds.class);
         PlayListUtils.setIdsSkip(new PlayListItemIds(PlayListConstant.IDS_VLC, 0), ids);
+
+        urls.add(
+                new PlayListItemUrls(
+                        ((!Text.isempty(po.itemDimension)) ?
+                                po.itemDimension : title.get()),
+                        po.itemUri,
+                        PlayListUtils.getIdsString(PlayListConstant.IDS_EPG, po.idList)
+                )
+        );
     }
 
     private void copyNFO(ParseObject pa) {
@@ -906,13 +922,6 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         PlayListUtils.setIdsSkip(pa.idList, ids, PlayListItemIds.class);
 
         if (playListRoot != null) {
-
-            actorIdx = PlayListUtils.setNewActors(pa.actorList, playListRoot.actors);
-            genreIdx = PlayListUtils.setNewIndexList(pa.genreList, playListRoot.genres, PlayListGenres.class);
-            producerIdx = PlayListUtils.setNewIndexList(pa.producerList, playListRoot.producers, PlayListProducers.class);
-            studiosIdx = PlayListUtils.setNewIndexList(pa.studioList, playListRoot.studios, PlayListStudios.class);
-            countryIdx = PlayListUtils.setNewIndexList(pa.countryList, playListRoot.country, PlayListCountry.class);
-            tagIdx = PlayListUtils.setNewIndexList(pa.tagList, playListRoot.tags, PlayListTags.class);
 
             if (!Text.isempty(pa.itemTitle))
                 title.set(
@@ -954,6 +963,18 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         }
         if (pa.ratingList.size() > 0)
             rating.set(pa.getRating());
+
+        if (PlayListItem.isBuildLite)
+            return;
+
+        if (playListRoot != null) {
+            actorIdx = PlayListUtils.setNewActors(pa.actorList, playListRoot.actors);
+            genreIdx = PlayListUtils.setNewIndexList(pa.genreList, playListRoot.genres, PlayListGenres.class);
+            producerIdx = PlayListUtils.setNewIndexList(pa.producerList, playListRoot.producers, PlayListProducers.class);
+            studiosIdx = PlayListUtils.setNewIndexList(pa.studioList, playListRoot.studios, PlayListStudios.class);
+            countryIdx = PlayListUtils.setNewIndexList(pa.countryList, playListRoot.country, PlayListCountry.class);
+            tagIdx = PlayListUtils.setNewIndexList(pa.tagList, playListRoot.tags, PlayListTags.class);
+        }
     }
 
     @Override

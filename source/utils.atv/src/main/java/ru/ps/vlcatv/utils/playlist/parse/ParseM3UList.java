@@ -7,7 +7,7 @@ import ru.ps.vlcatv.utils.Log;
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.playlist.PlayList;
 import ru.ps.vlcatv.utils.playlist.PlayListConstant;
-import ru.ps.vlcatv.utils.playlist.PlayListEpgDefault;
+import ru.ps.vlcatv.utils.playlist.PlayListOnlineRenameList;
 import ru.ps.vlcatv.utils.playlist.PlayListGroup;
 import ru.ps.vlcatv.utils.playlist.PlayListItem;
 import ru.ps.vlcatv.utils.playlist.PlayListItemUrls;
@@ -15,7 +15,7 @@ import ru.ps.vlcatv.utils.playlist.PlayListUtils;
 
 public class ParseM3UList {
 
-    public static void parseM3u8(PlayList playList, String text, int idx) {
+    public static void parseM3u8(PlayList playList, PlayListOnlineRenameList renameList, String text, int type) {
         Scanner scanner = null;
         try {
             if (Text.isempty(text))
@@ -26,7 +26,6 @@ public class ParseM3UList {
                 ParseObject po = null;
                 scanner = new Scanner(text);
                 String[] array = null;
-                PlayListEpgDefault epgList = new PlayListEpgDefault(playList.getDbManager());
 
                 while (scanner.hasNextLine()) {
                     String s = scanner.nextLine();
@@ -38,12 +37,12 @@ public class ParseM3UList {
                     }
                     array[cnt++] = s;
                     if (s.startsWith("http")) {
-                        po = new ParseObject(array, epgList);
+                        po = new ParseObject(array, renameList, type);
                         if (po.itemType == PlayListConstant.TYPE_ONLINE) {
 
                             boolean isNotPoster = false;
                             PlayListGroup grp = null;
-                            switch (idx) {
+                            switch (type) {
                                 case PlayList.IDX_ONLINE_TV: {
                                     if (po.playListType == PlayList.IDX_ONLINE_RADIO)
                                         grp = playList.groups.get(PlayList.IDX_ONLINE_RADIO);
@@ -70,18 +69,26 @@ public class ParseM3UList {
                                 PlayListItem item = PlayListUtils.findItemByTitle(grp, po.itemTitle);
                                 if (item != null) {
                                     boolean b = false;
-                                    for (PlayListItemUrls purl : item.urls)
-                                        if (purl.url.equals(po.itemUri)) {
+                                    for (PlayListItemUrls obj : item.urls)
+                                        if (obj.url.equals(po.itemUri)) {
                                             b = true;
                                             break;
                                         }
                                     if (!b)
-                                        item.urls.add(new PlayListItemUrls(po.itemUri));
+                                        item.urls.add(
+                                                new PlayListItemUrls(
+                                                        ((!Text.isempty(po.itemDimension)) ? po.itemDimension : po.itemTitle),
+                                                        po.itemUri,
+                                                        PlayListUtils.getIdsString(PlayListConstant.IDS_EPG, po.idList)
+                                                )
+                                        );
                                 } else {
                                     item = new PlayListItem(playList, po);
                                     if (isNotPoster) {
                                         item.trailer.set("");
                                         item.trailers.clear();
+                                        item.images.clear();
+                                        item.poster.set("");
                                     }
                                     grp.items.add(item);
                                 }

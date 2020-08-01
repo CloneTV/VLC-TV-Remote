@@ -1689,3 +1689,593 @@ http://dmitry-tv.my1.ru/his/film/01/REPRODUKCIYA.m3u8
 http://dmitry-tv.my1.ru/his/film/yandex/01/PLAN_POBEGA.m3u8
 #EXTINF:-1 ,Механик [США/2010]
 http://dmitry-tv.my1.ru/his/film/yandex/01/MEHANIK.m3u8
+#EXTINF:-1 ,9с05
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e05.1080p.webdl.fox_79335/hls/360/index.m3u8
+#EXTINF:-1 ,9с06
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e06.1080p.webdl.fox_80038/hls/360/index.m3u8
+#EXTINF:-1 ,9с08
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e08.1080p.webdl.fox_81411/hls/360/index.m3u8
+#EXTINF:-1 ,9с09
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e09.1080p.webdl.fox_88790/hls/480/index.m3u8
+#EXTINF:-1 ,9с10
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e10.1080p.webdl.fox_89709/hls/720/index.m3u8
+#EXTINF:-1 ,9с12
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e12.1080p.webdl.fox_91703/hls/720/index.m3u8
+#EXTINF:-1 ,9с13
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e13.1080p.webdl.fox_92491/hls/720/index.m3u8
+#EXTINF:-1 ,9с14
+https://s1.plplayer.online/content/stream/films/the.walking.dead.s09e14.1080p.webdl.fox_93427/hls/720/index.m3u8
+#EXTINF:-1 ,2001 год: Космическая одиссея (1968)
+https://h1.kinovhd.tv/server_2/kino/2001_god_kosmicheskaya_odisseya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,51 (2011)
+https://vs49.vcdn.biz/199743c06ecee21c4523fca28a3bc3a1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/87781/u_uid/0/u_vod/3/u_device/cms_html5/a/2/type.amlst/chunklist-sid1611709743-b2000000.m3u8
+#EXTINF:-1 ,G.I.Joe: Бросок кобры (2009)
+https://h1.kinovhd.tv/server_2/kino/Brosok_kobry.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,G.I.Joe: Бросок кобры 2 (2013)
+https://h1.kinovhd.tv/server_2/kino/Brosok_kobry_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Аватар (2009)
+https://h2.kinovhd.tv/server_2/kino/Avatar.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Аквамен (2018)
+https://h2.kinovhd.tv/server/kino/Akvamen.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Акванавты (1979)
+https://vs36.vcdn.biz/953e7e2c6b7fa2b515c2f494dd9abc40_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/209811/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1949376290-b2000000.m3u8
+#EXTINF:-1 ,Алита: Боевой ангел (2019)
+https://h2.kinovhd.tv/server_2/kino/Alita.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Ангел тьмы (1990)
+https://h2.kinovhd.tv/server_2/kino/Angel_tmy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Аннигиляция (2018)
+https://h2.kinovhd.tv/server_2/kino/Annigilyaciya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Анон (2018)
+https://vs54.vcdn.biz/bf1451d80263d2d682e128842e5219b6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/49324071/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1548539311-b2000000.m3u8
+#EXTINF:-1 ,Апгрейд (2018)
+https://h1.kinovhd.tv/server_2/kino/Apgreyd.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Ба-бах! (2010)
+https://vs13.vcdn.biz/23e9c5ed7c82ceb32188f1370b71f326_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/460901/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid62848492-b2000000.m3u8
+#EXTINF:-1 ,Бамблби (2018)
+https://h2.kinovhd.tv/server_2/kino/Bamblbi_2018.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бегущий в лабиринте: Лекарство от смерти (2018)
+https://h1.kinovhd.tv/server_2/kino/Begushiy_v_labirinte_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бегущий по лезвию 2049 (2017)
+https://h1.kinovhd.tv/server_2/kino/Begushiy_po_lezviyu_2049.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бегущий человек (1987)
+https://h2.kinovhd.tv/server_2/kino/Begushiy_chelovek.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бездна (1989)
+https://h1.kinovhd.tv/server_2/kino/Bezdna.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Безумный Макс: Дорога ярости (2015)
+https://h1.kinovhd.tv/server_2/kino/Bezumnuy_Maks_4.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Белая стена (2010)
+https://h1.kinovhd.tv/server_2/kino/Belaya_stena.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бета-тест (2016)
+https://hls.kinokrad.co/hls/B.Test.2O16.P.HDRip/playlist.m3u8
+#EXTINF:-1 ,Битва за Землю (2019)
+https://h2.kinovhd.tv/server_2/kino/Bitva_za_Zemlyu.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бладшот (2020)
+https://h3.kinovhd.tv/kino/Bladshot.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бэтмен и Робин (1997)
+https://h1.kinovhd.tv/server_2/kino/Betmen_i_Robin.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бэтмен против Супермена: На заре справедливости (2016)
+https://h1.kinovhd.tv/server_2/kino/Betmen_protiv_Supermena.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Бюро человечества (2017)
+https://hls.kinokrad.co/hls/The.Humanity.Bureau.2017.Pof.HDRip/playlist.m3u8
+#EXTINF:-1 ,В ловушке времени (2003)
+https://h2.kinovhd.tv/server/kino/V_lovushke_vremeni.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,В тени Луны (2019)
+https://h1.kinovhd.tv/server_4/kino/V_teni_Luny.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Веном (2018)
+https://h3.kinovhd.tv/kino/Venom.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Викинги против пришельцев (2008)
+https://h2.kinovhd.tv/server/kino/Vikingi.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Виктор Франкенштейн (2015)
+https://h2.kinovhd.tv/server/kino/Viktor_Frankenshteyn.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Вирус (2016)
+https://vs30.vcdn.biz/4628d409ba0d50a55d45dfa01980b2f3_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/4392561/u_uid/0/u_vod/3/u_device/cms_html5/a/4/type.amlst/chunklist-sid1394113475-b2000000.m3u8
+#EXTINF:-1 ,Вне времени (2015)
+https://vs52.vcdn.biz/6e7b7179ace62342878b31185220ac03_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/27362221/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid1327384336-b2000000.m3u8
+#EXTINF:-1 ,Вне/себя (2015)
+https://cdnmfw.tvzavr.ru/stream/tvzavr/3/59e884a9-bb49-4fcc-81d9-7fabda787ecc/59e884a9-bb49-4fcc-81d9-7fabda787ecc-audio_rus%3D189375-video%3D4998000.m3u8
+#EXTINF:-1 ,Во имя спасения (2018)
+https://vs35.vcdn.biz/528f244f0019171f7a0408d492224607_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/78800541/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid1017399521-b2000000.m3u8
+#EXTINF:-1 ,Водный мир (1995)
+https://h2.kinovhd.tv/server/kino/Vodnuy_mir.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Восстание (2017)
+https://hls.kinokrad.co/hls/Vosstanie.2017.D.BDRip/playlist.m3u8
+#EXTINF:-1 ,Врaг мой (1985)
+https://h2.kinovhd.tv/server/kino/Vrag_moy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Время (2011)
+https://h1.kinovhd.tv/server_4/kino/Vremya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Вспомнить всё (1990)
+https://h1.kinovhd.tv/server_4/kino/Vspomnit_vse_1990.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Вспомнить всё (2012)
+https://h1.kinovhd.tv/server_4/kino/Vspomnit_vse.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Выжившие (2017)
+https://vs818.vcdn.biz/4581fa8d1b39ea568e80b11fa9f0b7dd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/70222721/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid493346056-b2000000.m3u8
+#EXTINF:-1 ,чувак? (2000)
+https://h1.kinovhd.tv/server_2/kino/Gde_moya_tachka_chuvak.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Гинтама (2017)
+https://hls.kinokrad.co/hls/Gintama.2017.P.BDRip/playlist.m3u8
+#EXTINF:-1 ,Годзилла 2: Король монстров (2019)
+https://h2.kinovhd.tv/server_2/kino/Godzilla_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,гори ясно (2019)
+https://h2.kinovhd.tv/server_2/kino/Gori_gori_yasno.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Господин Никто (2009)
+https://h1.kinovhd.tv/server_2/kino/Gospodin_Nikto.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Гостья (2013)
+https://vs56.vcdn.biz/dbd593b27af68fb3c9c42fd2bbd57550_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/15891671/u_uid/0/u_vod/3/u_device/cms_html5/a/11/type.amlst/chunklist-sid485444850-b2000000.m3u8
+#EXTINF:-1 ,Гостья из будущего 1 серия (1984)
+https://vs47.vcdn.biz/dfc86d2b096163cddff559c944c64094_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/102131/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1688240833-b1500000.m3u8
+#EXTINF:-1 ,Гостья из будущего 2 серия (1984)
+https://vs46.vcdn.biz/119c8aa722ca2e810fb03c9c7800b702_megogo/vod/hls/b/450_900_1350/u_sid/0/o/107821/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid568360092-b1350000.m3u8
+#EXTINF:-1 ,Гостья из будущего 3 серия (1984)
+https://vs50.vcdn.biz/5ff38e5142a9194ebf8d72eb571e2aa0_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/142281/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1539289728-b1500000.m3u8
+#EXTINF:-1 ,Гостья из будущего 4 серия (1984)
+https://vs34.vcdn.biz/7c2165532dfee93a88c2f0216b87f0b5_megogo/vod/hls/b/450_900_1350/u_sid/0/o/148081/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1151651445-b1350000.m3u8
+#EXTINF:-1 ,Гостья из будущего 5 серия (1984)
+https://vs6.vcdn.biz/c608e03feda31c26c3f6b76ab8123211_megogo/vod/hls/b/450_900_1350_1500/u_sid/0/o/171541/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid244919232-b1500000.m3u8
+#EXTINF:-1 ,Гравитация (2013)
+https://h2.kinovhd.tv/server_2/kino/Gravitaciya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Грань будущего (2014)
+https://h1.kinovhd.tv/server_2/kino/Gran_budushego.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,День гнева (1985)
+https://vs33.vcdn.biz/629935beaa1b24122dedf6ce69bb9038_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/188431/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid537767147-b2000000.m3u8
+#EXTINF:-1 ,Дефективные (2017)
+https://hls.kinokrad.co/hls/Defective.2017.P.HDRip/playlist.m3u8
+#EXTINF:-1 ,Джон Картер (2012)
+https://h2.kinovhd.tv/server_2/kino/Dzhon_Karter.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Джонни Мнемоник (1995)
+https://h1.kinovhd.tv/server_2/kino/Dzhonni_Mnemonik.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Дивергент (2014)
+https://vs40.vcdn.biz/f67cca1d86d85b4014b10e7e11283fa9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/10577721/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid1565653207-b2000000.m3u8
+#EXTINF:-1 ,глава 2: Инсургент (2015)
+https://vs32.vcdn.biz/044de1f32600ab7c30cb892ce07d6d19_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/33384191/u_uid/0/u_vod/3/u_device/cms_html5/a/5/type.amlst/chunklist-sid135226638-b2000000.m3u8
+#EXTINF:-1 ,глава 3: За стеной (2016)
+https://vs11.vcdn.biz/1cedf2e23b179150bb5ef8111d826369_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38341231/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid2116802942-b2000000.m3u8
+#EXTINF:-1 ,Доктор стрэндж (2016)
+https://h1.kinovhd.tv/server_2/kino/Doktor_Strendzh.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Доминус (1990)
+https://vs33.vcdn.biz/661440b2ab0371a327f614889582a745_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/63753141/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1313622418-b2000000.m3u8
+#EXTINF:-1 ,Дюна (1984)
+https://h1.kinovhd.tv/server_2/kino/Dyuna.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Железное небо (2012)
+https://vs32.vcdn.biz/1d5e1e42392ce1778deaeaa1d62c72d1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/426491/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1059242935-b2000000.m3u8
+#EXTINF:-1 ,Железный человек (2008)
+https://h1.kinovhd.tv/fast/Zheleznuy_chelovek.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Железный человек 2 (2010)
+https://h1.kinovhd.tv/server_2/kino/Geleznuy_chelovek_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Железный человек 3 (2013)
+https://h3.kinovhd.tv/kino/Zheleznuy_chelovek_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Живая сталь (2011)
+https://h1.kinovhd.tv/fast/Zhivaya_stal.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Завещание профессора Доуэля (1984)
+https://vs31.vcdn.biz/505e10322bf0d3663bc3c9b8117dc417_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/188171/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid527398064-b2000000.m3u8
+#EXTINF:-1 ,Защитники (2017)
+https://vs52.vcdn.biz/16e5da015f8e542b1ed72a1a1c470429_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38269611/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1730189013-b2000000.m3u8
+#EXTINF:-1 ,Звездные войны: Скайуокер. Восход (2019)
+https://h3.kinovhd.tv/kino/Zvezdnye_Voyny_9.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Звёздные врата (1994)
+https://h2.kinovhd.tv/server/kino/Zvezdnye_vrata.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Звездный десант (1997)
+https://h1.kinovhd.tv/server_5/kino/Zvezdnuy_desant.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Звездный десант 2 (2004)
+https://h1.kinovhd.tv/server_5/kino/Zvezdnuy_desant_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Звездный десант 3 (2008)
+https://h1.kinovhd.tv/server_5/kino/Zvezdnuy_desant_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Зеленый Фонарь (2011)
+https://h1.kinovhd.tv/server_5/kino/Zelenuy_Fonar.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Земля завтрашнего дня (2015)
+https://hls.kinokrad.co/hls/Tomorrowland.2015.BDRip/playlist.m3u8
+#EXTINF:-1 ,Знамение (2009)
+https://vs53.vcdn.biz/3f5ba84e2c030d61318cf3966487fa23_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/86031/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid1805057982-b2000000.m3u8
+#EXTINF:-1 ,Зоология (2016)
+https://cdnmfw.tvzavr.ru/stream/tvzavr/3/38b0dd94-a6b5-48e9-aa66-0397e93c37fd/38b0dd94-a6b5-48e9-aa66-0397e93c37fd-audio_rus%3D317440-video%3D4997000.m3u8
+#EXTINF:-1 ,Игра Эндера (2013)
+https://vs19.vcdn.biz/9ad76293738c231f7a939fc33ac14d7f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/15626291/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid1691095322-b2000000.m3u8
+#EXTINF:-1 ,Излом времени (2018)
+https://h1.kinovhd.tv/server_3/kino/Izlom_vremeni.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Интерстеллар (2014)
+https://h1.kinovhd.tv/server_2/kino/Interstellar.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Иные (2018)
+https://h2.kinovhd.tv/server/kino/Inye.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Искусственный разум (2001)
+https://h1.kinovhd.tv/server_3/kino/Iskusstvennuy_razum.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Исходный код (2011)
+https://vs54.vcdn.biz/8f5528471f325712c026d6740e2360f1_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/98291/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid999486585-b2000000.m3u8
+#EXTINF:-1 ,К звёздам (2019)
+https://h3.kinovhd.tv/kino/K_zvezdam_2019.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Как это заканчивается (2018)
+https://h2.kinovhd.tv/server_2/kino/Kak_eto_zakanchivaetsya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Капитан Марвел (2019)
+https://h2.kinovhd.tv/server_3/kino/Kapitan_Marvel.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Кин (2018)
+https://vs32.vcdn.biz/772fbe7b5680a8cdfb5ca4e0371597a9_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/71952831/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid476336379-b2000000.m3u8
+#EXTINF:-1 ,Кин-дза-дза! 1 серия (1986)
+https://vs43.vcdn.biz/08bd2198bebc637f4c376b8e13a4278a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/24937701/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2087640590-b2000000.m3u8
+#EXTINF:-1 ,Кин-дза-дза! 2 серия (1986)
+https://vs56.vcdn.biz/2bbf84eba5e5f8b1e70bc83e65672f37_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/24937711/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid849082832-b2000000.m3u8
+#EXTINF:-1 ,Код 8 (2019)
+https://h3.kinovhd.tv/kino/Kod_8.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Кокон (1985)
+https://h1.kinovhd.tv/server_2/kino/Cocoon.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Колония (2013)
+https://vs53.vcdn.biz/05a9be06ea95be2ae84056549ac76e9b_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/43894991/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid655056490-b2000000.m3u8
+#EXTINF:-1 ,Кредо убийцы (2016)
+https://h1.kinovhd.tv/server_3/kino/Kredo_ubiycy_2016.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Крикуны (1995)
+https://h2.kinovhd.tv/server_3/kino/Krikuny.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Кровоточащая сталь (2017)
+https://hls.kinokrad.co/hls/Bleeding_Steel.2017.HDrip/playlist.m3u8
+#EXTINF:-1 ,Луна (1965)
+https://vs52.vcdn.biz/ec09c0748cb68cc14ecc9d7c1a91fe18_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/76032461/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid761870134-b2000000.m3u8
+#EXTINF:-1 ,Луна 2112 (2009)
+https://h1.kinovhd.tv/server_3/kino/Luna_2112.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Любовь (2011)
+https://vs31.vcdn.biz/18487b88aaeda44dd8893a21c54c6525_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/1005721/u_uid/0/u_vod/3/u_device/cms_html5/a/2/type.amlst/chunklist-sid510330071-b2000000.m3u8
+#EXTINF:-1 ,Люди в черном (1997)
+https://h1.kinovhd.tv/server_3/kino/Lyudi_v_chernom.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люди в черном 2 (2002)
+https://h1.kinovhd.tv/server_3/kino/Lyudi_v_chernom_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люди в черном 3 (2012)
+https://h1.kinovhd.tv/server_3/kino/Lyudi_v_chernom_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люди в черном: Интернэшнл (2019)
+https://h2.kinovhd.tv/server_3/kino/Lyudi_v_chernom_4.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люди Икс 3: Последняя битва (2006)
+https://h1.kinovhd.tv/server_3/kino/Lyudi_Iks_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люди Икс: Тёмный Феникс (2019)
+https://h2.kinovhd.tv/server_3/kino/Lyudi_Iks_7.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Люси (2014)
+https://h1.kinovhd.tv/server_3/kino/Lyusi.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Макс Стил (2016)
+https://bk2-hls.kinokrad.co/hls/Maks.Steel.2016.HDRip/playlist.m3u8
+#EXTINF:-1 ,Матрица: революция (2003)
+https://h1.kinovhd.tv/server_3/kino/Matrica_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Махнем на Луну! (2017)
+https://hls.kinokrad.co/hls/Condorito.La.Pelicula.2017.HDRip/playlist.m3u8
+#EXTINF:-1 ,Машина времени (2002)
+https://h2.kinovhd.tv/server_3/kino/Mashina_vremeni.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Машина времени в джакузи (2010)
+https://vs20.vcdn.biz/e4d292ca56348f2883b656ea461d30ce_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28774551/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid768903437-b2000000.m3u8
+#EXTINF:-1 ,Мгла (2007)
+https://h1.kinovhd.tv/server_3/kino/Mgla.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Меланхолия (2011)
+https://vs31.vcdn.biz/055f585a570381798d8a9e04f6457cf2_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84961/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid1330969878-b2000000.m3u8
+#EXTINF:-1 ,Метрополис (1927)
+https://cdnmfw.tvzavr.ru/stream/tvzavr_old_projects/3/04408dae-360d-4149-a0f3-5cd706647e49/04408dae-360d-4149-a0f3-5cd706647e49-audio_rus%3D128000-video%3D1000000.m3u8
+#EXTINF:-1 ,Мир Юрского периода (2015)
+https://h1.kinovhd.tv/server_3/kino/Mir_Yurskogo_perioda.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Мир Юрского периода 2 (2018)
+https://h2.kinovhd.tv/server_3/kino/Mir_Yurskogo_perioda_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Миссия «Серенити» (2005)
+https://h1.kinovhd.tv/server_3/kino/Missiya_Sereniti.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Мобильник (2016)
+https://vs10.vcdn.biz/5ea72fe4026f37bcae09f49670fffd87_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/36609361/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid1349729392-b2000000.m3u8
+#EXTINF:-1 ,Морской бой (2012)
+https://h2.kinovhd.tv/server_3/kino/Morskoy_boy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Моя девушка-монстр (2016)
+https://vs56.vcdn.biz/36b6a53fa81a6e39e919cf06dc4e07a0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/45865733/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid874684257-b2000000.m3u8
+#EXTINF:-1 ,Мстители: Финал (2019)
+https://h3.kinovhd.tv/kino/Mstiteli_4.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Муза смерти (2017)
+https://hls.kinokrad.co/hls/muza.2017.D.HDRip/playlist.m3u8
+#EXTINF:-1 ,Назад в будущее (1985)
+https://h1.kinovhd.tv/server_3/kino/Nazad_v_budushee.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Назад в будущее 2 (1989)
+https://h1.kinovhd.tv/server_3/kino/Nazad_v_budushee_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Назад в будущее 3 (1990)
+https://h1.kinovhd.tv/server_3/kino/Nazad_v_budushee_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Напролом (2012)
+https://cdnmfw.tvzavr.ru/stream/tvzavr/3/ad82cf1b-1cb0-46da-a504-2422dbc52b25/ad82cf1b-1cb0-46da-a504-2422dbc52b25-audio_rus%3D189375-video%3D4993000.m3u8
+#EXTINF:-1 ,Начало (2010)
+https://h1.kinovhd.tv/server_3/kino/Nachalo.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Не называй меня малышкой (1996)
+https://h1.kinovhd.tv/server_3/kino/Ne_nazyvay_menya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Небесный легион (2005)
+https://hls.kinokrad.co/hls/nebesnuy.legion2005/playlist.m3u8
+#EXTINF:-1 ,Немой (2018)
+https://hls.kinokrad.co/hls/Nemoy.2017.HDrip/playlist.m3u8
+#EXTINF:-1 ,Неуязвимый (2000)
+https://h1.kinovhd.tv/server_3/kino/Neuyazvimuy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Нечто (2011)
+https://vs36.vcdn.biz/eb08178a8c7bccf6c44c1b244179834c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/22224661/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid1257550687-b2000000.m3u8
+#EXTINF:-1 ,Области тьмы (2011)
+https://vs49.vcdn.biz/887b59d7a377390d0a1ece5de79f72c4_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/89101/u_uid/0/u_vod/3/u_device/cms_html5/a/10/type.amlst/chunklist-sid331670687-b2000000.m3u8
+#EXTINF:-1 ,Облачный атлас (2012)
+https://vs815.vcdn.biz/8de25107598b71761b4b1645ab4b0d31_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/22225081/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/7/type.amlst/chunklist-sid2035442915-b2000000.m3u8
+#EXTINF:-1 ,Обливион (2013)
+https://h1.kinovhd.tv/server_3/kino/Oblivion.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Оверлорд (2018)
+https://h2.kinovhd.tv/server/kino/Overlord.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Одна миллиардная доля (2014)
+https://vs33.vcdn.biz/41267902b5369b0536c4f0b5ababa4df_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/8072691/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid963388471-b2000000.m3u8
+#EXTINF:-1 ,Ожидайте дальнейших инструкций (2018)
+https://hls.kinokrad.co/hls/Await.Further.Instructions.2018.HDRip/playlist.m3u8
+#EXTINF:-1 ,Оккупация (2018)
+https://h1.kinovhd.tv/server_3/kino/Okkupaciya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Орбита 9 (2017)
+https://vs58.vcdn.biz/faa7ba1a3c14d73dd0c746a929efee5e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/45865683/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid590650741-b2000000.m3u8
+#EXTINF:-1 ,Особое мнение (2002)
+https://h1.kinovhd.tv/server_3/kino/Osoboe_mnenie.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Оставленные (2014)
+https://vs40.vcdn.biz/01e58d9e2303547adc8ebb42a72f08d7_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/1994981/u_uid/0/u_vod/3/u_device/cms_html5/a/5/type.amlst/chunklist-sid488490606-b2000000.m3u8
+#EXTINF:-1 ,Остров (2005)
+https://h1.kinovhd.tv/server_3/kino/Ostrov_2005.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Остров собак (2018)
+https://hls.kinokrad.co/hls/Isle.of.Dogs.2018.HDRip/playlist.m3u8
+#EXTINF:-1 ,Ошибка времени (2014)
+https://cdnmfw.tvzavr.ru/stream/tvzavr/3/272f80f2-63f6-4126-86b0-9227ecc0c9e1/272f80f2-63f6-4126-86b0-9227ecc0c9e1-audio_rus%3D317440-video%3D5001000.m3u8
+#EXTINF:-1 ,Параграф 78: фильм второй (2007)
+https://bk2-hls.kinokrad.co/hls/paragraf_2_DVDRip/playlist.m3u8
+#EXTINF:-1 ,Парад планет (1984)
+https://vs31.vcdn.biz/74177fffa3d8e9596fe8433a94662933_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/17775831/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2135969187-b2000000.m3u8
+#EXTINF:-1 ,Первому игроку приготовиться (2018)
+https://h1.kinovhd.tv/server_3/kino/Pervomu_igroku_prigotovitsya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Первый мститель: Противостояние (2016)
+https://h1.kinovhd.tv/server_3/kino/Pervuy_mstitel_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Перспектива (2018)
+https://h2.kinovhd.tv/server/kino/Perspektiva.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Петля времени (2012)
+https://vs59.vcdn.biz/459044ac08275f1a6bc3edd7ddd03163_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/91101/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid225555867-b2000000.m3u8
+#EXTINF:-1 ,Побег из Лос-Анджелеса (1996)
+https://h2.kinovhd.tv/server/kino/Pobeg_iz_Los_Andzhelesa.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Побег из Нью-Йорка (1981)
+https://h2.kinovhd.tv/server/kino/Pobeg_iz_Nyu_Yorka.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Повторяющие реальность (2010)
+https://vs52.vcdn.biz/bf96edf8762e756e88a9da0841d26ebd_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/140711/u_uid/0/u_vod/3/u_device/cms_html5/a/6/type.amlst/chunklist-sid772227955-b2000000.m3u8
+#EXTINF:-1 ,Поле битвы: Земля (2000)
+https://h1.kinovhd.tv/server/kino/Pole_bitvy_Zemlya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Помешанный на времени (2018)
+https://vs19.vcdn.biz/81faef61bbaaba1c645db884088add66_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/71406251/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1952955549-b2000000.m3u8
+#EXTINF:-1 ,Помни (2012)
+https://vs47.vcdn.biz/dac702aa40f2ae895b88df2b3b0fbaf5_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/43458621/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid337008954-b2000000.m3u8
+#EXTINF:-1 ,Прибытие (2016)
+https://h2.kinovhd.tv/server/kino/Pribytie_2016.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Притяжение (2017)
+https://vs58.vcdn.biz/326e90dd68175faf149432ede911958d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/48679571/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid258044480-b2000000.m3u8
+#EXTINF:-1 ,Пришельцы (1993)
+https://h1.kinovhd.tv/server/kino/Prishelcy_1993.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Пришельцы 3: Взятие Бастилии (2016)
+https://cdnmfw.tvzavr.ru/stream/tvzavr/3/bf7bcbd2-c267-4549-bcde-3c1d34737cfb/bf7bcbd2-c267-4549-bcde-3c1d34737cfb-audio_rus%3D318936-video%3D1999000.m3u8
+#EXTINF:-1 ,Пришельцы в доме (2018)
+https://hls.kinokrad.co/hls/InoPlaneTynE.2O18.D.HDRip/playlist.m3u8
+#EXTINF:-1 ,Проблема серых пришельцев (2018)
+https://h1.kinovhd.tv/server_4/kino/Problemy_seryh_prishelcev.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Прометей (2012)
+https://h1.kinovhd.tv/server_4/kino/Prometey.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Пророк (2007)
+https://h1.kinovhd.tv/server_4/kino/Prorok.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Прорубь (2017)
+https://hls.kinokrad.co/hls/Prorub_2017.HDRip/playlist.m3u8
+#EXTINF:-1 ,Противостояние (2001)
+https://h2.kinovhd.tv/server/kino/Protivostoyanie_2001.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Птичий короб (2018)
+https://h1.kinovhd.tv/server_4/kino/Ptichiy_korob.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Пятый элемент (1997)
+https://h2.kinovhd.tv/server/kino/Pyatuy_element.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Равные (2016)
+https://vs30.vcdn.biz/d2c68f48e92c4bee9468570e82c54e71_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/40251091/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid579297256-b2000000.m3u8
+#EXTINF:-1 ,Разрушитель (1993)
+https://h1.kinovhd.tv/server_4/kino/Razrushitel1.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Район №9 (2009)
+https://h1.kinovhd.tv/server_3/kino/Nomer_9.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Репродукция (2018)
+https://vs59.vcdn.biz/403620c5d5ea57384c29c8de58e93dfb_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/49414521/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid318065947-b2000000.m3u8
+#EXTINF:-1 ,Риддик (2013)
+https://vs36.vcdn.biz/a135fa94716a875f85abb8a5a9b485a5_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/5068491/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid462270010-b2000000.m3u8
+#EXTINF:-1 ,Робокоп (2014)
+https://h2.kinovhd.tv/server/kino/RoboKop.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Робот 2.0 (2019)
+https://vs55.vcdn.biz/4de3e706b8149899b937a14fa77c3e65_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/79309251/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid2138414074-b2000000.m3u8
+#EXTINF:-1 ,Рубеж (2018)
+https://vs47.vcdn.biz/fb7556c3ca6b32c13026b77b9cdb304d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/62747421/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid241285849-b2000000.m3u8
+#EXTINF:-1 ,Рэмпейдж (2018)
+https://h1.kinovhd.tv/server_4/kino/Rempeydzh.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Сверхъестественное (2019)
+https://hls.kinokrad.co/hls/First.Light.2018.P.HDRip/playlist.m3u8
+#EXTINF:-1 ,Секрет Зоар (2016)
+https://vs48.vcdn.biz/2cd987774a67efe4859620d92edbd6ad_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/60945541/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1174850454-b2000000.m3u8
+#EXTINF:-1 ,Семь стихий (1984)
+https://vs12.vcdn.biz/56fb8171e7b91a65894e2a8ff8ac91b5_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/33077391/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid2098019095-b2000000.m3u8
+#EXTINF:-1 ,Скайлайн (2010)
+https://vs54.vcdn.biz/f7158850c94948e160ccd5f9df1df5ff_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/85391/u_uid/0/u_vod/3/u_device/cms_html5/a/17/type.amlst/chunklist-sid1791505871-b2000000.m3u8
+#EXTINF:-1 ,Скайлайн 2 (2017)
+https://vs19.vcdn.biz/9c418687d3ddd8c03609f036314f2ffc_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/34357811/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid572140742-b2000000.m3u8
+#EXTINF:-1 ,Смертельная гонка (2008)
+https://h1.kinovhd.tv/server_4/kino/Smertelnaya_gonka.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Смертельная гонка 4: Вне анархии (2018)
+https://h1.kinovhd.tv/server_4/kino/Smertelnaya_gonka_4.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Смокинг (2002)
+https://h2.kinovhd.tv/server/kino/Smoking.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Совершенное оружие (2016)
+https://hls.kinokrad.co/hls/The.Perfect.Weapon.2016.Pof.HDRip/playlist.m3u8
+#EXTINF:-1 ,Солярис (1972)
+https://vs40.vcdn.biz/8e089a5ab0df5d47f9bdee74f6859c99_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17748451/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1690875647-b2000000.m3u8
+#EXTINF:-1 ,Сталкер (1979)
+https://vs17.vcdn.biz/b85b710d0120cb006720751655b703b6_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/17555671/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1192740553-b2000000.m3u8
+#EXTINF:-1 ,Стартрек: Бесконечность (2016)
+https://h1.kinovhd.tv/server_4/kino/Startrek_beskonechnost.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Стартрек: Возмездие (2013)
+https://h3.kinovhd.tv/kino/Startrek_Vozmezdie.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Стекло (2019)
+https://h2.kinovhd.tv/server/kino/Steklo.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Страховщик (2014)
+https://vs22.vcdn.biz/b19b21ff005d0ba8b801b3e3520e5a0a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/11794371/u_uid/0/u_vod/3/u_device/cms_html5/a/7/type.amlst/chunklist-sid2037609408-b2000000.m3u8
+#EXTINF:-1 ,Судная ночь. Начало (2018)
+https://h2.kinovhd.tv/server/kino/Sudnaya_noch_nachalo.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Судья Дредд (1995)
+https://h1.kinovhd.tv/server_4/kino/Sudya_Dredd.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Судья Дредд (2012)
+https://vs32.vcdn.biz/b9f930dea8e1db7a9e1f53ae6dd98e69_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/91341/u_uid/0/u_vod/3/u_device/cms_html5/a/15/type.amlst/chunklist-sid1483289329-b2000000.m3u8
+#EXTINF:-1 ,Телекинез (2018)
+https://hls.kinokrad.co/hls/Psychokinesis.2018.HDRip/playlist.m3u8
+#EXTINF:-1 ,Телепорт (2008)
+https://h1.kinovhd.tv/server_4/kino/Teleport.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Тень (1994)
+https://vs36.vcdn.biz/8f204a4974a67117349a2d194492045d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/557841/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1033963678-b2000000.m3u8
+#EXTINF:-1 ,Терминатор 6: Темные судьбы (2019)
+https://h3.kinovhd.tv/kino/Terminator_6_2019.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Tёмный рыцарь (2008)
+https://h3.kinovhd.tv/kino/Temnuy_rycar_2008.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Тихоокеанский рубеж (2013)
+https://h2.kinovhd.tv/server/kino/Tihookeanskiy_rubezh.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Тихоокеанский рубеж 2 (2018)
+https://h1.kinovhd.tv/server_4/kino/Tihookeanskiy_rubezh_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Тор 2 : Царство тьмы (2013)
+https://h1.kinovhd.tv/server_4/kino/Tor_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Тор:Рогнарек (2017)
+https://h2.kinovhd.tv/server/kino/Tor_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Трансформация (2016)
+https://vs33.vcdn.biz/c0bebd80239e975c70c031965143296e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/45334681/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1641299484-b2000000.m3u8
+#EXTINF:-1 ,Трансформеры (2007)
+https://h1.kinovhd.tv/server/kino/Transformery.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Трансформеры:Последний рыцарь (2017)
+https://h1.kinovhd.tv/fast/Transformery_5.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Ультраамериканцы (2015)
+https://vs56.vcdn.biz/9c12b345d16517a4197ffdbd0a68c6b8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38597871/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/7/type.amlst/chunklist-sid1032988906-b2000000.m3u8
+#EXTINF:-1 ,Универсальный солдат 2: Братья по оружию (1998)
+https://vs48.vcdn.biz/8b264747d9829419f9dd6d1316d155b1_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/66222211/u_uid/0/u_vod/3/u_device/cms_html5/a/2/type.amlst/chunklist-sid926552001-b2000000.m3u8
+#EXTINF:-1 ,Универсальный солдат 3: Возрождение (2009)
+https://vs53.vcdn.biz/fc1187ce3f60a31e9b601565a4516b0a_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/66222001/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1009963502-b2000000.m3u8
+#EXTINF:-1 ,Универсальный солдат 4 (2012)
+https://vs33.vcdn.biz/20c716a5d07ea4d2296fdb0ba26e950e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/66222021/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid43579664-b2000000.m3u8
+#EXTINF:-1 ,Фар Край (2008)
+https://h1.kinovhd.tv/server_2/kino/Far_Kray.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,ФОТОГРАФ (2018)
+https://hls.kinokrad.co/hls/fotograf.HDRip2018/playlist.m3u8
+#EXTINF:-1 ,Хищник (1987)
+https://h1.kinovhd.tv/server_2/kino/Hishnik.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Хищники (2010)
+https://h2.kinovhd.tv/server_2/kino/Hishniki.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Хроники Риддика (2004)
+https://h1.kinovhd.tv/server_2/kino/Hroniki_Riddika.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Хроники хищных городов (2018)
+https://h1.kinovhd.tv/server_2/kino/Hroniki_hishnyh_gorodov.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Цензор (2017)
+https://vs36.vcdn.biz/bb0654651f0cd00bea55eed4534de297_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/83115361/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1256320841-b2000000.m3u8
+#EXTINF:-1 ,Час расплaты (2003)
+https://h2.kinovhd.tv/server_2/kino/Chas_rasplaty_2003.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Человек-амфибия (1962)
+https://vs21.vcdn.biz/a7cd705ecf32dc3436b6324bd50ef83c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/106021/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid125437175-b2000000.m3u8
+#EXTINF:-1 ,Человек из стали (2013)
+https://h1.kinovhd.tv/server_2/kino/Chelovek_iz_stali.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,который убил Гитлера и затем снежного человека (2018)
+https://vs54.vcdn.biz/ad32c5eece78fa819ce4ae2f0237db35_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/81927871/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/0/type.amlst/chunklist-sid2031613127-b2000000.m3u8
+#EXTINF:-1 ,Человек-муравей и Оса (2018)
+https://h1.kinovhd.tv/server_2/kino/Chelovek_Muravey_i_Osa.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Человек-невидимка (2020)
+https://h1.kinovhd.tv/server/kino/Chelovek_nevidimka.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Человек-паук: Вдали от дома (2019)
+https://h3.kinovhd.tv/kino/Chelovek_pauk_vdali_ot_doma.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Чeловек со звезды (1984)
+https://h2.kinovhd.tv/server_2/kino/Chelovek_so_zvezdy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Через тернии к звёздам 1серия (1980)
+https://vs11.vcdn.biz/9e0ce70fef6008e828a3810397f70484_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/502331/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid31755370-b2000000.m3u8
+#EXTINF:-1 ,Через тернии к звёздам 2серия (1980)
+https://vs34.vcdn.biz/fd4b428e39b0e682407abbabf0096f3e_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/210591/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid158259761-b2000000.m3u8
+#EXTINF:-1 ,Чёрная дыра (2000)
+https://h2.kinovhd.tv/server_2/kino/Hroniki_Riddika_Chernaya_dyra.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Черновик (2018)
+https://hls.kinokrad.co/hls/Chernovik.2018.HDRip/playlist.m3u8
+#EXTINF:-1 ,Чyжие против ниндзя (2010)
+https://h1.kinovhd.tv/server_2/kino/Chuzhoy_protiv_Nindzya.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Чужие против Хищника: Реквием (2007)
+https://h2.kinovhd.tv/server_2/kino/Chuzhoy_protiv_hishnika_2.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Шестой день (2000)
+https://h2.kinovhd.tv/server/kino/Shestoy_den.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Эквилибриум (2002)
+https://h1.kinovhd.tv/server_2/kino/Ekvilibrium.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Элизабет Харвест (2018)
+https://h1.kinovhd.tv/server_2/kino/Elizabet_Harvest.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Эпидемия (2013)
+https://vs38.vcdn.biz/4baa01d11d9c74bdb31b4b2c84aedf13_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/556471/u_uid/0/u_vod/3/u_device/cms_html5/a/5/type.amlst/chunklist-sid39590759-b2000000.m3u8
+#EXTINF:-1 ,Эффект бабочки (2004)
+https://h1.kinovhd.tv/server_2/kino/Effekt_babochki.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Эффект бабочки 3 (2009)
+https://h1.kinovhd.tv/server_2/kino/Effekt_babochki_3.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Я – легенда (2007)
+https://h1.kinovhd.tv/server_4/kino/Ya_legenda.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,робот (2004)
+https://h1.kinovhd.tv/server_4/kino/Ya_robot.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,Я – Четвертый (2011)
+https://h1.kinovhd.tv/server_4/kino/Ya_Chetvertuy.hd.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Агент Джонни Инглиш 3 (2018)
+https://h2.kinovhd.tv/server_2/kino/Agent_Dzhonni_Inglish_3.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Аладдин (1992)
+https://h2.kinovhd.tv/server_2/kino/Aladdine.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Аладдин (2019)
+https://h2.kinovhd.tv/server_2/kino/Aladdin_2019.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Анна (2019)
+https://h2.kinovhd.tv/server_2/kino/Anna.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Белоснежка и Охотник 2 (2016)
+https://h1.kinovhd.tv/server_2/kino/Belosnezhka_i_Ohotnik_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",В погоне за Бонни и Клайдом (2019)
+https://h2.kinovhd.tv/server/kino/V_pogone_za_Bonni_i_Klaydom.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Годзилла 2: Король монстров (2019)
+https://h2.kinovhd.tv/server_2/kino/Godzilla_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",гори ясно (2019)
+https://h2.kinovhd.tv/server_2/kino/Gori_gori_yasno.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Грань будущего (2014)
+https://h1.kinovhd.tv/server_2/kino/Gran_budushego.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Душа компании (2018)
+https://h1.kinovhd.tv/server_2/kino/Dusha_kompanii.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Интерстеллар (2014)
+https://h1.kinovhd.tv/server_2/kino/Interstellar.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Красный воробей (2018)
+https://h2.kinovhd.tv/server_3/kino/Krasnuy_vorobey.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Кредо убийцы (2016)
+https://h1.kinovhd.tv/server_3/kino/Kredo_ubiycy_2016.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Лара Крофт:Расхитительница гробниц 2 (2003)
+https://h1.kinovhd.tv/server_3/kino/Lara_Kroft_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Люди Икс: Тёмный Феникс (2019)
+https://h2.kinovhd.tv/server_3/kino/Lyudi_Iks_7.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Люси (2014)
+https://h1.kinovhd.tv/server_3/kino/Lyusi.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Миссия «Серенити» (2005)
+https://h1.kinovhd.tv/server_3/kino/Missiya_Sereniti.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Мумия возвращается (2001)
+https://h1.kinovhd.tv/server_3/kino/Mumiya_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Отель «Артемида» (2018)
+https://h2.kinovhd.tv/server/kino/Otel_Artemida.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Отпуск по обмену (2006)
+https://h1.kinovhd.tv/server_3/kino/Otpusk_po_obmenu.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Очень плохие мамочки 2 (2017)
+https://h1.kinovhd.tv/server_3/kino/Ochen_plohie_mamochki_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Первому игроку приготовиться (2018)
+https://h1.kinovhd.tv/server_3/kino/Pervomu_igroku_prigotovitsya.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Престиж (2006)
+https://h1.kinovhd.tv/server/kino/Prestizh_2006.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Проклятие Аннабель 3 (2019)
+https://h2.kinovhd.tv/server/kino/Proklyatie_Annabel_3.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Прометей (2012)
+https://h1.kinovhd.tv/server_4/kino/Prometey.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Птичий короб (2018)
+https://h1.kinovhd.tv/server_4/kino/Ptichiy_korob.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Солт (2010)
+https://h1.kinovhd.tv/server_4/kino/Solt.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Судья Дредд (2012)
+https://h1.kinovhd.tv/server_4/kino/Sudya_Dredd_3.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Тайная жизнь домашних животных 2 (2019)
+https://h2.kinovhd.tv/server/kino/Taynaya_zhizn_domashnih_zhivotnyh_2.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Хищники (2010)
+https://h2.kinovhd.tv/server_2/kino/Hishniki.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Храброе сердце (1995)
+https://h1.kinovhd.tv/server_2/kino/Hrabroe_serdce.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Человек-Муравей и Оса (2018)
+https://h1.kinovhd.tv/server_2/kino/Chelovek_Muravey_i_Osa.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Чёрная Пантера (2018)
+https://h2.kinovhd.tv/server_2/kino/Chernaya_pantera.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 group-title="Without category" tvg-logo="http://127.0.0.1/",Я - легенда (2007)
+https://h1.kinovhd.tv/server_4/kino/Ya_legenda.4k.mp4/index-v1-a1.m3u8
+#EXTINF:-1 ,11-11-11 (2011) (16+)
+http://meta.vcdn.biz/8d8fb0e37d1c69d80f5f03765dcce08f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/28402171/u_uid/0/u_vod/3/u_device/cms_webandroid/a/6/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Боба и слон (1972)
+http://meta.vcdn.biz/a4bc9dc42e6c41f0f591f4b5c4855b52_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/203041/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Дело было в Пенькове (1957)
+http://meta.vcdn.biz/f5adc809b55a4be48a9b7a1eec47a421_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/152731/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Деловые люди (1962) 2 серия
+http://meta.vcdn.biz/8fa0f08a27b43f998c05a39addd0ae23_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24924991/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Маша и Медведь 38
+http://vs328.vcdn.biz/d0a0d90d59bdf5356ff27ed6dac73fed_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/3024651/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Поезд в Пусан (2016) (16+)
+http://vs327.vcdn.biz/2675600efd9691283d6e70cf75fb23e1_megogo/vod/hls/b/450_900_1350_1500_2000_5000/u_sid/0/o/40783951/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Последствия (2017) (18+)
+http://meta.vcdn.biz/482a117971b0ade8e27ad327e525073f_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/47411541/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
+#EXTINF:-1 ,Чучело 2 серия (1983)
+http://meta.vcdn.biz/33c474d834f7474f9268e9d4df42b66f_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24939371/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8

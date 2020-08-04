@@ -30,14 +30,16 @@ public interface PlayStatusInterface {
     public int getControlForeground(int id, ObservableBoolean __not_use_virtual_changer);
     public Drawable getControlDrawable(int id, ObservableBoolean __not_use_virtual_changer);
     public Drawable getControlDrawableEmpty(int id, ObservableBoolean __not_use_virtual_changer);
-    public String getTitle(ObservableBoolean __not_use_virtual_changer);
     public String getDuration(ObservableBoolean __not_use_virtual_changer);
     public String getPlayId(ObservableBoolean __not_use_virtual_changer);
+    public String getTitle(ObservableBoolean __not_use_virtual_changer);
     public int getPlayTotal(ObservableBoolean __not_use_virtual_changer);
     public int getPlayPosition(ObservableBoolean __not_use_virtual_changer);
+    public String getTitle();
     public int getPlayTotal();
     public int getPlayPosition();
     public int getPlayId();
+    public int getPlayType();
     public int getAudioVolume();
     public int getVlcApiVersion();
     public int getPlayState();
@@ -46,6 +48,7 @@ public interface PlayStatusInterface {
     public boolean getPlayIsRandom();
     public boolean getPlayIsFullscreen();
     public boolean isPlay();
+    public boolean isVlcEnable();
     public int getLastCommand();
     public void setLastCommand(int event);
 }

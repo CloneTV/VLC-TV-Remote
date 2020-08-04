@@ -520,17 +520,24 @@ public class PlayList extends ReflectAttribute {
                         }
                 });
         }
-        public void saveToDb() {
-                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
-                        return;
-                saveToDb_();
-        }
-        public void closeDbEx() {
+        public void saveToDbEx() {
                 if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
                         return;
                 getExecutor().execute(new Runnable() {
                         @Override
                         public void run() {
+                                saveToDb_();
+                        }
+                });
+
+        }
+        public void saveAndCloseDbEx() {
+                if (actionStateDb.get() == PlayList.DB_ACTION_CLOSE)
+                        return;
+                getExecutor().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                                saveToDb_();
                                 closeDb_();
                         }
                 });

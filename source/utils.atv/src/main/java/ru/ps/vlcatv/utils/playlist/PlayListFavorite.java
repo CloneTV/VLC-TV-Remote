@@ -17,14 +17,16 @@ import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 public class PlayListFavorite extends ReflectAttribute {
 
     PlayListFavorite() {}
-    public PlayListFavorite(String title, String uri, String desc, String img, String epg) {
+    public PlayListFavorite(
+            final String title, final String uri, final String desc, final String img, final String epg) {
         itemTitle = title;
         itemUrl = uri;
         itemDesc = desc;
         itemImage = img;
         itemEpg = epg;
     }
-    public PlayListFavorite(String title, String uri, String desc, String img, String epg, String ent) {
+    public PlayListFavorite(
+            final String title, final String uri, final String desc, final String img, final String epg, final String ent) {
         itemTitle = title;
         itemUrl = uri;
         itemDesc = desc;

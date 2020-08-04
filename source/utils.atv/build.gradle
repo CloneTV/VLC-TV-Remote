@@ -75,4 +75,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation project(path: ':constanttag')
 }

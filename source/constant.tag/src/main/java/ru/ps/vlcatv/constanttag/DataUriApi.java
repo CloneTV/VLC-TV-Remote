@@ -5,6 +5,7 @@ public class DataUriApi {
     public final static String PLAY_PLAY = "PLAY_PLAY";
     public final static String PLAY_ID = "PLAY_BY_ID";
     public final static String PLAY_URL = "PLAY_BY_URI";
+    public final static String PLAY_FAVORITE = "PLAY_BY_FAVORITE";
     public final static String PLAY_PAUSE = "PLAY_PAUSE";
     public final static String PLAY_STOP = "PLAY_STOP";
     public final static String PLAY_FORWARD = "PLAY_FORWARD";
@@ -12,7 +13,10 @@ public class DataUriApi {
     public final static String PLAY_NEXT_TRACK = "PLAY_NEXT_TRACK";
     public final static String PLAY_PREVIOUS_TRACK = "PLAY_PREVIOUS_TRACK";
     public final static String GET_MEDIA_ITEM = "GET_MEDIA_ITEM";
-    public final static String GET_MEDIA_ITEMS = "GET_MEDIA_ITEMS";
+    public final static String GET_MEDIA_HISTORY = "GET_MEDIA_HISTORY";
+    public final static String GET_MEDIA_FAVORITES = "GET_MEDIA_FAVORITES";
+    public final static String GET_MEDIA_POSTER = "GET_MEDIA_POSTER";
+    public final static String GET_MEDIA_EPG = "GET_MEDIA_EPG";
     public final static String GET_STAT = "GET_STATUS";
     public final static String AUDIO_VOLUME_UP = "AUDIO_VOLUME_UP";
     public final static String AUDIO_VOLUME_DOWN = "AUDIO_VOLUME_DOWN";
@@ -34,10 +38,15 @@ public class DataUriApi {
     public final static String TAG_STATUS = "status";
     public final static String TAG_TYPE = "type";
     public final static String TAG_VALUE = "value";
+    public final static String TAG_SIZE = "size";
     public final static String TAG_ID_STATUS = "STATUS";
     public final static String TAG_ID_OK = "OK";
     public final static String TAG_ID_MEDIAITEM = "MEDIAITEM";
     public final static String TAG_ID_MEDIAITEMS = "MEDIAITEMS";
+    public final static String TAG_ID_MEDIAFAVORITES = "MEDIAFAVORITES";
+    public final static String TAG_ID_MEDIAPOSTER = "MEDIAPOSTER";
+    public final static String TAG_ID_MEDIAEPG = "TAG_ID_MEDIAEPG";
+    public final static String TAG_ID_PLAYFAVORITE = "PLAYFAVORITE";
 
     public final static String TAG_SUPPORT_GIT = "https://github.com/CloneTV/VLC-TV-Remote";
     public final static String TAG_SUPPORT_WWW = "https://clonetv.github.io/VLC-TV-Remote/";

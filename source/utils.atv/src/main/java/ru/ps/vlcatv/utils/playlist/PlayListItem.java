@@ -316,7 +316,20 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     }
     @Override
     public int visibleWatchedImage(ObservableBoolean b) {
-        return ((stat.watched.get()) ? View.GONE : View.VISIBLE);
+        if (type == PlayListConstant.TYPE_ONLINE) {
+            if (playListRoot != null) {
+                final PlayListItem item = PlayListUtils.findItemByTitle(
+                        playListRoot.getGroup(PlayList.IDX_ONLINE_FAV),
+                        title.get()
+                );
+                if (item != null)
+                    return View.VISIBLE;
+            }
+            return View.GONE;
+        } else {
+            return ((stat.watched.get()) ? View.GONE : View.VISIBLE);
+        }
+
     }
     @Override
     public boolean visibleWatchedColor(ObservableBoolean b) {

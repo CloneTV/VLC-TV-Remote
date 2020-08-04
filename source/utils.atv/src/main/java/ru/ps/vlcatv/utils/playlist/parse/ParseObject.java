@@ -354,7 +354,7 @@ public class ParseObject extends ReflectAttribute {
 
             String str;
             ///////////////////////////////////////////////////////////////////////////////
-            /// IMDB source compatible
+            /// IMDB / IMDB-API source compatible
             if ((str = obj.optString("searchType",null)) != null) {
 
                 if (Text.isempty(str))
@@ -388,6 +388,9 @@ public class ParseObject extends ReflectAttribute {
                 );
                 addImage("poster", ele.optString("image", null), -1);
                 addTitle(ele.optString("title", null));
+                str = ele.optString("year", null);
+                if (!Text.isempty(str))
+                    setPremiered2(str);
 
                 str = ele.optString("description", null);
                 if ((!Text.isempty(str)) && (!str.equals("N/A"))) {
@@ -404,7 +407,8 @@ public class ParseObject extends ReflectAttribute {
                         };
                         Matcher m = p[0].matcher(str);
                         if (m.find()) {
-                            setPremiered2(m.group(0));
+                            if (itemPremiered == null)
+                                setPremiered2(m.group(0));
                             str = m.group(1);
                             if (!Text.isempty(str)) {
                                 addTitle(str.replace("\"", "").trim());
@@ -412,7 +416,8 @@ public class ParseObject extends ReflectAttribute {
                         } else {
                             m = p[1].matcher(str);
                             if (m.find()) {
-                                setPremiered1(m.group(0));
+                                if (itemPremiered == null)
+                                    setPremiered1(m.group(0));
                             } else {
                                 setDescription(str);
                             }

@@ -31,8 +31,8 @@
     <output-test url="file://$MODULE_DIR$/build/intermediates/javac/dbEnableGitVersionIncrementDebugUnitTest/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/dbEnableGitVersionIncrementDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/dbEnableGitVersionIncrementDebug/out" isTestSource="false" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/dbEnableGitVersionIncrementDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/dbEnableGitVersionIncrement/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/dbEnableGitVersionIncrementDebug/out" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/dbEnableGitVersionIncrement/debug" type="java-resource" generated="true" />
@@ -50,10 +50,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/dbEnableGitVersionIncrement/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/dbEnableGitVersionIncrement/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/dbEnableGitVersionIncrement/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/dbEnableGitVersionIncrementDebugAndroidTest/out" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/dbEnableGitVersionIncrementDebugAndroidTest/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/ap_generated_sources/dbEnableGitVersionIncrementDebugAndroidTest/out" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/aidl_source_output_dir/dbEnableGitVersionIncrementDebugAndroidTest/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/dbEnableGitVersionIncrement/debug" isTestSource="true" generated="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/renderscript_source_output_dir/dbEnableGitVersionIncrementDebugAndroidTest/out" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/dbEnableGitVersionIncrement/debug" type="java-test-resource" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDbEnableGitVersionIncrementDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestDbEnableGitVersionIncrementDebug/resources" type="java-test-resource" />

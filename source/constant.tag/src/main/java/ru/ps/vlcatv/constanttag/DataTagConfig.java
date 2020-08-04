@@ -35,4 +35,5 @@ public class DataTagConfig {
     public final static String TAG_PATH_ONLINE_RADIO_LOCAL = "online_radio";
     public final static String TAG_PATH_ONLINE_FILM_LOCAL = "online_film";
     public final static String TAG_PATH_ONLINE_USER_LOCAL = "online_user";
+    public final static String TAG_TYPE_REMOTE_SEVER_PORT = "server_port";
 }

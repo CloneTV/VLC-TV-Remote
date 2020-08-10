@@ -6,10 +6,12 @@ import androidx.databinding.ObservableInt;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
 import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 
 @Keep
-public class PlayListEpgItem {
+public class PlayListEpgItem extends ReflectAttribute {
     @IFieldReflect("epg_title")
     public String epgTitle = null;
     @IFieldReflect("epg_date")

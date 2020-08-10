@@ -625,6 +625,7 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         setDescription(fav.itemDesc);
         setImage(fav.itemImage);
         setUri(fav.itemUrl);
+        setTrailer(fav.itemTrailer);
         long id = ((fav.itemVlcId > 0L) ? fav.itemVlcId : 0L);
         PlayListUtils.setIdsSkip(new PlayListItemIds(PlayListConstant.IDS_VLC, id), ids);
         PlayListUtils.setIdsSkip(new PlayListItemIds(PlayListConstant.IDS_GRP_ID, PlayList.IDX_ONLINE_FAV), ids);

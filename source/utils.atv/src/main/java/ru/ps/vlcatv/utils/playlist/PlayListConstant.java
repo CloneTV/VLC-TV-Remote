@@ -10,6 +10,7 @@ public class PlayListConstant {
     public static final int TYPE_AUDIO = 1005;
     public static final int TYPE_VIDEO = 1006;
     public static final int TYPE_ONLINE = 1007;
+    public static final int TYPE_IPCAM = 1008;
     public static final int TYPE_NODE = 1021;
     public static final int TYPE_LEAF = 1022;
     public static final int TYPE_FOLDER_AUDIO = 1023;

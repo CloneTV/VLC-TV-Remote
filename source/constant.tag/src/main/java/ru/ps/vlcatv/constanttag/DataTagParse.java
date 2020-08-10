@@ -21,6 +21,7 @@ public class DataTagParse {
     public final static String TAG_NFO = "nfo";
     public final static String TAG_SEASON = "season";
     public final static String TAG_EPISODE = "episode";
+    public final static String TAG_TRAILER = "trailer";
     public final static String TAG_POSTERF = "posterfile";
     public final static String TAG_POSTERU = "posterurl";
     public final static String TAG_LASTVIEW = "lastview";

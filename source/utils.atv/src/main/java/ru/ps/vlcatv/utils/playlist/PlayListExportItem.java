@@ -13,9 +13,10 @@ public class PlayListExportItem extends ReflectAttribute {
     PlayListExportItem() {}
     public PlayListExportItem(final PlayListItem item, Date d) {
         itemTitle = item.title.get();
-        itemUrl = item.uri;
         itemDesc = item.description.get();
+        itemUrl = item.uri;
         itemImage = item.poster.get();
+        itemTrailer = item.trailer.get();
         itemVlcId = item.getVlcId();
         itemDbId = item.dbIndex;
         itemType = item.type;
@@ -28,14 +29,15 @@ public class PlayListExportItem extends ReflectAttribute {
     }
     public PlayListExportItem(final PlayListFavorite fav) {
         itemTitle = fav.itemTitle;
-        itemUrl = fav.itemUrl;
         itemDesc = fav.itemDesc;
+        itemUrl = fav.itemUrl;
         itemImage = fav.itemImage;
+        itemTrailer = fav.itemTrailer;
+        itemEpg = fav.itemEpg;
+        itemEpgNotify = fav.itemEpgNotify;
         itemVlcId = fav.itemVlcId;
         itemDbId = fav.dbIndex;
         itemType = fav.itemType;
-        itemEpg = fav.itemEpg;
-        itemEpgNotify = fav.itemEpgNotify;
     }
 
     @IFieldReflect(DataTagParse.TAG_TYPE)
@@ -64,12 +66,15 @@ public class PlayListExportItem extends ReflectAttribute {
     public String itemTitle = null;
     @IFieldReflect(DataTagParse.TAG_DESC)
     public String itemDesc = null;
-    @IFieldReflect(DataTagParse.TAG_POSTERU)
-    public String itemImage = null;
     @IFieldReflect(DataTagParse.TAG_URI)
     public String itemUrl = null;
+    @IFieldReflect(DataTagParse.TAG_POSTERU)
+    public String itemImage = null;
+    @IFieldReflect(DataTagParse.TAG_TRAILER)
+    public String itemTrailer = null;
     @IFieldReflect(DataTagParse.TAG_EPG)
     public String itemEpg = null;
     @IFieldReflect(DataTagParse.TAG_EPGNOTIFY)
     public String itemEpgNotify = null;
+
 }

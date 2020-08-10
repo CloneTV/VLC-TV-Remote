@@ -102,6 +102,8 @@ public class PlayList extends ReflectAttribute {
         public List<PlayListHistoryIndex> history = new ArrayList<>();
         @IArrayReflect(value = "favorites", SkipRecursion = false)
         public List<PlayListFavorite> favorites = new ArrayList<>();
+        public List<PlayListFavorite> favoritesCustom = new ArrayList<>();
+
         @IArrayReflect(value = "schedule", SkipRecursion = false)
         public List<PlayListSchedule> schedule = new ArrayList<>();
 
@@ -118,8 +120,10 @@ public class PlayList extends ReflectAttribute {
         PlayList() {
                 dbIndex = 1;
         }
-        public PlayList(Context context, PlayListParseInterface ifc, PlayStatusInterface psi) {
+        public PlayList(
+                Context context, PlayListParseInterface ifc, PlayStatusInterface psi, List<PlayListFavorite> fav) {
                 setInstance(new DbManager(context), ifc, psi);
+                setCustomFavorites(fav);
                 dbMgr.open(ConstantDataDb.BaseVersion, this.getClass());
                 dbIndex = 1;
                 // item.visibleWatched() = ...
@@ -240,6 +244,19 @@ public class PlayList extends ReflectAttribute {
                 if (psi != null)
                         psi.setPlayList(this);
                 playStatus = psi;
+        }
+        public void setCustomFavorites(List<PlayListFavorite> ipcamList) {
+                if ((ipcamList == null) || (ipcamList.size() == 0))
+                        return;
+                synchronized (favoritesCustom) {
+                        favoritesCustom.clear();
+                        favoritesCustom.addAll(ipcamList);
+                        favoritesCustom.notifyAll();
+                }
+                if ((groups.size() >= IDX_GROUP_LAST) && (isCompleteDb.get())) {
+                        loadFavorites_();
+                        pif.loadStage2();
+                }
         }
         public int getGroupSize() {
             return groups.size();
@@ -678,10 +695,19 @@ public class PlayList extends ReflectAttribute {
                         if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- BEGIN: " + favorites.size());
 
                         grp.items.clear();
-                        for (PlayListFavorite fav : favorites) {
+
+                        for (PlayListFavorite fav : favoritesCustom) {
                                 final PlayListItem item = new PlayListItem(PlayList.this, fav);
                                 if (!item.isEmpty())
                                         grp.items.add(item);
+                        }
+                        for (PlayListFavorite fav : favorites) {
+                                final PlayListItem item = new PlayListItem(PlayList.this, fav);
+                                if (!item.isEmpty()) {
+                                        if (!Text.isempty(item.description.get()))
+                                                item.description.set("");
+                                        grp.items.add(item);
+                                }
                         }
                         synchronized (grp) {
                                 grp.notifyAll();

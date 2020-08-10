@@ -1,7 +1,7 @@
 package ru.ps.vlcatv.utils.db;
 
 public class ConstantDataDb {
-        public static final int BaseVersion = 3;
+        public static final int BaseVersion = 4;
         public static final String[] FieldCount = { "count_group", "count_item" };
         public static final String[] BaseCleanSuffix = new String[] {
                 "ToDb",
@@ -39,11 +39,11 @@ public class ConstantDataDb {
                 "CREATE UNIQUE INDEX IF NOT EXISTS `Index_TableItemUrls_url` ON `TableItemUrls` (`url`);",
 
                 "CREATE TABLE IF NOT EXISTS `TableFavorites` (`idx` INTEGER PRIMARY KEY AUTOINCREMENT, `id_parent` INTEGER," +
-                        "`title` TEXT, `desc` TEXT, `img` TEXT, `url` TEXT, `epg` TEXT, `vlc_id` INTEGER );",
+                        "`title` TEXT, `desc` TEXT, `trailer` TEXT, `img` TEXT, `url` TEXT, `epg` TEXT, `vlc_id` INTEGER );",
                 "CREATE INDEX IF NOT EXISTS `Index_TableFavorites_title` ON `TableFavorites` (`title`);",
 
                 "CREATE TABLE IF NOT EXISTS `TableSchedule` (`idx` INTEGER PRIMARY KEY AUTOINCREMENT, `id_parent` INTEGER," +
-                        "`title` TEXT, `desc` TEXT, `img` TEXT, `url` TEXT, `epg` TEXT, `date_start` TEXT, `notify` TEXT, `vlc_id` INTEGER );",
+                        "`title` TEXT, `desc` TEXT, `trailer` TEXT, `img` TEXT, `url` TEXT, `epg` TEXT, `date_start` TEXT, `notify` TEXT, `vlc_id` INTEGER );",
                 "CREATE INDEX IF NOT EXISTS `Index_TableSchedule_date_start` ON `TableSchedule` (`date_start`);",
 
                 "CREATE TABLE IF NOT EXISTS `TableItemTitles` (`idx` INTEGER PRIMARY KEY AUTOINCREMENT, `id_parent` INTEGER," +

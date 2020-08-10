@@ -31,14 +31,15 @@ public class PlayListSchedule extends ReflectAttribute {
         itemType = PlayListConstant.TYPE_ONLINE;
     }
     public PlayListSchedule(final Date d, final PlayListFavorite fav) {
+        itemTitle = fav.itemTitle;
+        itemDesc = fav.itemDesc;
+        itemUrl = fav.itemUrl;
+        itemImage = fav.itemImage;
+        itemTrailer = fav.itemTrailer;
+        itemEpg = fav.itemEpg;
+        itemEpgNotify = fav.itemEpgNotify;
         itemType = fav.itemType;
         itemDateStart = d;
-        itemEpgNotify = fav.itemEpgNotify;
-        itemTitle = fav.itemTitle;
-        itemUrl = fav.itemUrl;
-        itemDesc = fav.itemDesc;
-        itemImage = fav.itemImage;
-        itemEpg = fav.itemEpg;
     }
     public Object get(int idx) {
         switch (idx) {
@@ -47,11 +48,13 @@ public class PlayListSchedule extends ReflectAttribute {
             case GET_FAVORITE:
                 return new PlayListFavorite(
                         itemTitle,
-                        itemUrl,
                         itemDesc,
+                        itemUrl,
                         itemImage,
+                        itemTrailer,
                         itemEpg,
-                        ((Text.isempty(itemEpgNotify)) ? getEpgNotify() : itemEpgNotify)
+                        ((Text.isempty(itemEpgNotify)) ? getEpgNotify() : itemEpgNotify),
+                        itemType
                 );
             default:
                 return null;
@@ -77,6 +80,8 @@ public class PlayListSchedule extends ReflectAttribute {
     public Date itemDateStart = null;
     @IFieldReflect("title")
     public String itemTitle = null;
+    @IFieldReflect("trailer")
+    public String itemTrailer = null;
     @IFieldReflect("desc")
     public String itemDesc = null;
     @IFieldReflect("img")

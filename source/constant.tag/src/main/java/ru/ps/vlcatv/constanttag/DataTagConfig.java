@@ -23,7 +23,7 @@ public class DataTagConfig {
     public final static String TAG_SEEK_IDX = "seek_idx";
     public final static String TAG_SEARCH_TYPE = "search_type";
     public final static String TAG_SEARCH_LIST = "search_list";
-    public final static String TAG_IPCAM_LIST = "ipcam_list";
+    //public final static String TAG_IPCAM_LIST = "ipcam_list";
     public final static String TAG_SEARCH_VOICE = "is_preferred_voice_search";
     public final static String TAG_RECOMMEND_MAX = "max_recommend";
     public final static String TAG_HISTORY_MAX = "max_history";

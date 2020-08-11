@@ -161,7 +161,7 @@ public class ReflectAttribute implements Parcelable {
 
         } catch(Exception e) {
             if (BuildConfig.DEBUG) Log.e("DbCreate", Text.requireString(e.getLocalizedMessage()), e);
-            throw new NullPointerException(e.getLocalizedMessage());
+            throw new NullPointerException(Text.requireString(e.getLocalizedMessage()));
         }
     }
     //
@@ -169,11 +169,12 @@ public class ReflectAttribute implements Parcelable {
     public void DbDelete(DbManager dbm, ContentValues cv) {
         try {
             ActionDb ap = new ActionDb(dbm, prefixName, dbIndex, dbParent, false);
+            iteratorDelete(ap);
             ap.Delete(this, cv);
 
         } catch(Exception e) {
             if (BuildConfig.DEBUG) Log.e("DbDelete", Text.requireString(e.getLocalizedMessage()), e);
-            throw new NullPointerException(e.getLocalizedMessage());
+            throw new NullPointerException(Text.requireString(e.getLocalizedMessage()));
         }
     }
     //
@@ -358,6 +359,17 @@ public class ReflectAttribute implements Parcelable {
         }
     }
 
+    private void iteratorDelete(ActionInterface action) throws NullPointerException {
+        try {
+            final IBaseTableReflect fk = getClass().getAnnotation(IBaseTableReflect.class);
+            if (fk != null)
+                action.foreignKey(fk);
+
+        } catch (Exception e) {
+            if (BuildConfig.DEBUG) Log.e("iteratorDelete Exception", Text.requireString(e.getLocalizedMessage()), e);
+            throw new NullPointerException(e.getLocalizedMessage());
+        }
+    }
     ///
     /// To interface action
     ///

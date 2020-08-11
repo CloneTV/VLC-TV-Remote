@@ -354,7 +354,7 @@ public class ParseObject extends ReflectAttribute {
 
             String str;
             ///////////////////////////////////////////////////////////////////////////////
-            /// IMDB / IMDB-API source compatible
+            /// IMDB / IMDB-API / KINOPOISK source compatible
             if ((str = obj.optString("searchType",null)) != null) {
 
                 if (Text.isempty(str))
@@ -382,10 +382,21 @@ public class ParseObject extends ReflectAttribute {
                 if (ele == null)
                     return PlayListConstant.TYPE_NONE;
 
-                addIds(
-                        PlayListConstant.IDS_IMDB,
-                        ele.optString("id", null)
-                );
+                str = ele.optString("type", null);
+                if ((Text.isempty(str)) || (str.equals("imdb"))) {
+                    addIds(
+                            PlayListConstant.IDS_IMDB,
+                            ele.optString("id", null)
+                    );
+
+                } else if (str.equals("kpo")) {
+                    addIds(
+                            PlayListConstant.IDS_KPO,
+                            ele.optString("id", null)
+                    );
+                    addRating("userrating", ele.optDouble("rating", 0.0));
+                }
+
                 addImage("poster", ele.optString("image", null), -1);
                 addTitle(ele.optString("title", null));
                 str = ele.optString("year", null);

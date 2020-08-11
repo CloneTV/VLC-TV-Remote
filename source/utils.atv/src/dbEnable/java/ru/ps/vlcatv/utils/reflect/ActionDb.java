@@ -26,6 +26,7 @@ import java.util.Locale;
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Log;
 import ru.ps.vlcatv.utils.Text;
+import ru.ps.vlcatv.utils.db.ConstantDataDb;
 import ru.ps.vlcatv.utils.db.DbManager;
 import ru.ps.vlcatv.utils.reflect.annotation.ActionInterface;
 import ru.ps.vlcatv.utils.reflect.annotation.IBaseTableReflect;
@@ -785,10 +786,13 @@ public class ActionDb implements ActionInterface {
     public void Delete(ReflectAttribute ra, ContentValues cv) {
         if (sqlRoot.index <= 0)
             return;
+        if (Text.isempty(sqlRoot.table))
+            throw new RuntimeException("Db delete, table name empty!");
+
         dbMgr.rawSql(
                 String.format(
                         Locale.getDefault(),
-                        "DELETE FROM `%s` WHERE `%s` = %d",
+                        ConstantDataDb.BaseDeleteRow,
                         sqlRoot.table,
                         ReflectAttribute.ID_INDEX,
                         sqlRoot.index

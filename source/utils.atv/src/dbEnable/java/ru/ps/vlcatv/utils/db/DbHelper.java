@@ -109,7 +109,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 if (BuildConfig.DEBUG_DB) Log.e("- Db onCreate (Base file Delete)", Text.requireString(e.getLocalizedMessage()), e);
             }
         } else {
-            for (String s : ConstantDataDb.BaseDelete) {
+            for (String s : ConstantDataDb.BaseDeleteTable) {
                 try {
                     db.execSQL(s);
                 } catch (Exception e) {

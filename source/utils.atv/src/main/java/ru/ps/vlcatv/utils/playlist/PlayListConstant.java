@@ -25,6 +25,7 @@ public class PlayListConstant {
 
     public static final String IDS_VLC = "vlc";
     public static final String IDS_EPG = "epg";
+    public static final String IDS_KPO = "kpo";
     public static final String IDS_IMDB = "imdb";
     public static final String IDS_TMDB = "tmdb";
     public static final String IDS_TRAKT = "trakt";
@@ -55,6 +56,11 @@ public class PlayListConstant {
     };
     ///
     public static final String TV_EPG_ONLINE_JTV_URI = "https://www.teleguide.info/download/new3/jtv.zip";
+    public static final String UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36";
+    public static final String IMDB_REF = "https://www.imdb.com/";
+    public static final String KINOP_REF = "https://www.kinopoisk.ru/";
+    public static final String KINOP_IMG = "https://st.kp.yandex.net%s";
+
     /// "23be17be"
     /// "k_k19g0kAJ"
 }

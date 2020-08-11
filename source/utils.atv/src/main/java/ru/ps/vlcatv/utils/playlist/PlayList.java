@@ -7,10 +7,12 @@ import androidx.annotation.Keep;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -102,7 +104,6 @@ public class PlayList extends ReflectAttribute {
         public List<PlayListHistoryIndex> history = new ArrayList<>();
         @IArrayReflect(value = "favorites", SkipRecursion = false)
         public List<PlayListFavorite> favorites = new ArrayList<>();
-        public List<PlayListFavorite> favoritesCustom = new ArrayList<>();
 
         @IArrayReflect(value = "schedule", SkipRecursion = false)
         public List<PlayListSchedule> schedule = new ArrayList<>();
@@ -121,9 +122,8 @@ public class PlayList extends ReflectAttribute {
                 dbIndex = 1;
         }
         public PlayList(
-                Context context, PlayListParseInterface ifc, PlayStatusInterface psi, List<PlayListFavorite> fav) {
+                Context context, PlayListParseInterface ifc, PlayStatusInterface psi) {
                 setInstance(new DbManager(context), ifc, psi);
-                setCustomFavorites(fav);
                 dbMgr.open(ConstantDataDb.BaseVersion, this.getClass());
                 dbIndex = 1;
                 // item.visibleWatched() = ...
@@ -244,19 +244,6 @@ public class PlayList extends ReflectAttribute {
                 if (psi != null)
                         psi.setPlayList(this);
                 playStatus = psi;
-        }
-        public void setCustomFavorites(List<PlayListFavorite> ipcamList) {
-                if ((ipcamList == null) || (ipcamList.size() == 0))
-                        return;
-                synchronized (favoritesCustom) {
-                        favoritesCustom.clear();
-                        favoritesCustom.addAll(ipcamList);
-                        favoritesCustom.notifyAll();
-                }
-                if ((groups.size() >= IDX_GROUP_LAST) && (isCompleteDb.get())) {
-                        loadFavorites_();
-                        pif.loadStage2();
-                }
         }
         public int getGroupSize() {
             return groups.size();
@@ -456,7 +443,10 @@ public class PlayList extends ReflectAttribute {
 
         /// favorites
 
-        public void AddFavoritesEx(PlayListFavorite fav) { // remote 184 Green button
+        public void addFavoritesEx(final PlayListFavorite fav) { // remote 184 Green button
+                addFavoritesEx(fav, false, false);
+        }
+        public void addFavoritesEx(final PlayListFavorite fav, boolean isFirst, boolean isUniqueName) { // remote 184 Green button
                 boolean b = false;
                 for (PlayListFavorite f : favorites)
                         if (f.itemUrl.equals(fav.itemUrl)) {
@@ -464,7 +454,29 @@ public class PlayList extends ReflectAttribute {
                                 break;
                         }
                 if (!b) {
-                        favorites.add(fav);
+                        if (isUniqueName) {
+                                for (PlayListFavorite f : favorites)
+                                        if (f.itemTitle.equals(fav.itemTitle)) {
+                                                try {
+                                                        SimpleDateFormat fmt = new SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.getDefault());
+                                                        fav.itemTitle = String.format(
+                                                                Locale.getDefault(),
+                                                                "%s - %s",
+                                                                fav.itemTitle,
+                                                                fmt.format(
+                                                                        Calendar.getInstance().getTime()
+                                                                )
+                                                        );
+                                                } catch (Exception ignore) {
+                                                }
+                                                break;
+                                        }
+                        }
+                        if (isFirst)
+                                favorites.add(0, fav);
+                        else
+                                favorites.add(fav);
+
                         loadFavorites_();
                         getExecutor().execute(new Runnable() {
                                 @Override
@@ -480,17 +492,23 @@ public class PlayList extends ReflectAttribute {
                         });
                 }
         }
-        public void RemoveFavoritesEx(String url) { // remote 183 RED button
-                boolean b = false;
-                for (PlayListFavorite f : favorites)
-                        if (f.itemUrl.equals(url)) {
+        public void removeFavoritesEx(String url) { // remote 183 RED button
+                removeFavoritesEx(url, false);
+        }
+        public void removeFavoritesEx(String txt, boolean isTitle) { // remote 183 RED button
+                for (final PlayListFavorite f : favorites) {
+                        boolean b = (isTitle) ? f.itemTitle.equals(txt) : f.itemUrl.equals(txt);
+                        if (b) {
                                 favorites.remove(f);
                                 loadFavorites_();
                                 getExecutor().execute(new Runnable() {
+                                        final PlayListFavorite fav = f;
                                         @Override
                                         public void run() {
                                                 if (waitDb_(DB_ACTION_SAVE_PART)) {
                                                         try {
+                                                                if (fav.dbIndex > 0)
+                                                                        fav.DbDelete(dbMgr);
                                                                 toDb(dbMgr, -1, true);
                                                         } finally {
                                                                 waitDbEnd_();
@@ -500,6 +518,7 @@ public class PlayList extends ReflectAttribute {
                                 });
                                 break;
                         }
+                }
         }
 
         ///
@@ -695,12 +714,6 @@ public class PlayList extends ReflectAttribute {
                         if (BuildConfig.DEBUG) Log.d("- UPDATE PlayList from Favorites", "- BEGIN: " + favorites.size());
 
                         grp.items.clear();
-
-                        for (PlayListFavorite fav : favoritesCustom) {
-                                final PlayListItem item = new PlayListItem(PlayList.this, fav);
-                                if (!item.isEmpty())
-                                        grp.items.add(item);
-                        }
                         for (PlayListFavorite fav : favorites) {
                                 final PlayListItem item = new PlayListItem(PlayList.this, fav);
                                 if (!item.isEmpty()) {
@@ -855,7 +868,15 @@ public class PlayList extends ReflectAttribute {
                                         if (b) {
                                                 if (waitDb_(DB_ACTION_USING)) {
                                                         try {
+                                                                List<PlayListFavorite> list = new ArrayList<>();
+                                                                if (favorites.size() > 0)
+                                                                        list.addAll(favorites);
+
                                                                 fromDb(dbMgr, -1, 1, true);
+
+                                                                if (list.size() > 0)
+                                                                        for (PlayListFavorite fav : list)
+                                                                                addFavoritesEx(fav, true, true);
                                                         } finally {
                                                                 waitDbEnd_();
                                                         }
@@ -909,7 +930,15 @@ public class PlayList extends ReflectAttribute {
 
                                         if (waitDb_(DB_ACTION_USING)) {
                                                 try {
+                                                        List<PlayListFavorite> list = new ArrayList<>();
+                                                        if (favorites.size() > 0)
+                                                                list.addAll(favorites);
+
                                                         fromDb(dbMgr, -1, 1, true);
+
+                                                        if (list.size() > 0)
+                                                                for (PlayListFavorite fav : list)
+                                                                        addFavoritesEx(fav, true, true);
                                                 } finally {
                                                         waitDbEnd_();
                                                 }

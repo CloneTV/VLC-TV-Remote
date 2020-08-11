@@ -29,6 +29,7 @@ public interface PlayListParseInterface {
     public String downloadM3U8(String uri, int idx);
     public Object downloadOMDB(String ids);
     public Object downloadIMDB(String ids, int type);
+    public Object downloadKPO(String ids, int type);
     public String checkTRAILER(String uri);
     public boolean isEmpty();
     public void close();

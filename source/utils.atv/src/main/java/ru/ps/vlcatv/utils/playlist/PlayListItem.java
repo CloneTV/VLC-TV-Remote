@@ -3,6 +3,7 @@ package ru.ps.vlcatv.utils.playlist;
 import androidx.annotation.Keep;
 
 import android.content.ContentValues;
+import android.media.MediaCodec;
 import android.os.Parcel;
 import android.util.Log;
 import android.view.View;
@@ -384,6 +385,10 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     @Override
     public String getImdbId() {
         return PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
+    }
+    @Override
+    public String getKpoId() {
+        return PlayListUtils.getIdsString(PlayListConstant.IDS_KPO, ids);
     }
     @Override
     public long getDbIndex() {
@@ -1076,25 +1081,52 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
             if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String imdb;
-            if ((imdb = getImdbId()) == null) {
+            String moveDbId;
+            if ((moveDbId = getImdbId()) == null) {
+                final String t = title.get();
+                if (Text.isempty(t))
+                    return;
+
+                int tt = ((episode.get() > 0) ?
+                        PlayListParseInterface.ID_FMT_EPISODE :
+                        PlayListParseInterface.ID_FMT_MOVIE
+                );
                 copy(
                         PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadIMDB(
-                                        title.get(),
-                                        ((episode.get() > 0) ?
-                                                PlayListParseInterface.ID_FMT_EPISODE :
-                                                PlayListParseInterface.ID_FMT_MOVIE
-                                        )
-                                )
+                                (JSONObject) pif.downloadIMDB(t, tt)
                         )
                 );
-                imdb = getImdbId();
+                if (getImdbId() == null) {
+                    final Pattern[] pattern = new Pattern[] {
+                            Pattern.compile("([\\W\\s\\S]+)\\s\\(.*", Pattern.UNICODE_CASE),
+                            Pattern.compile("([\\W\\s\\S]+)\\s([\\d]+).*", Pattern.UNICODE_CASE)
+                    };
+                    for (Pattern p : pattern) {
+                        final Matcher m = p.matcher(t);
+                        if (m.find()) {
+                            if (m.groupCount() >= 1)
+                                copy(
+                                        PlayListUtils.parseObject(
+                                                (JSONObject) pif.downloadIMDB(m.group(1), tt)
+                                        )
+                                );
+                            break;
+                        }
+                    }
+                }
+                if (getKpoId() == null) {
+                    copy(
+                            PlayListUtils.parseObject(
+                                    (JSONObject) pif.downloadKPO(t, tt)
+                            )
+                    );
+                }
+                moveDbId = getImdbId();
             }
-            if (!Text.isempty(imdb))
+            if (!Text.isempty(moveDbId))
                 copy(
                         PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadOMDB(imdb)
+                                (JSONObject) pif.downloadOMDB(moveDbId)
                         )
                 );
 

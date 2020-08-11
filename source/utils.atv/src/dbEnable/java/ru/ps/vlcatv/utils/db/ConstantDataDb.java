@@ -2,6 +2,8 @@ package ru.ps.vlcatv.utils.db;
 
 public class ConstantDataDb {
         public static final int BaseVersion = 4;
+        public static final String BaseCheckEmpty = "SELECT (SELECT COUNT(*) FROM `TableGroups`) AS `count_group`, (SELECT COUNT(*) FROM `TableItems`) AS `count_item`;";
+        public static final String BaseDeleteRow = "DELETE FROM `%s` WHERE `%s` = %d;";
         public static final String[] FieldCount = { "count_group", "count_item" };
         public static final String[] BaseCleanSuffix = new String[] {
                 "ToDb",
@@ -153,7 +155,7 @@ public class ConstantDataDb {
                         "`title_id` TEXT, `epg_id` TEXT, `title_default` TEXT, `poster_default` TEXT, `change_id` INTEGER DEFAULT 1 );",
                 "CREATE UNIQUE INDEX IF NOT EXISTS `Index_TableOnlineRenameList_title_id` ON `TableEpgItems` (`title_id`);",
         };
-        public static final String[] BaseDelete = new String[] {
+        public static final String[] BaseDeleteTable = new String[] {
                 "DROP INDEX IF EXISTS `Index_TableGroups_nfo`;",
                 "DROP INDEX IF EXISTS `Index_TableGroups_id_parent`;",
                 "DROP INDEX IF EXISTS `Index_TableGroups_nfo`;",
@@ -236,7 +238,6 @@ public class ConstantDataDb {
                 "DROP TABLE IF EXISTS `TableGroups`;",
                 "DROP TABLE IF EXISTS `TablePlayList`;"
         };
-        public static final String BaseCheckEmpty = "SELECT (SELECT COUNT(*) FROM `TableGroups`) AS `count_group`, (SELECT COUNT(*) FROM `TableItems`) AS `count_item`;";
         public static final String[] BaseUpdateOnCreate = new String[] {
                 "INSERT INTO `main`.`TableOnlineRenameList` (`id_parent`) VALUES ('0');",
                 "INSERT INTO `main`.`TableOnlineRenameItems` (`id_parent`, `title_id`, `epg_id`, `title_default`, `change_id`) VALUES ('1', 'DISCOVERY CHANNEL', 'Discovery_Channel', 'DISCOVERY', '0');",

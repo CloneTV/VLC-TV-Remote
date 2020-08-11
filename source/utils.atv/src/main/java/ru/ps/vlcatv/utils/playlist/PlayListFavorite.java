@@ -16,7 +16,7 @@ import ru.ps.vlcatv.utils.reflect.annotation.IFieldReflect;
 )
 public class PlayListFavorite extends ReflectAttribute {
 
-    /*
+    /*   ORDER to ALL parcelable:
             String title,
             String desc,
             String uri,

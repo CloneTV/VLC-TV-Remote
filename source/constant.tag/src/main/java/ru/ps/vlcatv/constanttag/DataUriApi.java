@@ -48,6 +48,11 @@ public class DataUriApi {
     public final static String TAG_ID_MEDIAEPG = "TAG_ID_MEDIAEPG";
     public final static String TAG_ID_PLAYFAVORITE = "PLAYFAVORITE";
 
+    public final static String HTTP_ATTR_GET = "GET";
+    public final static String HTTP_ATTR_UA = "User-Agent";
+    public final static String HTTP_ATTR_REF = "Referer";
+    public final static String HTTP_ATTR_LOC = "Location";
+
     public final static String TAG_SUPPORT_GIT = "https://github.com/CloneTV/VLC-TV-Remote";
     public final static String TAG_SUPPORT_WWW = "https://clonetv.github.io/VLC-TV-Remote/";
     public final static String TAG_SUPPORT_APTOIDE = "https://vlc-atv-remote.ru.aptoide.com/";

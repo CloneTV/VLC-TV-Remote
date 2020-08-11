@@ -13,27 +13,35 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import ru.ps.vlcatv.utils.Text;
+import ru.ps.vlcatv.utils.playlist.PlayListConstant;
 
 public class ParseControllerIMDB {
 
-    private static final String FIND_MOVIE = "&ref_=nv_sr_sm";
-    private static final String FIND_SEASON = "&s=tt&ttype=tv&ref_=fn_tv";
-    private static final String FIND_EPISODE = "&s=tt&ttype=ep&exact=true&ref_=fn_tt_ex";
     private final IMDBParseObject imdb  = new IMDBParseObject();
     private int type;
 
     public ParseControllerIMDB(final String title, int t) {
         try {
             type = t;
+            final String[] FIND_TYPE = new String[]{
+                    "&ref_=nv_sr_sm",                           // MOVIE
+                    "&s=tt&ttype=tv&ref_=fn_tv",                // SEASON
+                    "&s=tt&ttype=ep&exact=true&ref_=fn_tt_ex",  // EPISODE
+                    "",
+            };
             final Document doc = Jsoup.connect(
                     String.format(
                             Locale.getDefault(),
                             "https://www.imdb.com/find?q=%s&languages=%s%s",
                             titleEncode(title),
                             Locale.getDefault().getLanguage(),
-                            getUriType()
-                    )
-            ).get();
+                            FIND_TYPE[ParseUtils.getUriType(type)]
+                    ))
+                    .userAgent(PlayListConstant.UA)
+                    .referrer(PlayListConstant.IMDB_REF)
+                    .followRedirects(true)
+                    .get();
+
             if (doc == null)
                 throw new RuntimeException("IMDB Document empty");
             imdb.parse(doc);
@@ -67,29 +75,14 @@ public class ParseControllerIMDB {
         return toJson();
     }
     public @NonNull String toJson() {
-        return "{\"searchType\":\"" + getType() + "\"" +
+        return "{\"searchType\":\"" + ParseUtils.getType(type) + "\"" +
+                ",\"type\":\"imdb\"" +
                 ",\"results\":[{" +
                 "\"id\":\"" + imdb.strId + "\"" +
                 ",\"year\":" + imdb.strYear +
                 ",\"title\":\"" + imdb.strTitle + "\"" +
                 ",\"image\":\"" + imdb.strImage + "\"" +
                 "}],\"errorMessage\":\"" + getError() + "\"}";
-    }
-    public String getType() {
-        switch (type) {
-            case PlayListParseInterface.ID_FMT_MOVIE: return "Movie";
-            case PlayListParseInterface.ID_FMT_SEASON: return "Series";
-            case PlayListParseInterface.ID_FMT_EPISODE: return "Episode";
-            default: return "";
-        }
-    }
-    private String getUriType() {
-        switch (type) {
-            case PlayListParseInterface.ID_FMT_MOVIE: return FIND_MOVIE;
-            case PlayListParseInterface.ID_FMT_SEASON: return FIND_SEASON;
-            case PlayListParseInterface.ID_FMT_EPISODE: return FIND_EPISODE;
-            default: return "";
-        }
     }
 
     private static class IMDBParseObject {

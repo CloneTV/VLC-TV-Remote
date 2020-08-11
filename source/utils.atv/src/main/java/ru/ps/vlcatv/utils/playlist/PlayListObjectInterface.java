@@ -40,6 +40,7 @@ public interface PlayListObjectInterface {
     public long getDbIndex();
     public long getDbParent();
     public String getImdbId();
+    public String getKpoId();
     public String getDescription(ObservableBoolean b);
     public default String getTotalSeasonViewTime(ObservableBoolean b) {
         return "";

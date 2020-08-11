@@ -224,6 +224,12 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
             return null;
         return PlayListUtils.getIdsString(PlayListConstant.IDS_IMDB, ids);
     }
+
+    @Override
+    public String getKpoId() {
+        return PlayListUtils.getIdsString(PlayListConstant.IDS_KPO, ids);
+    }
+
     @Override
     public long getDbIndex() {
         return dbIndex;

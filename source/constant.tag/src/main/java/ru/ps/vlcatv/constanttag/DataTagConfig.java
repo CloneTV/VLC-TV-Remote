@@ -23,7 +23,6 @@ public class DataTagConfig {
     public final static String TAG_SEEK_IDX = "seek_idx";
     public final static String TAG_SEARCH_TYPE = "search_type";
     public final static String TAG_SEARCH_LIST = "search_list";
-    //public final static String TAG_IPCAM_LIST = "ipcam_list";
     public final static String TAG_SEARCH_VOICE = "is_preferred_voice_search";
     public final static String TAG_RECOMMEND_MAX = "max_recommend";
     public final static String TAG_HISTORY_MAX = "max_history";
@@ -37,4 +36,13 @@ public class DataTagConfig {
     public final static String TAG_PATH_ONLINE_FILM_LOCAL = "online_film";
     public final static String TAG_PATH_ONLINE_USER_LOCAL = "online_user";
     public final static String TAG_TYPE_REMOTE_SEVER_PORT = "server_port";
+    //
+    public final static String TAG_VLC_CONFIG = "vlc_cnf";
+    public final static String TAG_CIFS_CONFIG = "cifs_cnf";
+    public final static String TAG_CIFS_IP = "cifs_ip";
+    public final static String TAG_CIFS_LOG = "cifs_log";
+    public final static String TAG_CIFS_PWD = "cifs_pwd";
+    public final static String TAG_CIFS_DOM = "cifs_dom";
+    public final static String TAG_CIFS_SH = "cifs_sh";
+
 }

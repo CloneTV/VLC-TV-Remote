@@ -17,7 +17,6 @@ import java.util.regex.Pattern;
 
 import ru.ps.vlcatv.constanttag.DataUriApi;
 import ru.ps.vlcatv.utils.Text;
-import ru.ps.vlcatv.utils.db.ConstantDataDb;
 import ru.ps.vlcatv.utils.playlist.PlayListConstant;
 
 public class ParseControllerKINOP {
@@ -28,11 +27,19 @@ public class ParseControllerKINOP {
     public ParseControllerKINOP(final String title, int t) {
         try {
             type = t;
+            final String[] FIND_TYPE = new String[]{
+                    "",                                         // MOVIE
+                    //"&m_act%5Bcontent_find%5D=film",          // MOVIE
+                    "&m_act%5Bcontent_find%5D=serial",          // SEASON
+                    "&m_act%5Bcontent_find%5D=serial",          // EPISODE
+                    "",
+            };
             final Document doc = Jsoup.connect(
                     String.format(
                             Locale.getDefault(),
-                            "https://www.kinopoisk.ru/index.php?kp_query=%s",
-                            buildUrl(title)
+                            "https://www.kinopoisk.ru/index.php?kp_query=%s%s",
+                            buildUrl(title),
+                            FIND_TYPE[ParseUtils.getUriType(type)]
                     ))
                     .userAgent(PlayListConstant.UA)
                     .referrer(PlayListConstant.KINOP_REF)

@@ -37,7 +37,7 @@ public class MethodCheckAll {
 
         try {
             if (grp.getImdbId() == null) {
-                grp.updateFromMOVEDB();
+                grp.updateFromIDB();
                 grp.updateTRAILER();
             }
         } catch (Exception e) {
@@ -48,7 +48,7 @@ public class MethodCheckAll {
             for (PlayListItem item : grp.items) {
                 try {
                     if (item.getImdbId() == null) {
-                        item.updateFromMOVEDB();
+                        item.updateFromIDB();
                         item.updateTRAILER();
                     }
                 } catch (Exception e) {

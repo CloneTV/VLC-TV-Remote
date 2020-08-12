@@ -37,7 +37,7 @@ public class MethodUpdateAll {
             grp.updateFromNFO();
         } catch (Exception ignore) {}
         try {
-            grp.updateFromMOVEDB();
+            grp.updateFromIDB();
         } catch (Exception ignore) {}
         try {
             grp.updateTRAILER();
@@ -50,7 +50,7 @@ public class MethodUpdateAll {
                         item.updateFromNFO();
                 } catch (Exception ignore) {}
                 try {
-                    item.updateFromMOVEDB();
+                    item.updateFromIDB();
                 } catch (Exception ignore) {}
                 try {
                     item.updateTRAILER();

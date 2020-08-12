@@ -3,11 +3,14 @@ package ru.ps.vlcatv.utils.playlist;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import ru.ps.vlcatv.utils.Text;
 import ru.ps.vlcatv.utils.json.JSONArray;
 import ru.ps.vlcatv.utils.json.JSONObject;
 import ru.ps.vlcatv.utils.playlist.parse.ParseObject;
+import ru.ps.vlcatv.utils.playlist.parse.PlayListParseInterface;
 
 public class PlayListUtils {
 
@@ -453,4 +456,56 @@ public class PlayListUtils {
         return po;
     }
 
+    ////
+    /// FROM Internet Db base
+
+    public static void updateFromIDB(
+            final PlayListObjectInterface item, final PlayListParseInterface pif,
+            final String title, int type) {
+        try {
+
+            String moveDbId;
+            if ((moveDbId = item.getImdbId()) == null) {
+                item.copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadIMDB(title, type)
+                        )
+                );
+                if (item.getImdbId() == null) {
+                    final Pattern[] pattern = new Pattern[] {
+                            Pattern.compile("([\\W\\s\\S]+)\\s\\(.*", Pattern.UNICODE_CASE),
+                            Pattern.compile("([\\W\\s\\S]+)\\s([\\d]+).*", Pattern.UNICODE_CASE)
+                    };
+                    for (Pattern p : pattern) {
+                        final Matcher m = p.matcher(title);
+                        if (m.find()) {
+                            if (m.groupCount() >= 1)
+                                item.copy(
+                                        PlayListUtils.parseObject(
+                                                (JSONObject) pif.downloadIMDB(m.group(1), type)
+                                        )
+                                );
+                            break;
+                        }
+                    }
+                }
+                if (item.getKpoId() == null) {
+                    item.copy(
+                            PlayListUtils.parseObject(
+                                    (JSONObject) pif.downloadKPO(title, type)
+                            )
+                    );
+                }
+                moveDbId = item.getImdbId();
+            }
+            if (!Text.isempty(moveDbId))
+                item.copy(
+                        PlayListUtils.parseObject(
+                                (JSONObject) pif.downloadOMDB(moveDbId)
+                        )
+                );
+
+        } catch (Exception ignore) {}
+        item.reloadBindingData();
+    }
 }

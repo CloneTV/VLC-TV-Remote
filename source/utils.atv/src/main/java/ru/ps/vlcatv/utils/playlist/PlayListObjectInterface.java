@@ -57,6 +57,6 @@ public interface PlayListObjectInterface {
     public default void updateFromDB(int type) {}
     public void updateFromDB();
     public void updateFromNFO();
-    public void updateFromMOVEDB();
+    public void updateFromIDB();
     public void updateTRAILER();
 }

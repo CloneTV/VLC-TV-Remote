@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import ru.ps.vlcatv.utils.BuildConfig;
 import ru.ps.vlcatv.utils.Text;
@@ -765,37 +767,24 @@ public class PlayListGroup extends ReflectAttribute implements PlayListObjectInt
     }
 
     @Override
-    public void updateFromMOVEDB() {
+    public void updateFromIDB() {
         try {
             PlayListParseInterface pif;
-            if ((season.get() == 0) ||
-                (playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
+            if ((season.get() <= 0) ||
+                (playListRoot == null) ||
+                ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String imdb;
-            if ((imdb = getImdbId()) == null) {
-                String s = title.get();
-                if (Text.isempty(s))
-                    return;
-                int pos = s.lastIndexOf('/');
-                if (pos > 0)
-                    s = s.substring(0, pos);
-                copy(
-                        PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadIMDB(
-                                        s,
-                                        PlayListParseInterface.ID_FMT_SEASON
-                                )
-                        )
-                );
-                imdb = getImdbId();
-            }
-            if (!Text.isempty(imdb))
-                copy(
-                        PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadOMDB(imdb)
-                        )
-                );
+            String t = title.get();
+            if (Text.isempty(t))
+                return;
+            int pos = t.lastIndexOf('/');
+            if (pos > 0)
+                t = t.substring(0, pos);
+
+            PlayListUtils.updateFromIDB(
+                    this, pif, t, PlayListParseInterface.ID_FMT_SEASON
+            );
 
         } catch (Exception ignore) {}
         reloadBindingData();

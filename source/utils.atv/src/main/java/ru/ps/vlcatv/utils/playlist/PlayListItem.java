@@ -3,7 +3,6 @@ package ru.ps.vlcatv.utils.playlist;
 import androidx.annotation.Keep;
 
 import android.content.ContentValues;
-import android.media.MediaCodec;
 import android.os.Parcel;
 import android.util.Log;
 import android.view.View;
@@ -1075,60 +1074,21 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
     }
 
     @Override
-    public void updateFromMOVEDB() {
+    public void updateFromIDB() {
         try {
             PlayListParseInterface pif;
-            if ((playListRoot == null) || ((pif = playListRoot.getParseInterface()) == null))
+            if ((playListRoot == null) ||
+                (Text.isempty(title.get())) ||
+                ((pif = playListRoot.getParseInterface()) == null))
                 return;
 
-            String moveDbId;
-            if ((moveDbId = getImdbId()) == null) {
-                final String t = title.get();
-                if (Text.isempty(t))
-                    return;
-
-                int tt = ((episode.get() > 0) ?
-                        PlayListParseInterface.ID_FMT_EPISODE :
-                        PlayListParseInterface.ID_FMT_MOVIE
-                );
-                copy(
-                        PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadIMDB(t, tt)
-                        )
-                );
-                if (getImdbId() == null) {
-                    final Pattern[] pattern = new Pattern[] {
-                            Pattern.compile("([\\W\\s\\S]+)\\s\\(.*", Pattern.UNICODE_CASE),
-                            Pattern.compile("([\\W\\s\\S]+)\\s([\\d]+).*", Pattern.UNICODE_CASE)
-                    };
-                    for (Pattern p : pattern) {
-                        final Matcher m = p.matcher(t);
-                        if (m.find()) {
-                            if (m.groupCount() >= 1)
-                                copy(
-                                        PlayListUtils.parseObject(
-                                                (JSONObject) pif.downloadIMDB(m.group(1), tt)
-                                        )
-                                );
-                            break;
-                        }
-                    }
-                }
-                if (getKpoId() == null) {
-                    copy(
-                            PlayListUtils.parseObject(
-                                    (JSONObject) pif.downloadKPO(t, tt)
-                            )
-                    );
-                }
-                moveDbId = getImdbId();
-            }
-            if (!Text.isempty(moveDbId))
-                copy(
-                        PlayListUtils.parseObject(
-                                (JSONObject) pif.downloadOMDB(moveDbId)
-                        )
-                );
+            PlayListUtils.updateFromIDB(
+                    this, pif, title.get(),
+                    ((episode.get() > 0) ?
+                            PlayListParseInterface.ID_FMT_EPISODE :
+                            PlayListParseInterface.ID_FMT_MOVIE
+                    )
+            );
 
         } catch (Exception ignore) {}
         reloadBindingData();
@@ -1162,8 +1122,8 @@ public final class PlayListItem extends ReflectAttribute implements PlayListObje
         public static final int IDX_YEAR = 1;
         public static final int IDX_SEASON = 1;
         public static final int IDX_EPISODE = 2;
-        Pattern pattern;
-        Integer[] list;
+        final Pattern pattern;
+        final Integer[] list;
 
         uriParse(String p, Integer[] idx) {
             pattern = Pattern.compile(p);

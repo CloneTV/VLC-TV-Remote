@@ -38,12 +38,12 @@ public class ActionDb implements ActionInterface {
     private final RootTableHolder sqlRoot;
     private final DbManager dbMgr;
     private IBaseTableReflect fKey = null;
-    private boolean skipRecursion = false;
+    private boolean skipRecursion;
 
-    ActionDb(DbManager dbm, String s, long index, long parent, boolean skipr) {
+    ActionDb(DbManager dbm, long index, long parent, boolean skip) {
         super();
-        skipRecursion = skipr;
-        sqlRoot = new RootTableHolder(s, index, parent);
+        skipRecursion = skip;
+        sqlRoot = new RootTableHolder(index, parent);
         if (dbm == null)
             throw new RuntimeException("Data Base handle is NULL!");
         dbMgr = dbm;
@@ -544,7 +544,7 @@ public class ActionDb implements ActionInterface {
     }
 
     @Override
-    public Object to(Field field, ReflectAttribute fa, boolean skipAttr) throws Exception {
+    public Object to(final Field field, ReflectAttribute fa, final String name, boolean skipAttr) throws Exception {
         if (skipRecursion && skipAttr)
             return null;
         sqlRoot.objectTables.add(fa);
@@ -820,12 +820,12 @@ public class ActionDb implements ActionInterface {
         protected long index;                               // Id
         protected long parent;                              // parent Id
 
-        RootTableHolder(String tbl, long idx, long p) {
+        RootTableHolder(long idx, long p) {
             index = idx;
             parent = p;
-            table = tbl;
+            table = null;
             fields.add(new DbManager.DbArguments.TableField(null, long.class, ReflectAttribute.ID_INDEX));
-            fields.add(new DbManager.DbArguments.TableField(null, long.class,ReflectAttribute.ID_PARENT));
+            fields.add(new DbManager.DbArguments.TableField(null, long.class, ReflectAttribute.ID_PARENT));
         }
         void addField(Field field, Type type, String name) {
             fields.add(new DbManager.DbArguments.TableField(field, type, name));

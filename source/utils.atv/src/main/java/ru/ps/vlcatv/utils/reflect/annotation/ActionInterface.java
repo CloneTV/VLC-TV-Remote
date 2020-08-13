@@ -12,19 +12,19 @@ import ru.ps.vlcatv.utils.reflect.ReflectAttribute;
 import ru.ps.vlcatv.utils.reflect.annotation.IBaseTableReflect;
 
 public interface ActionInterface {
-    public void to(Field field, Type type, Object val, String name) throws Exception;               // Field create
-    public void to(Field field, ArrayList<Object> array, String name) throws Exception;             // Array create
-    public Object to(Field field, ReflectAttribute ra, boolean skipAttr) throws Exception;          // Object create
+    public void to(final Field field, Type type, Object val, final String name) throws Exception;               // Field create
+    public void to(final Field field, ArrayList<Object> array, final String name) throws Exception;             // Array create
+    public Object to(final Field field, ReflectAttribute ra, final String name, boolean skipAttr) throws Exception; // Object create
 
-    public Object from(Field field, Type type, String name) throws Exception;                       // Field create
-    public Object from(Field field, ReflectAttribute ra, String name) throws Exception;             // Object create
-    public Object from(Field field, ReflectAttribute ra, Object obj, String name, boolean skipAttr) throws Exception; // Array create
-    public ArrayList<Object> from(Field field, String name) throws Exception;                       // Array list Object create
+    public Object from(final Field field, Type type, final String name) throws Exception;                       // Field create
+    public Object from(final Field field, ReflectAttribute ra, final String name) throws Exception;             // Object create
+    public Object from(final Field field, ReflectAttribute ra, Object obj, final String name, boolean skipAttr) throws Exception; // Array create
+    public ArrayList<Object> from(final Field field, final String name) throws Exception;                       // Array list Object create
 
-    public void createArray(Type type, String name) throws Exception;
-    public void createObject(ReflectAttribute ra, String name) throws Exception;
-    public void createField(Type type, String name) throws Exception;
-    public void createFieldIndex(Type type, String name) throws Exception;
+    public void createArray(Type type, final String name) throws Exception;
+    public void createObject(ReflectAttribute ra, final String name) throws Exception;
+    public void createField(Type type, final String name) throws Exception;
+    public void createFieldIndex(Type type, final String name) throws Exception;
     public void foreignKey(IBaseTableReflect fk);
 
     public Object data();

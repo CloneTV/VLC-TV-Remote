@@ -32,16 +32,10 @@ public class ReflectAttribute implements Parcelable {
     public static final String ID_INDEX = "idx";
     public static final String ID_PARENT = "id_parent";
 
-    private String prefixName = "";
-
     protected ReflectAttribute() {}
     protected ReflectAttribute(Parcel in) {
         fromParcelable(in);
     }
-    protected void setPrefixName(String s) {
-        prefixName = s;
-    }
-    /* required for DB* method, this table name */
 
     /// for DB
 
@@ -70,24 +64,26 @@ public class ReflectAttribute implements Parcelable {
         }
         return null;
     }
-    public void fromJson(String s) throws NullPointerException, JSONException {
+    public void fromJson(final String s) throws NullPointerException, JSONException {
         fromJson(new JSONObject(s));
     }
-    public void fromJson(JSONObject obj) throws NullPointerException {
+    public void fromJson(final JSONObject obj) throws NullPointerException {
         try {
-
-            ActionJson aj = new ActionJson(obj);
+            ActionJson aj = new ActionJson(this, obj);
             iteratorFrom(aj);
-            aj.Save(this, null);
+            //aj.Save(this, null);
 
         } catch (Exception e) {
             if (BuildConfig.DEBUG) Log.e("fromJson", Text.requireString(e.getLocalizedMessage()), e);
             throw new NullPointerException(e.getLocalizedMessage());
         }
     }
-    public void toPreferences(SharedPreferences pref) {
+    public void toPreferences(final SharedPreferences pref) {
+        toPreferences(pref, "");
+    }
+    public void toPreferences(final SharedPreferences pref, final String prefix) {
         try {
-            ActionPreferences ap = new ActionPreferences(pref, prefixName, this);
+            ActionPreferences ap = new ActionPreferences(pref, prefix, this);
             iteratorTo(ap);
             ap.Save(this, null);
 
@@ -96,9 +92,12 @@ public class ReflectAttribute implements Parcelable {
             throw new NullPointerException(e.getLocalizedMessage());
         }
     }
-    public void fromPreferences(SharedPreferences pref) {
+    public void fromPreferences(final SharedPreferences pref) {
+        fromPreferences(pref, "");
+    }
+    public void fromPreferences(final SharedPreferences pref, final String prefix) {
         try {
-            ActionPreferences ap = new ActionPreferences(pref, prefixName, this);
+            ActionPreferences ap = new ActionPreferences(pref, prefix, this);
             iteratorFrom(ap);
 
         } catch(Exception e) {
@@ -130,7 +129,8 @@ public class ReflectAttribute implements Parcelable {
     public void DbCreateDump(DbManager dbm) {
         try {
             List<ActionDb.RootTableHolder.RootTableCreator> list = DbCreate(dbm, true);
-            ActionDb ap = new ActionDb(dbm, prefixName, dbIndex, dbParent, false);
+            ActionDb ap = new ActionDb(dbm, dbIndex, dbParent, false);
+            iteratorCreate(ap);
             ap.Create(list);
 
         } catch(Exception e) {
@@ -145,7 +145,7 @@ public class ReflectAttribute implements Parcelable {
     }
     public List<ActionDb.RootTableHolder.RootTableCreator> DbCreate(DbManager dbm, boolean isWriteScheme) {
         try {
-            ActionDb ap = new ActionDb(dbm, prefixName, dbIndex, dbParent, false);
+            ActionDb ap = new ActionDb(dbm, dbIndex, dbParent, false);
             iteratorCreate(ap);
             return ap.Create(isWriteScheme);
 
@@ -168,7 +168,7 @@ public class ReflectAttribute implements Parcelable {
     public void DbDelete(DbManager dbm) { DbDelete(dbm, null); }
     public void DbDelete(DbManager dbm, ContentValues cv) {
         try {
-            ActionDb ap = new ActionDb(dbm, prefixName, dbIndex, dbParent, false);
+            ActionDb ap = new ActionDb(dbm, dbIndex, dbParent, false);
             iteratorDelete(ap);
             ap.Delete(this, cv);
 
@@ -195,7 +195,7 @@ public class ReflectAttribute implements Parcelable {
     }
     public void toDb(DbManager dbm, long parent, ContentValues cv, boolean skipRecursion) {
         try {
-            ActionDb ap = new ActionDb(dbm, prefixName, dbIndex, parent, skipRecursion);
+            ActionDb ap = new ActionDb(dbm, dbIndex, parent, skipRecursion);
             iteratorTo(ap);
             ap.Save(this, cv);
 
@@ -226,7 +226,7 @@ public class ReflectAttribute implements Parcelable {
     public void fromDb(DbManager dbm, long parent, long id, ContentValues cv, boolean skipRecursion) {
         try {
             dbIndex = id;
-            ActionDb ap = new ActionDb(dbm, prefixName, id, parent, skipRecursion);
+            ActionDb ap = new ActionDb(dbm, id, parent, skipRecursion);
             iteratorFrom(ap);
             ap.Load(this, cv);
 
@@ -386,7 +386,7 @@ public class ReflectAttribute implements Parcelable {
     private void actionObjectInterfaceTo(ActionInterface action, Field field, Object obj, Type type, String name) {
         try {
             if (obj instanceof ReflectAttribute) {
-                Object data = action.to(field, (ReflectAttribute) obj, false);
+                Object data = action.to(field, (ReflectAttribute) obj, name,false);
                 if (data != null)
                     action.to(field, type, data, name);
             }
@@ -402,13 +402,12 @@ public class ReflectAttribute implements Parcelable {
                 iterable = ((Iterable) obj);
                 if (iterable == null)
                     return;
-            } catch (Exception ignore) {
-                return;
-            }
+            } catch (Exception ignore) { return; }
+
             ArrayList<Object> abj = new ArrayList<>();
             for (Object o : iterable) {
                 if (o instanceof ReflectAttribute) {
-                    Object ao = action.to(field, (ReflectAttribute) o, skipRecursive);
+                    Object ao = action.to(field, (ReflectAttribute) o, name, skipRecursive);
                     if (ao != null)
                         abj.add(ao);
                 } else {
@@ -500,15 +499,14 @@ public class ReflectAttribute implements Parcelable {
                 }
             } else {
                 ReflectAttribute fa = actionGetReflectByType(field.getGenericType());
-                if (fa != null)
+                if (fa != null) {
                     action.from(field, fa, null, name, skipRecursive);
-                else {
+                } else {
                     Class<?> type = (Class<?>) ((ParameterizedType) field.getGenericType())
                             .getActualTypeArguments()[0];
                     if (type != null)
                         action.from(field, null, type, name, skipRecursive);
                 }
-
             }
             field.set(this, aout);
 

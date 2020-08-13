@@ -61,7 +61,7 @@ http://meta.vcdn.biz/e7bdd20d76a7f157eb3993e17d71f688_megogo/vod/hls/b/450_900_1
 http://meta.vcdn.biz/3484c25a4ddf1c4d73427bea990e8a30_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364271/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
 #EXTINF:-1 ,Адмирал Ушаков (1953)
 http://meta.vcdn.biz/5bd2cbfac76e3777b271e895c258e797_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/18364251/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
-#EXTINF:-1 ,Адреналин:Высокое Напряжение (2009) (18+)
+#EXTINF:-1 ,Адреналин, Высокое Напряжение (2009) (18+)
 http://meta.vcdn.biz/689596ba691df036a2f6b5b76ffc3d0c_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38070773/u_uid/0/u_vod/3/u_device/cms_webandroid/a/5/type.amlst/playlist.m3u8
 #EXTINF:-1 ,Адрес вашего дома (1973)
 http://meta.vcdn.biz/7761a7c5c8a690d80e9b56ff53c4287d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/344611/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
@@ -1353,9 +1353,9 @@ http://meta.vcdn.biz/bc82c1d52fc331074213dbb57dcb2aad_megogo/vod/hls/b/450_900_1
 http://meta.vcdn.biz/2e880883c7212dd1a57e796229032218_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/249691/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
 #EXTINF:-1 ,Учитель танцев (1952)
 http://meta.vcdn.biz/1a636b60f5d87172dbe7014888408152_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/52260241/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
-#EXTINF:-1 ,Феи:Загадка пиратского острова (2014)
+#EXTINF:-1 ,Феи, Загадка пиратского острова (2014)
 http://212.113.38.100/hls/917d9a4f0ebbbec712fefae018f51b58/mhd/_The.Pirate.Fairy.2014.720p.BluRay.DTS.x264.-CtrlHD.mkv.flv.m3u8
-#EXTINF:-1 ,Феи:Потерянное сокровище (2009)
+#EXTINF:-1 ,Феи, Потерянное сокровище (2009)
 http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Tinker.Bell.and.the.Lost.Treasure.2009.BDRip.1080p.m3u8
 #EXTINF:-1 ,Форма воды (2017) (18+)
 http://212.113.38.100/hls/bfdd458c4e10e0c609a28fd78fb552b2//fhd/The.Shape.of.Water.2017.BDRip.1080p.ExKinoRay.m3u8
@@ -2134,7 +2134,7 @@ https://h3.kinovhd.tv/kino/Temnuy_rycar_2008.hd.mp4/index-v1-a1.m3u8
 https://h2.kinovhd.tv/server/kino/Tihookeanskiy_rubezh.hd.mp4/index-v1-a1.m3u8
 #EXTINF:-1 ,Тихоокеанский рубеж 2 (2018)
 https://h1.kinovhd.tv/server_4/kino/Tihookeanskiy_rubezh_2.hd.mp4/index-v1-a1.m3u8
-#EXTINF:-1 ,Тор 2 : Царство тьмы (2013)
+#EXTINF:-1 ,Тор, Царство тьмы (2013)
 https://h1.kinovhd.tv/server_4/kino/Tor_2.hd.mp4/index-v1-a1.m3u8
 #EXTINF:-1 ,Тор, Рогнарек (2017)
 https://h2.kinovhd.tv/server/kino/Tor_3.hd.mp4/index-v1-a1.m3u8
@@ -2142,7 +2142,7 @@ https://h2.kinovhd.tv/server/kino/Tor_3.hd.mp4/index-v1-a1.m3u8
 https://vs33.vcdn.biz/c0bebd80239e975c70c031965143296e_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/45334681/u_uid/0/u_vod/3/u_device/cms_html5/a/0/type.amlst/chunklist-sid1641299484-b2000000.m3u8
 #EXTINF:-1 ,Трансформеры (2007)
 https://h1.kinovhd.tv/server/kino/Transformery.hd.mp4/index-v1-a1.m3u8
-#EXTINF:-1 ,Трансформеры:Последний рыцарь (2017)
+#EXTINF:-1 ,Трансформеры, Последний рыцарь (2017)
 https://h1.kinovhd.tv/fast/Transformery_5.hd.mp4/index-v1-a1.m3u8
 #EXTINF:-1 ,Ультраамериканцы (2015)
 https://vs56.vcdn.biz/9c12b345d16517a4197ffdbd0a68c6b8_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/38597871/u_uid/0/u_vod/3/u_device/cms_html5/u_devicekey/_site/a/7/type.amlst/chunklist-sid1032988906-b2000000.m3u8

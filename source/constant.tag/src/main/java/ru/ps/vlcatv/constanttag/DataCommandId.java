@@ -72,6 +72,7 @@ public class DataCommandId {
     public static final int ONLINE_PLAY = 12045;
     public static final int SYSTEM_KEY = 12046;
     public static final int EXCEPTION = 12047;
+    public static final int REQUEST_WRITE_PERMISSION = 12048;
 
         /*
         public static int fromString(String s, int  id) {

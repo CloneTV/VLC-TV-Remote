@@ -24,10 +24,6 @@ public class DeviceCodeResponse extends ReflectAttribute implements ResponseInte
     // Valid only pending User code request + <ExpiresIn> seconds
     private long DataCreated = 0L;
 
-    public DeviceCodeResponse() {
-        super.setPrefixName(DeviceCodeResponse.class.getSimpleName());
-    }
-
     @Override
     public void clear() {
         DevCode = null;

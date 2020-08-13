@@ -26,10 +26,6 @@ public class DeviceTokenResponse extends ReflectAttribute implements ResponseInt
     @IFieldReflect("app_data_expired")
     private long DataExpired = 0L;
 
-    public DeviceTokenResponse() {
-        super.setPrefixName(DeviceCodeResponse.class.getSimpleName());
-    }
-
     @Override
     public int getExpired() {
         if (DataExpired <= 0L)

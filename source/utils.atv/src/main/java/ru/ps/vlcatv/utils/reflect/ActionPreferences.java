@@ -3,6 +3,7 @@ package ru.ps.vlcatv.utils.reflect;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableByte;
@@ -139,8 +140,10 @@ public class ActionPreferences implements ActionInterface {
         } catch (Exception ignore) {}
     }
     @Override
-    public Object to(Field field, ReflectAttribute fa, boolean skipAttr) throws Exception {
-        fa.toPreferences(pref);
+    public Object to(final Field field, ReflectAttribute fa, final String name, boolean skipAttr) throws Exception {
+        try {
+            fa.toPreferences(pref, name + "_");
+        } catch (Exception ignore) {}
         return null;
     }
 
@@ -244,12 +247,16 @@ public class ActionPreferences implements ActionInterface {
     }
     @Override
     public Object from(Field field, ReflectAttribute fa, String name) throws Exception {
-        fa.fromPreferences(pref);
+        try {
+            fa.fromPreferences(pref, name + "_");
+        } catch (Exception ignore) {}
         return (Object) fa;
     }
     @Override
     public Object from(Field field, ReflectAttribute fa, Object obj, String name, boolean skipAttr) throws Exception {
-        fa.fromPreferences(pref);
+        try {
+            fa.fromPreferences(pref, name + "_");
+        } catch (Exception ignore) {}
         return (Object) fa;
     }
     @Override

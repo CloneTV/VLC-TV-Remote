@@ -24,6 +24,7 @@ public class DataTagConfig {
     public final static String TAG_SEARCH_TYPE = "search_type";
     public final static String TAG_SEARCH_LIST = "search_list";
     public final static String TAG_SEARCH_VOICE = "is_preferred_voice_search";
+    public final static String TAG_WRITE_STORAGE = "is_preferred_write_storage";
     public final static String TAG_RECOMMEND_MAX = "max_recommend";
     public final static String TAG_HISTORY_MAX = "max_history";
     public final static String TAG_PLAYER_TARGET = "player_target";

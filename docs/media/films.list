@@ -15,7 +15,7 @@ http://meta.vcdn.biz/4b588aac7030415339c7f1e141e9b430_megogo/vod/hls/b/450_900_1
 http://meta.vcdn.biz/3fa347b53d3e660cd081052694651732_megogo/vod/hls/b/450_900_1350_2000/u_sid/0/o/24917601/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
 #EXTINF:-1 ,13 (2010) (18+)
 http://vs344.vcdn.biz/16b8485ac87fd162447d7aa421924b3d_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/86831/u_uid/0/u_vod/3/u_device/cms_webandroid/a/8/type.amlst/playlist.m3u8
-#EXTINF:-1 ,13-й район:Ультиматум (2009) (16+)
+#EXTINF:-1 ,13-й район, Ультиматум (2009) (16+)
 https://vs8.vcdn.biz/eaafea3320cb012566d62af8a56c44f0_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/84761/u_uid/0/u_vod/3/u_device/cms_html5/a/8/type.amlst/chunklist-sid1140936118-b2000000.m3u8
 #EXTINF:-1 ,21 и больше (2013) (16+)
 http://meta.vcdn.biz/23f8e5353ee6377c3d661940eea0a3e5_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/368771/u_uid/0/u_vod/3/u_device/cms_webandroid/a/10/type.amlst/playlist.m3u8
@@ -33,9 +33,9 @@ http://meta.vcdn.biz/ce01148fee0aefec20dd1a3a07b3d86b_megogo/vod/hls/b/450_900_1
 http://meta.vcdn.biz/fdbdfa689c8f49ebe2df3c058db658aa_megogo/vod/hls/b/450_900_1350_1500_2000/u_sid/0/o/29521911/u_uid/0/u_vod/3/u_device/cms_webandroid/a/0/type.amlst/playlist.m3u8
 #EXTINF:-1 ,Angry Birds в кино (2016)
 http://212.113.38.100/realhls/st2/fhd/AHGp1.61ordC.v.K11Ho.2016.D.BDRip.1080p.mp4/index-v1-a1.m3u8
-#EXTINF:-1 ,Kingsman:Золотое кольцо (2017) (18+)
+#EXTINF:-1 ,Kingsman, Золотое кольцо (2017) (18+)
 http://212.113.38.100/hls/c83b73a334db2f5d987c340e9143fe26//fhd/Kingsman.The.Golden.Circle.2017.BDRip.1080p.ExKinoRay.m3u8
-#EXTINF:-1 ,Kingsman:Секретная служба (2014) (18+)
+#EXTINF:-1 ,Kingsman, Секретная служба (2014) (18+)
 http://212.113.38.100/hls/41e26a4e0d08f240b80dc2c570c25e40//fhd/Kingsman.The.Secret.Service.2014.1080p.m3u8
 #EXTINF:-1 ,SuperАлиби (2017) (18+)
 http://212.113.38.100/hls/7ed12485d30e557a97de143ae552395a//fhd/SuPerALebi.2O17.D.WEB-DL.1O8Op.m3u8

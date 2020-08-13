@@ -100,7 +100,7 @@ public class ParseControllerKINOP {
         final static String TAG_IMAGE = "img";
         final static String TAG_TITLE = "title";
         final static Pattern[] pattern = new Pattern[] {
-                Pattern.compile("([\\W\\s\\S]+)\\s\\(.*\\)\\s([\\d]+)", Pattern.UNICODE_CASE),
+                Pattern.compile("([\\w\\s\\S,:_-]+)\\s\\(.*\\)\\s([\\d]+)", Pattern.UNICODE_CASE),
                 Pattern.compile(".*/([\\d]+)\\.", Pattern.UNICODE_CASE)
         };
         private static final String EXCEPT = "element not found, media search failed";

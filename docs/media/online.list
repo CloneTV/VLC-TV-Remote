@@ -1,3 +1,27 @@
 #EXTM3U
 #EXTINF:-1,ULTO
 http://ultotv.ru:8888/live/uhd/playlist.m3u8
+#EXTINF:-1,Новороссия ТВ HD
+http://dprtv.phoenix-dnr.ru/novorossia-tv
+#EXTINF:-1,PARAMOUNT COMEDY
+http://46.174.189.10:45550/ParamountComedy
+#EXTINF:-1,PARAMOUNT COMEDY
+http://176.197.227.36:81/udp/239.255.42.16:1234
+#EXTINF:-1,PARAMOUNT COMEDY
+http://zigfreed.ru/2xD/37.m3u8
+#EXTINF:-1,PARAMOUNT COMEDY
+http://109.248.88.152:4044/udp/239.195.1.136:1234
+#EXTINF:-1,PARAMOUNT COMEDY HD
+http://1f2e8157.akadatel.com/iptv/D6SAVDGR6A2B4K/6000/index.m3u8
+#EXTINF:-1,PARAMOUNT COMEDY HD
+http://user57332.clients-cdnnow.ru/stream/IFBYIR5OA7/196.m3u8
+#EXTINF:-1,PARAMOUNT COMEDY HD
+http://144.76.199.108:8002/play/a0bf?auth=graf208:yKmL84u9QhRfJPx
+#EXTINF:-1,PARAMOUNT COMEDY HD
+http://0b383b28.machkalan.ru/iptv/7E9L6L8AV8KN99/6000/index.m3u8
+#EXTINF:-1,PARAMOUNT COMEDY UA
+http://1.1usd.tv:34000/ch714/mono.m3u8?token=1usdtv_v1909.q0qhO4C8xdYsoIcypQvn4mBLEVFZNkeK4O_PEhQs9Nnn5Wxoog7guyw_DtM_4PFk
+#EXTINF:-1,PARAMOUNT COMEDY UKR
+http://46.174.189.10:45550/ParamountComedyUKR
+#EXTINF:-1,PARAMOUNT COMEDY-11019
+http://176.197.26.198:81/udp/239.255.42.16:1234
